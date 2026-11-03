@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+format: 2
+# The strand of the learning map the app stays in; each page names its competencies (ids of map/mathematik.yaml in
+# lernapps/apps).
+strand: mathematik/algebra
+title: "Mathe: Algebra – Binomische Formeln"
+intro: |
+  Hier lernst du die binomischen Formeln für Klasse 8. Jede Seite erklärt eine Sache mit Regel, Beispiel und Bild.
+  Danach übst du mit Aufgaben. Jede Aufgabe sagt dir sofort, ob dein Term stimmt.
+languages: [de]
+chapters: [binom]
+sources:
+  - title: Kerncurriculum Mathematik Sekundarstufe I, Hessisches Kultusministerium
+    url: https://kultusministerium.hessen.de/unterricht/kerncurricula/sekundarstufe-i/mathematik
+  - title: Binomische Formeln (serlo.org)
+    url: https://de.serlo.org/mathe/1499/binomische-formeln
+  - title: Erklärvideos von Lehrerschmidt (YouTube), auf jeder Seite unter „Video dazu“ verlinkt
+    url: https://www.youtube.com/@Lehrerschmidt
+tutor:
+  rules: |
+    - Gerechnet wird auf Papier und in der App, nicht im Chat. Das Ergebnis tippt das Kind in die App; im Chat
+      stellst du Überschlags- und Warum-Fragen.
+    - Erklär am Bild der Seite (Abschnitt „Bild“), nicht abstrakt: Frag zuerst „Was siehst du?“.
+    - Macht das Kind einen typischen Fehler, benenne die Idee hinter dem Fehler, nicht nur „falsch“. Zum Beispiel:
+      „Du hast $x^2 + 16$ geschrieben. Wie viele Teilflächen hat das Quadrat mit der Seite $x + 4$?“
+    - Eine Seite ist erst geschafft, wenn drei Aufgaben richtig waren und das Kind eine davon erklären kann. Dann
+      bittest du um eine Aufgabe ganz von Hand, als Foto nur vom Blatt, ohne Namen. Prüf jeden Schritt; ist einer
+      falsch, nenn den ersten und stell eine Leitfrage dazu, statt ihn zu verbessern.
+    - Terme tippt das Kind mit dem Zeichen ^ für Hochzahlen, zum Beispiel x^2+6x+9 für $x^2 + 6x + 9$.
+    - Empfiehl das Video unter „Video dazu“, wenn das Kind die Erklärung zweimal nicht wiedergeben kann; sonst
+      zuerst Aufgaben. Hat die Seite einen Link zu serlo.org, ist er die zweite Erklärung in anderen Worten, wenn
+      Regel, Beispiel und Video nicht gereicht haben.

@@ -1,0 +1,24 @@
+{
+  "name": "mathe-algebra",
+  "private": true,
+  "description": "Mathe: Algebra von lernapps.net, ein explainer: binomische Formeln für Klasse 8.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vp dev",
+    "build": "vp build --outDir _site",
+    "check": "lernapps check",
+    "prepare": "lernapps hooks"
+  },
+  "devDependencies": {
+    "@lernapps/app-templates": "^0.3.0",
+    "@lernapps/tooling": "^0.5.2",
+    "fast-check": "4.10.2",
+    "typescript": "6.0.3",
+    "vite-plus": "1.4.0",
+    "vue-tsc": "3.3.13"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.4.0"
+  }
+}
