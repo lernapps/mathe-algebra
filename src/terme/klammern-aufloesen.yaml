@@ -60,7 +60,7 @@ blocks:
         formula: 'a \cdot (b + c) = a \cdot b + a \cdot c'
       - type: text
         text: >-
-          Das ist das **Distributivgesetz**, du kennst es aus den Rechengesetzen. Ein Faktor vor der Klammer wird mit
+          Das ist das **Distributivgesetz** (Verteilungsgesetz): Ein Faktor vor der Klammer wird mit
           **jedem** Glied in der Klammer multipliziert, das Vorzeichen gehört zum Glied: $2 \cdot (x - 5) = 2x - 10$.
   - type: section
     id: beispiel

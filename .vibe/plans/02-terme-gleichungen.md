@@ -100,7 +100,23 @@ grundrechenarten-rechengesetze (vor K1), rationale-zahlen-rechnen (vor K2); K4 h
 - Nicht geprüft vom Prüfer: `GleichungenFormel.ts` (620 Zeilen), Darstellung/Bilder, Laufzeit-Setzen negativer Zahlen, Quellenabgleich im Netz.
 
 **Lernenden-Prüfer** (Musterseite `tabelle-probieren`, Klasse 7): Befunde umgesetzt (siehe Commit „Musterseite nach dem Lernenden-Prüfer überarbeitet“).
-Lernenden-Prüfer für alle Seiten (Kapitel 1/2 und 3/4): Läufe durch ein API-Limit unterbrochen, werden fortgesetzt; Ergebnis folgt hier.
+**Lernenden-Prüfer für alle Seiten** (zwei Unteragenten, Klasse 6/7 für raetsel und terme, Klasse 8 für binom, gleichungen, bruchterme; Maus und Tastatur,
+360 und 1280 px; beide Läufe liefen durch ein API-Limit in Teilen und sahen zum Teil einen Stand vor der Reparatur der Kurztests):
+- Recap-Fragen: raetsel-Recap: „Nein, nur eingeschränkt“ (nur zwei Fragen, zweite kaputt, jetzt repariert); terme-Recap „teilweise“ (Vorzeichenregel stand
+  nach der ersten Frage, jetzt davor; „Minus vor Klammer mit mehreren Zahlen“ ergänzt); bruchterme-Recap: Kurztest war kaputt (repariert), Hauptnenner ergänzt.
+  Nach den Reparaturen nicht noch einmal von einem Prüfer durchgespielt: **offen**.
+- Umgesetzt: Päckchen = x erklärt, „Baustein/Lernlandkarte“ und „Terme/Variablen“ im Recap erklärt, Distributivgesetz mit Klammer im Beispiel und auf
+  `klammern-aufloesen` selbst erklärt, Assoziativgesetz mit Ausgangsrechnung, „Du bist bereit“ als Liste, „Hast du dich vertan?“ nur bei Fehlern,
+  Grammatik (Auto), Frage in `umformen-negativ`.
+- **Nicht umgesetzt (offen):** richtige Option steht meist an erster Stelle; Waage-Figur bei 360 px klein, nie schief, negative Gewichte möglich;
+  Einschätzung mit „Tipp“/„Probe mit Zahlen“ bei Term-Aufgaben und Verdopplung von Aufgaben; einzelne erste Aufgaben zu leicht;
+  Aufgaben ohne eigenes Bild („Links liegen 3 Päckchen …“); Figuren in `klammern-multiplizieren`/`dritte-binomische` ohne klare Legende;
+  Kürzen-Figur (`bruchterme-kuerzen`) maßstabslos; Hauptnenner-Sprung in `bruchgleichungen-loesen`.
+- **Funde zur Laufzeit/Werkzeug (nicht behoben, für den Orchestrator):** „Lies dazu noch einmal den Text“ statt der `mistakes`-Meldung bei Zahleneingaben;
+  „Antworte zuerst: Wähle, tippe oder ordne alles zu.“ auch bei getippter ungültiger Zahl; Rückmeldungen mit „.:“ (Punkt und Doppelpunkt);
+  negative Zahlen aus `{{…}}` mit Bindestrich statt „−“; Term-Komponenten melden nie ausdrücklich „richtig/falsch“; „Lösung zeigen“ nach dem ersten Fehlversuch;
+  `generated` ohne `links`; `lernapps check`-Lock über alle Worktrees; Wortzählung `explainer-text-load` zählt Rückmeldungen mit; „Aufgabe Nr. 38“ unerklärt;
+  Einschätzung zeigt nicht, welche Aufgabe falsch war.
 
 ## Explore
 

@@ -6,7 +6,7 @@ blocks:
   - type: text
     text: >-
       Das brauchst du für dieses Kapitel: Bruchterme behandelst du wie Brüche, nur mit Variablen im Zähler und im Nenner.
-      Dafür musst du Brüche sicher kürzen, erweitern, malnehmen und teilen können. Die Bausteine heißen auf der
+      Dafür musst du Brüche sicher kürzen, erweitern, malnehmen und teilen können. Ein Baustein ist ein Thema auf der Lernlandkarte. Die Bausteine heißen auf der
       Lernlandkarte „Brüche kürzen und erweitern“ und „Bruchrechnung: Multiplikation und Division“.
   - type: section
     id: kuerzen-erweitern
@@ -102,6 +102,6 @@ blocks:
     title: Du bist bereit, wenn du …
     blocks:
       - type: text
-        text: >-
-          … einen Bruch kürzt und erweitern kannst, ohne seinen Wert zu ändern. … Brüche malnimmst und durch einen Bruch
-          teilst, indem du mit dem Kehrwert malnimmst.
+        text: |
+          - Du kannst einen Bruch kürzen und erweitern, ohne seinen Wert zu ändern.
+          - Du nimmst Brüche mal und teilst durch einen Bruch, indem du mit dem Kehrwert malnimmst.

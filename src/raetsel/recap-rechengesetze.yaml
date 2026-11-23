@@ -6,7 +6,7 @@ blocks:
   - type: text
     text: >-
       Das brauchst du für dieses Kapitel: Du löst Zahlenrätsel und rechnest dabei vor und zurück. Dafür musst du
-      sicher mit Klammern, Punkt vor Strich und den Rechengesetzen umgehen. Der Baustein heißt auf der Lernlandkarte
+      sicher mit Klammern, Punkt vor Strich und den Rechengesetzen umgehen. Ein Baustein ist ein Thema auf der Lernlandkarte. Dieser Baustein heißt
       „Vorrangregeln und Rechengesetze“: Ich kann Klammern und Vorrangregeln beachten und Rechengesetze für vorteilhaftes
       Rechnen nutzen.
   - type: section
@@ -51,13 +51,13 @@ blocks:
       - type: definition
         term: Assoziativgesetz
         explanation: >-
-          Das Verbindungsgesetz: Beim Plus und beim Malnehmen darfst du anders zusammenfassen. Beispiel: Du
-          rechnest zuerst $48 + 52 = 100$, dann $37 + 100 = 137$.
+          Das Verbindungsgesetz: Beim Plus und beim Malnehmen darfst du anders zusammenfassen. Beispiel bei
+          $37 + 48 + 52$: Du rechnest zuerst $48 + 52 = 100$, dann $37 + 100 = 137$.
       - type: definition
         term: Distributivgesetz
         explanation: >-
           Das Verteilungsgesetz: Ein Faktor vor einer Klammer wird auf jeden Summanden verteilt. Beispiel:
-          $6 \cdot 23 = 6 \cdot 20 + 6 \cdot 3$. Das sind $120 + 18 = 138$.
+          $6 \cdot (20 + 3) = 6 \cdot 20 + 6 \cdot 3$. Das sind $120 + 18 = 138$.
       - type: example
         title: "Kannst du vorteilhaft rechnen? 4 · 27 · 25"
         blocks:
@@ -96,6 +96,6 @@ blocks:
     title: Du bist bereit, wenn du …
     blocks:
       - type: text
-        text: >-
-          … Klammern zuerst rechnest und Punkt vor Strich beachtest. … mit den Rechengesetzen vorteilhaft rechnest,
-          zum Beispiel $4 \cdot 27 \cdot 25$ im Kopf.
+        text: |
+          - Du rechnest Klammern zuerst und beachtest Punkt vor Strich.
+          - Du rechnest mit den Rechengesetzen vorteilhaft, zum Beispiel $4 \cdot 27 \cdot 25$ im Kopf.
