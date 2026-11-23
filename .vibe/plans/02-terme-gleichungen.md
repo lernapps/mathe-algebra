@@ -4,7 +4,7 @@
 # Archetype, as in the app's first plan. Allowed values: explainer, interactive, quiz.
 archetype: explainer
 # Current phase. Allowed values: explore, plan, code, commit.
-phase: plan
+phase: code
 # prePushFailures: failed pre-push runs of this increment, written by the hook.
 prePushFailures: 0
 # failedChecks: failed rules and runs, written by lernapps check and the hooks.
@@ -114,10 +114,11 @@ grundrechenarten-rechengesetze (vor K1), rationale-zahlen-rechnen (vor K2); K4 h
 - [x] Write "Content method": the guide's patterns, figures and components per slice. Anything new: map it as skill
       `lernapps-explainer-design` says, and say why the guide's patterns do not fit.
 - [x] Draw a sketch of each new component or interactive exercise, in `.vibe/sketches/`.
-- [ ] Show the creator, short: goal, new competencies by chapter, slices; in plain words what learners see and do and
+- [x] Show the creator, short: goal, new competencies by chapter, slices; in plain words what learners see and do and
       what is new. At most 2 questions.
-- [ ] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes: change
+- [x] **Checkpoint:** confirm the plan and the content method. Stop and wait for an explicit yes. Changes: change
       them, then ask again.
+      Creator: Orchestrator (in Vertretung des Menschen): Plan und Content method bestätigt, weiter mit Slice 1; Recap vor K4
 
 ### Content method
 
@@ -144,7 +145,7 @@ frei gewählten Werten, deshalb Komponenten mit statischer Form und Text für Le
 - Schreibweisen nach regeln.md 2; `a/b` in Rückmeldungen nur, wo die Laufzeit keine Formel setzt, jede Stelle im Plan gezählt (W28).
 
 Voraussetzungen von außen je Kapitel: K1 `grundrechenarten-rechengesetze` (Recap + Kurztest vor K1); K2 `rationale-zahlen-rechnen`
-(Recap + Kurztest vor K2); K3 und K4 nur innerhalb der App (`terme-umformen`, `klammern-binome`, `lineare-gleichungen`, `bruchterme`:
+(Recap + Kurztest vor K2); K4 braucht zusätzlich einen Recap (`recap: [brueche-kuerzen-erweitern, brueche-multiplizieren-dividieren]` mit `Kurztest`, auf Anweisung des Orchestrators; die Karte nennt es nicht als `requires`, er sammelt es als `map-review`); K3 nur innerhalb der App (`terme-umformen`, `klammern-binome`, `lineare-gleichungen`, `bruchterme`:
 alle geübt, kein Recap). Hinweis K4: „wie Brüche kürzen“ setzt Bruchrechnen voraus; die Karte nennt es nicht als `requires`: Frage
 ans Orchestrator-Protokoll `map-review`, falls der Lernenden-Prüfer es als Lücke findet.
 
@@ -161,8 +162,8 @@ ans Orchestrator-Protokoll `map-review`, falls der Lernenden-Prüfer es als Lüc
 
 ### Tasks
 
-- [ ] `git switch -c increment/<NN>-<short name>` from `main`. Commit this plan on it.
-- [ ] Load skill `lernapps-cli`. Update the app as its section "Update" says. Commit the update alone and fix its
+- [x] `git switch -c increment/<NN>-<short name>` from `main`. Commit this plan on it.
+- [x] Load skill `lernapps-cli`. Update the app as its section "Update" says. Commit the update alone and fix its
       findings before any content. The update replaces the `lernapps-*` skills: read again those you use.
 - [ ] Load skill `lernapps-explainer` and the content guide.
 - [ ] Load skill `lernapps-content-questions`. Read whole, with your file tool:
@@ -186,7 +187,9 @@ ans Orchestrator-Protokoll `map-review`, falls der Lernenden-Prüfer es als Lüc
 - [ ] Slice 13: bruchterme – Seite bruchgleichungen (Sub-Agent möglich)
 - [ ] Slice 14: Selbsteinschätzung je Kapitel, Glossar der Recap-Begriffe, app.yaml (Titel, Intro, Kapitel, Quellen), Liste Baustein → Seite im Plan (selbst)
 - [ ] Review: fachlicher Prüfer und Lernenden-Prüfer (Bestand und Neues, alle Recaps nach 7.7); Befunde unter Review im Plan, danach geänderte Stellen erneut prüfen
-<!-- tasks: slices (15 added): one per competency, as written in Plan -->
+- [ ] Slice 12a: bruchterme – Recap-Seite (recap brueche-kuerzen-erweitern, brueche-multiplizieren-dividieren) mit Kurztest-Komponente (selbst)
+- [ ] Slice 12a: bruchterme – Recap-Seite (recap brueche-kuerzen-erweitern, brueche-multiplizieren-dividieren) mit Kurztest-Komponente (selbst)
+<!-- tasks: slices (17 added): one per competency, as written in Plan -->
 - [ ] **Checkpoint:** the pattern page, after the first slice. A slice in a pattern the app already has: show it to
       the creator and go on. A new pattern: load skill `lernapps-learner-check`, do its learner check, fix what it
       finds, then ask the creator whether the others may follow it, and wait.

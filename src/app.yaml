@@ -8,7 +8,7 @@ intro: |
   Hier lernst du die binomischen Formeln für Klasse 8. Jede Seite erklärt eine Sache mit Regel, Beispiel und Bild.
   Danach übst du mit Aufgaben. Jede Aufgabe sagt dir sofort, ob dein Term stimmt.
 languages: [de]
-chapters: [binom]
+chapters: [raetsel, binom]
 sources:
   - title: Kerncurriculum Mathematik Sekundarstufe I, Hessisches Kultusministerium
     url: https://kultusministerium.hessen.de/unterricht/kerncurricula/sekundarstufe-i/mathematik

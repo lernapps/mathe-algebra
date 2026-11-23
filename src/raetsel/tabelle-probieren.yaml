@@ -1,0 +1,155 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Zahlenrätsel durch Probieren lösen
+description: "Eine gedachte Zahl finden: Du probierst in einer Tabelle Zahlen aus und rechnest beide Seiten der Gleichung aus. Mit Aufgaben, die dir sagen, warum eine Antwort stimmt."
+competencies: [einfache-gleichungen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Ich denke mir eine Zahl
+    blocks:
+      - type: single-choice
+        id: gedachte-zahl-erkennen
+        text: "Ich denke mir eine Zahl und addiere 5. Das Ergebnis ist 12. Welche Zahl habe ich mir gedacht?"
+        options:
+          - text: "7"
+            correct: true
+            info: "7 + 5 = 12. Du hast rückwärts gerechnet: Das Gegenteil von „plus 5“ ist „minus 5“."
+          - text: "17"
+            correct: false
+            info: "17 + 5 = 22, nicht 12. Du hast 12 + 5 gerechnet, aber es muss rückwärts gehen: 12 − 5."
+          - text: "60"
+            correct: false
+            info: "60 ist 12 · 5. Hier wird aber addiert, nicht multipliziert."
+        explanation: "Die gedachte Zahl ist 7, denn 7 + 5 = 12. Du kannst sie finden, indem du rückwärts rechnest: 12 − 5 = 7."
+        links:
+          - title: Einfache Gleichungen (Lernlandkarte)
+            url: "https://lernapps.net/apps/map/mathematik/c/einfache-gleichungen/"
+  - type: section
+    id: platzhalter
+    title: Die gedachte Zahl heißt x
+    blocks:
+      - type: text
+        text: >-
+          Für eine Zahl, die du noch nicht kennst, schreibst du einen Buchstaben, meistens $x$. Der Buchstabe steht
+          für die gedachte Zahl: Er ist ein **Platzhalter**. Das Rätsel „Ich denke mir eine Zahl, rechne mal 3 und
+          addiere 4. Das Ergebnis ist 19“ schreibst du so auf: $3 \cdot x + 4 = 19$.
+      - type: definition
+        term: Gleichung
+        explanation: >-
+          Zwei Terme mit einem Gleichheitszeichen dazwischen, zum Beispiel $3 \cdot x + 4 = 19$. Links und rechts
+          steht derselbe Wert, wenn du die richtige Zahl für $x$ einsetzt. Diese Zahl heißt **Lösung**.
+      - type: text
+        text: >-
+          Du findest die Lösung durch **Probieren**: Setze eine Zahl für $x$ ein und rechne die linke Seite aus.
+          Probiere es in der Tabelle. Sie sagt dir bei jeder Zahl, ob links kleiner, gleich oder größer ist als
+          rechts.
+      - type: vue-component
+        id: tabelle-3x-plus-4
+        component: RaetselTabelle
+        props:
+          a: 3
+          b: 4
+          c: 19
+          eingabeLabel: "Zahl für x"
+          eintragen: "In die Tabelle"
+          neuAnfangen: "Neu anfangen"
+          spalteX: "x"
+          spalteLinks: "3 · x + 4"
+          spalteRechts: "Rechts"
+          spalteVergleich: "Vergleich"
+        nojs: |
+          Tabelle zum Probieren für 3 · x + 4 = 19. Für x = 2 ist die linke Seite 10: kleiner als 19. Für x = 6 ist sie 22:
+          größer als 19. Für x = 5 ist sie 19: beide Seiten sind gleich. Die Lösung ist 5.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: "Löse 3 · x + 4 = 19 durch Probieren"
+        blocks:
+          - type: table
+            caption: "Drei Versuche. Der erste ist zu klein, der zweite zu groß, der dritte stimmt."
+            header: ["x", "3 · x + 4", "Vergleich mit 19"]
+            rows:
+              - ["2", "10", "kleiner"]
+              - ["6", "22", "größer"]
+              - ["5", "19", "gleich"]
+          - type: text
+            text: "Die Lösung ist $x = 5$. Zur Probe: $3 \\cdot 5 + 4 = 15 + 4 = 19$."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: single-choice
+        id: naechste-zahl-waehlen
+        text: "Bei 3 · x + 4 = 19 hast du x = 6 probiert. Links kommt 22 heraus. Was probierst du als Nächstes?"
+        options:
+          - text: "Eine kleinere Zahl als 6, zum Beispiel 5"
+            correct: true
+            info: "Links ist 22 und damit größer als 19. Eine kleinere Zahl für x macht die linke Seite kleiner."
+          - text: "Eine größere Zahl als 6, zum Beispiel 8"
+            correct: false
+            info: "Mit einer größeren Zahl wird die linke Seite noch größer, also noch weiter weg von 19."
+          - text: "Genau dieselbe Zahl noch einmal"
+            correct: false
+            info: "Dieselbe Zahl gibt dasselbe Ergebnis. Du brauchst eine andere Zahl."
+        explanation: "Ist die linke Seite zu groß, nimmst du ein kleineres x. Ist sie zu klein, nimmst du ein größeres x."
+        links:
+          - title: Einfache Gleichungen (Lernlandkarte)
+            url: "https://lernapps.net/apps/map/mathematik/c/einfache-gleichungen/"
+      - type: generated
+        id: rueckwaerts-plus
+        given:
+          b: { int: [3, 30] }
+          c: { int: [10, 60] }
+        where: ["c > b"]
+        task:
+          text: "Ich denke mir eine Zahl und addiere {{b}}. Das Ergebnis ist {{c}}. Welche Zahl habe ich mir gedacht?"
+        answer: { value: "c - b", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "c + b"
+            message: "Du hast {{c}} und {{b}} addiert. Das Rätsel addiert aber schon {{b}} zur gedachten Zahl. Rechne rückwärts: {{c}} − {{b}}."
+        hint: "Das Gegenteil von „plus {{b}}“ ist „minus {{b}}“. Rechne vom Ergebnis zurück."
+        steps:
+          - "Die Gleichung heißt x + {{b}} = {{c}}."
+          - "Rückwärts: x = {{c}} − {{b}} = {{answer}}."
+      - type: generated
+        id: probieren-mal
+        given:
+          a: { int: [2, 9] }
+          c: { int: [12, 90] }
+        where: ["decimals(c / a) == 0"]
+        task:
+          text: "Ich denke mir eine Zahl und rechne mal {{a}}. Das Ergebnis ist {{c}}. Welche Zahl habe ich mir gedacht? Tipp: Probiere in der Tabelle oben mit der Gleichung {{a}} · x = {{c}} im Kopf."
+        answer: { value: "c / a", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "c - a"
+            message: "Du hast {{a}} abgezogen. Das Rätsel rechnet aber mal {{a}}. Das Gegenteil von „mal {{a}}“ ist „geteilt durch {{a}}“."
+        hint: "Wie oft passt {{a}} in {{c}}? Das Gegenteil von „mal {{a}}“ ist „geteilt durch {{a}}“."
+        steps:
+          - "Die Gleichung heißt {{a}} · x = {{c}}."
+          - "Rückwärts: x = {{c}} : {{a}} = {{answer}}."
+      - type: generated
+        id: probieren-mal-plus
+        given:
+          a: { int: [2, 9] }
+          b: { int: [2, 25] }
+          c: { int: [20, 100] }
+        where: ["c > b", "decimals((c - b) / a) == 0"]
+        task:
+          text: "Löse die Gleichung {{a}} · x + {{b}} = {{c}}. Welche Zahl ist x?"
+        answer: { value: "(c - b) / a", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "c - b"
+            message: "Du hast {{b}} abgezogen, aber noch nicht durch {{a}} geteilt. x wird mit {{a}} multipliziert, also teilst du als Nächstes durch {{a}}."
+          - value: "c / a - b"
+            message: "Du hast zuerst durch {{a}} geteilt. Rückwärts rechnest du in der umgekehrten Reihenfolge: erst minus {{b}}, dann geteilt durch {{a}}."
+        hint: "Probiere in der Tabelle, oder rechne rückwärts: erst {{b}} abziehen, dann durch {{a}} teilen."
+        steps:
+          - "Vorwärts: x mal {{a}}, dann plus {{b}}, ergibt {{c}}."
+          - "Rückwärts: {{c}} − {{b}}, dann geteilt durch {{a}}."
+          - "x = ({{c}} − {{b}}) : {{a}} = {{answer}}."
+      - type: text
+        text: >-
+          Das kannst du jetzt: Du schreibst ein Zahlenrätsel als Gleichung auf, findest die gedachte Zahl durch Probieren in
+          der Tabelle und prüfst sie mit einer Probe.
