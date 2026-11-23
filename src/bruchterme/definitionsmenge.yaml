@@ -1,20 +1,176 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Wann ein Bruchterm nicht definiert ist
-description: "Platzhalter, wird ersetzt."
+description: "Bei welchen Zahlen ein Bruchterm keinen Wert hat: Du setzt Zahlen in eine Tabelle ein, siehst die Lücke und schreibst auf, welche Zahl x nicht sein darf."
 competencies: [bruchterme]
 blocks:
+  - type: section
+    id: tabelle
+    title: Bruchterme in die Tabelle einsetzen
+    blocks:
+      - type: text
+        text: >-
+          Ein **Bruchterm** ist ein Bruch, bei dem im Zähler oder im Nenner eine Variable steht, zum Beispiel
+          $\frac{12}{x - 2}$. Für $x$ setzt du eine Zahl ein und rechnest den Bruch aus.
+      - type: text
+        text: >-
+          Probiere es in der Tabelle: Trag Zahlen für $x$ ein. Gibt es eine Zahl, bei der kein Ergebnis herauskommt?
+      - type: vue-component
+        id: tabelle-12-durch-x-minus-2
+        component: BruchtermTabelle
+        props:
+          a: 0
+          b: 12
+          c: 1
+          d: -2
+          start: [5, 8, 0]
+          eingabeLabel: "Zahl für x"
+          eintragen: "In die Tabelle"
+          neuAnfangen: "Neu anfangen"
+          spalteX: "x"
+          spalteTerm: "Bruchterm"
+          spalteErgebnis: "Ergebnis"
+          nichtDefiniert: "nicht definiert"
+          nennerNull: "Nenner ist 0"
+        nojs: |
+          Tabelle für den Bruchterm 12 geteilt durch (x − 2). Für x = 5 ist das Ergebnis 4, für x = 8 ist es 2, für x = 0 ist
+          es −6. Für x = 2 wird der Nenner 2 − 2 = 0: Dort steht „nicht definiert“.
+  - type: section
+    id: regel
+    title: Der Nenner darf nie null sein
+    blocks:
+      - type: text
+        text: >-
+          Wird der Nenner 0, hat der Bruchterm keinen Wert, denn durch 0 kannst du nicht teilen: Mal 0 kommt nie 6 heraus, also gibt es 6 : 0 nicht. Der Bruchterm ist dann für diese Zahl **nicht definiert**. Alle anderen
+          Zahlen darfst du einsetzen.
+      - type: definition
+        term: Definitionsmenge
+        explanation: >-
+          Die Zahlen, die du für $x$ einsetzen darfst. Du schreibst sie als „$x$ darf nicht … sein“, bei
+          $\frac{12}{x - 2}$ also „$x$ darf nicht 2 sein“, kurz $x \neq 2$.
+      - type: formula
+        formula: 'x - 2 = 0 \quad \Rightarrow \quad x = 2'
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: "Nur der Nenner entscheidet. Ist der Zähler 0, ist der Bruchterm definiert und hat den Wert 0."
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: example
+        title: "Der Bruchterm mit dem Nenner 2x − 8"
+        blocks:
+          - type: formula
+            formula: '\frac{3}{2x - 8}'
+          - type: table
+            caption: "Nenner gleich 0 setzen und lösen, so wie auf der Waage."
+            rowHeaders: true
+            rows:
+              - ["Nenner gleich 0", "$2x - 8 = 0$"]
+              - ["auf beiden Seiten plus 8", "$2x = 8$"]
+              - ["auf beiden Seiten durch 2", "$x = 4$"]
+              - ["Probe", "$2 \\cdot 4 - 8 = 0$"]
+              - ["Ergebnis", "$x$ darf nicht 4 sein."]
+          - type: text
+            text: "Du kannst die Zahl auch in der Tabelle suchen: Probiere, bis der Nenner 0 wird."
   - type: section
     id: uebung
     title: Übung
     blocks:
+      - type: generated
+        id: luecke-minus
+        given:
+          a: { int: [2, 9] }
+          z: { int: [2, 9] }
+        where: ["z != a"]
+        task:
+          text: "Für welche Zahl ist der Bruchterm $\\frac{{{z}}}{x - {{a}}}$ nicht definiert?"
+        answer: { value: "a", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "-a"
+            message: "Minus statt Plus: Bei x − {{a}} = 0 gehört auf beiden Seiten {{a}} dazu, also x = {{a}}."
+          - value: "z"
+            message: "{{z}} steht im Zähler. Nur der Nenner darf nicht 0 werden."
+        hint: "Setze den Nenner gleich 0: Für welche Zahl ist x − {{a}} gleich 0?"
+        steps:
+          - "$x - {{a}} = 0$"
+          - "$x = {{answer}}$. Probe: ${{answer}} - {{a}} = 0$."
+      - type: generated
+        id: luecke-plus
+        given:
+          a: { int: [2, 9] }
+          z: { int: [2, 9] }
+        task:
+          text: "Für welche Zahl ist der Bruchterm $\\frac{{{z}}}{x + {{a}}}$ nicht definiert?"
+        answer: { value: "-a", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "a"
+            message: "Das Vorzeichen stimmt nicht. {{a}} gehört auf beiden Seiten abgezogen, also x = −{{a}}."
+          - value: "z"
+            message: "Die {{z}} oben spielt keine Rolle. Es zählt nur der Nenner."
+        hint: "Welche Zahl plus {{a}} ergibt 0?"
+        steps:
+          - "$x + {{a}} = 0$"
+          - "$x = {{answer}}$. Probe: ${{answer}} + {{a}} = 0$."
       - type: single-choice
-        id: platzhalter-definitionsmenge
-        text: "Platzhalter: Welche Zahl ist größer?"
+        id: zaehler-null
+        text: "Ist der Bruchterm $\\frac{x - 2}{x + 1}$ für $x = 2$ definiert?"
         options:
-          - text: "3"
-            correct: false
-            info: "3 ist kleiner als 5."
-          - text: "5"
+          - text: "Ja, der Wert ist 0"
             correct: true
-            info: "5 ist größer als 3."
-        explanation: "5 ist größer als 3."
+            info: "Zähler 0, Nenner 3: 0 : 3 = 0. Verboten ist nur ein Nenner 0."
+          - text: "Nein, weil der Zähler 0 wird"
+            correct: false
+            info: "Ein Zähler 0 ist erlaubt. Du verwechselst Zähler und Nenner."
+          - text: "Nein, weil die Zahl 2 im Term vorkommt"
+            correct: false
+            info: "Kein Grund: Der Nenner x + 1 ist für x = 2 gleich 3."
+        explanation: "Nicht definiert ist der Term nur, wo der Nenner 0 wird, hier bei x = −1."
+      - type: ordering
+        id: luecke-schritte-ordnen
+        text: "Wann ist ein Bruchterm nicht definiert? Bring die Schritte in die richtige Reihenfolge."
+        items:
+          - "Den Nenner gleich 0 setzen"
+          - "Die Gleichung lösen"
+          - "Die Probe machen: Wird der Nenner 0?"
+          - "Aufschreiben: x darf nicht … sein"
+        explanation: "Gleichung aufstellen, lösen, Probe machen, aufschreiben."
+      - type: generated
+        id: luecke-faktor
+        given:
+          m: { int: [2, 5] }
+          n: { int: [2, 30] }
+          z: { int: [2, 9] }
+        where: ["decimals(n / m) == 0"]
+        task:
+          text: "Für welche Zahl ist der Bruchterm $\\frac{{{z}}}{{{m}}x - {{n}}}$ nicht definiert?"
+        answer: { value: "n / m", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "n"
+            message: "Du hast {{n}} nicht durch {{m}} geteilt: x = {{n}} : {{m}}."
+          - value: "-n / m"
+            message: "Ein Minus zu viel: {{m}}x − {{n}} = 0 wird zu {{m}}x = {{n}}, und {{n}} ist positiv."
+        hint: "Nenner gleich 0, auf beiden Seiten plus {{n}}, dann durch {{m}}."
+        steps:
+          - "${{m}}x - {{n}} = 0$"
+          - "${{m}}x = {{n}}$"
+          - "$x = {{n}} : {{m}} = {{answer}}$"
+      - type: single-choice
+        id: luecke-produkt
+        text: "Wann ist der Bruchterm $\\frac{5}{(x - 3)(x + 4)}$ nicht definiert?"
+        options:
+          - text: "x darf nicht 3 und nicht −4 sein"
+            correct: true
+            info: "Ein Produkt ist 0, sobald ein Faktor 0 ist: x = 3 oder x = −4."
+          - text: "x darf nur nicht 3 sein"
+            correct: false
+            info: "Auch x + 4 kann 0 werden, nämlich für x = −4."
+          - text: "x darf nicht 3 und nicht 4 sein"
+            correct: false
+            info: "Aus x + 4 = 0 folgt x = −4, nicht 4."
+        explanation: "Jeden Faktor des Nenners gleich 0 setzen: x darf nicht 3 und nicht −4 sein."
+      - type: text
+        text: >-
+          Das kannst du jetzt: Du setzt Zahlen in einen Bruchterm ein, setzt den Nenner gleich 0, löst die Gleichung
+          und schreibst auf, welche Zahlen $x$ nicht sein darf.
