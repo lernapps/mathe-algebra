@@ -2,7 +2,7 @@
 // Tabelle zum Probieren für das Kapitel "Rätsel mit Platzhaltern": zur Gleichung a · x + b = c trägt man Zahlen für x
 // ein; die Tabelle rechnet beide Seiten aus und sagt mit Wort und Zeichen, ob links kleiner, gleich oder größer ist.
 // Ein Werkzeug zum Ausprobieren, keine Aufgabe (RaetselTabelle.ts); gespeichert wird nichts.
-import { computed, ref, useId } from "vue";
+import { computed, nextTick, ref, useId } from "vue";
 import { gleichungText, hinweis, trageEin, vergleichText, zahlText, type Zeile } from "./RaetselTabelle.ts";
 
 const props = defineProps<{
@@ -31,10 +31,14 @@ function eintragenKlick(): void {
   if (ergebnis.meldung === "") eingabe.value = "";
 }
 
-function neuAnfangenKlick(): void {
+const feld = ref<HTMLInputElement | null>(null);
+
+async function neuAnfangenKlick(): Promise<void> {
   zeilen.value = [];
   meldung.value = "";
   eingabe.value = "";
+  await nextTick();
+  feld.value?.focus();
 }
 
 const rueckmeldung = computed(() => (meldung.value !== "" ? meldung.value : hinweis(zeilen.value)));
@@ -49,6 +53,7 @@ const rueckmeldung = computed(() => (meldung.value !== "" ? meldung.value : hinw
       <label :for="`${id}-x`">{{ eingabeLabel }}</label>
       <input
         :id="`${id}-x`"
+        ref="feld"
         v-model="eingabe"
         type="text"
         inputmode="decimal"
@@ -61,7 +66,8 @@ const rueckmeldung = computed(() => (meldung.value !== "" ? meldung.value : hinw
         {{ neuAnfangen }}
       </button>
     </div>
-    <div class="tabelle-scroll">
+    <p class="tabelle-hinweis" aria-live="polite">{{ rueckmeldung }}</p>
+    <div class="tabelle-scroll" tabindex="0" role="region" :aria-label="spalteVergleich">
       <table v-if="zeilen.length > 0" class="tabelle-werte">
         <thead>
           <tr>
@@ -81,7 +87,6 @@ const rueckmeldung = computed(() => (meldung.value !== "" ? meldung.value : hinw
         </tbody>
       </table>
     </div>
-    <p class="tabelle-hinweis" aria-live="polite">{{ rueckmeldung }}</p>
   </div>
 </template>
 
@@ -144,6 +149,6 @@ const rueckmeldung = computed(() => (meldung.value !== "" ? meldung.value : hinw
   font-weight: 700;
 }
 .tabelle-hinweis {
-  margin: 0;
+  margin: 0.5rem 0 0;
 }
 </style>

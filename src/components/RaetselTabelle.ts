@@ -67,7 +67,7 @@ export function hinweis(zeilen: Zeile[]): string {
   const letzte = zeilen[zeilen.length - 1];
   if (letzte === undefined) return "Trag eine Zahl für x ein.";
   if (letzte.vergleich === "gleich")
-    return `Treffer: Für x = ${zahlText(letzte.x)} sind beide Seiten ${zahlText(letzte.rechts)}.`;
+    return `Treffer: Für x = ${zahlText(letzte.x)} sind beide Seiten ${zahlText(letzte.rechts)}. Das ist die Lösung.`;
   return letzte.vergleich === "kleiner"
     ? `Links ist noch zu klein. Probier ein größeres x als ${zahlText(letzte.x)}.`
     : `Links ist zu groß. Probier ein kleineres x als ${zahlText(letzte.x)}.`;

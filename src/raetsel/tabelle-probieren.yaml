@@ -36,13 +36,13 @@ blocks:
       - type: definition
         term: Gleichung
         explanation: >-
-          Zwei Terme mit einem Gleichheitszeichen dazwischen, zum Beispiel $3 \cdot x + 4 = 19$. Links und rechts
-          steht derselbe Wert, wenn du die richtige Zahl für $x$ einsetzt. Diese Zahl heißt **Lösung**.
+          Links und rechts vom Gleichheitszeichen steht eine Rechnung, zum Beispiel $3 \cdot x + 4 = 19$. Beide Seiten
+          haben denselben Wert, wenn du die richtige Zahl für $x$ einsetzt. Diese Zahl heißt **Lösung**.
       - type: text
         text: >-
           Du findest die Lösung durch **Probieren**: Setze eine Zahl für $x$ ein und rechne die linke Seite aus.
-          Probiere es in der Tabelle. Sie sagt dir bei jeder Zahl, ob links kleiner, gleich oder größer ist als
-          rechts.
+          Probiere es in der Tabelle: Trag eine Zahl ein. Sie rechnet die linke Seite aus und sagt dir, ob sie kleiner,
+          gleich oder größer ist als die rechte Seite (19).
       - type: vue-component
         id: tabelle-3x-plus-4
         component: RaetselTabelle
@@ -68,14 +68,15 @@ blocks:
         title: "Löse 3 · x + 4 = 19 durch Probieren"
         blocks:
           - type: table
-            caption: "Drei Versuche. Der erste ist zu klein, der zweite zu groß, der dritte stimmt."
+            caption: "Vier Versuche. Jeder Wert sagt, in welche Richtung du als Nächstes gehst."
             header: ["x", "3 · x + 4", "Vergleich mit 19"]
             rows:
               - ["2", "10", "kleiner"]
               - ["6", "22", "größer"]
+              - ["4", "16", "kleiner"]
               - ["5", "19", "gleich"]
           - type: text
-            text: "Die Lösung ist $x = 5$. Zur Probe: $3 \\cdot 5 + 4 = 15 + 4 = 19$."
+            text: "Die Lösung ist $x = 5$. Die **Probe** ist das Nachrechnen mit der Lösung: $3 \\cdot 5 + 4 = 15 + 4 = 19$. Das stimmt. Ein zweiter Weg ist das **Rückwärtsrechnen**: Das Gegenteil von „plus 4“ ist „minus 4“, das Gegenteil von „mal 3“ ist „geteilt durch 3“. Also $19 - 4 = 15$ und $15 : 3 = 5$. Beide Wege führen zu $x = 5$."
   - type: section
     id: uebung
     title: Übung
@@ -84,16 +85,42 @@ blocks:
         id: naechste-zahl-waehlen
         text: "Bei 3 · x + 4 = 19 hast du x = 6 probiert. Links kommt 22 heraus. Was probierst du als Nächstes?"
         options:
-          - text: "Eine kleinere Zahl als 6, zum Beispiel 5"
+          - text: "Eine kleinere Zahl als 6"
             correct: true
             info: "Links ist 22 und damit größer als 19. Eine kleinere Zahl für x macht die linke Seite kleiner."
-          - text: "Eine größere Zahl als 6, zum Beispiel 8"
+          - text: "Eine größere Zahl als 6"
             correct: false
             info: "Mit einer größeren Zahl wird die linke Seite noch größer, also noch weiter weg von 19."
           - text: "Genau dieselbe Zahl noch einmal"
             correct: false
             info: "Dieselbe Zahl gibt dasselbe Ergebnis. Du brauchst eine andere Zahl."
         explanation: "Ist die linke Seite zu groß, nimmst du ein kleineres x. Ist sie zu klein, nimmst du ein größeres x."
+        links:
+          - title: Einfache Gleichungen (Lernlandkarte)
+            url: "https://lernapps.net/apps/map/mathematik/c/einfache-gleichungen/"
+      - type: vue-component
+        id: tabelle-2x-plus-7
+        component: RaetselTabelle
+        props:
+          a: 2
+          b: 7
+          c: 25
+          eingabeLabel: "Zahl für x"
+          eintragen: "In die Tabelle"
+          neuAnfangen: "Neu anfangen"
+          spalteX: "x"
+          spalteLinks: "2 · x + 7"
+          spalteRechts: "Rechts"
+          spalteVergleich: "Vergleich"
+        nojs: |
+          Tabelle zum Probieren für 2 · x + 7 = 25. Probier Zahlen für x aus, bis beide Seiten gleich sind.
+      - type: number
+        id: probieren-2x-plus-7
+        text: "Löse 2 · x + 7 = 25 mit der Tabelle darüber. Welche Zahl ist x?"
+        answer: 9
+        tolerance: 0
+        hint: "Probier eine Zahl, schau auf den Vergleich und geh in die passende Richtung."
+        explanation: "Für x = 9 ist 2 · 9 + 7 = 18 + 7 = 25. Beide Seiten sind gleich, also ist 9 die Lösung."
         links:
           - title: Einfache Gleichungen (Lernlandkarte)
             url: "https://lernapps.net/apps/map/mathematik/c/einfache-gleichungen/"
@@ -120,7 +147,7 @@ blocks:
           c: { int: [12, 90] }
         where: ["decimals(c / a) == 0"]
         task:
-          text: "Ich denke mir eine Zahl und rechne mal {{a}}. Das Ergebnis ist {{c}}. Welche Zahl habe ich mir gedacht? Tipp: Probiere in der Tabelle oben mit der Gleichung {{a}} · x = {{c}} im Kopf."
+          text: "Ich denke mir eine Zahl und rechne mal {{a}}. Das Ergebnis ist {{c}}. Welche Zahl habe ich mir gedacht?"
         answer: { value: "c / a", compare: { number: { format: integer } } }
         mistakes:
           - value: "c - a"
@@ -144,12 +171,12 @@ blocks:
             message: "Du hast {{b}} abgezogen, aber noch nicht durch {{a}} geteilt. x wird mit {{a}} multipliziert, also teilst du als Nächstes durch {{a}}."
           - value: "c / a - b"
             message: "Du hast zuerst durch {{a}} geteilt. Rückwärts rechnest du in der umgekehrten Reihenfolge: erst minus {{b}}, dann geteilt durch {{a}}."
-        hint: "Probiere in der Tabelle, oder rechne rückwärts: erst {{b}} abziehen, dann durch {{a}} teilen."
+        hint: "Probiere Zahlen aus und rechne die linke Seite aus, oder rechne rückwärts: erst {{b}} abziehen, dann durch {{a}} teilen."
         steps:
           - "Vorwärts: x mal {{a}}, dann plus {{b}}, ergibt {{c}}."
           - "Rückwärts: {{c}} − {{b}}, dann geteilt durch {{a}}."
           - "x = ({{c}} − {{b}}) : {{a}} = {{answer}}."
       - type: text
         text: >-
-          Das kannst du jetzt: Du schreibst ein Zahlenrätsel als Gleichung auf, findest die gedachte Zahl durch Probieren in
-          der Tabelle und prüfst sie mit einer Probe.
+          Das kannst du jetzt: Du liest ein Zahlenrätsel als Gleichung, findest die gedachte Zahl durch Probieren in der
+          Tabelle oder durch Rückwärtsrechnen und prüfst sie mit der Probe.
