@@ -1,0 +1,110 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Rückwärts rechnen mit Pfeilen
+description: "Ein Zahlenrätsel rückwärts lösen: Du zeichnest die Rechenschritte als Pfeile und kehrst jeden Pfeil um."
+competencies: [einfache-gleichungen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Ich denke mir eine Zahl
+    blocks:
+      - type: single-choice
+        id: umkehren-erkennen
+        text: "Ich denke mir eine Zahl und rechne mal 4. Das Ergebnis ist 20. Welche Zahl habe ich mir gedacht?"
+        options:
+          - text: "5"
+            correct: true
+            info: "5 · 4 = 20. Das Gegenteil von „mal 4“ ist „geteilt durch 4“: 20 : 4 = 5."
+          - text: "16"
+            correct: false
+            info: "16 ist 20 − 4. Hier wird aber mal 4 gerechnet, nicht minus 4."
+          - text: "80"
+            correct: false
+            info: "80 ist 20 · 4. Du musst rückwärts rechnen, also teilen."
+        explanation: "Die gedachte Zahl ist 5, denn 5 · 4 = 20."
+        links:
+          - title: Einfache Gleichungen (Lernlandkarte)
+            url: "https://lernapps.net/apps/map/mathematik/c/einfache-gleichungen/"
+  - type: section
+    id: pfeile
+    title: Pfeile hin und zurück
+    blocks:
+      - type: text
+        text: >-
+          Ein Rätsel besteht aus Rechenschritten. Du zeichnest sie als Pfeile: Aus $x$ wird mal 3, dann plus 4 und am Ende
+          19. Zurück gehst du in der **umgekehrten Reihenfolge**, und jeder Schritt wird zu seinem **Gegenteil**: Aus
+          „plus 4“ wird „minus 4“, aus „mal 3“ wird „geteilt durch 3“. Das nennst du **Umkehraufgabe**.
+      - type: table
+        caption: "Das Rätsel 3 · x + 4 = 19: oben hin, unten zurück."
+        rowHeaders: true
+        rows:
+          - ["Hin", "x → · 3 → + 4 → 19"]
+          - ["Zurück", "19 → − 4 → : 3 → 5"]
+      - type: text
+        text: "Rechnung zurück: $19 - 4 = 15$ und $15 : 3 = 5$. Zur Probe: $3 \\cdot 5 + 4 = 19$."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: ordering
+        id: rueckwaerts-ordnen
+        text: "Bei 3 · x + 4 = 19 gehst du zurück. Bring die Schritte in die richtige Reihenfolge."
+        items:
+          - "Von 19 abziehen: 19 − 4"
+          - "Das Ergebnis durch 3 teilen"
+          - "Die Probe machen"
+        explanation: "Zurück gehst du in der umgekehrten Reihenfolge: erst das Plus rückgängig machen, dann das Mal, am Ende die Probe."
+        links:
+          - title: Einfache Gleichungen (Lernlandkarte)
+            url: "https://lernapps.net/apps/map/mathematik/c/einfache-gleichungen/"
+      - type: generated
+        id: umkehren-minus
+        given:
+          b: { int: [3, 25] }
+          c: { int: [2, 40] }
+        task:
+          text: "Ich denke mir eine Zahl und ziehe {{b}} ab. Das Ergebnis ist {{c}}. Welche Zahl habe ich mir gedacht?"
+        answer: { value: "c + b", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "c - b"
+            message: "Du hast noch einmal {{b}} abgezogen. Das Gegenteil von „minus {{b}}“ ist „plus {{b}}“."
+        hint: "Das Gegenteil von „minus {{b}}“ ist „plus {{b}}“."
+        steps:
+          - "Die Gleichung heißt x − {{b}} = {{c}}."
+          - "Zurück: x = {{c}} + {{b}} = {{answer}}."
+      - type: generated
+        id: umkehren-geteilt
+        given:
+          a: { int: [2, 9] }
+          c: { int: [2, 12] }
+        task:
+          text: "Ich denke mir eine Zahl und teile sie durch {{a}}. Das Ergebnis ist {{c}}. Welche Zahl habe ich mir gedacht?"
+        answer: { value: "c * a", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "c / a"
+            message: "Du hast noch einmal durch {{a}} geteilt. Das Gegenteil von „geteilt durch {{a}}“ ist „mal {{a}}“."
+        hint: "Das Gegenteil von „geteilt durch {{a}}“ ist „mal {{a}}“."
+        steps:
+          - "Die Gleichung heißt x : {{a}} = {{c}}."
+          - "Zurück: x = {{c}} · {{a}} = {{answer}}."
+      - type: generated
+        id: umkehren-zwei-schritte
+        given:
+          a: { int: [2, 9] }
+          b: { int: [2, 20] }
+          c: { int: [10, 80] }
+        where: ["c > b", "decimals((c + b) / a) == 0"]
+        task:
+          text: "Ich denke mir eine Zahl, rechne mal {{a}} und ziehe dann {{b}} ab. Das Ergebnis ist {{c}}. Welche Zahl habe ich mir gedacht?"
+        answer: { value: "(c + b) / a", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "(c - b) / a"
+            message: "Du hast {{b}} abgezogen. Das Rätsel hat {{b}} schon abgezogen, du musst es zurück addieren: erst plus {{b}}, dann geteilt durch {{a}}."
+          - value: "c + b"
+            message: "Du hast {{b}} richtig addiert, aber noch nicht durch {{a}} geteilt."
+        hint: "Zeichne die Pfeile hin und kehre sie um: erst „plus {{b}}“, dann „geteilt durch {{a}}“."
+        steps:
+          - "Hin: x → · {{a}} → − {{b}} → {{c}}."
+          - "Zurück: {{c}} → + {{b}} → : {{a}}."
+          - "x = ({{c}} + {{b}}) : {{a}} = {{answer}}."
+      - type: text
+        text: "Das kannst du jetzt: Du kehrst jeden Rechenschritt um, in umgekehrter Reihenfolge, und findest so die gedachte Zahl."

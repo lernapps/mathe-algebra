@@ -174,7 +174,7 @@ ans Orchestrator-Protokoll `map-review`, falls der Lernenden-Prüfer es als Lüc
 - [x] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
 - [x] Slice 1 (Musterseite, selbst): Kapitel raetsel, Seite tabelle-probieren (einfache-gleichungen): Komponente Tabelle zum Probieren, ≥3 Aufgaben, Bild, Test; danach Lernenden-Prüfer Klasse 7
-- [ ] Slice 2: raetsel – Recap-Seite (recap grundrechenarten-rechengesetze) + Kurztest-Seite (selbst)
+- [x] Slice 2: raetsel – Recap-Seite (recap grundrechenarten-rechengesetze) + Kurztest-Seite (selbst)
 - [ ] Slice 3: raetsel – Seiten zahlenraetsel-umkehren (Umkehrpfeile) und waage-paeckchen (Waage-Komponente), je ≥3 Aufgaben (Sub-Agent möglich, eigene Dateien)
 - [ ] Slice 4: terme – Recap-Seite (recap rationale-zahlen-rechnen) + Kurztest (selbst)
 - [ ] Slice 5: terme – Seite(n) terme-variable (Streichholzmuster, Term aufstellen, Tabelle prüft Gleichheit) (Sub-Agent möglich)
