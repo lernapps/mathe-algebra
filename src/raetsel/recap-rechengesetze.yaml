@@ -77,7 +77,7 @@ blocks:
             - {
                 text: "7 · 100 − 2",
                 correct: false,
-                info: "Der Faktor 7 gehört auch zur 2: 7 · 98 = 7 · 100 − 7 · 2. Sonst fehlen 12.",
+                info: "Der Faktor 7 gehört auch zur 2: 7 · 98 = 7 · 100 − 7 · 2. Sonst sind es 12 zu viel.",
               }
             - {
                 text: "7 · 90 + 8",
@@ -97,5 +97,5 @@ blocks:
     blocks:
       - type: text
         text: |
-          - Du rechnest Klammern zuerst und beachtest Punkt vor Strich.
-          - Du rechnest mit den Rechengesetzen vorteilhaft, zum Beispiel $4 \cdot 27 \cdot 25$ im Kopf.
+          - Ich kann Klammern zuerst rechnen und Punkt vor Strich beachten.
+          - Ich kann mit den Rechengesetzen vorteilhaft rechnen, zum Beispiel $4 \cdot 27 \cdot 25$ im Kopf.

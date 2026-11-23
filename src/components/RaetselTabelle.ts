@@ -68,7 +68,7 @@ export function hinweis(zeilen: Zeile[], ungleichung = false): string {
   if (letzte === undefined) return "Trag eine Zahl für x ein.";
   if (ungleichung) {
     if (letzte.vergleich === "gleich") {
-      return `Für x = ${zahlText(letzte.x)} sind beide Seiten gleich: Hier kippt die Waage. Probier Zahlen darüber und darunter.`;
+      return `Für x = ${zahlText(letzte.x)} sind beide Seiten gleich: Die Waage ist im Gleichgewicht, das ist die Grenze. Probier Zahlen darüber und darunter.`;
     }
     return letzte.vergleich === "kleiner"
       ? `Für x = ${zahlText(letzte.x)} ist links kleiner als rechts.`

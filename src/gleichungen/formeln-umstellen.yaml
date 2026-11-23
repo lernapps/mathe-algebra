@@ -131,7 +131,7 @@ blocks:
         id: weg-berechnen
         given:
           v: { oneOf: [60, 80, 90, 100, 120] }
-          t: { oneOf: [2, 3, 6] }
+          t: { oneOf: [2, 3, 4] }
         task:
           text: "Die Formel v = s : t ist nach s umgestellt: s = v · t. Ein Auto fährt {{t}} Stunden lang mit {{v}} km/h. Wie viele Kilometer fährt das Auto?"
         answer: { value: "v * t", compare: { number: { format: integer, unit: km } } }

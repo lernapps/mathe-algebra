@@ -99,7 +99,7 @@ describe("trageEin", () => {
 
 describe("Ungleichung", () => {
   test("kein Treffer und keine Lösung, nur der Vergleich", () => {
-    expect(hinweis([probiere(g, 5)], true)).toContain("kippt");
+    expect(hinweis([probiere(g, 5)], true)).toContain("Grenze");
     expect(hinweis([probiere(g, 5)], true)).not.toContain("Lösung");
     expect(hinweis([probiere(g, 2)], true)).toContain("links kleiner");
     expect(hinweis([probiere(g, 6)], true)).toContain("links größer");

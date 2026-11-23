@@ -88,7 +88,7 @@ blocks:
             - {
                 text: "3/2",
                 correct: false,
-                info: "Du hast die Brüche nicht richtig verknüpft. Rechne 3/4 mal den Kehrwert 8/9 von 9/8.",
+                info: "Du hast die Zähler und die Nenner einzeln geteilt: 3 : 9 und 4 : 8 ergibt nicht 2/3. Rechne 3/4 mal den Kehrwert 8/9 von 9/8.",
               }
           right: "Richtig."
           wrong: "Nicht richtig."
@@ -103,5 +103,5 @@ blocks:
     blocks:
       - type: text
         text: |
-          - Du kannst einen Bruch kürzen und erweitern, ohne seinen Wert zu ändern.
-          - Du nimmst Brüche mal und teilst durch einen Bruch, indem du mit dem Kehrwert malnimmst.
+          - Ich kann einen Bruch kürzen und erweitern, ohne seinen Wert zu ändern.
+          - Ich kann Brüche malnehmen und durch einen Bruch teilen, indem ich mit dem Kehrwert malnehme.
