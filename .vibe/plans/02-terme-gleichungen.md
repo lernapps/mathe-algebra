@@ -46,6 +46,7 @@ Schicht 2, Tiefe 4; abhängig von #385 und #768.
 - Kapitel-ids: `raetsel` (K1), `terme` (K2, enthält `binom` nicht: das Kapitel `binom` bleibt wegen der Adressen
   bestehen und wird als K2b hinter `terme` einsortiert) (guess), `gleichungen` (K3), `bruchterme` (K4).
 - Neue Komponenten tragen das Präfix ihres Kapitels; Zufall mit `Zufallszahlen.ts` (mulberry32), Werte mit Rechenprobe im Test.
+- Kein `scope`: die App hat keine `open-task` und folgt keinem Material des Creators.
 - Waage und Tabelle als SVG/Vue-Komponenten im Explainer (keine Fremdquellen). (guess: Waage als SVG mit Schiebern, nicht Drag-and-drop, wegen Tastatur)
 
 ## Notes
@@ -165,14 +166,14 @@ ans Orchestrator-Protokoll `map-review`, falls der Lernenden-Prüfer es als Lüc
 - [x] `git switch -c increment/<NN>-<short name>` from `main`. Commit this plan on it.
 - [x] Load skill `lernapps-cli`. Update the app as its section "Update" says. Commit the update alone and fix its
       findings before any content. The update replaces the `lernapps-*` skills: read again those you use.
-- [ ] Load skill `lernapps-explainer` and the content guide.
-- [ ] Load skill `lernapps-content-questions`. Read whole, with your file tool:
+- [x] Load skill `lernapps-explainer` and the content guide.
+- [x] Load skill `lernapps-content-questions`. Read whole, with your file tool:
       `.agents/skills/lernapps-explainer/references/blocks.md` and
       `.agents/skills/lernapps-explainer/references/exercises.md`. A foreign language: also
       `references/language-tasks.md` in the same folder. A component in the plan: also `references/components.md`.
-- [ ] Decide whether the app needs `scope`, as "`scope`" in
+- [x] Decide whether the app needs `scope`, as "`scope`" in
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
-- [ ] Slice 1 (Musterseite, selbst): Kapitel raetsel, Seite tabelle-probieren (einfache-gleichungen): Komponente Tabelle zum Probieren, ≥3 Aufgaben, Bild, Test; danach Lernenden-Prüfer Klasse 7
+- [x] Slice 1 (Musterseite, selbst): Kapitel raetsel, Seite tabelle-probieren (einfache-gleichungen): Komponente Tabelle zum Probieren, ≥3 Aufgaben, Bild, Test; danach Lernenden-Prüfer Klasse 7
 - [ ] Slice 2: raetsel – Recap-Seite (recap grundrechenarten-rechengesetze) + Kurztest-Seite (selbst)
 - [ ] Slice 3: raetsel – Seiten zahlenraetsel-umkehren (Umkehrpfeile) und waage-paeckchen (Waage-Komponente), je ≥3 Aufgaben (Sub-Agent möglich, eigene Dateien)
 - [ ] Slice 4: terme – Recap-Seite (recap rationale-zahlen-rechnen) + Kurztest (selbst)
