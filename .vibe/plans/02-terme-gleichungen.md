@@ -40,8 +40,9 @@ Schicht 2, Tiefe 4; abhängig von #385 und #768.
 - Dritt-Inhalte raus: YouTube-Videos, serlo-Quelle, „Zum Nachlesen“-Links, `links:` an Übungen (zeigen künftig auf die
   Kartenseite des Bausteins), Tutor-Regeln ohne Video/serlo. Bild und Text tragen. (Orchestrator, Recherche-Antwort)
 - Vorhandene Binom-Seiten bleiben (ids, Adressen, Komponenten); angepasst wird nur, was gegen Regeln verstößt.
-- Recap nach regeln.md 7.6: Seite mit `recap:` nur mit beschreibenden Blöcken (Begriffe, Beispiel, Kopf, Checkliste),
-  der Selbsttest als normale Seite „… Kurztest“ direkt dahinter.
+- Recap nach regeln.md 7.6 (Änderung des Orchestrators): Seite mit `recap:` (beschreibend) und der Selbsttest als Komponente
+  `Kurztest` direkt in der Seite, kopiert aus `lernapps/mathe-saetze-entdecken` (Branch `work`) und angepasst; Rückfall nur
+  bei Fehlschlag: eigene Seite „… Kurztest“. Die Slices 2 und 4 lesen sich entsprechend (Kurztest = Komponente, keine Seite).
 - Kapitel-ids: `raetsel` (K1), `terme` (K2, enthält `binom` nicht: das Kapitel `binom` bleibt wegen der Adressen
   bestehen und wird als K2b hinter `terme` einsortiert) (guess), `gleichungen` (K3), `bruchterme` (K4).
 - Neue Komponenten tragen das Präfix ihres Kapitels; Zufall mit `Zufallszahlen.ts` (mulberry32), Werte mit Rechenprobe im Test.
@@ -138,8 +139,8 @@ frei gewählten Werten, deshalb Komponenten mit statischer Form und Text für Le
 - Aufgaben: `generated` (Zufallswerte, `mistakes` je typischem Fehler), `single-choice` je Seite; Term-Eingabe über den vorhandenen
   Parser (`BinomParser.ts`), gemeinsamer Code einmal in `src/components/`.
 - Recap nach regeln.md 7 und Orchestrator-Festlegung 7.6: Seite mit `recap:` (nur beschreibende Blöcke: Kopf „Das brauchst du für
-  dieses Kapitel“, je Baustein Überschrift mit Begriffen fett, Beispiel, Checkliste „Du bist bereit, wenn du …“) und direkt dahinter
-  die Seite „… Kurztest“ mit 1–2 Kurzaufgaben je Baustein und Verweis auf die Kartenseite des Bausteins. Begriffe ins Glossar.
+  dieses Kapitel“, je Baustein Überschrift mit Begriffen fett, Beispiel, Checkliste „Du bist bereit, wenn du …“) und darin die
+  Komponente `Kurztest` mit 1–2 Kurzaufgaben je Baustein und Verweis auf die Kartenseite des Bausteins (Rückfall: Kurztest-Seite). Begriffe ins Glossar.
 - Schreibweisen nach regeln.md 2; `a/b` in Rückmeldungen nur, wo die Laufzeit keine Formel setzt, jede Stelle im Plan gezählt (W28).
 
 Voraussetzungen von außen je Kapitel: K1 `grundrechenarten-rechengesetze` (Recap + Kurztest vor K1); K2 `rationale-zahlen-rechnen`
