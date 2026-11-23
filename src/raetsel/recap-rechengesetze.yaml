@@ -1,0 +1,89 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du für dieses Kapitel
+description: "Kurze Wiederholung zu Klammern, Punkt vor Strich und den Rechengesetzen, mit zwei Kurztests, damit du siehst, ob du bereit bist."
+recap: mathematik/grundrechenarten-rechengesetze
+blocks:
+  - type: text
+    text: >-
+      Das brauchst du für dieses Kapitel: Du löst Zahlenrätsel und rechnest dabei vor und zurück. Dafür musst du
+      sicher mit Klammern, Punkt vor Strich und den Rechengesetzen umgehen. Der Baustein heißt auf der Lernlandkarte
+      „Vorrangregeln und Rechengesetze“: Ich kann Klammern und Vorrangregeln beachten und Rechengesetze für vorteilhaftes
+      Rechnen nutzen.
+  - type: section
+    id: vorrangregeln
+    title: Vorrangregeln und Rechengesetze
+    blocks:
+      - type: definition
+        term: Punkt vor Strich
+        explanation: >-
+          Die Vorrangregel für Rechnungen ohne Klammern: Malnehmen und Teilen (Punktrechnung) kommen vor Plus und
+          Minus (Strichrechnung). Beispiel: $3 + 4 \cdot 5 = 3 + 20 = 23$.
+      - type: definition
+        term: Klammer
+        explanation: >-
+          Was in einer Klammer steht, rechnest du zuerst. Beispiel: $(3 + 4) \cdot 5 = 7 \cdot 5 = 35$.
+      - type: vue-component
+        id: kurztest-punkt-vor-strich
+        component: Kurztest
+        props:
+          question: "Was ist 3 + 4 · 5?"
+          options:
+            - { text: "23", correct: true, info: "Erst 4 · 5 = 20, dann 3 + 20 = 23: Punkt vor Strich." }
+            - { text: "35", correct: false, info: "Das ist (3 + 4) · 5. Ohne Klammer rechnest du erst das Malnehmen." }
+            - { text: "20", correct: false, info: "4 · 5 = 20 stimmt, aber du musst noch die 3 addieren." }
+          right: "Richtig."
+          wrong: "Nicht richtig."
+        nojs: |
+          Kurztest: Was ist 3 + 4 · 5? 23, 35 oder 20. Antwort: 23, denn erst 4 · 5 = 20, dann 3 + 20 = 23 (Punkt vor Strich).
+      - type: definition
+        term: Kommutativgesetz
+        explanation: >-
+          Das Vertauschungsgesetz: Beim Plus und beim Malnehmen darfst du die Zahlen vertauschen. Beispiel:
+          $4 \cdot 25 = 25 \cdot 4$. Beim Minus und beim Teilen geht das nicht: $7 - 3$ ist nicht $3 - 7$.
+      - type: definition
+        term: Assoziativgesetz
+        explanation: >-
+          Das Verbindungsgesetz: Beim Plus und beim Malnehmen darfst du anders zusammenfassen. Beispiel: Du
+          rechnest zuerst $48 + 52 = 100$, dann $37 + 100 = 137$.
+      - type: definition
+        term: Distributivgesetz
+        explanation: >-
+          Das Verteilungsgesetz: Ein Faktor vor einer Klammer wird auf jeden Summanden verteilt. Beispiel:
+          $6 \cdot 23 = 6 \cdot 20 + 6 \cdot 3$. Das sind $120 + 18 = 138$.
+      - type: example
+        title: "Kannst du vorteilhaft rechnen? 4 · 27 · 25"
+        blocks:
+          - type: text
+            text: "Vertausche und fasse zusammen: $4 \\cdot 27 \\cdot 25 = 27 \\cdot (4 \\cdot 25) = 27 \\cdot 100 = 2700$."
+      - type: vue-component
+        id: kurztest-verteilen
+        component: Kurztest
+        props:
+          question: "6 · 23 = 6 · 20 + 6 · ? Welche Zahl gehört auf das Fragezeichen?"
+          options:
+            - { text: "3", correct: true, info: "23 = 20 + 3, also 6 · 23 = 6 · 20 + 6 · 3 = 120 + 18 = 138." }
+            - {
+                text: "23",
+                correct: false,
+                info: "Du verteilst auf die Teile von 23, also auf 20 und 3, nicht noch einmal auf 23.",
+              }
+            - {
+                text: "6",
+                correct: false,
+                info: "Der Faktor 6 steht schon vor der Klammer. Verteilt wird er auf 20 und 3.",
+              }
+          right: "Richtig."
+          wrong: "Nicht richtig."
+        nojs: |
+          Kurztest: 6 · 23 = 6 · 20 + 6 · ? Antwort: 3, denn 23 = 20 + 3 (Distributivgesetz), also 6 · 23 = 120 + 18 = 138.
+      - type: text
+        text: >-
+          Hast du dich vertan? Dann wiederhole den Baustein „Vorrangregeln und Rechengesetze“ auf seiner Seite der
+          Lernlandkarte: [Vorrangregeln und Rechengesetze](https://lernapps.net/apps/map/mathematik/c/grundrechenarten-rechengesetze/).
+  - type: note
+    title: Du bist bereit, wenn du …
+    blocks:
+      - type: text
+        text: >-
+          … Klammern zuerst rechnest und Punkt vor Strich beachtest. … mit den Rechengesetzen vorteilhaft rechnest,
+          zum Beispiel $4 \cdot 27 \cdot 25$ im Kopf.
