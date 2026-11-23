@@ -1,23 +1,276 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Bruchgleichungen lösen
-description: "Platzhalter, wird ersetzt."
+description: "Gleichungen mit x im Nenner lösen, auf zwei Wegen: durch Einsetzen in die Tabelle und durch Rechnen mit dem Hauptnenner. Mit Definitionsmenge und Probe."
 competencies: [bruchgleichungen]
 blocks:
+  - type: section
+    id: einstieg
+    title: Eine Zahl steht im Nenner
+    blocks:
+      - type: number
+        id: teilen-rueckwaerts
+        text: "Ich denke mir eine Zahl. Wenn ich 6 durch diese Zahl teile, kommt 2 heraus. Welche Zahl habe ich mir gedacht?"
+        answer: 3
+        tolerance: 0
+        hint: "Probiere ein paar Zahlen aus."
+        explanation: "Es ist 3, denn 6 : 3 = 2. Als Gleichung: 6 : x = 2."
+        links:
+          - title: Bruchgleichungen (Lernlandkarte)
+            url: "https://lernapps.net/apps/map/mathematik/c/bruchgleichungen/"
+  - type: section
+    id: tabelle
+    title: "Weg 1: Zahlen einsetzen"
+    blocks:
+      - type: text
+        text: >-
+          Die Gleichung $\frac{6}{x} = 2$ ist eine **Bruchgleichung**: Das $x$ steht im Nenner. Du löst sie wie ein
+          Zahlenrätsel durch Probieren. Trag Zahlen für $x$ in die Tabelle ein, auch die 0.
+      - type: vue-component
+        id: tabelle-6-durch-x
+        component: BruchgleichungTabelle
+        props:
+          links:
+            - { za: 0, zb: 6, na: 1, nb: 0 }
+          rechts:
+            - { za: 0, zb: 2, na: 0, nb: 1 }
+          eingabeLabel: "Zahl für x"
+          eintragen: "In die Tabelle"
+          neuAnfangen: "Neu anfangen"
+          spalteX: "x"
+          spalteLinks: "Links"
+          spalteRechts: "Rechts"
+          spalteVergleich: "Vergleich"
+        nojs: |
+          Tabelle zum Probieren für 6 : x = 2. Für x = 2 ist die linke Seite 3: größer als 2. Für x = 4 ist sie 1,5:
+          kleiner als 2. Für x = 3 ist sie 2: beide Seiten sind gleich. Für x = 0 gibt es eine Lücke: Durch 0 teilt man
+          nicht, die linke Seite ist nicht definiert. Die Lösung ist 3.
+      - type: text
+        text: >-
+          Bei $x = 0$ bleibt eine **Lücke**: Durch 0 teilt man nicht, der Term $\frac{6}{x}$ ist dort **nicht
+          definiert**. Die Zahl 0 kann also nie die Lösung sein. Die Lösung hier ist $x = 3$.
+  - type: section
+    id: rechnen
+    title: "Weg 2: Mit dem Hauptnenner rechnen"
+    blocks:
+      - type: text
+        text: >-
+          Das Einsetzen findet die Lösung nur, wenn du sie triffst. Das Rechnen findet sie sicher, in vier Schritten:
+
+
+          1. **Definitionsmenge:** Welche Zahlen machen einen Nenner 0? Die darf $x$ nicht sein.
+
+          2. **Multiplizieren:** Nimm beide Seiten mal den Hauptnenner, wie bei der Waage: auf beiden Seiten dasselbe.
+          Jeder Bruch verliert seinen Nenner.
+
+          3. **Lösen:** Die Gleichung ist jetzt linear. Löse sie mit der Waage.
+
+          4. **Prüfen:** Gehört die Lösung zur Definitionsmenge? Dann mache die Probe.
+      - type: example
+        title: "Löse 3 : (x − 1) = 2 : (x + 1)"
+        blocks:
+          - type: text
+            text: "Definitionsmenge: Für $x = 1$ und für $x = -1$ wird ein Nenner 0. Also darf $x$ weder 1 noch −1 sein."
+          - type: formula
+            formula: '\frac{3}{x-1} = \frac{2}{x+1}'
+          - type: formula
+            formula: '3 \cdot (x+1) = 2 \cdot (x-1)'
+          - type: text
+            text: "Das ist der Schritt „beide Seiten mal $(x-1)(x+1)$“: Links fällt $x-1$ weg, rechts fällt $x+1$ weg. Dann löst du wie mit der Waage."
+          - type: formula
+            formula: '3 \cdot x + 3 = 2 \cdot x - 2'
+          - type: formula
+            formula: "x = -5"
+          - type: text
+            text: "Prüfen: −5 ist weder 1 noch −1, gehört also zur Definitionsmenge. Probe: $\\frac{3}{-6} = -\\frac{1}{2}$ und $\\frac{2}{-4} = -\\frac{1}{2}$. Beide Seiten sind gleich."
+      - type: text
+        text: "Dieselbe Gleichung kannst du auch mit Weg 1 lösen. In der Tabelle zeigt die Lücke bei 1 und bei −1 die Definitionsmenge, und bei −5 sind beide Seiten gleich."
+      - type: vue-component
+        id: tabelle-3-durch-x-minus-1
+        component: BruchgleichungTabelle
+        props:
+          links:
+            - { za: 0, zb: 3, na: 1, nb: -1 }
+          rechts:
+            - { za: 0, zb: 2, na: 1, nb: 1 }
+          eingabeLabel: "Zahl für x"
+          eintragen: "In die Tabelle"
+          neuAnfangen: "Neu anfangen"
+          spalteX: "x"
+          spalteLinks: "Links"
+          spalteRechts: "Rechts"
+          spalteVergleich: "Vergleich"
+        nojs: |
+          Tabelle zum Probieren für 3 : (x − 1) = 2 : (x + 1). Für x = 1 und für x = −1 gibt es eine Lücke, weil ein
+          Nenner 0 wird. Für x = 0 ist links −3 und rechts 2. Für x = −5 sind beide Seiten −0,5: gleich. Die Lösung ist −5.
+  - type: section
+    id: vergleich
+    title: Die zwei Wege im Vergleich
+    blocks:
+      - type: table
+        caption: "Beide Wege führen zum selben x. Sie zeigen Verschiedenes."
+        header: ["Weg", "Tabelle", "Rechnen"]
+        rowHeaders: true
+        rows:
+          - ["Findet", "die Lösung, wenn du sie triffst", "die Lösung sicher"]
+          - ["Zeigt", "die Lücke beim Nenner 0", "die Definitionsmenge vorab"]
+          - ["Prüft", "die Gleichheit beim Einsetzen", "mit der Probe am Ende"]
+      - type: note
+        title: Drei typische Fehler
+        blocks:
+          - type: text
+            text: >-
+              - **Definitionsmenge vergessen.** Dann siehst du nicht, dass eine Zahl verboten ist.
+
+              - **Nur einen Bruch mit dem Nenner malnehmen.** Du musst beide Seiten, jeden Summanden, mit dem Hauptnenner
+              malnehmen.
+
+              - **Die Lösung nicht prüfen.** Bei $\frac{x}{x-3} = \frac{3}{x-3}$ kommt beim Rechnen $x = 3$ heraus. Aber
+              3 ist verboten: Die Gleichung hat keine Lösung.
   - type: section
     id: uebung
     title: Übung
     blocks:
+      - type: generated
+        id: einfach-ueben
+        given:
+          a: { int: [6, 48] }
+          b: { int: [2, 6] }
+        where: ["decimals(a / b) == 0"]
+        task:
+          text: "Löse $\\frac{{{a}}}{x} = {{b}}$. Welche Zahl ist x?"
+        answer: { value: "a / b", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "a * b"
+            message: "Du hast malgenommen. Erst beide Seiten mal x, dann durch {{b}} teilen."
+          - value: "a - b"
+            message: "Du hast abgezogen. Nach dem Malnehmen mit x musst du durch {{b}} teilen."
+        hint: "Multipliziere beide Seiten mit x. Beachte: x darf nicht 0 sein."
+        steps:
+          - '**Definitionsmenge:** $x \neq 0$.'
+          - '**Beide Seiten mal $x$:** ${{a}} = {{b}} \cdot x$.'
+          - "**Beide Seiten durch {{b}}:** $x = {{a}} : {{b}} = {{answer}}$."
+          - "**Prüfen:** {{answer}} ist nicht 0. Probe (Weg 1): ${{a}} : {{answer}} = {{b}}$ stimmt."
       - type: single-choice
-        id: platzhalter-bruchgleichungen-loesen
-        text: "Platzhalter: Welche Zahl ist größer?"
+        id: definitionsmenge-finden
+        text: "Bei 5 : (x − 2) = 1 : (x + 3): Welche Zahlen darf x nicht sein?"
         options:
-          - text: "3"
-            correct: false
-            info: "3 ist kleiner als 5."
-          - text: "5"
+          - text: "2 und −3"
             correct: true
-            info: "5 ist größer als 3."
-        explanation: "5 ist größer als 3."
+            info: "x − 2 ist 0 für x = 2, x + 3 ist 0 für x = −3."
+          - text: "−2 und 3"
+            correct: false
+            info: "Vorzeichen vertauscht: Für x = −2 ist x − 2 gleich −4."
+          - text: "Nur 2"
+            correct: false
+            info: "Der zweite Nenner fehlt: x + 3 ist 0 für x = −3."
+          - text: "5 und 1"
+            correct: false
+            info: "Das sind Zähler. Nur ein Nenner darf nicht 0 sein."
+        explanation: "Gesucht sind die Zahlen, die einen Nenner 0 machen."
         links:
-          - title: Lernlandkarte
+          - title: Bruchgleichungen (Lernlandkarte)
             url: "https://lernapps.net/apps/map/mathematik/c/bruchgleichungen/"
+      - type: ordering
+        id: schritte-ordnen
+        text: "Du löst 4 : (x + 1) = 2 : x. Ordne die Schritte."
+        items:
+          - "Definitionsmenge bestimmen: x ≠ −1 und x ≠ 0"
+          - "Beide Seiten mal x · (x + 1): 4 · x = 2 · (x + 1)"
+          - "Die lineare Gleichung lösen: x = 1"
+          - "Prüfen und die Probe machen"
+        explanation: "Probe: 4 : 2 = 2 und 2 : 1 = 2."
+        links:
+          - title: Bruchgleichungen (Lernlandkarte)
+            url: "https://lernapps.net/apps/map/mathematik/c/bruchgleichungen/"
+      - type: vue-component
+        id: tabelle-6-durch-x-minus-1
+        component: BruchgleichungTabelle
+        props:
+          links:
+            - { za: 0, zb: 6, na: 1, nb: -1 }
+          rechts:
+            - { za: 0, zb: 3, na: 1, nb: -3 }
+          eingabeLabel: "Zahl für x"
+          eintragen: "In die Tabelle"
+          neuAnfangen: "Neu anfangen"
+          spalteX: "x"
+          spalteLinks: "Links"
+          spalteRechts: "Rechts"
+          spalteVergleich: "Vergleich"
+        nojs: |
+          Tabelle zum Probieren für 6 : (x − 1) = 3 : (x − 3). Für x = 1 und für x = 3 gibt es eine Lücke. Für x = 5 sind
+          beide Seiten 1,5: gleich.
+      - type: number
+        id: zwei-nenner-tabelle
+        text: "Löse 6 : (x − 1) = 3 : (x − 3) mit der Tabelle und mit dem Hauptnenner. Welche Zahl ist x?"
+        answer: 5
+        tolerance: 0
+        hint: "Nach dem Malnehmen: 6 · (x − 3) = 3 · (x − 1)."
+        explanation: "Es ist x = 5. Probe: 6 : 4 = 1,5 und 3 : 2 = 1,5."
+        links:
+          - title: Bruchgleichungen (Lernlandkarte)
+            url: "https://lernapps.net/apps/map/mathematik/c/bruchgleichungen/"
+      - type: generated
+        id: zwei-nenner-ueben
+        given:
+          a: { int: [2, 6] }
+          b: { int: [1, 5] }
+          p: { int: [1, 6] }
+          q: { int: [1, 6] }
+        where: ["a != b", "decimals((b * p + a * q) / (a - b)) == 0"]
+        task:
+          text: "Löse $\\frac{{{a}}}{x - {{p}}} = \\frac{{{b}}}{x + {{q}}}$. Welche Zahl ist x?"
+        answer: { value: "(0 - b * p - a * q) / (a - b)", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "(b * p - a * q) / (a - b)"
+            message: "Vorzeichenfehler bei {{b}} · (x − {{p}}): Es gilt −{{b}} · {{p}}."
+          - value: "(a * q - b * p) / (a - b)"
+            message: "Vorzeichenfehler beim Umstellen: Achte auf das Minus bei {{a}} · {{q}}."
+        hint: "x darf nicht {{p}} und nicht −{{q}} sein. Nimm beide Seiten mal (x − {{p}}) · (x + {{q}})."
+        steps:
+          - '**Definitionsmenge:** $x \neq {{p}}$ und $x \neq -{{q}}$.'
+          - '**Beide Seiten mal $(x - {{p}})(x + {{q}})$:** ${{a}} \cdot (x + {{q}}) = {{b}} \cdot (x - {{p}})$.'
+          - '**Ausmultiplizieren, x sammeln:** $({{a}} - {{b}}) \cdot x = -{{b}} \cdot {{p}} - {{a}} \cdot {{q}}$.'
+          - "**Lösung:** $x = {{answer}}$. Das gehört zur Definitionsmenge. Probe (Weg 1): Setze {{answer}} in die Tabelle ein, beide Seiten sind gleich."
+      - type: single-choice
+        id: keine-loesung
+        text: "Bei x : (x − 3) = 3 : (x − 3) kommt beim Rechnen x = 3 heraus. Was sagst du?"
+        options:
+          - text: "x = 3 ist die Lösung."
+            correct: false
+            info: "Für x = 3 ist der Nenner 0. Die Gleichung ist dort nicht definiert."
+          - text: "Keine Lösung: 3 ist nicht definiert."
+            correct: true
+            info: "x darf nicht 3 sein. Es bleibt keine Lösung übrig."
+          - text: "x = 0 ist die Lösung."
+            correct: false
+            info: "Für x = 0 ist links 0 und rechts −1."
+        explanation: "Du musst prüfen, ob die Zahl zur Definitionsmenge gehört. Hier nicht."
+        links:
+          - title: Bruchgleichungen (Lernlandkarte)
+            url: "https://lernapps.net/apps/map/mathematik/c/bruchgleichungen/"
+      - type: generated
+        id: summe-ueben
+        given:
+          a: { int: [4, 12] }
+          b: { int: [2, 10] }
+        where: ["b < a", "decimals(a * b / (a - b)) == 0"]
+        task:
+          text: "Löse $\\frac{1}{x} + \\frac{1}{{{a}}} = \\frac{1}{{{b}}}$. Welche Zahl ist x?"
+        answer: { value: "a * b / (a - b)", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "b - a"
+            message: "Nenner abziehen geht nicht. Nimm jeden Summanden mal x · {{a}} · {{b}}."
+          - value: "a - b"
+            message: "Das ist nur ein Faktor: Teile noch {{a}} · {{b}} durch {{a}} − {{b}}."
+        hint: "Nimm beide Seiten mal x · {{a}} · {{b}}, jeden Summanden."
+        steps:
+          - '**Definitionsmenge:** $x \neq 0$.'
+          - '**Beide Seiten mal $x \cdot {{a}} \cdot {{b}}$:** ${{a}} \cdot {{b}} + {{b}} \cdot x = {{a}} \cdot x$.'
+          - '**x sammeln:** ${{a}} \cdot {{b}} = ({{a}} - {{b}}) \cdot x$.'
+          - "**Lösung:** $x = {{answer}}$. Das ist nicht 0. Probe (Weg 1): Setze {{answer}} für x ein, beide Seiten sind gleich."
+      - type: text
+        text: >-
+          Das kannst du jetzt: Du sagst, für welche Zahlen eine Bruchgleichung nicht definiert ist, multiplizierst mit dem
+          Hauptnenner, löst die lineare Gleichung, prüfst die Lösung an der Definitionsmenge und machst die Probe. Du löst
+          jede Gleichung auch durch Einsetzen in die Tabelle und vergleichst beide Wege.
