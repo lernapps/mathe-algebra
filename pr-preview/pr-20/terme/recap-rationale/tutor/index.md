@@ -76,5 +76,5 @@ Wenn du dich vertan hast, wiederhole den Baustein „Rechnen mit negativen Zahle
 
 **Merke: Du bist bereit, wenn du …**
 
-- Du addierst und subtrahierst Zahlen mit Vorzeichen und beachtest dabei die Klammern.
-- Du bestimmst beim Malnehmen und Teilen das Vorzeichen des Ergebnisses.
+- Ich kann Zahlen mit Vorzeichen addieren und subtrahieren und dabei die Klammern beachten.
+- Ich kann beim Malnehmen und Teilen das Vorzeichen des Ergebnisses bestimmen.

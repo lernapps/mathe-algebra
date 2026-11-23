@@ -86,5 +86,5 @@ Wenn du dich vertan hast, wiederhole den Baustein „Bruchrechnung: Multiplikati
 
 **Merke: Du bist bereit, wenn du …**
 
-- Du kannst einen Bruch kürzen und erweitern, ohne seinen Wert zu ändern.
-- Du nimmst Brüche mal und teilst durch einen Bruch, indem du mit dem Kehrwert malnimmst.
+- Ich kann einen Bruch kürzen und erweitern, ohne seinen Wert zu ändern.
+- Ich kann Brüche malnehmen und durch einen Bruch teilen, indem ich mit dem Kehrwert malnehme.

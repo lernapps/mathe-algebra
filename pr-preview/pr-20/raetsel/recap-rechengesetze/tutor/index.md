@@ -82,5 +82,5 @@ Wenn du dich vertan hast, wiederhole den Baustein „Vorrangregeln und Rechenges
 
 **Merke: Du bist bereit, wenn du …**
 
-- Du rechnest Klammern zuerst und beachtest Punkt vor Strich.
-- Du rechnest mit den Rechengesetzen vorteilhaft, zum Beispiel $4 \cdot 27 \cdot 25$ im Kopf.
+- Ich kann Klammern zuerst rechnen und Punkt vor Strich beachten.
+- Ich kann mit den Rechengesetzen vorteilhaft rechnen, zum Beispiel $4 \cdot 27 \cdot 25$ im Kopf.
