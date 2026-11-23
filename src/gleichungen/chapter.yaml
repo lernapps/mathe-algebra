@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Lineare Gleichungen
+summary: >-
+  Klasse 7-8: Lineare Gleichungen und Ungleichungen lösen, Gleichungen zu Sachaufgaben aufstellen und Formeln umstellen.
+pages: [gleichungen-umformen, x-auf-beiden-seiten, sachaufgaben, formeln-umstellen, ungleichungen-loesen]

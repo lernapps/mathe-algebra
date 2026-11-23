@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: x auf beiden Seiten
+description: "Platzhalter, wird ersetzt."
+competencies: [lineare-gleichungen]
+blocks:
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: single-choice
+        id: platzhalter-x-auf-beiden-seiten
+        text: "Platzhalter: Welche Zahl ist größer?"
+        options:
+          - text: "3"
+            correct: false
+            info: "3 ist kleiner als 5."
+          - text: "5"
+            correct: true
+            info: "5 ist größer als 3."
+        explanation: "5 ist größer als 3."
+        links:
+          - title: Lernlandkarte
+            url: "https://lernapps.net/apps/map/mathematik/c/lineare-gleichungen/"

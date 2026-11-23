@@ -1,0 +1,5 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Bruchterme und Bruchgleichungen
+summary: >-
+  Klasse 7-8: Bruchterme vereinfachen, sagen, wann sie nicht definiert sind, und Bruchgleichungen lösen.
+pages: [definitionsmenge, bruchterme-kuerzen, bruchgleichungen-loesen]
