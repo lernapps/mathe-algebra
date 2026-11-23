@@ -175,8 +175,8 @@ ans Orchestrator-Protokoll `map-review`, falls der Lernenden-Prüfer es als Lüc
       `.agents/skills/lernapps-explainer/references/structure.md` says. Write the choice under "Key decisions".
 - [x] Slice 1 (Musterseite, selbst): Kapitel raetsel, Seite tabelle-probieren (einfache-gleichungen): Komponente Tabelle zum Probieren, ≥3 Aufgaben, Bild, Test; danach Lernenden-Prüfer Klasse 7
 - [x] Slice 2: raetsel – Recap-Seite (recap grundrechenarten-rechengesetze) + Kurztest-Seite (selbst)
-- [ ] Slice 3: raetsel – Seiten zahlenraetsel-umkehren (Umkehrpfeile) und waage-paeckchen (Waage-Komponente), je ≥3 Aufgaben (Sub-Agent möglich, eigene Dateien)
-- [ ] Slice 4: terme – Recap-Seite (recap rationale-zahlen-rechnen) + Kurztest (selbst)
+- [x] Slice 3: raetsel – Seiten zahlenraetsel-umkehren (Umkehrpfeile) und waage-paeckchen (Waage-Komponente), je ≥3 Aufgaben (Sub-Agent möglich, eigene Dateien)
+- [x] Slice 4: terme – Recap-Seite (recap rationale-zahlen-rechnen) + Kurztest (selbst)
 - [ ] Slice 5: terme – Seite(n) terme-variable (Streichholzmuster, Term aufstellen, Tabelle prüft Gleichheit) (Sub-Agent möglich)
 - [ ] Slice 6: terme – Seite(n) terme-umformen (zusammenfassen, Klammern auflösen, Rechteckmodell) (Sub-Agent möglich)
 - [ ] Slice 7: Bestand binom bereinigen: Videos, serlo, links:, Tutor-Regeln, Quellen, Titel/Intro, Schreibweisen; Kapitelreihenfolge nach requires (selbst)

@@ -63,17 +63,6 @@ blocks:
         source: Eigene Darstellung der Mathe-Karte
         licence: MIT
   - type: section
-    id: video
-    title: Video dazu
-    blocks:
-      - type: video
-        youtube: X5E2bqby8f0
-        title: "Ausmultiplizieren – Klammern auflösen"
-        channel: Lehrerschmidt
-      - type: text
-        text: >-
-          Zum Nachlesen: [Klammern ausmultiplizieren bei Serlo](https://de.serlo.org/mathe/1525/klammern-ausmultiplizieren).
-  - type: section
     id: uebung
     title: Übung
     blocks:
@@ -92,10 +81,8 @@ blocks:
             info: "Das letzte Produkt ist 3 · 5 = 15, das stimmt. Die 8 gehört zum Mittelglied: 5x + 3x = 8x."
         explanation: "Nur außen rechnen reicht nicht: (x + 3)(x + 5) = x² + 5x + 3x + 15 = x² + 8x + 15."
         links:
-          - {
-              title: Klammern ausmultiplizieren (Serlo),
-              url: "https://de.serlo.org/mathe/1525/klammern-ausmultiplizieren",
-            }
+          - title: Klammern und binomische Formeln (Lernlandkarte)
+            url: "https://lernapps.net/apps/map/mathematik/c/klammern-binome/"
       - type: vue-component
         id: klammern-ueben
         component: BinomTermAufgabe

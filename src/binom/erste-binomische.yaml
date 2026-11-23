@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Erste binomische Formel
-description: "Die erste binomische Formel (a + b)² = a² + 2ab + b²: Erklärung mit Flächenbild, Beispiel, Video und Übungsaufgaben mit Sofort-Feedback."
+description: "Die erste binomische Formel (a + b)² = a² + 2ab + b²: Erklärung mit Flächenbild, Beispiel und Übungsaufgaben mit Sofort-Feedback."
 competencies: [klammern-binome]
 blocks:
   - type: section
@@ -59,17 +59,6 @@ blocks:
         source: Eigene Darstellung der Mathe-Karte
         licence: MIT
   - type: section
-    id: video
-    title: Video dazu
-    blocks:
-      - type: video
-        youtube: D_D4gvqNDdE
-        title: "1.binomische Formel – mit grafischer Erklärung"
-        channel: Lehrerschmidt
-      - type: text
-        text: >-
-          Zum Nachlesen: [Binomische Formeln bei Serlo](https://de.serlo.org/mathe/1499/binomische-formeln).
-  - type: section
     id: uebung
     title: Übung
     blocks:
@@ -88,7 +77,8 @@ blocks:
             info: "Das letzte Glied ist 5² = 25, das stimmt schon. Die 10 gehört als 10x in die Mitte."
         explanation: "Nach der ersten binomischen Formel ist (x + 5)² = x² + 2 · x · 5 + 5² = x² + 10x + 25."
         links:
-          - { title: Binomische Formeln (Serlo), url: "https://de.serlo.org/mathe/1499/binomische-formeln" }
+          - title: Klammern und binomische Formeln (Lernlandkarte)
+            url: "https://lernapps.net/apps/map/mathematik/c/klammern-binome/"
       - type: vue-component
         id: erste-binomische-ueben
         component: BinomTermAufgabe

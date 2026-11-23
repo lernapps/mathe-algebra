@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Zweite binomische Formel
-description: "Die zweite binomische Formel (a − b)² = a² − 2ab + b²: Erklärung mit Flächenbild, Beispiel, Video und Übungsaufgaben mit Sofort-Feedback."
+description: "Die zweite binomische Formel (a − b)² = a² − 2ab + b²: Erklärung mit Flächenbild, Beispiel und Übungsaufgaben mit Sofort-Feedback."
 competencies: [klammern-binome]
 blocks:
   - type: section
@@ -55,36 +55,26 @@ blocks:
         source: Eigene Darstellung der Mathe-Karte
         licence: MIT
   - type: section
-    id: video
-    title: Video dazu
-    blocks:
-      - type: video
-        youtube: P9Moh6nUSI8
-        title: "2.binomische Formel – ganz einfach erklärt mit Beispielen!"
-        channel: Lehrerschmidt
-      - type: text
-        text: >-
-          Zum Nachlesen: [Binomische Formeln bei Serlo](https://de.serlo.org/mathe/1499/binomische-formeln).
-  - type: section
     id: uebung
     title: Übung
     blocks:
       - type: single-choice
         id: zweite-binomische-erkennen
-        text: Jemand rechnet (x - 4)² = x² - 8x - 16. Was ist daran falsch?
+        text: Jemand rechnet (x − 4)² = x² − 8x − 16. Was ist daran falsch?
         options:
-          - text: "Das letzte Glied ist +16, denn (-4) · (-4) = +16."
+          - text: "Das letzte Glied ist +16, denn (−4) · (−4) = +16."
             correct: true
-            info: "Minus mal Minus gibt Plus. Richtig ist (x - 4)² = x² - 8x + 16."
+            info: "Minus mal Minus gibt Plus. Richtig ist (x − 4)² = x² − 8x + 16."
           - text: "Das Mittelglied muss +8x heißen."
             correct: false
-            info: "Bei (a - b)² ist das Mittelglied negativ: -2 · x · 4 = -8x. Das stimmt schon."
-          - text: "Das Mittelglied muss -4x heißen."
+            info: "Bei (a − b)² ist das Mittelglied negativ: −2 · x · 4 = −8x. Das stimmt schon."
+          - text: "Das Mittelglied muss −4x heißen."
             correct: false
-            info: "Das Mittelglied kommt zweimal vor: x · (-4) und (-4) · x, zusammen -8x."
-        explanation: "Nach der zweiten binomischen Formel ist (x - 4)² = x² - 2 · x · 4 + 4² = x² - 8x + 16."
+            info: "Das Mittelglied kommt zweimal vor: x · (−4) und (−4) · x, zusammen −8x."
+        explanation: "Nach der zweiten binomischen Formel ist (x − 4)² = x² − 2 · x · 4 + 4² = x² − 8x + 16."
         links:
-          - { title: Binomische Formeln (Serlo), url: "https://de.serlo.org/mathe/1499/binomische-formeln" }
+          - title: Klammern und binomische Formeln (Lernlandkarte)
+            url: "https://lernapps.net/apps/map/mathematik/c/klammern-binome/"
       - type: vue-component
         id: zweite-binomische-ueben
         component: BinomTermAufgabe

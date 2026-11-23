@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Dritte binomische Formel
-description: "Die dritte binomische Formel (a + b)(a − b) = a² − b²: Erklärung mit Flächenbild zum Umlegen, Beispiel, Video und Übungsaufgaben mit Sofort-Feedback."
+description: "Die dritte binomische Formel (a + b)(a − b) = a² − b²: Erklärung mit Flächenbild zum Umlegen, Beispiel und Übungsaufgaben mit Sofort-Feedback."
 competencies: [klammern-binome]
 blocks:
   - type: section
@@ -54,36 +54,26 @@ blocks:
         source: Eigene Darstellung der Mathe-Karte
         licence: MIT
   - type: section
-    id: video
-    title: Video dazu
-    blocks:
-      - type: video
-        youtube: 6ySWeEhTOt4
-        title: "3.binomische Formel – ganz einfach erklärt mit Beispielen!"
-        channel: Lehrerschmidt
-      - type: text
-        text: >-
-          Zum Nachlesen: [Binomische Formeln bei Serlo](https://de.serlo.org/mathe/1499/binomische-formeln).
-  - type: section
     id: uebung
     title: Übung
     blocks:
       - type: single-choice
         id: dritte-binomische-erkennen
-        text: Jemand rechnet (a + 7)(a - 7) = a² - 14a - 49. Was ist daran falsch?
+        text: Jemand rechnet (a + 7)(a − 7) = a² − 14a − 49. Was ist daran falsch?
         options:
-          - text: "Es gibt kein Mittelglied: +7a und -7a heben sich auf."
+          - text: "Es gibt kein Mittelglied: +7a und −7a heben sich auf."
             correct: true
-            info: "Richtig ist (a + 7)(a - 7) = a² - 7a + 7a - 49 = a² - 49."
+            info: "Richtig ist (a + 7)(a − 7) = a² − 7a + 7a − 49 = a² − 49."
           - text: "Das letzte Glied muss +49 heißen."
             correct: false
-            info: "Das letzte Produkt ist (+7) · (-7) = -49. Das Minus bleibt."
-          - text: "Das letzte Glied muss -14 heißen."
+            info: "Das letzte Produkt ist (+7) · (−7) = −49. Das Minus bleibt."
+          - text: "Das letzte Glied muss −14 heißen."
             correct: false
             info: "Das letzte Glied ist 7² = 7 · 7 = 49, nicht 2 · 7."
-        explanation: "Nach der dritten binomischen Formel ist (a + 7)(a - 7) = a² - 7² = a² - 49."
+        explanation: "Nach der dritten binomischen Formel ist (a + 7)(a − 7) = a² − 7² = a² − 49."
         links:
-          - { title: Binomische Formeln (Serlo), url: "https://de.serlo.org/mathe/1499/binomische-formeln" }
+          - title: Klammern und binomische Formeln (Lernlandkarte)
+            url: "https://lernapps.net/apps/map/mathematik/c/klammern-binome/"
       - type: vue-component
         id: dritte-binomische-ueben
         component: BinomTermAufgabe
