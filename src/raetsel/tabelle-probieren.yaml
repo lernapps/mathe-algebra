@@ -20,7 +20,7 @@ blocks:
           - text: "60"
             correct: false
             info: "60 ist 12 · 5. Hier wird aber addiert, nicht multipliziert."
-        explanation: "Die gedachte Zahl ist 7, denn 7 + 5 = 12. Du kannst sie finden, indem du rückwärts rechnest: 12 − 5 = 7."
+        explanation: "Die gedachte Zahl ist 7, denn 7 + 5 = 12."
         links:
           - title: Einfache Gleichungen (Lernlandkarte)
             url: "https://lernapps.net/apps/map/mathematik/c/einfache-gleichungen/"
@@ -94,7 +94,7 @@ blocks:
           - text: "Genau dieselbe Zahl noch einmal"
             correct: false
             info: "Dieselbe Zahl gibt dasselbe Ergebnis. Du brauchst eine andere Zahl."
-        explanation: "Ist die linke Seite zu groß, nimmst du ein kleineres x. Ist sie zu klein, nimmst du ein größeres x."
+        explanation: "Zu groß heißt: ein kleineres x. Zu klein heißt: ein größeres x."
         links:
           - title: Einfache Gleichungen (Lernlandkarte)
             url: "https://lernapps.net/apps/map/mathematik/c/einfache-gleichungen/"
@@ -135,7 +135,7 @@ blocks:
         answer: { value: "c - b", compare: { number: { format: integer } } }
         mistakes:
           - value: "c + b"
-            message: "Du hast {{c}} und {{b}} addiert. Das Rätsel addiert aber schon {{b}} zur gedachten Zahl. Rechne rückwärts: {{c}} − {{b}}."
+            message: "Du hast {{c}} und {{b}} addiert. Das Rätsel addiert schon {{b}}. Rechne rückwärts: {{c}} − {{b}}."
         hint: "Das Gegenteil von „plus {{b}}“ ist „minus {{b}}“. Rechne vom Ergebnis zurück."
         steps:
           - "Die Gleichung heißt x + {{b}} = {{c}}."
@@ -151,7 +151,7 @@ blocks:
         answer: { value: "c / a", compare: { number: { format: integer } } }
         mistakes:
           - value: "c - a"
-            message: "Du hast {{a}} abgezogen. Das Rätsel rechnet aber mal {{a}}. Das Gegenteil von „mal {{a}}“ ist „geteilt durch {{a}}“."
+            message: "Du hast {{a}} abgezogen. Das Gegenteil von „mal {{a}}“ ist „geteilt durch {{a}}“."
         hint: "Wie oft passt {{a}} in {{c}}? Das Gegenteil von „mal {{a}}“ ist „geteilt durch {{a}}“."
         steps:
           - "Die Gleichung heißt {{a}} · x = {{c}}."
@@ -168,12 +168,11 @@ blocks:
         answer: { value: "(c - b) / a", compare: { number: { format: integer } } }
         mistakes:
           - value: "c - b"
-            message: "Du hast {{b}} abgezogen, aber noch nicht durch {{a}} geteilt. x wird mit {{a}} multipliziert, also teilst du als Nächstes durch {{a}}."
+            message: "Du hast {{b}} abgezogen, aber noch nicht durch {{a}} geteilt."
           - value: "c / a - b"
-            message: "Du hast zuerst durch {{a}} geteilt. Rückwärts rechnest du in der umgekehrten Reihenfolge: erst minus {{b}}, dann geteilt durch {{a}}."
+            message: "Du hast zuerst durch {{a}} geteilt. Rückwärts: erst minus {{b}}, dann geteilt durch {{a}}."
         hint: "Probiere Zahlen aus und rechne die linke Seite aus, oder rechne rückwärts: erst {{b}} abziehen, dann durch {{a}} teilen."
         steps:
-          - "Vorwärts: x mal {{a}}, dann plus {{b}}, ergibt {{c}}."
           - "Rückwärts: {{c}} − {{b}}, dann geteilt durch {{a}}."
           - "x = ({{c}} − {{b}}) : {{a}} = {{answer}}."
       - type: text
