@@ -1,0 +1,106 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du für dieses Kapitel
+description: "Kurze Wiederholung zum Kürzen und Erweitern von Brüchen und zum Malnehmen und Teilen von Brüchen, mit zwei Kurztests."
+recap: [mathematik/brueche-kuerzen-erweitern, mathematik/brueche-multiplizieren-dividieren]
+blocks:
+  - type: text
+    text: >-
+      Das brauchst du für dieses Kapitel: Bruchterme behandelst du wie Brüche, nur mit Variablen im Zähler und im Nenner.
+      Dafür musst du Brüche sicher kürzen, erweitern, malnehmen und teilen können. Die Bausteine heißen auf der
+      Lernlandkarte „Brüche kürzen und erweitern“ und „Bruchrechnung: Multiplikation und Division“.
+  - type: section
+    id: kuerzen-erweitern
+    title: Brüche kürzen und erweitern
+    blocks:
+      - type: text
+        text: "Ich kann Brüche kürzen und erweitern und der Größe nach vergleichen."
+      - type: definition
+        term: Kürzen
+        explanation: >-
+          Zähler und Nenner durch dieselbe Zahl teilen. Der Wert des Bruchs bleibt gleich. Beispiel:
+          $\frac{6}{8} = \frac{6 : 2}{8 : 2} = \frac{3}{4}$.
+      - type: definition
+        term: Erweitern
+        explanation: >-
+          Zähler und Nenner mit derselben Zahl malnehmen. Der Wert bleibt gleich. Beispiel:
+          $\frac{3}{4} = \frac{3 \cdot 5}{4 \cdot 5} = \frac{15}{20}$. So bekommst du gleiche Nenner.
+      - type: vue-component
+        id: kurztest-kuerzen
+        component: Kurztest
+        props:
+          question: "Kürze 6/8 so weit wie möglich. Welcher Bruch bleibt?"
+          options:
+            - {
+                text: "3/4",
+                correct: true,
+                info: "Zähler und Nenner durch 2 geteilt: 6 : 2 = 3 und 8 : 2 = 4. Mehr geht nicht.",
+              }
+            - {
+                text: "6/4",
+                correct: false,
+                info: "Du hast nur den Nenner durch 2 geteilt. Zähler und Nenner müssen durch dieselbe Zahl geteilt werden.",
+              }
+            - {
+                text: "2/8",
+                correct: false,
+                info: "Du hast 6 durch 3 geteilt, aber 8 nicht. Beide müssen durch dieselbe Zahl geteilt werden.",
+              }
+          right: "Richtig."
+          wrong: "Nicht richtig."
+        nojs: |
+          Kurztest: Kürze 6/8 so weit wie möglich. 3/4, 6/4 oder 2/8. Antwort: 3/4, denn Zähler und Nenner werden durch 2 geteilt.
+      - type: text
+        text: >-
+          Hast du dich vertan? Dann wiederhole den Baustein „Brüche kürzen und erweitern“ auf seiner Seite der
+          Lernlandkarte: [Brüche kürzen und erweitern](https://lernapps.net/apps/map/mathematik/c/brueche-kuerzen-erweitern/).
+  - type: section
+    id: multiplizieren-dividieren
+    title: "Bruchrechnung: Multiplikation und Division"
+    blocks:
+      - type: text
+        text: "Ich kann Brüche multiplizieren und dividieren."
+      - type: definition
+        term: Brüche malnehmen
+        explanation: >-
+          Zähler mal Zähler, Nenner mal Nenner. Beispiel: $\frac{2}{3} \cdot \frac{4}{5} = \frac{2 \cdot 4}{3 \cdot 5} = \frac{8}{15}$.
+      - type: definition
+        term: Kehrwert
+        explanation: >-
+          Der Bruch mit vertauschtem Zähler und Nenner. Beispiel: Der Kehrwert von $\frac{2}{3}$ ist $\frac{3}{2}$. Durch einen
+          Bruch teilst du, indem du mit seinem Kehrwert malnimmst: $\frac{1}{2} : \frac{3}{4} = \frac{1}{2} \cdot \frac{4}{3} = \frac{4}{6} = \frac{2}{3}$.
+      - type: vue-component
+        id: kurztest-teilen
+        component: Kurztest
+        props:
+          question: "Was ist 1/2 : 1/4?"
+          options:
+            - {
+                text: "2",
+                correct: true,
+                info: "Durch 1/4 teilen heißt mit dem Kehrwert 4/1 malnehmen: 1/2 · 4 = 4/2 = 2.",
+              }
+            - {
+                text: "1/8",
+                correct: false,
+                info: "Das ist 1/2 · 1/4. Beim Teilen musst du den Kehrwert des zweiten Bruchs nehmen.",
+              }
+            - {
+                text: "1/4",
+                correct: false,
+                info: "Das ist nur der zweite Bruch. Rechne 1/2 mal den Kehrwert von 1/4.",
+              }
+          right: "Richtig."
+          wrong: "Nicht richtig."
+        nojs: |
+          Kurztest: Was ist 1/2 : 1/4? 2, 1/8 oder 1/4. Antwort: 2, denn durch 1/4 teilen heißt mit 4 malnehmen: 1/2 · 4 = 2.
+      - type: text
+        text: >-
+          Hast du dich vertan? Dann wiederhole den Baustein „Bruchrechnung: Multiplikation und Division“ auf seiner Seite der
+          Lernlandkarte: [Bruchrechnung: Multiplikation und Division](https://lernapps.net/apps/map/mathematik/c/brueche-multiplizieren-dividieren/).
+  - type: note
+    title: Du bist bereit, wenn du …
+    blocks:
+      - type: text
+        text: >-
+          … einen Bruch kürzt und erweitern kannst, ohne seinen Wert zu ändern. … Brüche malnimmst und durch einen Bruch
+          teilst, indem du mit dem Kehrwert malnimmst.
