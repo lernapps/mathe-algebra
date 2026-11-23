@@ -14,9 +14,6 @@ blocks:
         tolerance: 0
         hint: "Probiere ein paar Zahlen aus."
         explanation: "Es ist 3, denn 6 : 3 = 2. Als Gleichung: 6 : x = 2."
-        links:
-          - title: Bruchgleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/bruchgleichungen/"
   - type: section
     id: tabelle
     title: "Weg 1: Zahlen einsetzen"
@@ -167,9 +164,6 @@ blocks:
             correct: false
             info: "Das sind Zähler. Nur ein Nenner darf nicht 0 sein."
         explanation: "Gesucht sind die Zahlen, die einen Nenner 0 machen."
-        links:
-          - title: Bruchgleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/bruchgleichungen/"
       - type: ordering
         id: schritte-ordnen
         text: "Du löst 4 : (x + 1) = 2 : x. Ordne die Schritte."
@@ -179,9 +173,6 @@ blocks:
           - "Die lineare Gleichung lösen: x = 1"
           - "Prüfen und die Probe machen"
         explanation: "Probe: 4 : 2 = 2 und 2 : 1 = 2."
-        links:
-          - title: Bruchgleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/bruchgleichungen/"
       - type: vue-component
         id: tabelle-6-durch-x-minus-1
         component: BruchgleichungTabelle
@@ -207,9 +198,6 @@ blocks:
         tolerance: 0
         hint: "Nach dem Malnehmen: 6 · (x − 3) = 3 · (x − 1)."
         explanation: "Es ist x = 5. Probe: 6 : 4 = 1,5 und 3 : 2 = 1,5."
-        links:
-          - title: Bruchgleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/bruchgleichungen/"
       - type: generated
         id: zwei-nenner-ueben
         given:
@@ -246,9 +234,6 @@ blocks:
             correct: false
             info: "Für x = 0 ist links 0 und rechts −1."
         explanation: "Du musst prüfen, ob die Zahl zur Definitionsmenge gehört. Hier nicht."
-        links:
-          - title: Bruchgleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/bruchgleichungen/"
       - type: generated
         id: summe-ueben
         given:

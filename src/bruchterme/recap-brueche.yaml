@@ -28,7 +28,7 @@ blocks:
         id: kurztest-kuerzen
         component: Kurztest
         props:
-          question: "Kürze 6/8 so weit wie möglich. Welcher Bruch bleibt?"
+          question: "Kürze 48/84 so weit wie möglich. Welcher Bruch bleibt?"
           options:
             - {
                 text: "3/4",
@@ -48,7 +48,7 @@ blocks:
           right: "Richtig."
           wrong: "Nicht richtig."
         nojs: |
-          Kurztest: Kürze 6/8 so weit wie möglich. 3/4, 6/4 oder 2/8. Antwort: 3/4, denn Zähler und Nenner werden durch 2 geteilt.
+          Kurztest: Kürze 48/84 so weit wie möglich. 4/7, 24/42 oder 12/21. Antwort: 4/7, denn Zähler und Nenner werden durch 12 geteilt.
       - type: text
         text: >-
           Hast du dich vertan? Dann wiederhole den Baustein „Brüche kürzen und erweitern“ auf seiner Seite der
@@ -72,7 +72,7 @@ blocks:
         id: kurztest-teilen
         component: Kurztest
         props:
-          question: "Was ist 1/2 : 1/4?"
+          question: "Was ist 3/4 : 9/8?"
           options:
             - {
                 text: "2",
@@ -92,7 +92,7 @@ blocks:
           right: "Richtig."
           wrong: "Nicht richtig."
         nojs: |
-          Kurztest: Was ist 1/2 : 1/4? 2, 1/8 oder 1/4. Antwort: 2, denn durch 1/4 teilen heißt mit 4 malnehmen: 1/2 · 4 = 2.
+          Kurztest: Was ist 3/4 : 9/8? 2/3, 27/32 oder 3/2. Antwort: 2/3, denn durch 9/8 teilen heißt mit 8/9 malnehmen: 3/4 · 8/9 = 24/36 = 2/3.
       - type: text
         text: >-
           Hast du dich vertan? Dann wiederhole den Baustein „Bruchrechnung: Multiplikation und Division“ auf seiner Seite der

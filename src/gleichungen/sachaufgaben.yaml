@@ -23,9 +23,6 @@ blocks:
           - "x − 7 = 19"
           - "x + 3 = 18"
         explanation: "Du schreibst Wort für Wort auf, was im Text passiert: addieren wird plus, „drei Hefte“ wird 3 · x, „in 5 Jahren“ wird plus 5, „teilen“ wird ein Doppelpunkt."
-        links:
-          - title: Gleichungen aufstellen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/gleichungen-aufstellen/"
   - type: section
     id: ablauf
     title: Vier Schritte
@@ -89,9 +86,6 @@ blocks:
           - "Lösen: x = 4"
           - "Antworten und Probe: Eine Karte kostet 4 €. 3 · 4 € + 2 € = 14 €."
         explanation: "Erst legst du fest, was x ist, dann stellst du die Gleichung auf, dann löst du sie. Am Ende steht der Antwortsatz mit der Probe am Text."
-        links:
-          - title: Gleichungen aufstellen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/gleichungen-aufstellen/"
       - type: single-choice
         id: gleichung-preise-waehlen
         text: "Im Zoo kosten 5 Kinderkarten und eine Futtertüte für 3 € zusammen 38 €. x ist der Preis einer Kinderkarte in €. Welche Gleichung passt?"
@@ -109,9 +103,6 @@ blocks:
             correct: false
             info: "38 € ist der Gesamtpreis, aber x ist der Preis einer einzelnen Karte. Der Gesamtpreis steht auf der anderen Seite des Gleichheitszeichens."
         explanation: "Der Gesamtpreis besteht aus 5 Karten zu je x und einer Futtertüte: 5 · x + 3 = 38."
-        links:
-          - title: Gleichungen aufstellen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/gleichungen-aufstellen/"
       - type: generated
         id: preise-ueben
         given:
@@ -151,9 +142,6 @@ blocks:
             correct: false
             info: "„4 Jahre älter“ heißt plus 4, nicht mal 4."
         explanation: "Beide Alter werden addiert: x für Jonas und x + 4 für die Schwester."
-        links:
-          - title: Gleichungen aufstellen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/gleichungen-aufstellen/"
       - type: generated
         id: alter-ueben
         given:

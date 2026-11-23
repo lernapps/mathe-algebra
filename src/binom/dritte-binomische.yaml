@@ -71,9 +71,6 @@ blocks:
             correct: false
             info: "Das letzte Glied ist 7² = 7 · 7 = 49, nicht 2 · 7."
         explanation: "Nach der dritten binomischen Formel ist (a + 7)(a − 7) = a² − 7² = a² − 49."
-        links:
-          - title: Klammern und binomische Formeln (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/klammern-binome/"
       - type: vue-component
         id: dritte-binomische-ueben
         component: BinomTermAufgabe

@@ -21,9 +21,6 @@ blocks:
             correct: false
             info: "80 ist 20 · 4. Du musst rückwärts rechnen, also teilen."
         explanation: "Die gedachte Zahl ist 5, denn 5 · 4 = 20."
-        links:
-          - title: Einfache Gleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/einfache-gleichungen/"
   - type: section
     id: pfeile
     title: Pfeile hin und zurück
@@ -53,9 +50,6 @@ blocks:
           - "Das Ergebnis durch 3 teilen"
           - "Die Probe machen"
         explanation: "Zurück gehst du in der umgekehrten Reihenfolge: erst das Plus rückgängig machen, dann das Mal, am Ende die Probe."
-        links:
-          - title: Einfache Gleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/einfache-gleichungen/"
       - type: generated
         id: umkehren-minus
         given:

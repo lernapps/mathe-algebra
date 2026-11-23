@@ -82,9 +82,6 @@ blocks:
             info: "Das Mittelglied ist 2 · a · b: Halbiere 10, dann ist b = 5, nicht 10."
         explanation: >-
           x² und 25 = 5² sind Quadrate, −10x = −2 · x · 5: Das ist die zweite Formel, x² − 10x + 25 = (x − 5)².
-        links:
-          - title: Klammern und binomische Formeln (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/klammern-binome/"
       - type: vue-component
         id: rueckwaerts-ueben
         component: BinomTermAufgabe

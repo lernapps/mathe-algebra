@@ -21,9 +21,6 @@ blocks:
             correct: false
             info: "60 ist 12 · 5. Hier wird aber addiert, nicht multipliziert."
         explanation: "Die gedachte Zahl ist 7, denn 7 + 5 = 12."
-        links:
-          - title: Einfache Gleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/einfache-gleichungen/"
   - type: section
     id: platzhalter
     title: Die gedachte Zahl heißt x
@@ -95,9 +92,6 @@ blocks:
             correct: false
             info: "Dieselbe Zahl gibt dasselbe Ergebnis. Du brauchst eine andere Zahl."
         explanation: "Zu groß heißt: ein kleineres x. Zu klein heißt: ein größeres x."
-        links:
-          - title: Einfache Gleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/einfache-gleichungen/"
       - type: vue-component
         id: tabelle-2x-plus-7
         component: RaetselTabelle
@@ -121,9 +115,6 @@ blocks:
         tolerance: 0
         hint: "Probier eine Zahl, schau auf den Vergleich und geh in die passende Richtung."
         explanation: "Für x = 9 ist 2 · 9 + 7 = 18 + 7 = 25. Beide Seiten sind gleich, also ist 9 die Lösung."
-        links:
-          - title: Einfache Gleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/einfache-gleichungen/"
       - type: generated
         id: rueckwaerts-plus
         given:

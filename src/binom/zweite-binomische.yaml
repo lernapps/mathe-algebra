@@ -72,9 +72,6 @@ blocks:
             correct: false
             info: "Das Mittelglied kommt zweimal vor: x · (−4) und (−4) · x, zusammen −8x."
         explanation: "Nach der zweiten binomischen Formel ist (x − 4)² = x² − 2 · x · 4 + 4² = x² − 8x + 16."
-        links:
-          - title: Klammern und binomische Formeln (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/klammern-binome/"
       - type: vue-component
         id: zweite-binomische-ueben
         component: BinomTermAufgabe

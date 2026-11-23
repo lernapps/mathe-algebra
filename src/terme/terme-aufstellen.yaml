@@ -18,6 +18,3 @@ blocks:
             correct: true
             info: "5 ist größer als 3."
         explanation: "5 ist größer als 3."
-        links:
-          - title: Lernlandkarte
-            url: "https://lernapps.net/apps/map/mathematik/c/terme-variable/"

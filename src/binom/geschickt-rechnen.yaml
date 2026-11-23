@@ -75,9 +75,6 @@ blocks:
             info: "Hier fehlt das Mittelglied 2 · 40 · 9. Außerdem rechnet es sich mit 50 − 1 viel leichter."
         explanation: >-
           49 = 50 − 1, also 49² = (50 − 1)² = 50² − 2 · 50 · 1 + 1² = 2500 − 100 + 1 = 2401.
-        links:
-          - title: Klammern und binomische Formeln (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/klammern-binome/"
       - type: vue-component
         id: geschickt-ueben
         component: BinomKopfrechnen

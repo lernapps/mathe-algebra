@@ -21,9 +21,6 @@ blocks:
             correct: false
             info: "Rechts liegen 11 Gewichte, links 13. Die schwerere Seite geht nach unten, das ist hier die linke."
         explanation: "Du rechnest erst jede Seite aus und vergleichst dann: 13 ist größer als 11, also ist die linke Seite schwerer."
-        links:
-          - title: Lineare Ungleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/ungleichungen/"
   - type: section
     id: kippen
     title: Die Waage kippt
@@ -172,9 +169,6 @@ blocks:
             correct: false
             info: "10 ist 12 − 2. Die 2 hast du schon im ersten Schritt abgezogen. Jetzt fehlt nur noch das Teilen durch 3."
         explanation: "Teilen durch eine positive Zahl lässt die Waage in der Schieflage: Das Zeichen bleibt, aus 3 · x < 12 wird x < 4."
-        links:
-          - title: Lineare Ungleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/ungleichungen/"
       - type: matching
         id: loesungsmenge-zuordnen
         text: "Ordne jeder Ungleichung ihre Lösungsmenge auf der Zahlengerade zu."
@@ -190,9 +184,6 @@ blocks:
         distractors:
           - "Alle Zahlen links der 2, ohne die 2"
         explanation: "Das Zeichen sagt die Richtung: > und ≥ zeigen nach rechts, < und ≤ nach links. Ein Gleichheitsstrich (≥ und ≤) heißt: Die Grenzzahl gehört dazu, der Punkt ist gefüllt."
-        links:
-          - title: Lineare Ungleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/ungleichungen/"
       - type: single-choice
         id: gerade-lesen
         text: "Welche Ungleichung gehört zur Zahlengerade im Bild?"
@@ -217,9 +208,6 @@ blocks:
             correct: false
             info: "Der Punkt liegt bei der −2, links der Null, nicht bei der 2."
         explanation: "Erst die Richtung, dann der Rand: Strahl nach rechts heißt > oder ≥, gefüllter Punkt heißt ≥."
-        links:
-          - title: Lineare Ungleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/ungleichungen/"
       - type: generated
         id: grenzzahl-positiv
         given:
@@ -256,9 +244,6 @@ blocks:
             correct: false
             info: "Probe mit x = −6: Es ist −4 · (−6) = 24, und 24 < 20 stimmt nicht. Die −6 gehört nicht zur Lösung, obwohl sie zu x < −5 passt."
         explanation: "Der typische Fehler: Das Zeichen bleibt, obwohl durch eine negative Zahl geteilt wird. Die Probe mit einer Zahl aus der Lösungsmenge deckt ihn auf: x = −4 gibt −4 · (−4) = 16, und 16 < 20 stimmt."
-        links:
-          - title: Lineare Ungleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/ungleichungen/"
       - type: generated
         id: grenzzahl-negativ
         given:

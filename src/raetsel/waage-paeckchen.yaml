@@ -7,6 +7,11 @@ blocks:
     id: einstieg
     title: Zwei gleiche Seiten
     blocks:
+      - type: text
+        text: >-
+          Eine Waage ist im **Gleichgewicht**, wenn beide Seiten gleich schwer sind. Auf der Waage liegen Gewichte, jedes
+          wiegt 1, und **Päckchen**: In jedem Päckchen stecken gleich viele Gewichte, aber du weißt nicht, wie viele.
+          Diese unbekannte Zahl nennst du $x$.
       - type: single-choice
         id: waage-gleichgewicht
         text: "Links liegen ein Päckchen und 3 Gewichte, rechts 7 Gewichte. Die Waage ist im Gleichgewicht. Du nimmst links 3 Gewichte weg. Was musst du rechts tun, damit sie im Gleichgewicht bleibt?"
@@ -21,17 +26,13 @@ blocks:
             correct: false
             info: "Dann wäre rechts noch schwerer. Die Waage bleibt nur im Gleichgewicht, wenn du auf beiden Seiten dasselbe tust."
         explanation: "Was du links tust, musst du rechts auch tun. Dann bleibt die Waage im Gleichgewicht."
-        links:
-          - title: Einfache Gleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/einfache-gleichungen/"
   - type: section
     id: waage
     title: Das Päckchen finden
     blocks:
       - type: text
         text: >-
-          In einem **Päckchen** steckt jedes Mal dieselbe Zahl von Gewichten: Das ist $x$. Die Gleichung $x + 3 = 7$
-          sagt: Ein Päckchen und 3 Gewichte wiegen so viel wie 7 Gewichte. Du willst wissen, wie schwer ein Päckchen ist.
+          Die Gleichung $x + 3 = 7$ sagt: Ein Päckchen und 3 Gewichte wiegen so viel wie 7 Gewichte. Du willst wissen, wie schwer ein Päckchen ist.
           Dazu tust du **auf beiden Seiten dasselbe**, bis ein Päckchen allein liegt. Probiere es aus.
       - type: vue-component
         id: waage-x-plus-3
@@ -74,16 +75,29 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: vue-component
+        id: waage-3x-plus-5-werkzeug
+        component: GleichungWaage
+        props:
+          a: 3
+          b: 5
+          c: 23
+          schrittLabel: "Deine Schritte"
+          zahlLabel: "Anzahl"
+          minusKnopf: "Auf beiden Seiten minus"
+          plusKnopf: "Auf beiden Seiten plus"
+          teilenKnopf: "Beide Seiten teilen"
+          neuAnfangen: "Neu anfangen"
+          bildLabel: "Waage mit drei Päckchen und Gewichten."
+        nojs: |
+          Waage für 3 · x + 5 = 23. Erst auf beiden Seiten 5 abziehen: 3 · x = 18. Dann beide Seiten durch 3 teilen: x = 6.
       - type: number
         id: waage-3x-plus-5
-        text: "Links liegen 3 Päckchen und 5 Gewichte, rechts 23 Gewichte. Wie viele Gewichte stecken in einem Päckchen? Probiere es mit der Waage oben, sie hat eine eigene Aufgabe."
+        text: "Links liegen 3 Päckchen und 5 Gewichte, rechts 23 Gewichte. Wie viele Gewichte stecken in einem Päckchen? Die Waage darüber zeigt diese Aufgabe."
         answer: 6
         tolerance: 0
         hint: "Erst auf beiden Seiten 5 abziehen, dann durch 3 teilen."
         explanation: "23 − 5 = 18 und 18 : 3 = 6. Probe: 3 · 6 + 5 = 23."
-        links:
-          - title: Einfache Gleichungen (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/einfache-gleichungen/"
       - type: generated
         id: waage-ueben-einfach
         given:

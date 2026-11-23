@@ -76,9 +76,6 @@ blocks:
             correct: false
             info: "Das letzte Glied ist 5² = 25, das stimmt schon. Die 10 gehört als 10x in die Mitte."
         explanation: "Nach der ersten binomischen Formel ist (x + 5)² = x² + 2 · x · 5 + 5² = x² + 10x + 25."
-        links:
-          - title: Klammern und binomische Formeln (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/klammern-binome/"
       - type: vue-component
         id: erste-binomische-ueben
         component: BinomTermAufgabe

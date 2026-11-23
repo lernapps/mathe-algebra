@@ -26,15 +26,23 @@ blocks:
         id: kurztest-punkt-vor-strich
         component: Kurztest
         props:
-          question: "Was ist 3 + 4 · 5?"
+          question: "Was ist 24 − 6 · 3 + 8 : 2?"
           options:
-            - { text: "23", correct: true, info: "Erst 4 · 5 = 20, dann 3 + 20 = 23: Punkt vor Strich." }
-            - { text: "35", correct: false, info: "Das ist (3 + 4) · 5. Ohne Klammer rechnest du erst das Malnehmen." }
-            - { text: "20", correct: false, info: "4 · 5 = 20 stimmt, aber du musst noch die 3 addieren." }
+            - {
+                text: "10",
+                correct: true,
+                info: "Erst Punkt vor Strich: 6 · 3 = 18 und 8 : 2 = 4. Dann 24 − 18 + 4 = 10.",
+              }
+            - {
+                text: "31",
+                correct: false,
+                info: "Du hast von links nach rechts gerechnet. Malnehmen und Teilen kommen vor Plus und Minus.",
+              }
+            - { text: "14", correct: false, info: "Du hast 8 : 2 nicht ausgerechnet, sondern 8 addiert. Es sind 4." }
           right: "Richtig."
           wrong: "Nicht richtig."
         nojs: |
-          Kurztest: Was ist 3 + 4 · 5? 23, 35 oder 20. Antwort: 23, denn erst 4 · 5 = 20, dann 3 + 20 = 23 (Punkt vor Strich).
+          Kurztest: Was ist 24 − 6 · 3 + 8 : 2? 10, 31 oder 14. Antwort: 10, denn erst 6 · 3 = 18 und 8 : 2 = 4, dann 24 − 18 + 4 = 10 (Punkt vor Strich).
       - type: definition
         term: Kommutativgesetz
         explanation: >-
@@ -59,7 +67,7 @@ blocks:
         id: kurztest-verteilen
         component: Kurztest
         props:
-          question: "6 · 23 = 6 · 20 + 6 · ? Welche Zahl gehört auf das Fragezeichen?"
+          question: "Wie rechnest du 7 · 98 geschickt im Kopf?"
           options:
             - { text: "3", correct: true, info: "23 = 20 + 3, also 6 · 23 = 6 · 20 + 6 · 3 = 120 + 18 = 138." }
             - {
@@ -75,7 +83,7 @@ blocks:
           right: "Richtig."
           wrong: "Nicht richtig."
         nojs: |
-          Kurztest: 6 · 23 = 6 · 20 + 6 · ? Antwort: 3, denn 23 = 20 + 3 (Distributivgesetz), also 6 · 23 = 120 + 18 = 138.
+          Kurztest: Wie rechnest du 7 · 98 geschickt im Kopf? Antwort: 7 · 100 − 7 · 2, denn 98 = 100 − 2 (Distributivgesetz), also 700 − 14 = 686.
       - type: text
         text: >-
           Hast du dich vertan? Dann wiederhole den Baustein „Vorrangregeln und Rechengesetze“ auf seiner Seite der

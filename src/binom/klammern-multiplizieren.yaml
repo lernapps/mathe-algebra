@@ -80,9 +80,6 @@ blocks:
             correct: false
             info: "Das letzte Produkt ist 3 · 5 = 15, das stimmt. Die 8 gehört zum Mittelglied: 5x + 3x = 8x."
         explanation: "Nur außen rechnen reicht nicht: (x + 3)(x + 5) = x² + 5x + 3x + 15 = x² + 8x + 15."
-        links:
-          - title: Klammern und binomische Formeln (Lernlandkarte)
-            url: "https://lernapps.net/apps/map/mathematik/c/klammern-binome/"
       - type: vue-component
         id: klammern-ueben
         component: BinomTermAufgabe

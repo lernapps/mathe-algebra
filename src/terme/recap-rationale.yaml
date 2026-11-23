@@ -28,10 +28,10 @@ blocks:
           Eine Subtraktion ist das Addieren der Gegenzahl. Beispiel: $5 - (-3) = 5 + 3 = 8$ und
           $5 + (-3) = 5 - 3 = 2$. Eine negative Zahl in einer Rechnung steht in Klammern.
       - type: vue-component
-        id: kurztest-subtrahieren
+        id: kurztest-gemischt
         component: Kurztest
         props:
-          question: "Was ist 5 − (−3)?"
+          question: "Was ist (−4) · (−3) − (−6) : 2?"
           options:
             - { text: "8", correct: true, info: "Minus (−3) heißt: Du addierst die Gegenzahl 3. Also 5 + 3 = 8." }
             - { text: "2", correct: false, info: "Das ist 5 + (−3) oder 5 − 3. Hier steht aber minus (−3)." }
@@ -43,17 +43,17 @@ blocks:
           right: "Richtig."
           wrong: "Nicht richtig."
         nojs: |
-          Kurztest: Was ist 5 − (−3)? 8, 2 oder −8. Antwort: 8, denn minus (−3) heißt, du addierst die Gegenzahl 3: 5 + 3 = 8.
+          Kurztest: Was ist (−4) · (−3) − (−6) : 2? 15, 9 oder −9. Antwort: 15, denn (−4) · (−3) = 12 und (−6) : 2 = −3, dann 12 + 3 = 15.
       - type: definition
         term: Vorzeichenregel beim Malnehmen und Teilen
         explanation: >-
           Gleiche Vorzeichen geben ein positives Ergebnis, verschiedene ein negatives. Beispiel:
           $(-3) \cdot (-4) = 12$, $(-3) \cdot 4 = -12$ und $(-12) : 4 = -3$.
       - type: vue-component
-        id: kurztest-vorzeichen
+        id: kurztest-addieren
         component: Kurztest
         props:
-          question: "Was ist (−3) · (−4)?"
+          question: "Was ist −7 + (−5) − (−9)?"
           options:
             - {
                 text: "12",
@@ -69,7 +69,7 @@ blocks:
           right: "Richtig."
           wrong: "Nicht richtig."
         nojs: |
-          Kurztest: Was ist (−3) · (−4)? 12, −12 oder −7. Antwort: 12, denn zwei gleiche Vorzeichen geben ein positives Ergebnis.
+          Kurztest: Was ist −7 + (−5) − (−9)? −3, −21 oder 7. Antwort: −3, denn −7 + (−5) = −12 und −12 + 9 = −3.
       - type: text
         text: >-
           Hast du dich vertan? Dann wiederhole den Baustein „Rechnen mit negativen Zahlen“ auf seiner Seite der
