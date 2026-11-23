@@ -90,7 +90,7 @@ blocks:
           Kurztest: Wie rechnest du 7 · 98 geschickt im Kopf? Antwort: 7 · 100 − 7 · 2, denn 98 = 100 − 2 (Distributivgesetz), also 700 − 14 = 686.
       - type: text
         text: >-
-          Hast du dich vertan? Dann wiederhole den Baustein „Vorrangregeln und Rechengesetze“ auf seiner Seite der
+          Wenn du dich vertan hast, wiederhole den Baustein „Vorrangregeln und Rechengesetze“ auf seiner Seite der
           Lernlandkarte: [Vorrangregeln und Rechengesetze](https://lernapps.net/apps/map/mathematik/c/grundrechenarten-rechengesetze/).
   - type: note
     title: Du bist bereit, wenn du …

@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Bis jetzt lagen Päckchen nur auf einer Schale. Jetzt liegen sie auf beiden. Dann **sammelst** du zuerst die
+          Ein Päckchen ist das $x$: Es enthält überall gleich viele Gewichte. Bis jetzt lagen Päckchen nur auf einer Schale. Jetzt liegen sie auf beiden. Dann **sammelst** du zuerst die
           Päckchen auf einer Seite: Du nimmst auf beiden Seiten gleich viele Päckchen weg.
       - type: text
         text: >-

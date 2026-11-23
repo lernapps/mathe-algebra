@@ -72,7 +72,7 @@ blocks:
           Kurztest: Was ist −7 + (−5) − (−9)? −3, −21 oder 7. Antwort: −3, denn −7 + (−5) = −12 und −12 + 9 = −3.
       - type: text
         text: >-
-          Hast du dich vertan? Dann wiederhole den Baustein „Rechnen mit negativen Zahlen“ auf seiner Seite der
+          Wenn du dich vertan hast, wiederhole den Baustein „Rechnen mit negativen Zahlen“ auf seiner Seite der
           Lernlandkarte: [Rechnen mit negativen Zahlen](https://lernapps.net/apps/map/mathematik/c/rationale-zahlen-rechnen/).
   - type: note
     title: Du bist bereit, wenn du …

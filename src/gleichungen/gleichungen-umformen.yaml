@@ -13,7 +13,7 @@ blocks:
           weg, sonst kippt sie. Dasselbe auf beiden Seiten zu tun heißt **umformen**.
       - type: text
         text: >-
-          Die Waage kennst du aus Klasse 5-6. Jetzt wird sie zum Werkzeug für jede Gleichung. Nimm
+          Die Waage kennst du aus Klasse 5 und 6: Ein Päckchen enthält gleich viele Gewichte, das ist das $x$. Jetzt wird sie zum Werkzeug für jede Gleichung. Nimm
           $3 \cdot x - 5 = 16$: Eine Zahl mal 3, dann 5 weniger, ergibt 16. **Weg 1:** Probiere in der Tabelle.
       - type: vue-component
         id: tabelle-3x-minus-5

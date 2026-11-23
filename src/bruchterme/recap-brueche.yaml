@@ -56,7 +56,7 @@ blocks:
           Kurztest: Kürze 48/84 so weit wie möglich. 4/7, 24/42 oder 12/21. Antwort: 4/7, denn Zähler und Nenner werden durch 12 geteilt.
       - type: text
         text: >-
-          Hast du dich vertan? Dann wiederhole den Baustein „Brüche kürzen und erweitern“ auf seiner Seite der
+          Wenn du dich vertan hast, wiederhole den Baustein „Brüche kürzen und erweitern“ auf seiner Seite der
           Lernlandkarte: [Brüche kürzen und erweitern](https://lernapps.net/apps/map/mathematik/c/brueche-kuerzen-erweitern/).
   - type: section
     id: multiplizieren-dividieren
@@ -96,7 +96,7 @@ blocks:
           Kurztest: Was ist 3/4 : 9/8? 2/3, 27/32 oder 3/2. Antwort: 2/3, denn durch 9/8 teilen heißt mit 8/9 malnehmen: 3/4 · 8/9 = 24/36 = 2/3.
       - type: text
         text: >-
-          Hast du dich vertan? Dann wiederhole den Baustein „Bruchrechnung: Multiplikation und Division“ auf seiner Seite der
+          Wenn du dich vertan hast, wiederhole den Baustein „Bruchrechnung: Multiplikation und Division“ auf seiner Seite der
           Lernlandkarte: [Bruchrechnung: Multiplikation und Division](https://lernapps.net/apps/map/mathematik/c/brueche-multiplizieren-dividieren/).
   - type: note
     title: Du bist bereit, wenn du …
