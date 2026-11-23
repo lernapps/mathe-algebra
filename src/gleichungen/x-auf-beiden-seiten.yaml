@@ -1,20 +1,271 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: x auf beiden Seiten
-description: "Platzhalter, wird ersetzt."
+description: "Gleichungen mit x links und rechts lösen: Du sammelst zuerst alle x auf einer Seite, vergleichst mit dem Probieren und erkennst Gleichungen ohne Lösung und solche mit allen Zahlen als Lösung."
 competencies: [lineare-gleichungen]
 blocks:
+  - type: section
+    id: einstieg
+    title: Päckchen links und rechts
+    blocks:
+      - type: text
+        text: >-
+          Bis jetzt lagen Päckchen nur auf einer Schale. Jetzt liegen sie auf beiden. Dann **sammelst** du zuerst die
+          Päckchen auf einer Seite: Du nimmst auf beiden Seiten gleich viele Päckchen weg.
+      - type: text
+        text: >-
+          Jetzt liegen Päckchen auf beiden Schalen: $3 \cdot x + 2 = x + 8$. **Weg 1:** Probiere in der Tabelle. Beide
+          Seiten hängen von $x$ ab. Achte darauf, ob der Unterschied zwischen links und rechts kleiner wird.
+      - type: vue-component
+        id: tabelle-3x-plus-2-gleich-x-plus-8
+        component: GleichungenTabelle
+        props:
+          a: 3
+          b: 2
+          c: 1
+          d: 8
+          eingabeLabel: "Zahl für x"
+          eintragen: "In die Tabelle"
+          neuAnfangen: "Neu anfangen"
+          spalteX: "x"
+          spalteSeiten: "Links und rechts"
+          spalteVergleich: "Vergleich"
+        nojs: |
+          Tabelle zum Probieren für 3 · x + 2 = x + 8. Für x = 1 ist links 5 und rechts 9: links ist kleiner. Für x = 5 ist
+          links 17 und rechts 13: links ist größer. Für x = 3 ist links 11 und rechts 11: beide Seiten sind gleich. Die
+          Lösung ist 3.
+      - type: text
+        text: >-
+          **Weg 2:** Die Waage. Sammle zuerst alle Päckchen auf einer Seite: Nimm auf beiden Seiten gleich viele weg. Dann
+          sind es wieder die Schritte von vorher.
+      - type: vue-component
+        id: waage-3x-plus-2-gleich-x-plus-8
+        component: GleichungenWaage
+        props:
+          a: 3
+          b: 2
+          c: 1
+          d: 8
+          schrittLabel: "Deine Schritte"
+          waehleLabel: "Was tust du auf beiden Seiten?"
+          zahlLabel: "Anzahl"
+          tunKnopf: "Tun"
+          neuAnfangen: "Neu anfangen"
+          bildLabel: "Waage mit drei Päckchen und zwei Gewichten links, einem Päckchen und acht Gewichten rechts."
+          opMinusX: "Päckchen wegnehmen (− n · x)"
+          opPlusX: "Päckchen dazulegen (+ n · x)"
+          opMinus: "Gewichte wegnehmen (− n)"
+          opPlus: "Gewichte dazulegen (+ n)"
+          opTeilen: "Beide Seiten teilen (: n)"
+        nojs: |
+          Waage für 3 · x + 2 = x + 8. Auf beiden Seiten ein Päckchen wegnehmen: 2 · x + 2 = 8. Auf beiden Seiten 2 Gewichte
+          wegnehmen: 2 · x = 6. Beide Seiten durch 2 teilen: x = 3.
+      - type: text
+        text: >-
+          Beide Wege geben $x = 3$. Zur Probe setzt du 3 links und rechts ein: $3 \cdot 3 + 2 = 11$ und $3 + 8 = 11$.
+          Die Tabelle sagt dir nur, ob du triffst. Das Umformen führt dich ohne Raten ans Ziel.
+  - type: section
+    id: beispiel
+    title: Erst x sammeln
+    blocks:
+      - type: example
+        title: "Löse 5 · x − 4 = 2 · x + 11"
+        blocks:
+          - type: table
+            caption: "Eine Zeile je Schritt. Rechts steht, was du auf beiden Seiten getan hast."
+            header: ["Gleichung", "Rand"]
+            rows:
+              - ["5 · x − 4 = 2 · x + 11", "Start"]
+              - ["3 · x − 4 = 11", "− 2 · x"]
+              - ["3 · x = 15", "+ 4"]
+              - ["x = 5", ": 3"]
+          - type: text
+            text: >-
+              **Probe:** Links ist $5 \cdot 5 - 4 = 21$, rechts $2 \cdot 5 + 11 = 21$. Das stimmt.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: >-
+              Erst die $x$ auf eine Seite sammeln, dann die Zahlen auf die andere Seite bringen, dann durch die Zahl vor
+              dem $x$ teilen. Am besten sammelst du dort, wo mehr $x$ liegen: Dann bleibt eine positive Zahl vor dem
+              $x$.
+  - type: section
+    id: sonderfaelle
+    title: Wenn das x verschwindet
+    blocks:
+      - type: text
+        text: >-
+          Manchmal bleiben beim Sammeln keine Päckchen übrig. Probiere $2 \cdot x + 3 = 2 \cdot x + 7$ in der Tabelle:
+          Was fällt dir auf?
+      - type: vue-component
+        id: tabelle-2x-plus-3-gleich-2x-plus-7
+        component: GleichungenTabelle
+        props:
+          a: 2
+          b: 3
+          c: 2
+          d: 7
+          eingabeLabel: "Zahl für x"
+          eintragen: "In die Tabelle"
+          neuAnfangen: "Neu anfangen"
+          spalteX: "x"
+          spalteSeiten: "Links und rechts"
+          spalteVergleich: "Vergleich"
+        nojs: |
+          Tabelle zum Probieren für 2 · x + 3 = 2 · x + 7. Für jede Zahl ist links 4 weniger als rechts: Für x = 1 steht
+          5 < 9, für x = 4 steht 11 < 15. Beide Seiten sind nie gleich.
+      - type: table
+        caption: "Was nach dem Sammeln der x übrig bleibt, sagt dir die Lösung."
+        header: ["Gleichung", "Nach dem Sammeln", "Lösung"]
+        rows:
+          - ["2 · x + 3 = 2 · x + 7", "3 = 7 (falsch)", "keine Lösung"]
+          - ["2 · x + 6 = 2 · x + 6", "6 = 6 (wahr)", "alle Zahlen"]
+          - ["3 · x + 2 = x + 8", "2 · x = 6", "x = 3"]
+      - type: text
+        text: >-
+          Ist die Aussage am Ende falsch, gibt es **keine Lösung**: Egal welche Zahl du einsetzt, links und rechts bleiben
+          verschieden. Ist sie immer wahr, ist **jede Zahl** eine Lösung. Hier hilft dir die Tabelle: Du siehst, dass
+          der Unterschied immer gleich bleibt.
   - type: section
     id: uebung
     title: Übung
     blocks:
       - type: single-choice
-        id: platzhalter-x-auf-beiden-seiten
-        text: "Platzhalter: Welche Zahl ist größer?"
+        id: x-nur-links
+        text: "Mia löst 5 · x + 3 = 2 · x + 12. Sie schreibt 3 · x + 3 = 2 · x + 12. Was ist falsch?"
         options:
-          - text: "3"
-            correct: false
-            info: "3 ist kleiner als 5."
-          - text: "5"
+          - text: "Sie hat 2 · x nur links abgezogen."
             correct: true
-            info: "5 ist größer als 3."
-        explanation: "5 ist größer als 3."
+            info: "Rechts muss es auch weg: 3 · x + 3 = 12."
+          - text: "Sie hätte 2 · x addieren müssen."
+            correct: false
+            info: "Wegnehmen stimmt, nur rechts fehlt es."
+          - text: "Nichts, die Zeile stimmt."
+            correct: false
+            info: "Ihr x = 9 löst die Anfangsgleichung nicht: 48 ist nicht 30."
+        explanation: "Jeder Schritt gilt für beide Seiten."
+      - type: vue-component
+        id: tabelle-5x-plus-4-gleich-2x-plus-19
+        component: GleichungenTabelle
+        props:
+          a: 5
+          b: 4
+          c: 2
+          d: 19
+          eingabeLabel: "Zahl für x"
+          eintragen: "In die Tabelle"
+          neuAnfangen: "Neu anfangen"
+          spalteX: "x"
+          spalteSeiten: "Links und rechts"
+          spalteVergleich: "Vergleich"
+        nojs: |
+          Tabelle zum Probieren für 5 · x + 4 = 2 · x + 19. Probier Zahlen für x aus, bis beide Seiten gleich sind.
+      - type: vue-component
+        id: waage-5x-plus-4-gleich-2x-plus-19
+        component: GleichungenWaage
+        props:
+          a: 5
+          b: 4
+          c: 2
+          d: 19
+          schrittLabel: "Deine Schritte"
+          waehleLabel: "Was tust du auf beiden Seiten?"
+          zahlLabel: "Anzahl"
+          tunKnopf: "Tun"
+          neuAnfangen: "Neu anfangen"
+          bildLabel: "Waage mit fünf Päckchen und vier Gewichten links, zwei Päckchen und 19 Gewichten rechts."
+          opMinusX: "Päckchen wegnehmen (− n · x)"
+          opPlusX: "Päckchen dazulegen (+ n · x)"
+          opMinus: "Gewichte wegnehmen (− n)"
+          opPlus: "Gewichte dazulegen (+ n)"
+          opTeilen: "Beide Seiten teilen (: n)"
+        nojs: |
+          Waage für 5 · x + 4 = 2 · x + 19. Auf beiden Seiten 2 Päckchen wegnehmen: 3 · x + 4 = 19. Auf beiden Seiten 4 Gewichte
+          wegnehmen: 3 · x = 15. Beide Seiten durch 3 teilen: x = 5.
+      - type: number
+        id: zwei-wege-5x-plus-4
+        text: "Löse 5 · x + 4 = 2 · x + 19 mit der Tabelle und mit der Waage. Welche Zahl ist x?"
+        answer: 5
+        tolerance: 0
+        hint: "Erst 2 Päckchen weg, dann 4 Gewichte, dann teilen."
+        explanation: "3 · x = 15, also x = 5. Probe: 5 · 5 + 4 = 29 und 2 · 5 + 19 = 29. Die Tabelle braucht mehr Versuche."
+      - type: generated
+        id: beide-seiten-plus
+        given:
+          a: { int: [3, 9] }
+          b: { int: [1, 10] }
+          c: { int: [1, 4] }
+          d: { int: [12, 50] }
+        where: ["a > c", "d > b", "decimals((d - b) / (a - c)) == 0"]
+        task:
+          text: "Löse {{a}} · x + {{b}} = {{c}} · x + {{d}}. Welche Zahl ist x?"
+        answer: { value: "(d - b) / (a - c)", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "(d + b) / (a - c)"
+            message: "Aus + {{b}} wird − {{b}}, auf beiden Seiten."
+          - value: "(d - b) / (a + c)"
+            message: "Die Päckchen nimmst du weg, du addierst sie nicht."
+          - value: "(d - b) / a"
+            message: "Rechts liegen {{c}} Päckchen: erst auf beiden Seiten wegnehmen."
+        hint: "Erst − {{c}} · x, dann − {{b}}, dann teilen."
+        steps:
+          - '$({{a}} - {{c}}) \cdot x = {{d}} - {{b}}$'
+          - "$x = ({{d}} - {{b}}) : ({{a}} - {{c}}) = {{answer}}$"
+      - type: matching
+        id: sonderfaelle-zuordnen
+        text: "Wie viele Lösungen hat die Gleichung? Sammle die x und ordne zu."
+        pairs:
+          - left: "Gleichung 4 · x + 1 = 2 · x + 9"
+            right: "genau eine Lösung"
+          - left: "Gleichung 3 · x + 5 = 3 · x + 8"
+            right: "keine Lösung"
+          - left: "Gleichung 2 · x + 6 = 2 · x + 6"
+            right: "alle Zahlen sind Lösungen"
+        distractors:
+          - "genau zwei Lösungen"
+        explanation: "Es bleibt 2 · x = 8, oder 5 = 8 (falsch), oder 6 = 6 (immer wahr)."
+      - type: generated
+        id: beide-seiten-minus
+        given:
+          a: { int: [3, 9] }
+          b: { int: [1, 12] }
+          c: { int: [1, 4] }
+          d: { int: [2, 30] }
+        where: ["a > c", "decimals((d + b) / (a - c)) == 0"]
+        task:
+          text: "Löse {{a}} · x − {{b}} = {{c}} · x + {{d}}. Welche Zahl ist x?"
+        answer: { value: "(d + b) / (a - c)", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "(d - b) / (a - c)"
+            message: "Aus − {{b}} wird + {{b}}."
+          - value: "(d + b) / a"
+            message: "Das {{c}} · x rechts bleibt stehen, nimm es weg."
+        hint: "Erst − {{c}} · x, dann + {{b}}, dann teilen."
+        steps:
+          - '$({{a}} - {{c}}) \cdot x = {{d}} + {{b}}$'
+          - "$x = ({{d}} + {{b}}) : ({{a}} - {{c}}) = {{answer}}$"
+      - type: generated
+        id: beide-seiten-rechts
+        given:
+          a: { int: [1, 4] }
+          b: { int: [12, 50] }
+          c: { int: [3, 9] }
+          d: { int: [1, 10] }
+        where: ["c > a", "b > d", "decimals((b - d) / (c - a)) == 0"]
+        task:
+          text: "Löse {{a}} · x + {{b}} = {{c}} · x + {{d}}. Rechts liegen mehr Päckchen."
+        answer: { value: "(b - d) / (c - a)", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "(d - b) / (c - a)"
+            message: "Vorzeichen verdreht: Links liegen mehr Gewichte."
+          - value: "(b - d) / c"
+            message: "Links bleiben {{a}} Päckchen: erst beide Seiten − {{a}} · x."
+        hint: "Sammle die Päckchen rechts."
+        steps:
+          - '${{b}} - {{d}} = ({{c}} - {{a}}) \cdot x$'
+          - "$x = ({{b}} - {{d}}) : ({{c}} - {{a}}) = {{answer}}$"
+      - type: text
+        text: >-
+          Das kannst du jetzt: Du löst Gleichungen der Form $a \cdot x + b = c \cdot x + d$, indem du zuerst die
+          $x$ sammelst. Du vergleichst den Weg mit dem Probieren in der Tabelle, prüfst mit der Probe und erkennst
+          Gleichungen ohne Lösung und solche mit allen Zahlen als Lösung.
