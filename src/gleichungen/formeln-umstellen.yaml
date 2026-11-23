@@ -1,20 +1,220 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Formeln umstellen
-description: "Platzhalter, wird ersetzt."
+description: "Formeln aus Geometrie und Physik nach einer Größe umstellen: erst mit Zahlen, dann mit Buchstaben, auf beiden Seiten dasselbe wie bei der Waage."
 competencies: [formeln-umstellen]
 blocks:
+  - type: section
+    id: einstieg
+    title: Erst mit Zahlen
+    blocks:
+      - type: number
+        id: rechteck-seite-a
+        text: "Ein Rechteck hat den Umfang U = 20 cm. Die Seite b ist 4 cm lang. Wie lang ist die Seite a? Es gilt U = 2 · a + 2 · b."
+        answer: 6
+        tolerance: 0
+        unit: cm
+        mistakes:
+          - answer: 12
+            message: "Du hast 8 abgezogen, aber noch nicht durch 2 geteilt: 12 = 2 · a."
+          - answer: 8
+            message: "Du hast b nur einmal abgezogen: In der Formel steht 2 · b."
+          - answer: 10
+            message: "Du hast b vergessen. Nimm erst 2 · b auf beiden Seiten weg."
+        hint: "Setze b = 4 ein. Nimm auf beiden Seiten 8 weg, dann teile durch 2."
+        explanation: "Aus 20 = 2 · a + 8 wird 12 = 2 · a und a = 6. Probe: 2 · 6 + 2 · 4 = 20."
+  - type: section
+    id: weg
+    title: Derselbe Weg mit Buchstaben
+    blocks:
+      - type: text
+        text: >-
+          Eine **Formel** ist eine Gleichung mit Buchstaben. Die Buchstaben stehen für Zahlen. Darum stellst du eine
+          Formel um wie eine Gleichung mit Zahlen: Du tust auf beiden Seiten dasselbe. Probiere es an der Waage mit
+          den Zahlen von eben.
+      - type: vue-component
+        id: waage-umfang
+        component: GleichungWaage
+        props:
+          a: 2
+          b: 8
+          c: 20
+          schrittLabel: "Deine Schritte"
+          zahlLabel: "Anzahl"
+          minusKnopf: "Auf beiden Seiten minus"
+          plusKnopf: "Auf beiden Seiten plus"
+          teilenKnopf: "Beide Seiten teilen"
+          neuAnfangen: "Neu anfangen"
+          bildLabel: "Waage mit zwei Päckchen und 8 Gewichten gegen 20 Gewichte."
+        nojs: |
+          Waage für 20 = 2 · a + 8. Auf beiden Seiten 8 abziehen: 12 = 2 · a. Beide Seiten durch 2 teilen: a = 6.
+      - type: table
+        caption: "Dieselben Schritte, einmal mit Zahlen und einmal mit Buchstaben."
+        header: ["Schritt", "Mit Zahlen", "Mit Buchstaben"]
+        rowHeaders: true
+        rows:
+          - ["Start", "$20 = 2 \\cdot a + 8$", "$U = 2 \\cdot a + 2 \\cdot b$"]
+          - ["Minus", "$20 - 8 = 2 \\cdot a$", "$U - 2b = 2 \\cdot a$"]
+          - ["Geteilt", "$(20 - 8) : 2 = a$", "$(U - 2b) : 2 = a$"]
+          - ["Ergebnis", "$a = 6$", "$a = (U - 2b) : 2$"]
+      - type: text
+        text: >-
+          Die Schritte bleiben gleich, nur steht statt 8 jetzt $2b$. Beim Teilen teilst du die **ganze Seite**:
+          $U - 2b$ steht dabei in Klammern.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: >-
+              Erst nimmst du das Glied weg, das addiert wird. Dann teilst du durch die Zahl vor der gesuchten Größe.
+              Beides tust du immer auf beiden Seiten. Zur Probe setzt du Zahlen ein.
+          - type: formula
+            formula: 'a = (U - 2b) : 2 \quad \text{oder} \quad a = \frac{U - 2b}{2}'
+  - type: section
+    id: einheiten
+    title: Mit Einheiten
+    blocks:
+      - type: text
+        text: >-
+          In Formeln aus der Physik hat jede Größe eine Einheit, und die Einheit rechnest du mit. Für die
+          Gewichtskraft gilt $F = m \cdot g$. Wir runden den Ortsfaktor auf $g = 10\,\frac{\text{N}}{\text{kg}}$.
+      - type: example
+        title: Welche Masse hat ein Körper?
+        blocks:
+          - type: text
+            text: "Gesucht ist die Masse m eines Körpers mit der Gewichtskraft 45 N. Stelle erst um, dann setze ein."
+          - type: formula
+            formula: 'F = m \cdot g \quad \Rightarrow \quad m = F : g'
+          - type: formula
+            formula: 'm = 45\,\text{N} : 10\,\frac{\text{N}}{\text{kg}} = 4{,}5\,\text{kg}'
+      - type: text
+        text: >-
+          Bei der Dichte $\rho = m : V$ ist es genauso: Willst du die Masse, rechnest du auf beiden Seiten mal $V$.
+          Es entsteht $m = \rho \cdot V$.
   - type: section
     id: uebung
     title: Übung
     blocks:
+      - type: matching
+        id: formeln-zuordnen
+        text: "Ordne jeder Formel die Umstellung nach der genannten Größe zu."
+        pairs:
+          - left: "F = m · g, nach m"
+            right: "m = F : g"
+          - left: "v = s : t, nach s"
+            right: "s = v · t"
+          - left: "A = a · b, nach b"
+            right: "b = A : a"
+          - left: "ρ = m : V, nach m"
+            right: "m = ρ · V"
+        distractors:
+          - "m = F · g"
+          - "s = v : t"
+        explanation: "Mal wird mit geteilt rückgängig gemacht, geteilt mit mal."
       - type: single-choice
-        id: platzhalter-formeln-umstellen
-        text: "Platzhalter: Welche Zahl ist größer?"
+        id: umfang-nach-a
+        text: "Hanna stellt U = 2a + 2b nach a um. Welche Umformung ist richtig?"
         options:
-          - text: "3"
-            correct: false
-            info: "3 ist kleiner als 5."
-          - text: "5"
+          - text: "a = (U − 2b) : 2"
             correct: true
-            info: "5 ist größer als 3."
-        explanation: "5 ist größer als 3."
+            info: "Erst 2b abziehen, dann die ganze Seite durch 2 teilen."
+          - text: "a = U − 2b : 2"
+            correct: false
+            info: "Hier ist nur 2b durch 2 geteilt. Teile die ganze Seite U − 2b, mit Klammer."
+          - text: "a = (U + 2b) : 2"
+            correct: false
+            info: "Das Vorzeichen ist falsch: Das Gegenteil von plus 2b ist minus 2b."
+          - text: "a = 2 · (U − 2b)"
+            correct: false
+            info: "Hier wird mal 2 gerechnet. Bei 2a teilst du durch 2."
+        explanation: "Erst minus 2b, dann durch 2, jeweils auf beiden Seiten."
+      - type: generated
+        id: weg-berechnen
+        given:
+          v: { oneOf: [12, 18, 24, 30, 36, 60] }
+          t: { oneOf: [2, 3, 6] }
+        task:
+          text: "Die Formel v = s : t ist nach s umgestellt: s = v · t. Ein Zug fährt {{t}} Stunden lang mit {{v}} km/h. Wie viele Kilometer fährt er?"
+        answer: { value: "v * t", compare: { number: { format: integer, unit: km } } }
+        mistakes:
+          - value: "v / t"
+            message: "Du hast geteilt. In der umgestellten Formel steht mal: s = v · t."
+          - value: "v + t"
+            message: "Du hast addiert. Hier wird multipliziert."
+        hint: "Setze in s = v · t ein: Geschwindigkeit mal Zeit."
+        steps:
+          - "s = v · t"
+          - "s = {{v}} km/h · {{t}} h = {{answer}} km"
+      - type: generated
+        id: masse-berechnen
+        given:
+          F: { int: [15, 95], step: 5 }
+        task:
+          text: "Die Formel F = m · g ist nach m umgestellt: m = F : g. Rechne mit g = 10 N/kg. Ein Kasten hat die Gewichtskraft {{F}} N. Welche Masse hat er in kg? Schreib bei Bedarf ein Komma."
+        answer: { value: "F / 10", compare: { number: { format: decimal, decimals: 1, unit: kg } } }
+        mistakes:
+          - value: "F * 10"
+            message: "Du hast mal g gerechnet. Die Formel teilt: m = F : g."
+          - value: "10 / F"
+            message: "Zähler und Nenner sind vertauscht: m = F : g."
+        hint: "Teile die Gewichtskraft durch 10 N/kg."
+        steps:
+          - "m = F : g"
+          - "m = {{F}} N : 10 N/kg = {{answer}} kg"
+      - type: generated
+        id: seite-berechnen
+        given:
+          U: { int: [30, 60], step: 2 }
+          b: { int: [3, 12] }
+        task:
+          text: "Die Formel U = 2a + 2b ist nach a umgestellt: a = (U − 2b) : 2. Ein Rechteck hat den Umfang U = {{U}} cm, die Seite b ist {{b}} cm lang. Wie lang ist a?"
+        answer: { value: "(U - 2 * b) / 2", compare: { number: { format: integer, unit: cm } } }
+        mistakes:
+          - value: "U - b"
+            message: "Du hast nur 2b durch 2 geteilt. Teile die ganze Seite."
+          - value: "(U + 2 * b) / 2"
+            message: "Du hast 2b addiert. Das Gegenteil ist minus 2b."
+          - value: "U - 2 * b"
+            message: "Du hast 2b abgezogen, aber noch nicht durch 2 geteilt."
+        hint: "Ziehe 2 · b von U ab und teile durch 2."
+        steps:
+          - "a = (U − 2b) : 2"
+          - "a = ({{U}} − 2 · {{b}}) : 2 = {{answer}} cm"
+      - type: vue-component
+        id: formel-umstellen-zwei
+        component: GleichungenFormel
+        props:
+          art: zwei
+          loesungZeigen: Lösung zeigen
+          tipp: Tipp
+          rechenweg: "Lösung:"
+        examples:
+          accepted:
+            - { answer: "(U-2b)/2", seed: 1 }
+            - { answer: "a = (U − 2b) : 2", seed: 1 }
+            - { answer: "U/2 - b", seed: 1 }
+            - { answer: "2A/g", seed: 4 }
+          rejected:
+            - { answer: "U-2b/2", seed: 1 }
+            - { answer: "(U+2b)/2", seed: 1 }
+            - { answer: "2(U-2b)", seed: 1 }
+            - { answer: "A/(2g)", seed: 4 }
+      - type: vue-component
+        id: formel-umstellen-schwer
+        component: GleichungenFormel
+        props:
+          art: schwer
+          loesungZeigen: Lösung zeigen
+          tipp: Tipp
+          rechenweg: "Lösung:"
+        examples:
+          accepted:
+            - { answer: "2A/(a+c)", seed: 1 }
+            - { answer: "2A/h - c", seed: 2 }
+            - { answer: "(2A - c h)/h", seed: 2 }
+          rejected:
+            - { answer: "2A/a+c", seed: 1 }
+            - { answer: "A/(2(a+c))", seed: 1 }
+            - { answer: "2A/h + c", seed: 2 }
+            - { answer: "(2A-c)/h", seed: 2 }
+      - type: text
+        text: "Das kannst du jetzt: Du stellst eine Formel nach einer Größe um, indem du auf beiden Seiten dasselbe tust. Du teilst dabei die ganze Seite, achtest auf die Vorzeichen und rechnest mit Einheiten."
