@@ -4,3 +4,13 @@ summary: >-
   Klasse 5-6: Du löst Zahlenrätsel wie „Ich denke mir eine Zahl …“ durch Probieren in einer Tabelle und durch
   Rückwärtsrechnen. Jede Seite hat Aufgaben, die dir sagen, warum eine Antwort stimmt oder nicht.
 pages: [recap-rechengesetze, tabelle-probieren, zahlenraetsel-umkehren, waage-paeckchen]
+selfAssessment:
+  pages:
+    - exercises:
+        - /raetsel/tabelle-probieren/#probieren-mal-plus
+        - /raetsel/zahlenraetsel-umkehren/#umkehren-zwei-schritte
+        - /raetsel/waage-paeckchen/#waage-ueben-beides
+    - exercises:
+        - /raetsel/tabelle-probieren/#probieren-mal-plus
+        - /raetsel/zahlenraetsel-umkehren/#umkehren-minus
+        - /raetsel/waage-paeckchen/#waage-ueben-paeckchen

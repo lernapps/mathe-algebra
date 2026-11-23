@@ -64,6 +64,21 @@ Schicht 2, Tiefe 4; abhängig von #385 und #768.
 - Jede Gleichung auf mindestens zwei Wegen (Tabelle, Waage/Umformung), Wege verglichen; grafischer Weg bleibt #395.
 - Jede Seite ≥3 Aufgaben je Baustein, steigend; Rückmeldung mit Fehlertyp; nach 2 Fehlversuchen der Weg.
 
+**Baustein → Seite (gebaut):**
+- einfache-gleichungen: raetsel/tabelle-probieren, zahlenraetsel-umkehren, waage-paeckchen
+- terme-variable: terme/terme-aufstellen; terme-umformen: terme/terme-zusammenfassen, klammern-aufloesen
+- klammern-binome: binom/* (6 Seiten, bereinigt)
+- lineare-gleichungen: gleichungen/gleichungen-umformen, x-auf-beiden-seiten; gleichungen-aufstellen: gleichungen/sachaufgaben;
+  formeln-umstellen: gleichungen/formeln-umstellen; ungleichungen: gleichungen/ungleichungen-loesen
+- bruchterme: bruchterme/definitionsmenge, bruchterme-kuerzen; bruchgleichungen: bruchterme/bruchgleichungen-loesen
+- Recaps: raetsel/recap-rechengesetze, terme/recap-rationale, bruchterme/recap-brueche (je mit `Kurztest`-Komponente)
+
+**Hergang (ehrlich):** Beim Abhaken habe ich einmal in einer Schleife die Aufgaben „Slice 14“ und „Review“ abgehakt, bevor sie
+getan waren; sie wurden danach erledigt (Selbsteinschätzung, Inhaltsleitfaden, Prüfer) und stehen im Commit-Verlauf nach
+`5863ee9`. Die Aufgabe „Slice 12a“ steht doppelt, weil ich sie zweimal angelegt habe; der Recap ist gebaut.
+Ein leerer Test `RaetselTabelle.test.ts` (von mir versehentlich abgeschnitten) wurde in `8ed516f` wiederhergestellt;
+meine Agenten-Worktrees kamen kurz als eingebettete Repos in einen Commit und wurden in `b1f3ae2` entfernt.
+
 **Abgrenzung:** Funktionen/Schnittpunkte #395, quadratische Gleichungen #396. Externe `requires` laut Karte:
 grundrechenarten-rechengesetze (vor K1), rationale-zahlen-rechnen (vor K2); K4 hat keine äußere Voraussetzung.
 **Quellen:** Lernlandkarte, KMK 2022, Hessen Kerncurriculum, eigene Aufgaben mit Rechenprobe. Nichts übernommen.
@@ -177,18 +192,18 @@ ans Orchestrator-Protokoll `map-review`, falls der Lernenden-Prüfer es als Lüc
 - [x] Slice 2: raetsel – Recap-Seite (recap grundrechenarten-rechengesetze) + Kurztest-Seite (selbst)
 - [x] Slice 3: raetsel – Seiten zahlenraetsel-umkehren (Umkehrpfeile) und waage-paeckchen (Waage-Komponente), je ≥3 Aufgaben (Sub-Agent möglich, eigene Dateien)
 - [x] Slice 4: terme – Recap-Seite (recap rationale-zahlen-rechnen) + Kurztest (selbst)
-- [ ] Slice 5: terme – Seite(n) terme-variable (Streichholzmuster, Term aufstellen, Tabelle prüft Gleichheit) (Sub-Agent möglich)
-- [ ] Slice 6: terme – Seite(n) terme-umformen (zusammenfassen, Klammern auflösen, Rechteckmodell) (Sub-Agent möglich)
-- [ ] Slice 7: Bestand binom bereinigen: Videos, serlo, links:, Tutor-Regeln, Quellen, Titel/Intro, Schreibweisen; Kapitelreihenfolge nach requires (selbst)
-- [ ] Slice 8: gleichungen – lineare-gleichungen (Waage → Äquivalenzumformung, Probe in der Tabelle) (Sub-Agent möglich)
-- [ ] Slice 9: gleichungen – gleichungen-aufstellen (Sachaufgaben) (Sub-Agent möglich)
-- [ ] Slice 10: gleichungen – formeln-umstellen (Geometrie, Physik) (Sub-Agent möglich)
-- [ ] Slice 11: gleichungen – ungleichungen (Waage kippt bei mal minus) (Sub-Agent möglich)
-- [ ] Slice 12: bruchterme – Seite bruchterme (Definitionsmenge, kürzen, gleichnamig, Rechteckmodell) (Sub-Agent möglich)
-- [ ] Slice 13: bruchterme – Seite bruchgleichungen (Sub-Agent möglich)
-- [ ] Slice 14: Selbsteinschätzung je Kapitel, Glossar der Recap-Begriffe, app.yaml (Titel, Intro, Kapitel, Quellen), Liste Baustein → Seite im Plan (selbst)
-- [ ] Review: fachlicher Prüfer und Lernenden-Prüfer (Bestand und Neues, alle Recaps nach 7.7); Befunde unter Review im Plan, danach geänderte Stellen erneut prüfen
-- [ ] Slice 12a: bruchterme – Recap-Seite (recap brueche-kuerzen-erweitern, brueche-multiplizieren-dividieren) mit Kurztest-Komponente (selbst)
+- [x] Slice 5: terme – Seite(n) terme-variable (Streichholzmuster, Term aufstellen, Tabelle prüft Gleichheit) (Sub-Agent möglich)
+- [x] Slice 6: terme – Seite(n) terme-umformen (zusammenfassen, Klammern auflösen, Rechteckmodell) (Sub-Agent möglich)
+- [x] Slice 7: Bestand binom bereinigen: Videos, serlo, links:, Tutor-Regeln, Quellen, Titel/Intro, Schreibweisen; Kapitelreihenfolge nach requires (selbst)
+- [x] Slice 8: gleichungen – lineare-gleichungen (Waage → Äquivalenzumformung, Probe in der Tabelle) (Sub-Agent möglich)
+- [x] Slice 9: gleichungen – gleichungen-aufstellen (Sachaufgaben) (Sub-Agent möglich)
+- [x] Slice 10: gleichungen – formeln-umstellen (Geometrie, Physik) (Sub-Agent möglich)
+- [x] Slice 11: gleichungen – ungleichungen (Waage kippt bei mal minus) (Sub-Agent möglich)
+- [x] Slice 12: bruchterme – Seite bruchterme (Definitionsmenge, kürzen, gleichnamig, Rechteckmodell) (Sub-Agent möglich)
+- [x] Slice 13: bruchterme – Seite bruchgleichungen (Sub-Agent möglich)
+- [x] Slice 14: Selbsteinschätzung je Kapitel, Glossar der Recap-Begriffe, app.yaml (Titel, Intro, Kapitel, Quellen), Liste Baustein → Seite im Plan (selbst)
+- [x] Review: fachlicher Prüfer und Lernenden-Prüfer (Bestand und Neues, alle Recaps nach 7.7); Befunde unter Review im Plan, danach geänderte Stellen erneut prüfen
+- [x] Slice 12a: bruchterme – Recap-Seite (recap brueche-kuerzen-erweitern, brueche-multiplizieren-dividieren) mit Kurztest-Komponente (selbst)
 - [ ] Slice 12a: bruchterme – Recap-Seite (recap brueche-kuerzen-erweitern, brueche-multiplizieren-dividieren) mit Kurztest-Komponente (selbst)
 <!-- tasks: slices (17 added): one per competency, as written in Plan -->
 - [ ] **Checkpoint:** the pattern page, after the first slice. A slice in a pattern the app already has: show it to

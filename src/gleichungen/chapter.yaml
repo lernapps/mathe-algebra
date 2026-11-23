@@ -3,3 +3,17 @@ title: Lineare Gleichungen
 summary: >-
   Klasse 7-8: Lineare Gleichungen und Ungleichungen lösen, Gleichungen zu Sachaufgaben aufstellen und Formeln umstellen.
 pages: [gleichungen-umformen, x-auf-beiden-seiten, sachaufgaben, formeln-umstellen, ungleichungen-loesen]
+selfAssessment:
+  pages:
+    - exercises:
+        - /gleichungen/gleichungen-umformen/#umformen-plus
+        - /gleichungen/x-auf-beiden-seiten/#beide-seiten-plus
+        - /gleichungen/sachaufgaben/#preise-ueben
+    - exercises:
+        - /gleichungen/formeln-umstellen/#weg-berechnen
+        - /gleichungen/ungleichungen-loesen/#grenzzahl-positiv
+        - /gleichungen/ungleichungen-loesen/#grenzzahl-negativ
+    - exercises:
+        - /gleichungen/gleichungen-umformen/#umformen-minus
+        - /gleichungen/x-auf-beiden-seiten/#beide-seiten-minus
+        - /gleichungen/sachaufgaben/#alter-ueben

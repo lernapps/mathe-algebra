@@ -9,37 +9,45 @@ description: Use for any content work in this app - researching, writing, extend
 
 - Hessen, Gymnasium (G9); Kerncurriculum Mathematik Sekundarstufe I (Hessisches Kultusministerium, 2021). Die
   Zuordnung je Bundesland steht im Katalog (Lernlandkarte, `map/mathematik/curricula/`), nicht hier.
-- Binomische Formeln: Klasse 8 (Einheit 8.1).
+- Terme und Gleichungen: Klasse 5-6 (Rätsel mit Platzhaltern) und Klasse 7-8 (Terme, binomische Formeln, lineare
+  Gleichungen und Ungleichungen, Bruchterme).
 - Die App gehört zum Strang `mathematik/algebra` der Lernlandkarte (`strand` in `src/app.yaml`, Format 2). Jede
   Seite nennt in `competencies` die Bausteine, die sie übt: ids aus `map/mathematik.yaml` in lernapps/apps, nur aus
   diesem Strang. Ein neues Kapitel kommt nur dazu, wenn seine Bausteine im Strang `algebra` stehen; fehlt ein
   Baustein, wird er dem Katalog vorgeschlagen, nicht in der App erfunden.
-- Die App entstand aus der Mathe-Karte (Kapitel `binom`); Seiten-ids und Adressen sind von dort übernommen.
+- Die App entstand aus der Mathe-Karte (Kapitel `binom`); Seiten-ids und Adressen von `binom` sind von dort übernommen
+  und bleiben.
+- Regeln für alle Mathe-Explainer (Schreibweisen, Aufgaben, Quellen, Recaps): `docs/mathe-epic/regeln.md` in lernapps/apps.
 
 ## Competencies
 
-Je Seite eine Kompetenz, Datei `src/<kapitel>/<seite>.yaml`.
+Je Seite eine Kompetenz (ein Baustein), Datei `src/<kapitel>/<seite>.yaml`. Reihenfolge der Kapitel nach `requires` der Karte:
 
-- Binom (`src/binom/`): Ich kann zwei Klammern multiplizieren (`klammern-multiplizieren`), die erste, zweite und
-  dritte binomische Formel anwenden (`erste-binomische`, `zweite-binomische`, `dritte-binomische`), rückwärts
-  faktorisieren (`binome-rueckwaerts`) und damit im Kopf rechnen (`geschickt-rechnen`).
-- Bausteine je Seite (`competencies`): jede Seite `klammern-binome` (der Baustein umfasst Klammern auflösen und die
-  binomischen Formeln vorwärts und rückwärts).
+- `raetsel` (5-6): Recap „Vorrangregeln und Rechengesetze“; `einfache-gleichungen` auf `tabelle-probieren`,
+  `zahlenraetsel-umkehren`, `waage-paeckchen`.
+- `terme` (7-8): Recap „Rechnen mit negativen Zahlen“; `terme-variable` auf `terme-aufstellen`; `terme-umformen` auf
+  `terme-zusammenfassen` und `klammern-aufloesen`.
+- `binom` (8): `klammern-binome` auf `klammern-multiplizieren`, `erste-binomische`, `zweite-binomische`,
+  `dritte-binomische`, `binome-rueckwaerts`, `geschickt-rechnen`.
+- `gleichungen` (7-8): `lineare-gleichungen` auf `gleichungen-umformen`, `x-auf-beiden-seiten`;
+  `gleichungen-aufstellen` auf `sachaufgaben`; `formeln-umstellen` auf `formeln-umstellen`; `ungleichungen` auf
+  `ungleichungen-loesen`.
+- `bruchterme` (7-8): Recap „Brüche kürzen und erweitern“ und „Bruchrechnung: Multiplikation und Division“;
+  `bruchterme` auf `definitionsmenge`, `bruchterme-kuerzen`; `bruchgleichungen` auf `bruchgleichungen-loesen`.
 
 ## Content structure
 
-Jede Seite hat diese Abschnitte, in dieser Reihenfolge und mit diesen ids (öffentlicher Vertrag, nie umbenennen):
-
-1. `warum` – „Warum?“: ein Absatz aus dem Alltag oder der Klassenarbeit.
-2. `regel` – „Regel“: `formula`-Blöcke, Fachbegriffe als `definition`, eine `note` „Merke“.
-3. `beispiel` – „Beispiel“: eine `example`-Box mit `table` (gegeben, Rechnung, Ergebnis).
-4. `bild` – „Bild“: das Beispielbild, ohne JavaScript sichtbar (siehe Figures).
-5. `video` – „Video dazu“: ein `video`-Block (`youtube: <11 Zeichen nach watch?v=>`, `title` wie YouTube ihn zeigt,
-   `channel: Lehrerschmidt`), danach der serlo-Link als Text, falls es einen geprüften gibt. Kein YouTube-Link im
-   Text, kein Satz zu Kanal oder Datenschutz: das zeigt der Block selbst.
-6. `uebung` – „Übung“: die Übungen (siehe Exercise patterns).
-
-`description` und `summary` sind reiner Text ohne `$…$`.
+- Seitenabschnitte nach dem, was die Seite lehrt (ids bleiben nach der Veröffentlichung); neue Seiten beginnen mit einer
+  leichten ersten Aufgabe oder einem Bild, wechseln Schauen, Tun, Lesen und enden mit „Das kannst du jetzt: …“. Die
+  Seiten von `binom` haben die Abschnitte `warum`, `regel`, `beispiel`, `bild`, `uebung`.
+- Eine neue Darstellung oder Rechenart wird vor der ersten Aufgabe in Worten mit ihrem Modell eingeführt; Texte und
+  Aufgaben verweisen nur auf Sichtbares („die Tabelle darüber“ nur, wenn das Werkzeug direkt davor steht).
+- Recap-Seite (`recap:`, nur beschreibende Blöcke): Kopf „Das brauchst du für dieses Kapitel“, je Baustein eine
+  Überschrift, Fachbegriffe als `definition` (kommen ins Glossar), ein Beispiel, die Komponente `Kurztest` (kein Zählen,
+  Rückmeldung mit Grund) und der Satz mit dem Namen des Bausteins und seiner Kartenseite; Schluss „Du bist bereit,
+  wenn du …“. Kurztests sind nicht zu leicht für die Stufe.
+- Keine Videos, keine Links auf fremde Seiten (auch nicht serlo oder Wikipedia), keine `links:` an Aufgaben.
+- `description` und `summary` sind reiner Text ohne `$…$`.
 
 ## Ids, addresses and the tutor
 
@@ -55,41 +63,38 @@ Jede Seite hat diese Abschnitte, in dieser Reihenfolge und mit diesen ids (öffe
 
 ## Exercise patterns
 
-- Bezeichner: deutsche Fachbegriffe (`Grundwert`, `Pfad`), englisch nur für allgemeine Struktur. Jede Komponente
-  trägt das Präfix ihres Kapitels (`Binom…`). Gemeinsamer Code steht einmal in
-  `src/components/Zufallszahlen.ts` (mulberry32); nie in ein
-  Kapitel kopieren.
-
-- Je Seite eine Übungskomponente mit „Bild zur Aufgabe“, Tipp, Rechenweg und den typischen Fehlern der alten App:
-  - Binom: `BinomTermAufgabe` mit Prop `art` (`klammern`, `erste`, `zweite`, `dritte`, `rueckwaerts`), Parser und
-    Gleichwertigkeit in `BinomParser.ts`/`BinomTerm.ts`, Generatoren in `BinomFormeln.ts`; `BinomKopfrechnen` auf
-    `geschickt-rechnen`.
-- Dazu je Seite eine Übung, die keine Komponente ist (der explainer verlangt sie): eine `single-choice`-Frage zu
-  einem typischen Fehler mit `info` je Option.
-- Selbsteinschätzung (`selfAssessment` in `chapter.yaml`): so viele Seiten wie sinnvoll, je abgefragte Seite 2
-  Aufgaben, Schritte zu 3, je Kapitel 12. Bevorzugt die Übungskomponente der Seite (sie zeigt ihre Aufgabe
-  selbst und zieht jede Runde eine neue), dazu die `generated`-Übung, sonst die Komponente zweimal.
-  - Binom: auf jeder Seite die Komponente zweimal (`BinomTermAufgabe`, `BinomKopfrechnen`); die `single-choice`-Fragen
-    kann man raten.
+- Bezeichner: deutsche Fachbegriffe, englisch nur für allgemeine Struktur. Jede Komponente trägt das Präfix ihres
+  Kapitels (`Raetsel…`, `Terme…`, `Binom…`, `Gleichungen…`, `Bruchterm…`; `GleichungWaage` und `Kurztest` sind
+  kapitelübergreifend). Gemeinsamer Code steht einmal: `Zufallszahlen.ts` (mulberry32), `BinomParser.ts` und
+  `BinomTerm.ts` (Terme lesen, Gleichwertigkeit); nie in ein Kapitel kopieren.
+- **Werkzeuge** (keine Aufgaben, `nojs`, nichts wird geprüft): `RaetselTabelle` (Tabelle zum Probieren, a · x + b = c),
+  `GleichungWaage` (Waage mit Päckchen und Gewichten, auf beiden Seiten dasselbe tun), `GleichungenTabelle`,
+  `GleichungenWaage` (x auf beiden Seiten), `GleichungenGerade` (Lösungsmenge auf der Zahlengerade), `TermeTabelle`
+  (zwei Terme vergleichen), `BruchtermTabelle` (Lücke bei Nenner 0), `BruchtermRechteck`, `BruchgleichungTabelle`.
+- **Übungskomponenten** (Eingabe, Prüfung durch den explainer, Rückmeldung mit Fehlertyp): `BinomTermAufgabe`
+  (Prop `art`), `BinomKopfrechnen`, `TermeAufstellen`, `TermeUmformen`, `GleichungenFormel`.
+- Sonst `generated` (Zufallswerte, `mistakes` je typischem Fehler, `hint`, `steps`, ganzzahlig über `where`),
+  `number`, `single-choice` (mit `info` je Option), `ordering`, `matching`. Mindestens drei Aufgaben je Baustein, die
+  erste nicht ohne Gedanken im Kopf lösbar, steigende Schwierigkeit.
 - Text und Optionen einer Quiz-Frage sind reiner Text ohne `$…$` (die Laufzeit-Tests vergleichen ungesetzten Text):
-  Hochzahlen als `²`, Malpunkt `·`.
+  Hochzahlen als `²`, Malpunkt `·`, Minus `−`.
+- Selbsteinschätzung (`selfAssessment` in `chapter.yaml`): je Kapitel zwei bis drei Schritte zu 3 Aufgaben, bevorzugt
+  `generated` und Übungskomponenten, je Seite zwei Aufgaben; Recap-Seiten sind nie dabei.
 
 ## Figures
 
 - Was kein Block zeichnet (Flächenbild, Baum, Urne), zeichnet die Komponente der Übung; das Beispielbild entsteht
   daraus als SVG (gerendert mit `scripts/bilder.mjs`, das bis `8b229e9` im Repo lag und in der Git-Historie steht;
-  `<svg>` mit `viewBox`, sonst schneidet der Browser die Datei zu), auf der Seite ein `figure` mit
+  `<svg>` mit `viewBox`, sonst schneidet der Browser die Datei zu; neue Bilder erzeugt ein Skript außerhalb des Repos), auf der Seite ein `figure` mit
   `image: images/<kapitel>-<seite>.svg`, `alt` aus dem `aria-label`, `caption` mit der genauen Beschreibung,
   `source: Eigene Darstellung der Mathe-Karte`, `licence: MIT`. Nie von Hand gezeichnete SVGs.
 - Farben: Mathe-Blau `#1d4ed8`, Hervorhebung Orange `#ff8f00`.
 
 ## Sources
 
-- Videos: Kanal Lehrerschmidt (YouTube), je Seite geprüft über oEmbed (`author_name` und Titel passen); als `video`-Block,
-  der den Player erst nach dem Klick von youtube-nocookie.com lädt.
-- serlo.org: Artikel mit numerischer id (`https://de.serlo.org/mathe/<id>/<slug>`), per curl geprüft (Status 200, der
-  Artikel selbst, passt zur Kompetenz). Kein schwacher Treffer; dann kein Link.
-- Texte und Aufgaben sind eigene Arbeit (MIT), übernommen aus den alten Apps des Repos.
+- Texte, Aufgaben und Bilder sind eigene Arbeit (MIT); die Seiten von `binom` stammen aus den alten Apps des Repos.
+- Lernlandkarte, KMK-Bildungsstandards (2022) und das Hessische Kerncurriculum sind die einzigen Quellen. Keine Videos,
+  keine Dritt-Inhalte (`thirdParty: none`), kein serlo, kein Wikipedia im Explainer.
 
 ## Adding a chapter or round
 
@@ -106,6 +111,6 @@ Jede Seite hat diese Abschnitte, in dieser Reihenfolge und mit diesen ids (öffe
 - Formeln in `description` erschienen roh im Inhaltsverzeichnis → reiner Text.
 - Formeln in Quiz-Fragen ließen die Laufzeit-Tests scheitern und hatten keinen zugänglichen Namen → reiner Text.
 - Bilder als Komponente waren ohne JavaScript unsichtbar → statische SVGs aus `scripts/bilder.mjs`.
-- Videos als Textlink mit Satz „Der Link öffnet YouTube …“ wiederholten, was die Runtime kann → `video`-Block.
+- Videos und serlo-Links sind raus (Regeln für alle Mathe-Explainer, Abschnitt 4).
 - Ein wählbares Feld mit sichtbarem Text braucht diesen Text am Anfang seines Namens (axe
   label-content-name-mismatch).
