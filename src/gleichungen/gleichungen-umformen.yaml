@@ -64,7 +64,7 @@ blocks:
         term: Äquivalenzumformung
         explanation: >-
           Ein Schritt, den du auf beiden Seiten gleich ausführst: dieselbe Zahl addieren oder subtrahieren, beide
-          Seiten durch dieselbe Zahl teilen (nicht durch 0). Die Gleichung sieht danach anders aus, hat aber dieselbe
+          Seiten mit derselben Zahl malnehmen oder durch dieselbe Zahl teilen (nicht mit 0 malnehmen, nicht durch 0 teilen). Die Gleichung sieht danach anders aus, hat aber dieselbe
           Lösung.
       - type: example
         title: "Löse 3 · x − 5 = 16 durch Umformen"
@@ -193,7 +193,7 @@ blocks:
           - value: "c / a"
             message: "Du hast {{b}} nur links abgezogen."
           - value: "(c - b) / b"
-            message: "Du teilst durch die Zahl vor x, nicht durch {{b}}."
+            message: "Du musst durch die Zahl vor x teilen ({{a}}), nicht durch {{b}}."
           - value: "c / a - b"
             message: "Geteilt hast du nur {{c}}, {{b}} blieb stehen."
         hint: "Erst − {{b}}, dann : {{a}}."
@@ -214,7 +214,7 @@ blocks:
           - value: "(c - b) / a"
             message: "Aus − {{b}} wird + {{b}}, auf beiden Seiten."
           - value: "c + b"
-            message: "Jetzt noch beide Seiten : {{a}}."
+            message: "Du hast {{b}} richtig addiert, aber noch nicht durch {{a}} geteilt."
         hint: "Erst + {{b}}, dann : {{a}}."
         steps:
           - '${{a}} \cdot x = {{c}} + {{b}}$'
@@ -246,7 +246,7 @@ blocks:
           k: { int: [2, 30] }
         where: ["a != b", "decimals((k + b) / a) == 0", "decimals((b - k) / a) == 0"]
         task:
-          text: "Löse {{a}} · x + {{b}} = −{{k}}. Die Lösung ist negativ."
+          text: "Löse {{a}} · x + {{b}} = −{{k}}. Welche Zahl ist x? Die Lösung ist negativ."
         answer: { value: "-(k + b) / a", compare: { number: { format: integer } } }
         mistakes:
           - value: "(k + b) / a"

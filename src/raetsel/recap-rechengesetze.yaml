@@ -69,16 +69,20 @@ blocks:
         props:
           question: "Wie rechnest du 7 · 98 geschickt im Kopf?"
           options:
-            - { text: "3", correct: true, info: "23 = 20 + 3, also 6 · 23 = 6 · 20 + 6 · 3 = 120 + 18 = 138." }
             - {
-                text: "23",
-                correct: false,
-                info: "Du verteilst auf die Teile von 23, also auf 20 und 3, nicht noch einmal auf 23.",
+                text: "7 · 100 − 7 · 2",
+                correct: true,
+                info: "98 = 100 − 2, also 7 · 98 = 700 − 14 = 686 (Distributivgesetz).",
               }
             - {
-                text: "6",
+                text: "7 · 100 − 2",
                 correct: false,
-                info: "Der Faktor 6 steht schon vor der Klammer. Verteilt wird er auf 20 und 3.",
+                info: "Der Faktor 7 gehört auch zur 2: 7 · 98 = 7 · 100 − 7 · 2. Sonst fehlen 12.",
+              }
+            - {
+                text: "7 · 90 + 8",
+                correct: false,
+                info: "98 = 90 + 8, aber dann musst du 7 · 90 + 7 · 8 rechnen, nicht nur 7 · 90 + 8.",
               }
           right: "Richtig."
           wrong: "Nicht richtig."

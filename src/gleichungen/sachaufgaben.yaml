@@ -167,9 +167,9 @@ blocks:
       - type: generated
         id: weg-zeit-ueben
         given:
-          v: { oneOf: [10, 20] }
+          v: { oneOf: [10, 15, 20] }
           a: { int: [5, 30], step: 5 }
-          c: { int: [60, 120], step: 5 }
+          c: { int: [60, 100], step: 5 }
         where: ["decimals((c - a) / v) <= 1"]
         task:
           text: "Lena hat auf ihrer Radtour schon {{a}} km geschafft. Sie fährt mit gleichbleibend {{v}} km pro Stunde weiter. Nach wie vielen Stunden hat sie insgesamt {{c}} km geschafft? Gib auch halbe Stunden an, zum Beispiel 2,5."

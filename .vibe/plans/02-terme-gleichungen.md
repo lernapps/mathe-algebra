@@ -84,6 +84,24 @@ grundrechenarten-rechengesetze (vor K1), rationale-zahlen-rechnen (vor K2); K4 h
 **Quellen:** Lernlandkarte, KMK 2022, Hessen Kerncurriculum, eigene Aufgaben mit Rechenprobe. Nichts übernommen.
 **Offen/ungeprüft:** Schreibweisen-Prüfung des Bestands (fachlicher Prüfer); Lernenden-Prüfer für Bestand und Neues.
 
+### Review
+
+**Fachlicher Prüfer** (Unteragent, nicht Autor; las alle Seiten, rechnete alle 45 `generated`-Aufgaben über je 4000 Ziehungen mit exakten Brüchen nach):
+- Alle 45 `generated`-Aufgaben: 0 Funde. Alle festen Beispiele und Musterlösungen stimmen, bis auf die Kurztests.
+- Blocker (behoben): In 5 von 6 Kurztests passten Optionen und `info` nicht zur Frage; mein früherer Ersetzungsschritt hatte nur Frage und
+  `nojs` geändert. Neu geschrieben, Antworten nachgerechnet (10; 7 · 100 − 7 · 2; 15; −3; 4/7; 2/3).
+- Komponenten (behoben): `RaetselTabelle` meldete bei Ungleichungen „Treffer … Lösung“ (jetzt Prop `ungleichung`, Hinweise nur zum
+  Vergleich); `GleichungenTabelle` beachtet bei Vorzeichenwechsel die Richtung. Kleinere Rückmeldungen und ein fehlendes „Welche Zahl ist x?“ ergänzt;
+  Definition Äquivalenzumformung mit Malnehmen; „quadratische Ergänzung“ (gehört nach #396) gestrichen; Alltagswerte (Auto statt Zug,
+  Radtour kürzer); Recap: Minus vor Klammer mit Summe und Hauptnenner ergänzt.
+- Offen/nicht umgesetzt: Variablen in `generated`-Aufgabentexten als Klartext (ca. 15 Stellen, bei Quizfragen vorgesehen); einzelne Einheiten ohne
+  geschütztes Leerzeichen (Stichprobe); „man“ in 2 bis 3 Optionen; `BinomKopfrechnen` akzeptiert nur die vorgesehene Formel (didaktisch gewollt);
+  Recap „Vorrangregeln“ erklärt „Summand/Faktor“ nicht eigens. a/b in den Kurztests von `recap-brueche` (ca. 12 Stellen, Ausnahme W28, hier gezählt).
+- Nicht geprüft vom Prüfer: `GleichungenFormel.ts` (620 Zeilen), Darstellung/Bilder, Laufzeit-Setzen negativer Zahlen, Quellenabgleich im Netz.
+
+**Lernenden-Prüfer** (Musterseite `tabelle-probieren`, Klasse 7): Befunde umgesetzt (siehe Commit „Musterseite nach dem Lernenden-Prüfer überarbeitet“).
+Lernenden-Prüfer für alle Seiten (Kapitel 1/2 und 3/4): Läufe durch ein API-Limit unterbrochen, werden fortgesetzt; Ergebnis folgt hier.
+
 ## Explore
 
 <!--

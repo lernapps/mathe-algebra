@@ -157,8 +157,8 @@ blocks:
           - "Punkt vor Strich: {{a}} · {{n}} + {{b}} = {{answer}}."
       - type: text
         text: >-
-          Mia und Tom zählen dieselbe Kette aus Streichhölzern. Mia schreibt $2 \cdot n + 1$, Tom schreibt
-          $3 \cdot n - 1$. Vergleiche in der Tabelle.
+          Mia und Tom zählen Streichhölzer, aber einer von beiden hat sich verzählt. Mia schreibt
+          $2 \cdot n + 1$, Tom schreibt $3 \cdot n - 1$. Vergleiche in der Tabelle.
       - type: vue-component
         id: tabelle-mia-tom
         component: TermeTabelle

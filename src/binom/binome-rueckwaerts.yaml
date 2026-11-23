@@ -9,7 +9,7 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Bisher hast du Klammern aufgelöst. Oft brauchst du den umgekehrten Weg: Aus $x^2 + 6x + 9$ wird wieder $(x + 3)^2$. Das nennt man faktorisieren. Ein Produkt verrät mehr als eine Summe – zum Beispiel, wann ein Term null wird oder wie sich ein Bruch kürzen lässt. Später beim Lösen quadratischer Gleichungen („quadratische Ergänzung“) ist genau dieser Blick der entscheidende Schritt.
+          Bisher hast du Klammern aufgelöst. Oft brauchst du den umgekehrten Weg: Aus $x^2 + 6x + 9$ wird wieder $(x + 3)^2$. Das nennt man faktorisieren. Ein Produkt verrät mehr als eine Summe – zum Beispiel, wann ein Term null wird oder wie sich ein Bruch kürzen lässt.
   - type: section
     id: regel
     title: Regel

@@ -130,10 +130,10 @@ blocks:
       - type: generated
         id: weg-berechnen
         given:
-          v: { oneOf: [12, 18, 24, 30, 36, 60] }
+          v: { oneOf: [60, 80, 90, 100, 120] }
           t: { oneOf: [2, 3, 6] }
         task:
-          text: "Die Formel v = s : t ist nach s umgestellt: s = v · t. Ein Zug fährt {{t}} Stunden lang mit {{v}} km/h. Wie viele Kilometer fährt er?"
+          text: "Die Formel v = s : t ist nach s umgestellt: s = v · t. Ein Auto fährt {{t}} Stunden lang mit {{v}} km/h. Wie viele Kilometer fährt er?"
         answer: { value: "v * t", compare: { number: { format: integer, unit: km } } }
         mistakes:
           - value: "v / t"

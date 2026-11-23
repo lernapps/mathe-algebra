@@ -79,6 +79,10 @@ export function hinweis(g: Gleichung, zeilen: Zeile[]): string {
   const davor = zeilen[zeilen.length - 2];
   if (davor === undefined)
     return "Probier eine zweite Zahl und schau, ob der Unterschied zwischen links und rechts kleiner wird.";
+  if (Math.sign(unterschied(letzte)) !== Math.sign(unterschied(davor))) {
+    const [klein, gross] = letzte.x < davor.x ? [letzte.x, davor.x] : [davor.x, letzte.x];
+    return `Das Vorzeichen des Unterschieds hat gewechselt: Die Lösung liegt zwischen ${zahlText(klein)} und ${zahlText(gross)}.`;
+  }
   if (Math.abs(unterschied(letzte)) < Math.abs(unterschied(davor))) {
     return "Der Unterschied ist kleiner geworden. Geh in dieselbe Richtung weiter.";
   }

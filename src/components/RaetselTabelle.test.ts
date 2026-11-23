@@ -10,6 +10,7 @@ import {
   probiere,
   trageEin,
   vergleichText,
+  vergleichsText,
   zahlText,
   type Zeile,
 } from "./RaetselTabelle.ts";
@@ -93,5 +94,17 @@ describe("trageEin", () => {
     const r = trageEin(g, zeilen, "99");
     expect(r.zeilen).toHaveLength(MAX_ZEILEN);
     expect(r.meldung).toContain("voll");
+  });
+});
+
+describe("Ungleichung", () => {
+  test("kein Treffer und keine Lösung, nur der Vergleich", () => {
+    expect(hinweis([probiere(g, 5)], true)).toContain("kippt");
+    expect(hinweis([probiere(g, 5)], true)).not.toContain("Lösung");
+    expect(hinweis([probiere(g, 2)], true)).toContain("links kleiner");
+    expect(hinweis([probiere(g, 6)], true)).toContain("links größer");
+  });
+  test("die Überschrift ohne Gleichheitszeichen", () => {
+    expect(vergleichsText(g)).toBe("3 · x + 4 gegen 19");
   });
 });

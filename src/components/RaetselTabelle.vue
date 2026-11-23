@@ -3,7 +3,15 @@
 // ein; die Tabelle rechnet beide Seiten aus und sagt mit Wort und Zeichen, ob links kleiner, gleich oder größer ist.
 // Ein Werkzeug zum Ausprobieren, keine Aufgabe (RaetselTabelle.ts); gespeichert wird nichts.
 import { computed, nextTick, ref, useId } from "vue";
-import { gleichungText, hinweis, trageEin, vergleichText, zahlText, type Zeile } from "./RaetselTabelle.ts";
+import {
+  gleichungText,
+  hinweis,
+  trageEin,
+  vergleichsText,
+  vergleichText,
+  zahlText,
+  type Zeile,
+} from "./RaetselTabelle.ts";
 
 const props = defineProps<{
   a: number;
@@ -16,6 +24,8 @@ const props = defineProps<{
   spalteLinks: string;
   spalteRechts: string;
   spalteVergleich: string;
+  /** Bei true ist es eine Ungleichung: kein Gleichheitszeichen, kein „Lösung“, nur der Vergleich. */
+  ungleichung?: boolean;
 }>();
 
 const gleichung = computed(() => ({ a: props.a, b: props.b, c: props.c }));
@@ -41,13 +51,15 @@ async function neuAnfangenKlick(): Promise<void> {
   feld.value?.focus();
 }
 
-const rueckmeldung = computed(() => (meldung.value !== "" ? meldung.value : hinweis(zeilen.value)));
+const rueckmeldung = computed(() =>
+  meldung.value !== "" ? meldung.value : hinweis(zeilen.value, props.ungleichung === true),
+);
 </script>
 
 <template>
   <div class="tabelle-probieren">
     <p class="tabelle-gleichung">
-      <strong>{{ gleichungText(gleichung) }}</strong>
+      <strong>{{ ungleichung ? vergleichsText(gleichung) : gleichungText(gleichung) }}</strong>
     </p>
     <div class="tabelle-eingabe">
       <label :for="`${id}-x`">{{ eingabeLabel }}</label>

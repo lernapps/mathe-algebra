@@ -63,9 +63,17 @@ export function vergleichText(v: Vergleich): string {
 }
 
 /** Der Tipp zum nächsten Versuch, wenn die letzte Zeile nicht stimmt; bei einem Treffer die Meldung. */
-export function hinweis(zeilen: Zeile[]): string {
+export function hinweis(zeilen: Zeile[], ungleichung = false): string {
   const letzte = zeilen[zeilen.length - 1];
   if (letzte === undefined) return "Trag eine Zahl für x ein.";
+  if (ungleichung) {
+    if (letzte.vergleich === "gleich") {
+      return `Für x = ${zahlText(letzte.x)} sind beide Seiten gleich: Hier kippt die Waage. Probier Zahlen darüber und darunter.`;
+    }
+    return letzte.vergleich === "kleiner"
+      ? `Für x = ${zahlText(letzte.x)} ist links kleiner als rechts.`
+      : `Für x = ${zahlText(letzte.x)} ist links größer als rechts.`;
+  }
   if (letzte.vergleich === "gleich")
     return `Treffer: Für x = ${zahlText(letzte.x)} sind beide Seiten ${zahlText(letzte.rechts)}. Das ist die Lösung.`;
   return letzte.vergleich === "kleiner"
@@ -80,4 +88,9 @@ export function trageEin(g: Gleichung, zeilen: Zeile[], eingabe: string): { zeil
   if (zeilen.length >= MAX_ZEILEN)
     return { zeilen, meldung: "Die Tabelle ist voll. Fang mit „Neu anfangen“ von vorn an." };
   return { zeilen: [...zeilen, probiere(g, x)], meldung: "" };
+}
+
+/** Die Überschrift der Tabelle bei einer Ungleichung: ohne Gleichheitszeichen, z. B. „3 · x + 4 gegen 19“. */
+export function vergleichsText(g: Gleichung): string {
+  return `${linkeSeite(g)} gegen ${zahlText(g.c)}`;
 }

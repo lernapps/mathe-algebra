@@ -24,6 +24,11 @@ blocks:
         explanation: >-
           Zähler und Nenner mit derselben Zahl malnehmen. Der Wert bleibt gleich. Beispiel:
           $\frac{3}{4} = \frac{3 \cdot 5}{4 \cdot 5} = \frac{15}{20}$. So bekommst du gleiche Nenner.
+      - type: definition
+        term: Hauptnenner
+        explanation: >-
+          Der kleinste gemeinsame Nenner von Brüchen. Du erweiterst die Brüche, bis die Nenner gleich sind, und rechnest
+          dann mit den Zählern. Beispiel: $\frac{1}{2} + \frac{1}{3} = \frac{3}{6} + \frac{2}{6} = \frac{5}{6}$.
       - type: vue-component
         id: kurztest-kuerzen
         component: Kurztest
@@ -31,19 +36,19 @@ blocks:
           question: "Kürze 48/84 so weit wie möglich. Welcher Bruch bleibt?"
           options:
             - {
-                text: "3/4",
+                text: "4/7",
                 correct: true,
-                info: "Zähler und Nenner durch 2 geteilt: 6 : 2 = 3 und 8 : 2 = 4. Mehr geht nicht.",
+                info: "Teile durch 12: 48 : 12 = 4 und 84 : 12 = 7. Mehr geht nicht, denn 4 und 7 haben keinen gemeinsamen Teiler.",
               }
             - {
-                text: "6/4",
+                text: "24/42",
                 correct: false,
-                info: "Du hast nur den Nenner durch 2 geteilt. Zähler und Nenner müssen durch dieselbe Zahl geteilt werden.",
+                info: "Das ist erst durch 2 gekürzt. Beide Zahlen lassen sich noch weiter durch 6 teilen.",
               }
             - {
-                text: "2/8",
+                text: "12/21",
                 correct: false,
-                info: "Du hast 6 durch 3 geteilt, aber 8 nicht. Beide müssen durch dieselbe Zahl geteilt werden.",
+                info: "Das ist durch 4 gekürzt. 12 und 21 haben noch den gemeinsamen Teiler 3.",
               }
           right: "Richtig."
           wrong: "Nicht richtig."
@@ -74,20 +79,16 @@ blocks:
         props:
           question: "Was ist 3/4 : 9/8?"
           options:
+            - { text: "2/3", correct: true, info: "Durch 9/8 teilen heißt mit 8/9 malnehmen: 3/4 · 8/9 = 24/36 = 2/3." }
             - {
-                text: "2",
-                correct: true,
-                info: "Durch 1/4 teilen heißt mit dem Kehrwert 4/1 malnehmen: 1/2 · 4 = 4/2 = 2.",
+                text: "27/32",
+                correct: false,
+                info: "Das ist 3/4 · 9/8. Beim Teilen musst du den Kehrwert des zweiten Bruchs nehmen.",
               }
             - {
-                text: "1/8",
+                text: "3/2",
                 correct: false,
-                info: "Das ist 1/2 · 1/4. Beim Teilen musst du den Kehrwert des zweiten Bruchs nehmen.",
-              }
-            - {
-                text: "1/4",
-                correct: false,
-                info: "Das ist nur der zweite Bruch. Rechne 1/2 mal den Kehrwert von 1/4.",
+                info: "Du hast die Brüche nicht richtig verknüpft. Rechne 3/4 mal den Kehrwert 8/9 von 9/8.",
               }
           right: "Richtig."
           wrong: "Nicht richtig."

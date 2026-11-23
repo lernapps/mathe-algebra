@@ -59,6 +59,7 @@ blocks:
           spalteLinks: "2 · x + 3"
           spalteRechts: "Rechts"
           spalteVergleich: "Vergleich"
+          ungleichung: true
         nojs: |
           Tabelle zum Probieren für 2 · x + 3 > 11. Für x = 2 ist die linke Seite 7: kleiner als 11. Für x = 4 ist sie 11:
           beide Seiten sind gleich. Für x = 5 ist sie 13: links ist größer. Zur Lösungsmenge gehören alle Zahlen, bei denen
