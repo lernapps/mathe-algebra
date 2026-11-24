@@ -9,12 +9,15 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Eine Gleichung ist wie eine Waage im Gleichgewicht. Nimmst du links etwas weg, nimmst du rechts genauso viel
-          weg, sonst kippt sie. Dasselbe auf beiden Seiten zu tun heißt **umformen**.
+          Bei einer Gleichung suchst du die Zahl, die für das $x$ passt. Zwei Wege führen dahin: Du probierst Zahlen aus,
+          oder du formst die Gleichung um. Das Umformen brauchst du, sobald Probieren zu lange dauert. Eine Gleichung ist
+          wie eine Waage im Gleichgewicht. Nimmst du links etwas weg, nimmst du rechts genauso viel weg, sonst kippt
+          sie. Dasselbe auf beiden Seiten zu tun heißt **umformen**.
       - type: text
         text: >-
-          Die Waage kennst du aus Klasse 5 und 6: Ein Päckchen enthält gleich viele Gewichte, das ist das $x$. Jetzt wird sie zum Werkzeug für jede Gleichung. Nimm
-          $3 \cdot x - 5 = 16$: Eine Zahl mal 3, dann 5 weniger, ergibt 16. **Weg 1:** Probiere in der Tabelle.
+          In der Waage enthält ein Päckchen gleich viele Gewichte, das ist das $x$. Nimm $3 \cdot x - 5 = 16$: Eine
+          Zahl mal 3, dann 5 weniger, ergibt 16. **Weg 1:** Probiere in der Tabelle. Er passt, wenn du eine Lösung
+          schnell schätzen kannst.
       - type: vue-component
         id: tabelle-3x-minus-5
         component: RaetselTabelle
@@ -34,7 +37,8 @@ blocks:
           größer als 16. Für x = 7 ist sie 16: beide Seiten sind gleich. Die Lösung ist 7.
       - type: text
         text: >-
-          **Weg 2:** Die Waage. „Minus 5“ heißt: Fünf Gewichte fehlen, sie sind gestrichelt. Tu auf beiden Seiten
+          **Weg 2:** Die Waage. Sie passt, wenn Probieren zu lange dauert, denn sie sagt dir bei jedem Schritt, was du
+          tun musst. „Minus 5“ heißt: Fünf Gewichte fehlen, sie sind gestrichelt. Tu auf beiden Seiten
           dasselbe, bis ein Päckchen allein liegt. Schreib bei jedem Schritt auf, was du getan hast.
       - type: vue-component
         id: waage-3x-minus-5
@@ -60,6 +64,9 @@ blocks:
     id: umformen
     title: Auf beiden Seiten dasselbe tun
     blocks:
+      - type: text
+        text: >-
+          Damit du ohne Waagenbild umformen kannst, brauchst du genau zu wissen, welche Schritte erlaubt sind.
       - type: definition
         term: Äquivalenzumformung
         explanation: >-
@@ -93,8 +100,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Bei $2 \cdot (x + 3) = 14$ hast du zwei Wege. Weg A teilt zuerst beide Seiten durch 2. Weg B multipliziert
-          die Klammer aus, wie du es bei den Termen gelernt hast.
+          Steht das $x$ in einer Klammer, musst du entscheiden, womit du anfängst. Bei $2 \cdot (x + 3) = 14$ hast du
+          zwei Wege. Weg A teilt zuerst beide Seiten durch 2. Weg B multipliziert die Klammer aus.
       - type: table
         caption: "Dieselbe Gleichung auf zwei Wegen. Beide geben x = 4."
         header: ["Weg A: erst teilen", "Weg B: ausmultiplizieren"]
@@ -111,6 +118,9 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: >-
+          Hier prüfst du, ob du die Schritte sicher setzt und begründen kannst.
       - type: single-choice
         id: nur-eine-seite
         text: "Jonas löst 2 · x + 4 = 10. Er schreibt 2 · x = 10 und dann x = 5. Was ist falsch?"

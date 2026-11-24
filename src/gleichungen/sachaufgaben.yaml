@@ -7,6 +7,10 @@ blocks:
     id: einstieg
     title: Aus dem Text wird eine Gleichung
     blocks:
+      - type: text
+        text: >-
+          In einer Sachaufgabe steht die Gleichung versteckt in einem Text. Bevor du etwas ausrechnen kannst, musst du
+          den Text in eine Gleichung übersetzen. Das übst du zuerst.
       - type: matching
         id: text-gleichung-zuordnen
         text: "Ordne jedem Text die Gleichung zu, die zu ihm passt. Zwei Gleichungen passen zu keinem Text."
@@ -29,20 +33,24 @@ blocks:
     blocks:
       - type: text
         text: >-
-          In einer Sachaufgabe gibt es eine Größe, die du nicht kennst. Du gehst immer gleich vor:
+          In einer Sachaufgabe gibt es eine Größe, die du nicht kennst. Wenn du dabei oft nicht weißt, wo du anfangen
+          sollst oder was du vergessen hast, hilft dir ein fester Ablauf. Du gehst immer gleich vor:
 
 
           1. **Unbekanntes festlegen:** Was weißt du nicht? Das wird $x$. Schreibe auf, was $x$ bedeutet, mit Einheit.
 
           2. **Gleichung aufstellen:** Schreibe den Text als Rechnung mit $x$.
 
-          3. **Lösen:** Probiere in der Tabelle oder forme um, wie du es kennst.
+          3. **Lösen:** Probiere in der Tabelle, wenn die Zahlen klein sind, oder forme um, wenn Probieren zu lange dauert.
 
           4. **Antworten und Probe:** Schreibe einen Antwortsatz auf die Frage. Prüfe das Ergebnis am Text, nicht nur an der Gleichung.
   - type: section
     id: beispiel
     title: Beispiel
     blocks:
+      - type: text
+        text: >-
+          An einem Beispiel siehst du, wie die vier Schritte zusammen eine Aufgabe lösen.
       - type: example
         title: "Fahrkarten und Stadtplan"
         blocks:
@@ -77,6 +85,9 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: >-
+          Mit diesen Aufgaben übst du, den Ablauf auf Preise, Alter, Weg und Zeit und den Umfang zu übertragen.
       - type: ordering
         id: ablauf-ordnen
         text: "Nele kauft 3 Eintrittskarten und eine Limonade für 2 €. Sie zahlt zusammen 14 €. Bring die Schritte in die richtige Reihenfolge."

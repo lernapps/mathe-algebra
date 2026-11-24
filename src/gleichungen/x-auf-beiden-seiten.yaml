@@ -9,12 +9,14 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Ein Päckchen ist das $x$: Es enthält überall gleich viele Gewichte. Bis jetzt lagen Päckchen nur auf einer Schale. Jetzt liegen sie auf beiden. Dann **sammelst** du zuerst die
-          Päckchen auf einer Seite: Du nimmst auf beiden Seiten gleich viele Päckchen weg.
+          Steht in einer Gleichung das $x$ links und rechts, weißt du nicht, womit du anfangen sollst. Dann **sammelst**
+          du zuerst die $x$ auf einer Seite. Ein Päckchen ist das $x$: Es enthält überall gleich viele Gewichte. Du
+          nimmst auf beiden Seiten gleich viele Päckchen weg.
       - type: text
         text: >-
-          Jetzt liegen Päckchen auf beiden Schalen: $3 \cdot x + 2 = x + 8$. **Weg 1:** Probiere in der Tabelle. Beide
-          Seiten hängen von $x$ ab. Achte darauf, ob der Unterschied zwischen links und rechts kleiner wird.
+          Zwei Wege führen zur Lösung von $3 \cdot x + 2 = x + 8$. **Weg 1:** Probiere in der Tabelle. Er passt, wenn du
+          die Lösung schätzen kannst. Beide Seiten hängen von $x$ ab. Achte darauf, ob der Unterschied zwischen links
+          und rechts kleiner wird.
       - type: vue-component
         id: tabelle-3x-plus-2-gleich-x-plus-8
         component: GleichungenTabelle
@@ -35,7 +37,7 @@ blocks:
           Lösung ist 3.
       - type: text
         text: >-
-          **Weg 2:** Die Waage. Sammle zuerst alle Päckchen auf einer Seite: Nimm auf beiden Seiten gleich viele weg. Dann
+          **Weg 2:** Die Waage. Sie passt, wenn du ohne Raten ans Ziel willst. Sammle zuerst alle Päckchen auf einer Seite: Nimm auf beiden Seiten gleich viele weg. Dann
           sind es wieder die Schritte von vorher.
       - type: vue-component
         id: waage-3x-plus-2-gleich-x-plus-8
@@ -67,6 +69,9 @@ blocks:
     id: beispiel
     title: Erst x sammeln
     blocks:
+      - type: text
+        text: >-
+          Damit du Gleichungen mit $x$ auf beiden Seiten sicher löst, brauchst du eine feste Reihenfolge der Schritte.
       - type: example
         title: "Löse 5 · x − 4 = 2 · x + 11"
         blocks:
@@ -95,7 +100,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Manchmal bleiben beim Sammeln keine Päckchen übrig. Probiere $2 \cdot x + 3 = 2 \cdot x + 7$ in der Tabelle:
+          Nicht jede Gleichung hat genau eine Lösung. Du willst wissen, woran du das erkennst. Manchmal bleiben beim
+          Sammeln keine Päckchen übrig. Probiere $2 \cdot x + 3 = 2 \cdot x + 7$ in der Tabelle:
           Was fällt dir auf?
       - type: vue-component
         id: tabelle-2x-plus-3-gleich-2x-plus-7
@@ -130,6 +136,9 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: >-
+          Hier übst du das Sammeln der $x$ und erkennst, wie viele Lösungen eine Gleichung hat.
       - type: single-choice
         id: x-nur-links
         text: "Mia löst 5 · x + 3 = 2 · x + 12. Sie schreibt 3 · x + 3 = 2 · x + 12. Was ist falsch?"

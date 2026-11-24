@@ -7,6 +7,8 @@ blocks:
     id: einstieg
     title: Eine Zahl steht im Nenner
     blocks:
+      - type: text
+        text: "Manchmal steht die gesuchte Zahl im Nenner eines Bruchs. Wie du sie findest, lernst du auf dieser Seite."
       - type: number
         id: teilen-rueckwaerts
         text: "Ich denke mir eine Zahl. Wenn ich 6 durch diese Zahl teile, kommt 2 heraus. Welche Zahl habe ich mir gedacht?"
@@ -20,8 +22,9 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Die Gleichung $\frac{6}{x} = 2$ ist eine **Bruchgleichung**: Das $x$ steht im Nenner. Du löst sie wie ein
-          Zahlenrätsel durch Probieren. Trag Zahlen für $x$ in die Tabelle ein, auch die 0.
+          Wenn du eine Gleichung lösen willst, in der $x$ im Nenner steht, und du die Lösung schätzen oder nur prüfen
+          willst, setzt du Zahlen ein. Eine solche Gleichung heißt **Bruchgleichung**, zum Beispiel $\frac{6}{x} = 2$.
+          Trag Zahlen für $x$ in die Tabelle ein, auch die 0.
       - type: vue-component
         id: tabelle-6-durch-x
         component: BruchgleichungTabelle
@@ -51,15 +54,19 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Das Einsetzen findet die Lösung nur, wenn du sie triffst. Das Rechnen findet sie sicher, in vier Schritten:
+          Wenn du die Lösung nicht erraten kannst oder sicher sein willst, dass du keine übersiehst, rechnest du. Das
+          Einsetzen findet die Lösung nur, wenn du sie triffst. Das Rechnen findet sie sicher: Du machst aus der
+          Bruchgleichung eine Gleichung ohne Brüche. Dafür brauchst du den **Hauptnenner**, einen Nenner, in dem jeder
+          Nenner der Gleichung als Faktor steckt. Bei $\frac{6}{x} = 2$ ist er $x$, bei $\frac{3}{x-1} = \frac{2}{x+1}$ ist
+          er $(x-1)(x+1)$. Das sind vier Schritte:
 
 
           1. **Definitionsmenge:** Welche Zahlen machen einen Nenner 0? Die darf $x$ nicht sein.
 
-          2. **Multiplizieren:** Nimm beide Seiten mal den Hauptnenner, wie bei der Waage: auf beiden Seiten dasselbe.
+          2. **Multiplizieren:** Nimm beide Seiten mal den Hauptnenner, also auf beiden Seiten dasselbe.
           Jeder Bruch verliert seinen Nenner.
 
-          3. **Lösen:** Die Gleichung ist jetzt linear. Löse sie mit der Waage.
+          3. **Lösen:** Die Gleichung ist jetzt linear. Löse sie, indem du auf beiden Seiten dasselbe rechnest.
 
           4. **Prüfen:** Gehört die Lösung zur Definitionsmenge? Dann mache die Probe.
       - type: example
@@ -72,7 +79,7 @@ blocks:
           - type: formula
             formula: '3 \cdot (x+1) = 2 \cdot (x-1)'
           - type: text
-            text: "Das ist der Schritt „beide Seiten mal $(x-1)(x+1)$“: Links fällt $x-1$ weg, rechts fällt $x+1$ weg. Dann löst du wie mit der Waage."
+            text: "Das ist der Schritt „beide Seiten mal $(x-1)(x+1)$“: Links fällt $x-1$ weg, rechts fällt $x+1$ weg. Dann löst du die lineare Gleichung."
           - type: formula
             formula: '3 \cdot x + 3 = 2 \cdot x - 2'
           - type: formula
@@ -103,6 +110,8 @@ blocks:
     id: vergleich
     title: Die zwei Wege im Vergleich
     blocks:
+      - type: text
+        text: "Welchen Weg du nimmst, hängt davon ab, was du brauchst: eine schnelle Probe oder eine sichere Lösung."
       - type: table
         caption: "Beide Wege führen zum selben x. Sie zeigen Verschiedenes."
         header: ["Weg", "Tabelle", "Rechnen"]
@@ -127,6 +136,8 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Hier löst du Bruchgleichungen selbst und entscheidest, wann du einsetzt und wann du rechnest."
       - type: generated
         id: einfach-ueben
         given:

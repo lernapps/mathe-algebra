@@ -9,11 +9,12 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Ein **Bruchterm** ist ein Bruch, bei dem im Zähler oder im Nenner eine Variable steht, zum Beispiel
-          $\frac{12}{x - 2}$. Für $x$ setzt du eine Zahl ein und rechnest den Bruch aus.
+          Wenn du mit einem Bruchterm rechnest, musst du wissen, für welche Zahlen er überhaupt einen Wert hat. Das findest
+          du durch Probieren heraus. Ein **Bruchterm** ist ein Bruch, bei dem im Zähler oder im Nenner eine Variable
+          steht, zum Beispiel $\frac{12}{x - 2}$. Für $x$ setzt du eine Zahl ein und rechnest den Bruch aus.
       - type: text
         text: >-
-          Probiere es in der Tabelle: Trag Zahlen für $x$ ein. Gibt es eine Zahl, bei der kein Ergebnis herauskommt?
+          Trag Zahlen für $x$ in die Tabelle ein. Gibt es eine Zahl, bei der kein Ergebnis herauskommt?
       - type: vue-component
         id: tabelle-12-durch-x-minus-2
         component: BruchtermTabelle
@@ -40,7 +41,9 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Wird der Nenner 0, hat der Bruchterm keinen Wert, denn durch 0 kannst du nicht teilen: Mal 0 kommt nie 6 heraus, also gibt es 6 : 0 nicht. Der Bruchterm ist dann für diese Zahl **nicht definiert**. Alle anderen
+          Die Tabelle zeigt eine Lücke. Wenn du wissen willst, warum sie da ist und wo es noch Lücken gibt, schaust du auf
+          den Nenner. Wird er 0, hat der Bruchterm keinen Wert, denn durch 0 kannst du nicht teilen: Mal 0 kommt nie 6
+          heraus, also gibt es 6 : 0 nicht. Der Bruchterm ist dann für diese Zahl **nicht definiert**. Alle anderen
           Zahlen darfst du einsetzen.
       - type: definition
         term: Definitionsmenge
@@ -58,13 +61,15 @@ blocks:
     id: beispiel
     title: Beispiel
     blocks:
+      - type: text
+        text: "Ist der Nenner länger, probierst du nicht mehr, sondern rechnest die verbotene Zahl aus."
       - type: example
         title: "Der Bruchterm mit dem Nenner 2x − 8"
         blocks:
           - type: formula
             formula: '\frac{3}{2x - 8}'
           - type: table
-            caption: "Nenner gleich 0 setzen und lösen, so wie auf der Waage."
+            caption: "Nenner gleich 0 setzen und lösen: Auf beiden Seiten machst du dasselbe."
             rowHeaders: true
             rows:
               - ["Nenner gleich 0", "$2x - 8 = 0$"]
@@ -78,6 +83,8 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Bevor du mit einem Bruchterm weiterrechnest, findest du jetzt selbst die Zahlen, die verboten sind."
       - type: generated
         id: luecke-minus
         given:

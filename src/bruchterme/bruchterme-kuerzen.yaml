@@ -9,7 +9,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Beim Kürzen nimmst du aus Zähler und Nenner denselben **Faktor** weg, zum Beispiel
+          Wenn ein Bruchterm unübersichtlich ist, willst du ihn einfacher schreiben, ohne dass sich sein Wert ändert. Das
+          gelingt wie bei Brüchen durch Kürzen. Dabei nimmst du aus Zähler und Nenner denselben **Faktor** weg, zum Beispiel
           $\frac{5 \cdot (x + 2)}{3 \cdot (x + 2)} = \frac{5}{3}$. Im Rechteckmodell ist ein Faktor eine Seite.
           Drück auf „Kürzen“ und sieh, was passiert.
       - type: vue-component
@@ -35,9 +36,10 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Kürzen darfst du nur **Faktoren**, nie Summanden. Zähler wie $4x + 12$ oder $x^2 - 9$ sind Summen. Du
-          musst sie erst in ein Produkt verwandeln, also **faktorisieren**: mit einem gemeinsamen Faktor oder mit der
-          dritten binomischen Formel.
+          Oft steht im Zähler eine Summe wie $4x + 12$ oder $x^2 - 9$, und du siehst keinen Faktor zum Kürzen. Kürzen darfst
+          du nur **Faktoren**, nie Summanden. Darum verwandelst du die Summe erst in ein Produkt, also **faktorisierst**
+          du. Hast du in allen Summanden dieselbe Zahl, klammerst du sie als gemeinsamen Faktor aus. Ist es eine
+          Differenz zweier Quadrate, nimmst du die dritte binomische Formel.
       - type: example
         title: "Gemeinsamer Faktor"
         blocks:
@@ -68,8 +70,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Die Definitionsmenge bestimmst du am Nenner **vor** dem Kürzen. In der Tabelle siehst du, warum: Der Wert ist
-          überall 4, nur bei $x = -3$ nicht.
+          Nach dem Kürzen sieht der Term aus, als dürfte $x$ jede Zahl sein. Ob das stimmt, zeigt die Tabelle: Der Wert
+          ist überall 4, nur bei $x = -3$ nicht. Darum bestimmst du die Definitionsmenge am Nenner **vor** dem Kürzen.
       - type: vue-component
         id: tabelle-4x-plus-12
         component: BruchtermTabelle
@@ -96,7 +98,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Der häufigste Fehler: Aus $\frac{x + 6}{6}$ wird „gekürzt“ $x + 1$. Setz Zahlen ein und prüfe.
+          Wenn du kürzen willst, ist der häufigste Fehler, aus einer Summe zu kürzen: Aus $\frac{x + 6}{6}$ wird
+          „gekürzt“ $x + 1$. Ob das erlaubt ist, prüfst du, indem du Zahlen einsetzt.
       - type: table
         caption: "Der Bruchterm und der falsch gekürzte Term haben verschiedene Werte."
         header: ["x", "Bruchterm", "„Gekürzt“"]
@@ -114,9 +117,10 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Erweitern ist das Gegenteil von Kürzen: Du multiplizierst Zähler und Nenner mit demselben Term. Für das
-          **Gleichnamigmachen** erweiterst du beide Bruchterme auf denselben Nenner. Bei $\frac{1}{x}$ und
-          $\frac{2}{x + 1}$ ist das $x(x + 1)$.
+          Wenn du Bruchterme addieren oder vergleichen willst, brauchen sie denselben Nenner. Bruchterme mit demselben
+          Nenner heißen **gleichnamig**. Der gemeinsame Nenner, in dem jeder der Nenner als Faktor steckt, heißt
+          **Hauptnenner**. Um Bruchterme gleichnamig zu machen, **erweiterst** du sie: Du multiplizierst Zähler und
+          Nenner mit demselben Term. Bei $\frac{1}{x}$ und $\frac{2}{x + 1}$ ist der Hauptnenner $x(x + 1)$.
       - type: formula
         formula: '\frac{1}{x} = \frac{1 \cdot (x + 1)}{x \cdot (x + 1)}'
       - type: formula
@@ -125,6 +129,8 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Damit du Bruchterme sicher vereinfachst, übst du hier, was erlaubt ist und was nicht."
       - type: single-choice
         id: summanden-kuerzen
         text: "Jan kürzt $\\frac{x + 6}{6}$ zu $x + 1$. Was ist daran falsch?"

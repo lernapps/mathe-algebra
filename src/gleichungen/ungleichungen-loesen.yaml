@@ -7,6 +7,10 @@ blocks:
     id: einstieg
     title: Welche Seite ist schwerer?
     blocks:
+      - type: text
+        text: >-
+          Manchmal fragst du nicht nach einer einzigen Zahl, sondern: Für welche Zahlen ist etwas größer oder kleiner?
+          Das beantwortet eine Ungleichung. Zuerst vergleichst du zwei Seiten einer Waage.
       - type: single-choice
         id: waage-schwerer
         text: "Links liegen 2 Päckchen mit je 5 Gewichten und noch 3 einzelne Gewichte. Rechts liegen 11 Gewichte. Wie steht die Waage?"
@@ -27,7 +31,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Bei einer Gleichung ist die Waage im Gleichgewicht. Bei einer **Ungleichung** kippt sie. Die Ungleichung
+          Wenn du wissen willst, für welche Zahlen eine Seite schwerer ist, hast du eine Ungleichung. Bei einer
+          Gleichung ist die Waage im Gleichgewicht, bei einer **Ungleichung** kippt sie. Die Ungleichung
           $2 \cdot x + 3 > 11$ sagt: Links ist mehr Gewicht als rechts. Die offene Seite des Zeichens zeigt zur
           schwereren Seite.
       - type: figure
@@ -43,7 +48,8 @@ blocks:
           ist das nicht eine Zahl, sondern ganz viele.
       - type: text
         text: >-
-          Für welche Zahlen kippt die Waage nach links? Probiere es in der Tabelle. Die Spalte Vergleich zeigt dir: bei
+          Für welche Zahlen kippt die Waage nach links? Probieren in der Tabelle passt, um ein Gefühl für die Lösungen
+          zu bekommen, zeigt aber nur einzelne Zahlen. Die Spalte Vergleich zeigt dir: bei
           „>“ ist links schwerer, bei „=“ sind beide Seiten gleich, bei „<“ ist links leichter.
       - type: vue-component
         id: tabelle-ungleichung
@@ -70,7 +76,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Du kannst die Ungleichung wie eine Gleichung umformen. Wenn du auf beiden Seiten dasselbe tust, bleibt die
+          Willst du alle Lösungen sicher finden, ohne unendlich viele Zahlen zu probieren, formst du um wie bei einer
+          Gleichung. Wenn du auf beiden Seiten dasselbe tust, bleibt die
           Waage in der Schieflage und das Zeichen bleibt. Das gilt für plus, minus, mal und geteilt durch eine
           **positive** Zahl.
       - type: example
@@ -93,7 +100,7 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Die Lösungsmenge zeichnest du auf der **Zahlengerade**. Der Punkt an der Grenzzahl ist **offen**, wenn sie
+          Willst du alle Lösungen auf einen Blick zeigen, zeichnest du die Lösungsmenge auf der **Zahlengerade**. Der Punkt an der Grenzzahl ist **offen**, wenn sie
           nicht dazugehört (bei < und >), und **gefüllt**, wenn sie dazugehört (bei ≤ und ≥). Der Strahl zeigt zu den
           Lösungen. Teste Zahlen: Gehören sie dazu?
       - type: vue-component
@@ -114,7 +121,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Bei einer **negativen** Zahl ist es anders. Es gilt $2 < 5$. Rechne beide Zahlen mal $-2$: Du bekommst
+          Beim Umformen kommt es vor, dass du durch eine negative Zahl teilen musst, etwa bei $-2 \cdot x > 6$. Dann
+          musst du wissen, was mit dem Zeichen passiert. Bei einer **negativen** Zahl ist es anders. Es gilt $2 < 5$. Rechne beide Zahlen mal $-2$: Du bekommst
           $-4$ und $-10$. Auf der Zahlengerade liegt $-4$ rechts von $-10$, also gilt $-4 > -10$.
       - type: table
         caption: "Die Reihenfolge dreht sich um"
@@ -153,6 +161,10 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: >-
+          Hier entscheidest du, wann das Zeichen bleibt und wann es sich dreht, und liest Lösungsmengen von der
+          Zahlengerade ab.
       - type: single-choice
         id: zeichen-nach-umformung
         text: "Du löst 3x + 2 < 14. Nach „minus 2“ steht 3 · x < 12. Du teilst beide Seiten durch 3. Was steht dann?"

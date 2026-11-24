@@ -7,6 +7,10 @@ blocks:
     id: einstieg
     title: Erst mit Zahlen
     blocks:
+      - type: text
+        text: >-
+          Oft kennst du von einer Formel alle Größen bis auf eine und willst genau diese ausrechnen. Dafür musst du die
+          Formel nach der gesuchten Größe umstellen. Zuerst siehst du das an einer Aufgabe mit Zahlen.
       - type: number
         id: rechteck-seite-a
         text: "Ein Rechteck hat den Umfang U = 20 cm. Die Seite b ist 4 cm lang. Wie lang ist die Seite a? Es gilt U = 2 · a + 2 · b."
@@ -28,8 +32,9 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Eine **Formel** ist eine Gleichung mit Buchstaben. Die Buchstaben stehen für Zahlen. Darum stellst du eine
-          Formel um wie eine Gleichung mit Zahlen: Du tust auf beiden Seiten dasselbe. Probiere es an der Waage mit
+          Willst du dieselbe Rechnung für viele Zahlen nutzen, ohne jedes Mal neu zu überlegen, stellst du die Formel
+          einmal mit Buchstaben um. Eine **Formel** ist eine Gleichung mit Buchstaben. Die Buchstaben stehen für
+          Zahlen. Darum stellst du eine Formel um wie eine Gleichung mit Zahlen: Du tust auf beiden Seiten dasselbe. Probiere es an der Waage mit
           den Zahlen von eben.
       - type: vue-component
         id: waage-umfang
@@ -75,7 +80,7 @@ blocks:
     blocks:
       - type: text
         text: >-
-          In Formeln aus der Physik hat jede Größe eine Einheit, und die Einheit rechnest du mit. Für die
+          Willst du aus einer Formel der Physik eine Größe mit Einheit ausrechnen, rechnest du die Einheit mit. Für die
           Gewichtskraft gilt $F = m \cdot g$. Wir runden den Ortsfaktor auf $g = 10\,\frac{\text{N}}{\text{kg}}$.
       - type: example
         title: Welche Masse hat ein Körper?
@@ -94,6 +99,9 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: >-
+          Hier stellst du Formeln um und rechnest mit der umgestellten Formel.
       - type: matching
         id: formeln-zuordnen
         text: "Ordne jeder Formel die Umstellung nach der genannten Größe zu."
