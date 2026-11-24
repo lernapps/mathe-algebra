@@ -9,16 +9,19 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Quadrate von Summen wie $(x + 4)^2$ tauchen ständig auf: bei Flächen, bei Gleichungen und später bei Parabeln. Du kannst sie immer als $(x + 4)(x + 4)$ ausmultiplizieren – aber mit der Formel geht es in einer Zeile und ohne Vorzeichen-Chaos. Außerdem schützt dich die Formel vor dem häufigsten Fehler überhaupt: $(a + b)^2$ ist **nicht** $a^2 + b^2$.
+          Wenn du eine Summe wie $(x + 4)^2$ ausmultiplizieren willst, kannst du $(x + 4)(x + 4)$ Glied für Glied rechnen. Mit der Formel geht es in einer Zeile. Außerdem schützt sie dich vor dem häufigsten Fehler überhaupt: $(a + b)^2$ ist **nicht** $a^2 + b^2$.
   - type: section
     id: regel
     title: Regel
     blocks:
+      - type: text
+        text: >-
+          Wird eine Summe mit zwei Gliedern quadriert, gilt immer dasselbe Muster. Es heißt erste binomische Formel.
       - type: formula
         formula: "(a + b)^2 = a^2 + 2ab + b^2"
       - type: text
         text: >-
-          $a$ ist das erste Glied in der Klammer, $b$ das zweite. Du quadrierst beide Glieder und schreibst dazwischen das **Mittelglied** $2ab$: zweimal das Produkt der beiden Glieder.
+          $a$ ist das erste Glied (der erste Summand) in der Klammer, $b$ das zweite. Du quadrierst beide Glieder und schreibst dazwischen das **Mittelglied** $2ab$: zweimal das Produkt der beiden Glieder.
       - type: definition
         term: Mittelglied
         explanation: >-
@@ -39,6 +42,8 @@ blocks:
       - type: example
         title: "Multipliziere aus: (2a + 3)²"
         blocks:
+          - type: text
+            text: "Hier steht vor einem Glied eine Zahl, deshalb wird das ganze Glied quadriert."
           - type: table
             caption: "Der Rechenweg für (2a + 3)²"
             rowHeaders: true
@@ -55,7 +60,7 @@ blocks:
       - type: figure
         image: images/binom-erste-binomische.svg
         alt: "(x + 4)² = x² + 8x + 16. Zwei gleiche Streifen: 2 · 4x = 8x"
-        caption: "Ein Quadrat mit der Seite $x + 4$, oben und links in die Abschnitte $x$ und $4$ geteilt. Es zerfällt in vier Teilflächen: links oben das Quadrat $x^2$ (blau), rechts unten das Quadrat $16$ (grün) und zwei gleiche Streifen $4x$ (gelb). Die zwei Streifen sind das Mittelglied $2 \\cdot 4x = 8x$, also $(x + 4)^2 = x^2 + 8x + 16$."
+        caption: "Warum das Mittelglied zweimal vorkommt, zeigt eine Fläche. Ein Quadrat mit der Seite $x + 4$, oben und links in die Abschnitte $x$ und $4$ geteilt. Es zerfällt in vier Teilflächen: links oben das Quadrat $x^2$ (blau), rechts unten das Quadrat $16$ (grün) und zwei gleiche Streifen $4x$ (gelb). Die zwei Streifen sind das Mittelglied $2 \\cdot 4x = 8x$, also $(x + 4)^2 = x^2 + 8x + 16$."
         source: Eigene Darstellung der Mathe-Karte
         licence: MIT
   - type: section

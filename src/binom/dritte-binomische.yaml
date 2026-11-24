@@ -9,11 +9,14 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Die dritte Formel ist die kürzeste: Aus $(x + 4)(x - 4)$ wird sofort $x^2 - 16$, ganz ohne Mittelglied. Du brauchst sie ständig, um Terme zu vereinfachen und später, um Differenzen wie $x^2 - 16$ wieder in Klammern zu zerlegen. Und sie ist ein starker Kopfrechentrick: $21 \cdot 19 = 20^2 - 1^2 = 399$.
+          Wenn du $(x + 4)(x - 4)$ ausmultiplizierst, kommen vier Produkte heraus, doch zwei davon fallen weg. Die dritte Formel schreibt das Ergebnis $x^2 - 16$ sofort hin. Mit ihr kannst du auch eine Differenz wie $x^2 - 16$ in Klammern zerlegen. Und sie ist ein Kopfrechentrick: $21 \cdot 19 = 20^2 - 1^2 = 399$.
   - type: section
     id: regel
     title: Regel
     blocks:
+      - type: text
+        text: >-
+          Wenn sich zwei Klammern nur im Vorzeichen zwischen denselben Gliedern unterscheiden, gibt es eine Abkürzung.
       - type: formula
         formula: "(a + b)(a - b) = a^2 - b^2"
       - type: text
@@ -33,6 +36,8 @@ blocks:
       - type: example
         title: "Multipliziere aus: (x + 4)(x − 4)"
         blocks:
+          - type: text
+            text: "Hier siehst du, wie die Mittelglieder wegfallen."
           - type: table
             caption: "Der Rechenweg für (x + 4)(x − 4)"
             rowHeaders: true
@@ -50,7 +55,7 @@ blocks:
       - type: figure
         image: images/binom-dritte-binomische.svg
         alt: (x + 4)(x − 4) = x² − 16. Gleiche Teile, gleiche Fläche
-        caption: "Oben: das Quadrat $x^2$, aus dem rechts unten die Ecke $4^2 = 16$ fehlt (gestrichelt). Der Rest besteht aus zwei Teilen: einem blauen Rechteck $x$ mal $x - 4$ und einem gelben Rechteck $x - 4$ mal $4$. Unten: Das gelbe Teil ist gedreht und rechts angelegt – jetzt ist es ein Rechteck mit den Seiten $x + 4$ und $x - 4$. Gleiche Teile, gleiche Fläche: $(x + 4)(x - 4) = x^2 - 16$."
+        caption: "Warum $-b^2$ übrig bleibt, zeigt eine Fläche, deren Teile man umlegt. Oben: das Quadrat $x^2$, aus dem rechts unten die Ecke $4^2 = 16$ fehlt (gestrichelt). Der Rest besteht aus zwei Teilen: einem blauen Rechteck $x$ mal $x - 4$ und einem gelben Rechteck $x - 4$ mal $4$. Unten: Das gelbe Teil ist gedreht und rechts angelegt – jetzt ist es ein Rechteck mit den Seiten $x + 4$ und $x - 4$. Gleiche Teile, gleiche Fläche: $(x + 4)(x - 4) = x^2 - 16$."
         source: Eigene Darstellung der Mathe-Karte
         licence: MIT
   - type: section

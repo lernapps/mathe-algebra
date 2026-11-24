@@ -9,11 +9,14 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Die binomischen Formeln sind nicht nur für Buchstaben da. Mit ihnen rechnest du Aufgaben wie $49^2$ oder $21 \cdot 19$ im Kopf aus – schneller als mit dem schriftlichen Verfahren. Das hilft beim Kopfrechnen, beim Überschlagen und in der Klassenarbeit ohne Taschenrechner. Und es zeigt dir, dass die Formeln wirklich für jede Zahl gelten: Buchstaben sind nur Platzhalter.
+          Wenn du $49^2$ oder $21 \cdot 19$ ohne Taschenrechner ausrechnen willst, hilft dir eine binomische Formel: Du rechnest im Kopf, schneller als schriftlich. Das zeigt auch, dass die Formeln für jede Zahl gelten: Buchstaben sind nur Platzhalter.
   - type: section
     id: regel
     title: Regel
     blocks:
+      - type: text
+        text: >-
+          Eine Zahl wie $49$ ist knapp unter $50$, und mit $50$ rechnet es sich leicht. So nutzt du das:
       - type: formula
         formula: "49^2 = (50 - 1)^2 = 2500 - 100 + 1 = 2401"
       - type: text
@@ -33,6 +36,8 @@ blocks:
       - type: example
         title: "Rechne im Kopf: 102² und 21 · 19"
         blocks:
+          - type: text
+            text: "Je nach Aufgabe passt die erste oder die dritte Formel."
           - type: table
             caption: "Die Rechenwege für 102² und 21 · 19"
             rowHeaders: true
@@ -50,7 +55,7 @@ blocks:
       - type: figure
         image: images/binom-geschickt-rechnen.svg
         alt: 49² = 2401. 50² − zwei Streifen + Ecke zurück
-        caption: "$49^2$ als Fläche: Ein Quadrat mit der Seite $50$, also $50^2 = 2500$. Rechts und unten ist je ein Streifen $50 \\cdot 1 = 50$ markiert (rot): Beide werden abgezogen. Die grüne Ecke $1^2 = 1$ steckt in beiden Streifen, ist also doppelt abgezogen und kommt einmal zurück. Übrig bleibt das Quadrat $49^2$: $2500 - 100 + 1 = 2401$."
+        caption: "Warum die Rechnung stimmt, zeigt eine Fläche. $49^2$ als Fläche: Ein Quadrat mit der Seite $50$, also $50^2 = 2500$. Rechts und unten ist je ein Streifen $50 \\cdot 1 = 50$ markiert (rot): Beide werden abgezogen. Die grüne Ecke $1^2 = 1$ steckt in beiden Streifen, ist also doppelt abgezogen und kommt einmal zurück. Übrig bleibt das Quadrat $49^2$: $2500 - 100 + 1 = 2401$."
         source: Eigene Darstellung der Mathe-Karte
         licence: MIT
   - type: section
