@@ -9,7 +9,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Ein Buchstabe wie $x$ steht für eine Zahl. Hier ist es die Zahl der Streichhölzer in einer Schachtel, jede
+          Wenn ein Term lang und unübersichtlich ist, willst du ihn kürzer schreiben, ohne dass sich sein Wert ändert.
+          Das geht, indem du Gleichartiges zusammenfasst. Ein Buchstabe wie $x$ steht für eine Zahl. Hier ist es die Zahl der Streichhölzer in einer Schachtel, jede
           Schachtel enthält gleich viele. Einzelne Streichhölzer sind einfache Zahlen.
       - type: single-choice
         id: schachteln-zaehlen
@@ -31,8 +32,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Zwei Terme wie $3x$ und $5x$ (3 Schachteln und 5 Schachteln) kannst du zu einem zusammenfassen.
-          Dazu zählst du die Zahlen vor dem $x$ zusammen, das $x$ bleibt stehen.
+          Wenn zwei Glieder dieselbe Variable haben, zum Beispiel $3x$ und $5x$ (3 Schachteln und 5 Schachteln), kannst du
+          sie zu einem Glied zusammenfassen. Dazu zählst du die Zahlen vor dem $x$ zusammen, das $x$ bleibt stehen.
       - type: formula
         formula: '3x + 5x = (3 + 5) \cdot x = 8x'
       - type: definition
@@ -58,6 +59,8 @@ blocks:
     id: beispiel
     title: Beispiel
     blocks:
+      - type: text
+        text: "Bei einem Term mit mehreren Variablen und einer Zahl sortierst du zuerst, damit du nichts Ungleichartiges zusammenwirfst."
       - type: example
         title: "Fasse zusammen: 2a + 3b − a + 4b + 5"
         blocks:
@@ -75,7 +78,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Beim Umformen bleibt der Wert des Terms gleich. Das prüfst du mit einer **Probe**: Setze dieselben Zahlen in den
+          Wenn du wissen willst, ob du richtig zusammengefasst hast, machst du eine **Probe**. Beim Umformen bleibt der
+          Wert des Terms gleich, das prüfst du so: Setze dieselben Zahlen in den
           alten und in den neuen Term ein. Bei $2a + 3b - a + 4b + 5$ und $a + 7b + 5$ kommt jedes Mal dasselbe heraus.
       - type: table
         caption: "Wertetabelle: derselbe Wert vor und nach dem Umformen."
@@ -106,6 +110,8 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Hier erkennst du Fehler und fasst selbst zusammen. So wirst du sicher, was zusammengehört und was nicht."
       - type: single-choice
         id: fehler-zahl-und-x
         text: "Jemand rechnet 2x + 3 + 4x = 9x. Was ist falsch?"

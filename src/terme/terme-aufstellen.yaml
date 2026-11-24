@@ -9,7 +9,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Aus Streichhölzern entsteht eine Kette aus Quadraten. Das Bild zeigt Ketten mit 1, 2 und 3 Quadraten. Die
+          Wenn du wissen willst, wie viele Streichhölzer eine lange Kette braucht, ohne sie zu legen, suchst du die Regel
+          dahinter. Aus Streichhölzern entsteht eine Kette aus Quadraten. Das Bild zeigt Ketten mit 1, 2 und 3 Quadraten. Die
           orangen Hölzer kommen dazu, wenn ein Quadrat angelegt wird.
       - type: figure
         image: images/terme-terme-aufstellen-quadrate.svg
@@ -30,7 +31,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Für die Zahl der Quadrate schreibst du einen Buchstaben, hier $n$. Das erste Quadrat braucht 4 Hölzer. Bei
+          Damit eine einzige Rechnung für jede Länge der Kette stimmt, schreibst du für die Zahl der Quadrate einen
+          Buchstaben, hier $n$. Das erste Quadrat braucht 4 Hölzer. Bei
           $n$ Quadraten kommen $n - 1$ weitere dazu, jedes mit 3 Hölzern:
       - type: formula
         formula: '4 + 3 \cdot (n - 1)'
@@ -38,7 +40,7 @@ blocks:
         term: Variable
         explanation: >-
           Eine Variable ist ein Buchstabe, der für viele Zahlen steht, hier $n$ für die Zahl der Quadrate. Du darfst
-          jede passende Zahl einsetzen. Im Zahlenrätsel suchst du beim $x$ dagegen eine einzige Zahl.
+          jede passende Zahl einsetzen.
       - type: definition
         term: Term
         explanation: >-
@@ -47,6 +49,8 @@ blocks:
       - type: example
         title: "Wertetabelle der Quadratkette"
         blocks:
+          - type: text
+            text: "Wenn du wissen willst, wie viele Hölzer bestimmte Ketten brauchen, setzt du die Zahl der Quadrate in den Term ein."
           - type: table
             caption: "Du setzt Zahlen für n ein und rechnest den Term aus."
             header: ["n", "4 + 3 · (n − 1)", "Hölzer"]
@@ -62,6 +66,8 @@ blocks:
     id: beispiel
     title: Beispiel
     blocks:
+      - type: text
+        text: "Bei einem neuen Muster stellst du den Term selbst auf: Du zählst, was beim ersten Mal nötig ist und was bei jedem weiteren Mal dazukommt."
       - type: figure
         image: images/terme-terme-aufstellen-dreiecke.svg
         alt: "Streichholzketten aus einem, zwei und drei Dreiecken, untereinander. Das erste Dreieck ist blau, jedes weitere Dreieck orange. Daneben steht n = 1, n = 2 und n = 3."
@@ -86,7 +92,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Lena und Jonas zählen die Quadratkette verschieden. Lena rechnet: 4 Hölzer für das erste Quadrat und 3 für
+          Wenn zwei Kinder dasselbe Muster verschieden aufschreiben, willst du wissen, ob ihre Terme gleich sind. Lena
+          und Jonas zählen die Quadratkette verschieden. Lena rechnet: 4 Hölzer für das erste Quadrat und 3 für
           jedes weitere, also $4 + 3 \cdot (n - 1)$. Jonas legt zuerst 1 Holz an den Rand und rechnet 3 Hölzer je
           Quadrat, also $3 \cdot n + 1$. Haben beide recht? Schau in die **Tabelle**.
       - type: vue-component
@@ -115,6 +122,8 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Jetzt stellst du selbst Terme auf und prüfst sie. So kommst du bei neuen Mustern ohne Bild aus."
       - type: vue-component
         id: term-kette
         component: TermeAufstellen

@@ -7,6 +7,8 @@ blocks:
     id: einstieg
     title: Ich denke mir eine Zahl
     blocks:
+      - type: text
+        text: "Manchmal kennst du das Ergebnis einer Rechnung, aber nicht die Zahl, mit der sie anfängt. Dann suchst du eine gedachte Zahl, wie in diesem Rätsel."
       - type: single-choice
         id: gedachte-zahl-erkennen
         text: "Ich denke mir eine Zahl und addiere 5. Das Ergebnis ist 12. Welche Zahl habe ich mir gedacht?"
@@ -27,7 +29,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Für eine Zahl, die du noch nicht kennst, schreibst du einen Buchstaben, meistens $x$. Der Buchstabe steht
+          Damit du ein Rätsel kurz aufschreiben kannst, schreibst du für eine Zahl, die du noch nicht kennst, einen
+          Buchstaben, meistens $x$. Der Buchstabe steht
           für die gedachte Zahl: Er ist ein **Platzhalter**. Das Rätsel „Ich denke mir eine Zahl, rechne mal 3 und
           addiere 4. Das Ergebnis ist 19“ schreibst du so auf: $3 \cdot x + 4 = 19$.
       - type: definition
@@ -37,7 +40,7 @@ blocks:
           haben denselben Wert, wenn du die richtige Zahl für $x$ einsetzt. Diese Zahl heißt **Lösung**.
       - type: text
         text: >-
-          Du findest die Lösung durch **Probieren**: Setze eine Zahl für $x$ ein und rechne die linke Seite aus.
+          Wenn du die Lösung nicht sofort siehst, findest du sie durch **Probieren**: Setze eine Zahl für $x$ ein und rechne die linke Seite aus.
           Probiere es in der Tabelle: Trag eine Zahl ein. Sie rechnet die linke Seite aus und sagt dir, ob sie kleiner,
           gleich oder größer ist als die rechte Seite (19).
       - type: vue-component
@@ -61,6 +64,8 @@ blocks:
     id: beispiel
     title: Beispiel
     blocks:
+      - type: text
+        text: "Wenn du sehen willst, wie das Probieren Schritt für Schritt zur Lösung führt, hilft eine Tabelle mit allen Versuchen."
       - type: example
         title: "Löse 3 · x + 4 = 19 durch Probieren"
         blocks:
@@ -73,11 +78,13 @@ blocks:
               - ["4", "16", "kleiner"]
               - ["5", "19", "gleich"]
           - type: text
-            text: "Die Lösung ist $x = 5$. Die **Probe** ist das Nachrechnen mit der Lösung: $3 \\cdot 5 + 4 = 15 + 4 = 19$. Das stimmt. Ein zweiter Weg ist das **Rückwärtsrechnen**: Das Gegenteil von „plus 4“ ist „minus 4“, das Gegenteil von „mal 3“ ist „geteilt durch 3“. Also $19 - 4 = 15$ und $15 : 3 = 5$. Beide Wege führen zu $x = 5$."
+            text: "Die Lösung ist $x = 5$. Willst du sicher sein, dass die Lösung stimmt, machst du die **Probe**, das Nachrechnen mit der Lösung: $3 \\cdot 5 + 4 = 15 + 4 = 19$. Das stimmt. Wenn Probieren zu lange dauern würde, etwa bei großen Zahlen, rechnest du **rückwärts**: Das Gegenteil von „plus 4“ ist „minus 4“, das Gegenteil von „mal 3“ ist „geteilt durch 3“. Also $19 - 4 = 15$ und $15 : 3 = 5$. Beide Wege führen zu $x = 5$."
   - type: section
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Beim Probieren sagt dir der Vergleich, in welche Richtung du weitergehst. Das brauchst du, um mit wenigen Versuchen zur Lösung zu kommen."
       - type: single-choice
         id: naechste-zahl-waehlen
         text: "Bei 3 · x + 4 = 19 hast du x = 6 probiert. Links kommt 22 heraus. Was probierst du als Nächstes?"

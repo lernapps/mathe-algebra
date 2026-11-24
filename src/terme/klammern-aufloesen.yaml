@@ -9,7 +9,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Ein Rechteck kannst du in Teile zerlegen. Die Fläche jedes Teils ist Höhe mal Breite. Zusammen sind es die
+          Wenn ein Term eine Klammer hat, kannst du ihn oft nicht weiter vereinfachen. Erst ohne Klammer geht es weiter.
+          Wie das gelingt, zeigt ein Rechteck. Du kannst es in Teile zerlegen. Die Fläche jedes Teils ist Höhe mal Breite. Zusammen sind es die
           Fläche des ganzen Rechtecks.
       - type: single-choice
         id: rechteck-teile
@@ -31,8 +32,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Eine **Klammer auflösen** heißt: Du schreibst den Term ohne Klammer, sein Wert bleibt gleich. Bei einem Plus
-          davor lässt du die Klammer weg. Bei einem Minus dreht sich **jedes** Vorzeichen in der Klammer um.
+          Wenn vor der Klammer nur ein Plus oder Minus steht, kannst du sie auflösen. Eine **Klammer auflösen** heißt: Du
+          schreibst den Term ohne Klammer, sein Wert bleibt gleich. Bei einem Plus davor lässt du die Klammer weg. Bei einem Minus dreht sich **jedes** Vorzeichen in der Klammer um.
       - type: formula
         formula: "10 - (3 - 1) = 10 - 3 + 1 = 8"
       - type: number
@@ -48,7 +49,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Das Rechteckmodell hilft. Ein Rechteck mit der Höhe $3$ und der Breite $x + 4$ besteht aus zwei
+          Wenn eine Zahl vor der Klammer steht, brauchst du das Rechteckmodell: Es zeigt, dass die Zahl für jedes Glied in
+          der Klammer gilt. Ein Rechteck mit der Höhe $3$ und der Breite $x + 4$ besteht aus zwei
           Teilen: $3 \cdot x$ und $3 \cdot 4$.
       - type: figure
         image: images/terme-klammern-aufloesen.svg
@@ -66,6 +68,8 @@ blocks:
     id: beispiel
     title: Beispiel
     blocks:
+      - type: text
+        text: "Kommen beide Fälle in einem Term vor, löst du die Klammern nacheinander auf und fasst danach zusammen."
       - type: example
         title: "Löse die Klammern auf und fasse zusammen: 4(x + 2) − (x − 3)"
         blocks:
@@ -84,8 +88,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Auch hier prüfst du mit der Wertetabelle: Links und rechts muss derselbe Wert herauskommen. So fallen
-          typische Fehler auf.
+          Wenn du wissen willst, ob du die Klammern richtig aufgelöst hast, prüfst du mit der Wertetabelle: Links und
+          rechts muss derselbe Wert herauskommen. So fallen typische Fehler auf.
       - type: table
         caption: "Probe: Wert links und rechts vom Gleichheitszeichen"
         header: ["Umformung", "Zahlen", "Werte"]
@@ -97,6 +101,8 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Hier löst du Klammern selbst auf. Du brauchst das, um Terme ohne Klammer weiterzuvereinfachen."
       - type: single-choice
         id: minus-vor-klammer
         text: "Was ergibt 7 − (2x − 3)?"

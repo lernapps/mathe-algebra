@@ -7,6 +7,8 @@ blocks:
     id: einstieg
     title: Ich denke mir eine Zahl
     blocks:
+      - type: text
+        text: "Bei manchen Rätseln kennst du das Ergebnis und die Rechenschritte, die gedachte Zahl fehlt. Dann kannst du die Schritte rückwärts gehen, statt Zahlen auszuprobieren."
       - type: single-choice
         id: umkehren-erkennen
         text: "Ich denke mir eine Zahl und rechne mal 4. Das Ergebnis ist 20. Welche Zahl habe ich mir gedacht?"
@@ -27,7 +29,8 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Ein Rätsel besteht aus Rechenschritten. Du zeichnest sie als Pfeile: Aus $x$ wird mal 3, dann plus 4 und am Ende
+          Damit du bei einem Rätsel mit mehreren Schritten nichts durcheinanderbringst, zeichnest du die Rechenschritte als
+          Pfeile: Aus $x$ wird mal 3, dann plus 4 und am Ende
           19. Zurück gehst du in der **umgekehrten Reihenfolge**, und jeder Schritt wird zu seinem **Gegenteil**: Aus
           „plus 4“ wird „minus 4“, aus „mal 3“ wird „geteilt durch 3“. Das nennst du **Umkehraufgabe**.
       - type: table
@@ -42,6 +45,8 @@ blocks:
     id: uebung
     title: Übung
     blocks:
+      - type: text
+        text: "Beim Zurückgehen kommt es auf zwei Dinge an: die Reihenfolge und das Gegenteil jedes Schritts. Beides brauchst du, damit am Ende die richtige Zahl herauskommt."
       - type: ordering
         id: rueckwaerts-ordnen
         text: "Bei 3 · x + 4 = 19 gehst du zurück. Bring die Schritte in die richtige Reihenfolge."
