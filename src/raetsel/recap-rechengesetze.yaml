@@ -6,8 +6,7 @@ description:
 recap: mathematik/grundrechenarten-rechengesetze
 blocks:
   - type: text
-    text:
-      "Das brauchst du für dieses Kapitel: Du löst Zahlenrätsel und rechnest dabei vor und zurück. Dafür musst du sicher
+    text: "Du löst Zahlenrätsel und rechnest dabei vor und zurück. Dafür musst du sicher
       mit Klammern, Punkt vor Strich und den Rechengesetzen umgehen. Ein Baustein ist ein Thema auf der Lernlandkarte. Dieser
       Baustein heißt „Vorrangregeln und Rechengesetze“: Ich kann Klammern und Vorrangregeln beachten und Rechengesetze für vorteilhaftes
       Rechnen nutzen."
@@ -76,7 +75,7 @@ blocks:
           "Wenn du dich vertan hast, wiederhole den Baustein „Vorrangregeln und Rechengesetze“ auf seiner Seite der Lernlandkarte:
           [Vorrangregeln und Rechengesetze](https://lernapps.net/apps/map/mathematik/c/grundrechenarten-rechengesetze/)."
   - type: note
-    title: Du bist bereit, wenn du …
+    title: Du bist bereit, wenn du das kannst
     blocks:
       - type: text
         text: '- Ich kann Klammern zuerst rechnen und Punkt vor Strich beachten.

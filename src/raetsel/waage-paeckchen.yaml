@@ -154,4 +154,4 @@ blocks:
           - "Beide Seiten minus {{b}}: {{a}} · x = {{c}} − {{b}}."
           - "Beide Seiten durch {{a}}: x = ({{c}} − {{b}}) : {{a}} = {{answer}}."
       - type: text
-        text: "Das kannst du jetzt: Du löst eine Gleichung mit der Waage, indem du auf beiden Seiten dasselbe tust, und prüfst das Ergebnis mit der Probe."
+        text: "Das kannst du jetzt: Du löst eine Gleichung mit der Waage, indem du auf beiden Seiten dasselbe tust, und kannst dein Ergebnis durch Einsetzen prüfen."

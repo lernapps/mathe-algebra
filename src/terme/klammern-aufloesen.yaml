@@ -32,7 +32,7 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Wenn vor der Klammer nur ein Plus oder Minus steht, kannst du sie auflösen. Eine **Klammer auflösen** heißt: Du
+          Wenn du einen Term mit Klammer vereinfachen willst, musst du erst die Klammer loswerden. Steht vor ihr nur ein Plus oder Minus, geht das so: Eine **Klammer auflösen** heißt: Du
           schreibst den Term ohne Klammer, sein Wert bleibt gleich. Bei einem Plus davor lässt du die Klammer weg. Bei einem Minus dreht sich **jedes** Vorzeichen in der Klammer um.
       - type: formula
         formula: "10 - (3 - 1) = 10 - 3 + 1 = 8"
@@ -49,7 +49,7 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Wenn eine Zahl vor der Klammer steht, brauchst du das Rechteckmodell: Es zeigt, dass die Zahl für jedes Glied in
+          Wenn du eine Klammer mit einer Zahl davor auflösen willst, hilft das Rechteckmodell: Es zeigt, dass die Zahl für jedes Glied in
           der Klammer gilt. Ein Rechteck mit der Höhe $3$ und der Breite $x + 4$ besteht aus zwei
           Teilen: $3 \cdot x$ und $3 \cdot 4$.
       - type: figure

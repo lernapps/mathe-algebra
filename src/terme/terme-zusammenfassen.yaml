@@ -32,7 +32,7 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Wenn zwei Glieder dieselbe Variable haben, zum Beispiel $3x$ und $5x$ (3 Schachteln und 5 Schachteln), kannst du
+          Ein Term besteht aus **Gliedern**, das sind die Teile, die mit Plus oder Minus verbunden sind. Wenn du ihn kürzer schreiben willst, schaust du, welche Glieder zusammenpassen: Wenn zwei Glieder dieselbe Variable haben, zum Beispiel $3x$ und $5x$ (3 Schachteln und 5 Schachteln), kannst du
           sie zu einem Glied zusammenfassen. Dazu zählst du die Zahlen vor dem $x$ zusammen, das $x$ bleibt stehen.
       - type: formula
         formula: '3x + 5x = (3 + 5) \cdot x = 8x'

@@ -6,8 +6,7 @@ recap:
   - mathematik/brueche-multiplizieren-dividieren
 blocks:
   - type: text
-    text:
-      "Das brauchst du für dieses Kapitel: Bruchterme behandelst du wie Brüche, nur mit Variablen im Zähler und im Nenner.
+    text: "Bruchterme behandelst du wie Brüche, nur mit Variablen im Zähler und im Nenner.
       Dafür musst du Brüche sicher kürzen, erweitern, malnehmen und teilen können. Ein Baustein ist ein Thema auf der Lernlandkarte.
       Die Bausteine heißen auf der Lernlandkarte „Brüche kürzen und erweitern“ und „Bruchrechnung: Multiplikation und Division“."
   - type: section
@@ -87,7 +86,7 @@ blocks:
           "Wenn du dich vertan hast, wiederhole den Baustein „Bruchrechnung: Multiplikation und Division“ auf seiner Seite
           der Lernlandkarte: [Bruchrechnung: Multiplikation und Division](https://lernapps.net/apps/map/mathematik/c/brueche-multiplizieren-dividieren/)."
   - type: note
-    title: Du bist bereit, wenn du …
+    title: Du bist bereit, wenn du das kannst
     blocks:
       - type: text
         text: "- Ich kann einen Bruch kürzen und erweitern, ohne seinen Wert zu ändern.

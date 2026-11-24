@@ -118,6 +118,25 @@ grundrechenarten-rechengesetze (vor K1), rationale-zahlen-rechnen (vor K2); K4 h
   `generated` ohne `links`; `lernapps check`-Lock über alle Worktrees; Wortzählung `explainer-text-load` zählt Rückmeldungen mit; „Aufgabe Nr. 38“ unerklärt;
   Einschätzung zeigt nicht, welche Aufgabe falsch war.
 
+### Review, Runde 2 (nach den Anmerkungen des Menschen; regeln.md 7.6 und 9.7 bis 9.9)
+
+- Werkzeug: `lernapps update` als eigener Commit (tooling 0.18.6, app-templates 0.19.0); Build und check grün.
+- (a) Wiederholungen nur auf Recap-Seiten: Komponente `Kurztest` gelöscht; jedes Recap hat jetzt zwei normale `single-choice`-Übungen
+  (Rechengesetze: 24 − 6 · 3 + 8 : 2 und 7 · 98; negative Zahlen: (−4) · (−3) − (−6) : 2 und 8 − (2 − 5) − (−1); Brüche: Kürzen 48/84 und
+  3/4 : 9/8). Auffrischungssätze auf den 21 Inhaltsseiten gestrichen („Die Waage kennst du aus Klasse 5 und 6“, „wie bei der Waage“, „Bis jetzt …“,
+  Verweise auf das Zahlenrätsel u. a.).
+- (b) Erst das Wozu, dann das Wie: 4 Unteragenten (je Kapitelgruppe) haben den Anlass an den Anfang jeder Seite und jedes Abschnitts gesetzt und vor
+  jedes Verfahren/jeden Weg (Probieren, Rückwärtsrechnen, Waage, Umformen, Probe, Rechteckmodell, Kürzen, Hauptnenner), wann er passt; Nachprüfung nach
+  den Lernenden-Prüfern: Klammern-Abschnitte, „Glieder“ und die Recaps ergänzt.
+- (c) Buttons: alle Komponenten-Buttons nutzen die `--page-*`-Variablen (gleiche Gestaltung wie „Prüfen“); „Neu anfangen“ in `BruchtermTabelle` nur noch
+  sichtbar, wenn sich die Tabelle geändert hat; die anderen Buttons haben eine sichtbare Wirkung (Meldung, Zeile, Zustand).
+- Lernenden-Prüfer Runde 2 (Klasse 6/7 und Klasse 8, nur Regeln A, B, C und geänderte Stellen): Befunde umgesetzt (Verweise auf nicht vorhandene Tabelle in
+  `sachaufgaben`, Wiederholungen in `x-auf-beiden-seiten`, Satz ohne Bezug in `ungleichungen-loesen`, Lücke in `definitionsmenge` erst nach Eintrag sichtbar,
+  Schlusssatz Waage, „Du bist bereit“-Überschrift, doppelter Kopf der Recaps, zweite Recap-Übung zum Minus vor Klammer mit Summe).
+  Nach dem letzten Prüferlauf geändert: nur diese kleinen Texte, nicht noch einmal geprüft.
+- Offen (für den Orchestrator, Laufzeit/Werkzeug): „Tipp“ ohne Rahmen/Dreieck bei Term-Aufgaben; drei Button-Stile der Laufzeit („Neue Aufgabe“ als Textlink);
+  Recap-Verweise als rohe Kennung („mathematik/…“, „externe Seite“); Rückmeldung „Lies dazu noch einmal den Text“ bei Zahlen, Sortieren, Zuordnen.
+
 ## Explore
 
 <!--

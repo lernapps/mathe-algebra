@@ -5,10 +5,9 @@ recap: mathematik/rationale-zahlen-rechnen
 blocks:
   - type: text
     text:
-      "Das brauchst du für dieses Kapitel: In Termen (Rechenausdrücken) stehen Variablen, das sind Buchstaben für Zahlen.
-      Für sie setzt du auch negative Zahlen ein. Dafür musst du mit negativen Zahlen sicher rechnen. Ein Baustein ist ein Thema
-      auf der Lernlandkarte. Dieser Baustein heißt „Rechnen mit negativen Zahlen“: Ich kann mit negativen Zahlen rechnen und
-      dabei Vorzeichen- und Klammerregeln beachten."
+      "In Termen (Rechenausdrücken) stehen Variablen, das sind Buchstaben für Zahlen. Für sie setzt du auch negative Zahlen
+      ein. Dafür musst du mit negativen Zahlen sicher rechnen. Ein Baustein ist ein Thema auf der Lernlandkarte. Dieser Baustein
+      heißt „Rechnen mit negativen Zahlen“: Ich kann mit negativen Zahlen rechnen und dabei Vorzeichen- und Klammerregeln beachten."
   - type: section
     id: negative-zahlen
     title: Rechnen mit negativen Zahlen
@@ -49,25 +48,27 @@ blocks:
             info: "Das Ergebnis von (−4) · (−3) ist positiv: gleiche Vorzeichen geben plus. Es sind +12."
         explanation: "(−4) · (−3) = 12 und (−6) : 2 = −3. Dann 12 − (−3) = 12 + 3 = 15."
       - type: single-choice
-        id: recap-addieren
-        text: Was ist −7 + (−5) − (−9)?
+        id: recap-klammer
+        text: Was ist 8 − (2 − 5) − (−1)?
         options:
-          - text: −3
+          - text: "12"
             correct: true
-            info: −7 + (−5) = −12. Dann −12 − (−9) = −12 + 9 = −3.
-          - text: −21
+            info: 8 − (2 − 5) = 8 − 2 + 5 = 11, denn das Minus dreht beide Vorzeichen um. Dann 11 − (−1) = 11 + 1 = 12.
+          - text: "2"
             correct: false
-            info: "Du hast 9 abgezogen. Minus (−9) heißt: Du addierst 9."
-          - text: "7"
+            info:
+              "Du hast 8 − 2 − 5 gerechnet. Das Minus vor der Klammer dreht jedes Vorzeichen in der Klammer um: aus −5 wird
+              +5."
+          - text: "10"
             correct: false
-            info: Du hast die Vorzeichen nicht beachtet. −7 + (−5) liegt links von der Null, bei −12.
-        explanation: −7 + (−5) = −12. Dann −12 − (−9) = −12 + 9 = −3.
+            info: "Du hast 11 − 1 gerechnet. Minus (−1) heißt aber: Du addierst die Gegenzahl 1, also 11 + 1."
+        explanation: "Erst die Klammer auflösen (8 − 2 + 5 = 11), dann das Minus vor (−1) als Plus rechnen: 12."
       - type: text
         text:
           "Wenn du dich vertan hast, wiederhole den Baustein „Rechnen mit negativen Zahlen“ auf seiner Seite der Lernlandkarte:
           [Rechnen mit negativen Zahlen](https://lernapps.net/apps/map/mathematik/c/rationale-zahlen-rechnen/)."
   - type: note
-    title: Du bist bereit, wenn du …
+    title: Du bist bereit, wenn du das kannst
     blocks:
       - type: text
         text: "- Ich kann Zahlen mit Vorzeichen addieren und subtrahieren und dabei die Klammern beachten.
