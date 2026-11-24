@@ -1,0 +1,157 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Die Waage mit Päckchen und Gewichten
+description: "Eine Gleichung als Waage: Päckchen mit gleicher Zahl und Gewichte. Du tust auf beiden Seiten dasselbe, bis ein Päckchen allein liegt."
+competencies: [einfache-gleichungen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Zwei gleiche Seiten
+    blocks:
+      - type: text
+        text: >-
+          Wenn du eine Gleichung lösen willst, hilft ein Bild: die Waage. Sie zeigt, warum du auf beiden Seiten dasselbe
+          tun darfst. Eine Waage ist im **Gleichgewicht**, wenn beide Seiten gleich schwer sind. Auf der Waage liegen Gewichte, jedes
+          wiegt 1, und **Päckchen**: In jedem Päckchen stecken gleich viele Gewichte, aber du weißt nicht, wie viele.
+          Diese unbekannte Zahl nennst du $x$.
+      - type: single-choice
+        id: waage-gleichgewicht
+        text: "Links liegen ein Päckchen und 3 Gewichte, rechts 7 Gewichte. Die Waage ist im Gleichgewicht. Du nimmst links 3 Gewichte weg. Was musst du rechts tun, damit sie im Gleichgewicht bleibt?"
+        options:
+          - text: "Auch 3 Gewichte wegnehmen"
+            correct: true
+            info: "Nimmst du auf beiden Seiten gleich viel weg, bleibt die Waage im Gleichgewicht. Rechts liegen dann 4 Gewichte."
+          - text: "Nichts"
+            correct: false
+            info: "Dann wäre rechts mehr Gewicht als links: Die Waage kippt nach rechts."
+          - text: "3 Gewichte dazulegen"
+            correct: false
+            info: "Dann wäre rechts noch schwerer. Die Waage bleibt nur im Gleichgewicht, wenn du auf beiden Seiten dasselbe tust."
+        explanation: "Was du links tust, musst du rechts auch tun. Dann bleibt die Waage im Gleichgewicht."
+  - type: section
+    id: waage
+    title: Das Päckchen finden
+    blocks:
+      - type: text
+        text: >-
+          Wenn du wissen willst, wie schwer ein Päckchen ist, löst du die Gleichung. $x + 3 = 7$ sagt: Ein Päckchen und
+          3 Gewichte wiegen so viel wie 7 Gewichte. Dazu tust du **auf beiden Seiten dasselbe**, bis ein Päckchen allein liegt. Probiere es aus.
+      - type: vue-component
+        id: waage-x-plus-3
+        component: GleichungWaage
+        props:
+          a: 1
+          b: 3
+          c: 7
+          schrittLabel: "Deine Schritte"
+          zahlLabel: "Anzahl"
+          minusKnopf: "Auf beiden Seiten minus"
+          plusKnopf: "Auf beiden Seiten plus"
+          teilenKnopf: "Beide Seiten teilen"
+          neuAnfangen: "Neu anfangen"
+          bildLabel: "Waage mit Päckchen und Gewichten."
+        nojs: |
+          Waage für x + 3 = 7. Links liegen ein Päckchen x und 3 Gewichte, rechts 7 Gewichte. Auf beiden Seiten 3 abziehen:
+          x = 4. Ein Päckchen wiegt 4 Gewichte.
+      - type: text
+        text: >-
+          Bei $2 \cdot x + 3 = 11$ liegen zwei Päckchen links. Erst nimmst du 3 Gewichte weg, dann teilst du beide Seiten
+          durch 2: Ein Päckchen wiegt 4 Gewichte.
+      - type: vue-component
+        id: waage-2x-plus-3
+        component: GleichungWaage
+        props:
+          a: 2
+          b: 3
+          c: 11
+          schrittLabel: "Deine Schritte"
+          zahlLabel: "Anzahl"
+          minusKnopf: "Auf beiden Seiten minus"
+          plusKnopf: "Auf beiden Seiten plus"
+          teilenKnopf: "Beide Seiten teilen"
+          neuAnfangen: "Neu anfangen"
+          bildLabel: "Waage mit zwei Päckchen und Gewichten."
+        nojs: |
+          Waage für 2 · x + 3 = 11. Erst auf beiden Seiten 3 abziehen: 2 · x = 8. Dann beide Seiten durch 2 teilen: x = 4.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: text
+        text: "Mit der Waage findest du jede Päckchenzahl, solange du auf beiden Seiten dasselbe tust. Das übst du jetzt mit mehr Päckchen und mehr Gewichten."
+      - type: vue-component
+        id: waage-3x-plus-5-werkzeug
+        component: GleichungWaage
+        props:
+          a: 3
+          b: 5
+          c: 23
+          schrittLabel: "Deine Schritte"
+          zahlLabel: "Anzahl"
+          minusKnopf: "Auf beiden Seiten minus"
+          plusKnopf: "Auf beiden Seiten plus"
+          teilenKnopf: "Beide Seiten teilen"
+          neuAnfangen: "Neu anfangen"
+          bildLabel: "Waage mit drei Päckchen und Gewichten."
+        nojs: |
+          Waage für 3 · x + 5 = 23. Erst auf beiden Seiten 5 abziehen: 3 · x = 18. Dann beide Seiten durch 3 teilen: x = 6.
+      - type: number
+        id: waage-3x-plus-5
+        text: "Links liegen 3 Päckchen und 5 Gewichte, rechts 23 Gewichte. Wie viele Gewichte stecken in einem Päckchen? Die Waage darüber zeigt diese Aufgabe."
+        answer: 6
+        tolerance: 0
+        hint: "Erst auf beiden Seiten 5 abziehen, dann durch 3 teilen."
+        explanation: "23 − 5 = 18 und 18 : 3 = 6. Probe: 3 · 6 + 5 = 23."
+      - type: generated
+        id: waage-ueben-einfach
+        given:
+          b: { int: [2, 12] }
+          c: { int: [8, 30] }
+        where: ["c > b"]
+        task:
+          text: "Links liegen ein Päckchen und {{b}} Gewichte, rechts {{c}} Gewichte. Wie viele Gewichte stecken in einem Päckchen?"
+        answer: { value: "c - b", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "c + b"
+            message: "Du hast {{b}} dazugelegt. Du musst auf beiden Seiten {{b}} wegnehmen, damit links das Päckchen allein liegt."
+        hint: "Nimm auf beiden Seiten {{b}} Gewichte weg."
+        steps:
+          - "Die Gleichung heißt x + {{b}} = {{c}}."
+          - "Auf beiden Seiten {{b}} wegnehmen: x = {{c}} − {{b}} = {{answer}}."
+      - type: generated
+        id: waage-ueben-paeckchen
+        given:
+          a: { int: [2, 6] }
+          c: { int: [10, 60] }
+        where: ["decimals(c / a) == 0"]
+        task:
+          text: "Links liegen {{a}} Päckchen, rechts {{c}} Gewichte. Wie viele Gewichte stecken in einem Päckchen?"
+        answer: { value: "c / a", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "c - a"
+            message: "Du hast {{a}} Gewichte weggenommen. Links liegen aber {{a}} Päckchen. Du teilst beide Seiten durch {{a}}."
+        hint: "Teile beide Seiten durch {{a}}: Links bleibt ein Päckchen."
+        steps:
+          - "Die Gleichung heißt {{a}} · x = {{c}}."
+          - "Beide Seiten durch {{a}} teilen: x = {{c}} : {{a}} = {{answer}}."
+      - type: generated
+        id: waage-ueben-beides
+        given:
+          a: { int: [2, 6] }
+          b: { int: [2, 15] }
+          c: { int: [20, 80] }
+        where: ["c > b", "decimals((c - b) / a) == 0"]
+        task:
+          text: "Links liegen {{a}} Päckchen und {{b}} Gewichte, rechts {{c}} Gewichte. Wie viele Gewichte stecken in einem Päckchen?"
+        answer: { value: "(c - b) / a", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "c - b"
+            message: "Du hast {{b}} richtig weggenommen. Jetzt liegen links noch {{a}} Päckchen: Teile beide Seiten durch {{a}}."
+          - value: "c / a - b"
+            message: "Du hast zuerst geteilt. Erst nimmst du auf beiden Seiten {{b}} weg, dann teilst du durch {{a}}."
+        hint: "Erst {{b}} Gewichte auf beiden Seiten wegnehmen, dann beide Seiten durch {{a}} teilen."
+        steps:
+          - "Die Gleichung heißt {{a}} · x + {{b}} = {{c}}."
+          - "Beide Seiten minus {{b}}: {{a}} · x = {{c}} − {{b}}."
+          - "Beide Seiten durch {{a}}: x = ({{c}} − {{b}}) : {{a}} = {{answer}}."
+      - type: text
+        text: "Das kannst du jetzt: Du löst eine Gleichung mit der Waage, indem du auf beiden Seiten dasselbe tust, und kannst dein Ergebnis durch Einsetzen prüfen."

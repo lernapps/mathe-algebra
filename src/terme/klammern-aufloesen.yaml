@@ -1,0 +1,233 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Klammern auflösen
+description: "Klammern auflösen: Plus und Minus vor der Klammer, ein Faktor vor der Klammer mit dem Rechteckmodell. Mit der Wertetabelle prüfst du, ob der Term gleich bleibt."
+competencies: [terme-umformen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Ein Rechteck in Teile zerlegen
+    blocks:
+      - type: text
+        text: >-
+          Wenn ein Term eine Klammer hat, kannst du ihn oft nicht weiter vereinfachen. Erst ohne Klammer geht es weiter.
+          Wie das gelingt, zeigt ein Rechteck. Du kannst es in Teile zerlegen. Die Fläche jedes Teils ist Höhe mal Breite. Zusammen sind es die
+          Fläche des ganzen Rechtecks.
+      - type: single-choice
+        id: rechteck-teile
+        text: "Ein Rechteck ist 6 cm hoch. Seine Breite besteht aus einem Teil von x cm und einem Teil von 3 cm. Wie groß ist die Fläche des ganzen Rechtecks in cm²?"
+        options:
+          - text: "6x + 18"
+            correct: true
+            info: "Die Höhe 6 gilt für beide Teile: 6 · x + 6 · 3 = 6x + 18."
+          - text: "6x + 3"
+            correct: false
+            info: "Die Höhe 6 gilt auch für den zweiten Teil: Er hat die Fläche 6 · 3 = 18."
+          - text: "x + 18"
+            correct: false
+            info: "Der erste Teil hat die Fläche 6 · x, nicht x."
+        explanation: "6 · (x + 3) = 6 · x + 6 · 3 = 6x + 18."
+  - type: section
+    id: plusminus
+    title: Plus oder Minus vor der Klammer
+    blocks:
+      - type: text
+        text: >-
+          Wenn du einen Term mit Klammer vereinfachen willst, musst du erst die Klammer loswerden. Steht vor ihr nur ein Plus oder Minus, geht das so: Eine **Klammer auflösen** heißt: Du
+          schreibst den Term ohne Klammer, sein Wert bleibt gleich. Bei einem Plus davor lässt du die Klammer weg. Bei einem Minus dreht sich **jedes** Vorzeichen in der Klammer um.
+      - type: formula
+        formula: "10 - (3 - 1) = 10 - 3 + 1 = 8"
+      - type: number
+        id: minus-klammer-zahlen
+        text: "Löse die Klammer auf und rechne: 7 − (2 − 5). Welche Zahl kommt heraus?"
+        answer: 10
+        tolerance: 0
+        hint: "Das Minus dreht beide Vorzeichen um: 7 − 2 + 5."
+        explanation: "7 − 2 + 5 = 10."
+  - type: section
+    id: faktor
+    title: Faktor vor der Klammer
+    blocks:
+      - type: text
+        text: >-
+          Wenn du eine Klammer mit einer Zahl davor auflösen willst, hilft das Rechteckmodell: Es zeigt, dass die Zahl für jedes Glied in
+          der Klammer gilt. Ein Rechteck mit der Höhe $3$ und der Breite $x + 4$ besteht aus zwei
+          Teilen: $3 \cdot x$ und $3 \cdot 4$.
+      - type: figure
+        image: images/terme-klammern-aufloesen.svg
+        alt: "Zwei Rechtecke. Oben: 3(x + 4) = 3x + 12, ein Rechteck mit der Höhe 3, geteilt in die Teile 3x und 12. Unten: 3(x − 2) = 3x − 6, ein Rechteck der Fläche 3x, von dem ein gestrichelter Streifen mit der Fläche 6 abgezogen wird."
+        caption: "Oben: Höhe 3, Breite $x + 4$ (blauer Teil $x$, oranger Teil $4$). Die Teilflächen sind $3x$ und $12$. Unten: Bei $x - 2$ wird der gestrichelte Streifen der Breite $2$ abgezogen, es bleibt $3x - 6$."
+        source: Eigene Darstellung
+        licence: MIT
+      - type: formula
+        formula: 'a \cdot (b + c) = a \cdot b + a \cdot c'
+      - type: text
+        text: >-
+          Das ist das **Distributivgesetz** (Verteilungsgesetz): Ein Faktor vor der Klammer wird mit
+          **jedem** Glied in der Klammer multipliziert, das Vorzeichen gehört zum Glied: $2 \cdot (x - 5) = 2x - 10$.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: text
+        text: "Kommen beide Fälle in einem Term vor, löst du die Klammern nacheinander auf und fasst danach zusammen."
+      - type: example
+        title: "Löse die Klammern auf und fasse zusammen: 4(x + 2) − (x − 3)"
+        blocks:
+          - type: table
+            caption: "Ein Schritt je Zeile, die Begründung steht rechts."
+            header: ["Term", "Begründung"]
+            rows:
+              - ["$4(x + 2) - (x - 3)$", "Aufgabe"]
+              - ["$4 \\cdot x + 4 \\cdot 2 - x + 3$", "4 mal jedes Glied, das Minus dreht beide Vorzeichen"]
+              - ["$4x + 8 - x + 3$", "ausgerechnet"]
+              - ["$4x - x + 8 + 3$", "gleichartige Glieder nebeneinander"]
+              - ["**$3x + 11$**", "zusammengefasst"]
+  - type: section
+    id: probe
+    title: Probe mit Zahlen
+    blocks:
+      - type: text
+        text: >-
+          Wenn du wissen willst, ob du die Klammern richtig aufgelöst hast, prüfst du mit der Wertetabelle: Links und
+          rechts muss derselbe Wert herauskommen. So fallen typische Fehler auf.
+      - type: table
+        caption: "Probe: Wert links und rechts vom Gleichheitszeichen"
+        header: ["Umformung", "Zahlen", "Werte"]
+        rows:
+          - ["$4(x + 2) - (x - 3) = 3x + 11$", "$x = 2$", "17 und 17"]
+          - ["$-(a - b) = -a - b$", "$a = 5$, $b = 2$", "−3 und −7"]
+          - ["$3(x + 4) = 3x + 4$", "$x = 2$", "18 und 10"]
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: text
+        text: "Hier löst du Klammern selbst auf. Du brauchst das, um Terme ohne Klammer weiterzuvereinfachen."
+      - type: single-choice
+        id: minus-vor-klammer
+        text: "Was ergibt 7 − (2x − 3)?"
+        options:
+          - text: "10 − 2x"
+            correct: true
+            info: "7 − 2x + 3 = 10 − 2x."
+          - text: "4 − 2x"
+            correct: false
+            info: "Du hast nur das erste Vorzeichen gedreht. Auch −3 wird +3."
+          - text: "4 + 2x"
+            correct: false
+            info: "Du hast das Minus vor der Klammer ignoriert."
+        explanation: "Minus vor der Klammer dreht jedes Vorzeichen."
+      - type: vue-component
+        id: plusminus-ueben
+        component: TermeUmformen
+        props:
+          art: plusminus
+          loesungZeigen: Lösung zeigen
+          tipp: Tipp
+          rechenweg: "Lösung:"
+          probeZeigen: Probe mit Zahlen
+          probeVerbergen: Probe verbergen
+        examples:
+          accepted:
+            - { answer: "x+2", seed: 1 }
+            - { answer: "2+x", seed: 1 }
+            - { answer: "-5y-6", seed: 2 }
+          rejected:
+            - { answer: "9x-2", seed: 1 }
+            - { answer: "x-2", seed: 1 }
+            - { answer: "5x-(4x-2)", seed: 1 }
+            - { answer: "5y+6", seed: 2 }
+      - type: generated
+        id: faktor-probe
+        given:
+          a: { int: [2, 9] }
+          b: { int: [2, 9] }
+          x: { int: [2, 6] }
+        task:
+          text: "Setze $x = {{x}}$ ein. Welchen Wert hat ${{a}}(x + {{b}})$?"
+        answer: { value: "a * (x + b)", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "a * x + b"
+            message: "Der Faktor {{a}} gilt auch für {{b}}."
+        hint: "Rechne erst die Klammer aus: {{x}} + {{b}}. Dann mal {{a}}."
+        steps:
+          - "${{a}} \\cdot ({{x}} + {{b}}) = {{answer}}$"
+      - type: vue-component
+        id: faktor-ueben
+        component: TermeUmformen
+        props:
+          art: faktor
+          loesungZeigen: Lösung zeigen
+          tipp: Tipp
+          rechenweg: "Lösung:"
+          probeZeigen: Probe mit Zahlen
+          probeVerbergen: Probe verbergen
+        examples:
+          accepted:
+            - { answer: "-8x+16", seed: 1 }
+            - { answer: "16-8x", seed: 1 }
+            - { answer: "18y+72", seed: 2 }
+          rejected:
+            - { answer: "-8x-4", seed: 1 }
+            - { answer: "-8x-16", seed: 1 }
+            - { answer: "18y+8", seed: 2 }
+      - type: generated
+        id: faktor-minus
+        given:
+          a: { int: [2, 9] }
+          b: { int: [2, 9] }
+        where: ["a != b"]
+        task:
+          text: "Löse die Klammer auf: ${{a}}(x - {{b}}) = {{a}}x - \\text{□}$. Welche Zahl steht hinter dem Minus?"
+        answer: { value: "a * b", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "b"
+            message: "Der Faktor {{a}} gilt auch für {{b}}."
+          - value: "a + b"
+            message: "Du hast addiert, der Faktor wird multipliziert."
+        hint: "Das Glied −{{b}} wird mit {{a}} multipliziert."
+        steps:
+          - "${{a}}(x - {{b}}) = {{a}}x - {{a}} \\cdot {{b}} = {{a}}x - {{answer}}$"
+      - type: matching
+        id: klammern-zuordnen
+        text: "Ordne jeder Klammer den aufgelösten Term zu."
+        pairs:
+          - { left: "+(x − 3)", right: "x − 3" }
+          - { left: "−(x − 3)", right: "−x + 3" }
+          - { left: "2(x − 3)", right: "2x − 6" }
+          - { left: "−2(x − 3)", right: "−2x + 6" }
+        distractors:
+          - "−x − 3"
+          - "2x − 3"
+        explanation: "Plus lässt alles stehen, Minus dreht jedes Vorzeichen, ein Faktor gilt für beide Glieder."
+      - type: vue-component
+        id: kombiniert-ueben
+        component: TermeUmformen
+        props:
+          art: kombiniert
+          loesungZeigen: Lösung zeigen
+          tipp: Tipp
+          rechenweg: "Lösung:"
+          probeZeigen: Probe mit Zahlen
+          probeVerbergen: Probe verbergen
+        examples:
+          accepted:
+            - { answer: "3x-3", seed: 1 }
+            - { answer: "-3+3x", seed: 1 }
+            - { answer: "16y+44", seed: 2 }
+          rejected:
+            - { answer: "5x-5", seed: 1 }
+            - { answer: "3x+3", seed: 1 }
+            - { answer: "16y-44", seed: 2 }
+      - type: ordering
+        id: klammer-reihenfolge
+        text: "Bring die Schritte beim Auflösen von −2(x − 5) in die richtige Reihenfolge."
+        items:
+          - "−2(x − 5)"
+          - "−2 · x − 2 · (−5)"
+          - "−2x + 10"
+        explanation: "Erst jedes Glied mit −2 multiplizieren: −2 · (−5) = +10."
+      - type: text
+        text: >-
+          Das kannst du jetzt: Du löst Klammern mit Plus, Minus und einem Faktor davor auf, siehst die Aufgabe als
+          Rechteck in Teilen und prüfst mit der Wertetabelle, ob der Term gleich geblieben ist.

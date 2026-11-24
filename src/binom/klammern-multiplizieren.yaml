@@ -9,13 +9,20 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Terme wie $(x + 3)(x + 5)$ begegnen dir ab jetzt überall: beim Vereinfachen, beim Lösen von Gleichungen und bei Flächen. Ausmultiplizieren macht aus dem Produkt eine Summe, mit der du weiterrechnen kannst. Die drei binomischen Formeln sind nichts anderes als Abkürzungen für genau diese Rechnung. Wer Klammer mal Klammer sicher kann, kann jede Formel selbst herleiten, falls er sie einmal vergisst.
+          Ein Term wie $(x + 3)(x + 5)$ ist ein Produkt, mit dem du nicht weiterrechnen kannst: Du kannst ihn weder vereinfachen noch zu einer Gleichung umformen. Erst wenn du die Klammern ausmultiplizierst, wird daraus eine Summe. Die drei binomischen Formeln sind Abkürzungen für genau diese Rechnung. Wer Klammer mal Klammer kann, kann sie selbst herleiten, falls er sie vergisst.
   - type: section
     id: regel
     title: Regel
     blocks:
+      - type: text
+        text: >-
+          Wenn zwei Summen miteinander multipliziert werden, soll dabei kein Produkt verloren gehen. Dafür gibt es eine feste Regel.
       - type: formula
         formula: "(a + b)(c + d) = ac + ad + bc + bd"
+      - type: definition
+        term: Glied
+        explanation: >-
+          Ein Teil einer Summe, mit seinem Vorzeichen. Steht in einer Klammer ein Minus, gehört es zum Glied dahinter: $(x - 1)$ hat die Glieder $x$ und $-1$.
       - type: text
         text: >-
           Jedes Glied der ersten Klammer wird mit **jedem** Glied der zweiten Klammer multipliziert. Bei je zwei Gliedern sind das $2 \cdot 2 =$ **4 Produkte**. Danach fasst du gleichartige Glieder zusammen, zum Beispiel $5x + 3x = 8x$.
@@ -23,10 +30,6 @@ blocks:
         term: Ausmultiplizieren
         explanation: >-
           Ein Produkt mit Klammern in eine Summe ohne Klammern umformen: Jedes Glied der einen Klammer wird mit jedem Glied der anderen multipliziert.
-      - type: definition
-        term: Glied
-        explanation: >-
-          Ein Teil einer Summe, mit seinem Vorzeichen. Steht in einer Klammer ein Minus, gehört es zum Glied dahinter: $(x - 1)$ hat die Glieder $x$ und $-1$.
       - type: text
         text: "Achte beim Multiplizieren auf die Vorzeichen: Plus mal Minus gibt Minus, Minus mal Minus gibt Plus."
       - type: note
@@ -42,6 +45,8 @@ blocks:
       - type: example
         title: "Multipliziere aus und fasse zusammen: (2x − 1)(x + 4)"
         blocks:
+          - type: text
+            text: "Mit einem Minus in der Klammer passieren die meisten Vorzeichenfehler, deshalb dieses Beispiel."
           - type: table
             caption: "Der Rechenweg für (2x − 1)(x + 4)"
             rowHeaders: true
@@ -59,20 +64,9 @@ blocks:
       - type: figure
         image: images/binom-klammern-multiplizieren.svg
         alt: (x + 3)(x + 5) = x² + 8x + 15. Feld = Zeile mal Spalte
-        caption: "Ein Rechteck mit den Seiten $x + 3$ (links, in die Abschnitte $x$ und $3$ geteilt) und $x + 5$ (oben, in die Abschnitte $x$ und $5$ geteilt). Es zerfällt in vier Teilflächen: $x^2$ (blau), $5x$ und $3x$ (gelb) und $15$ (grün). Jedes Feld ist Zeile mal Spalte. Zusammen sind sie $(x + 3)(x + 5)$ $= x^2 + 8x + 15$."
+        caption: "Warum es genau vier Produkte sind, zeigt eine Fläche. Ein Rechteck mit den Seiten $x + 3$ (links, in die Abschnitte $x$ und $3$ geteilt) und $x + 5$ (oben, in die Abschnitte $x$ und $5$ geteilt). Es zerfällt in vier Teilflächen: $x^2$ (blau), $5x$ und $3x$ (gelb) und $15$ (grün). Jedes Feld ist Zeile mal Spalte. Zusammen sind sie $(x + 3)(x + 5)$ $= x^2 + 8x + 15$."
         source: Eigene Darstellung der Mathe-Karte
         licence: MIT
-  - type: section
-    id: video
-    title: Video dazu
-    blocks:
-      - type: video
-        youtube: X5E2bqby8f0
-        title: "Ausmultiplizieren – Klammern auflösen"
-        channel: Lehrerschmidt
-      - type: text
-        text: >-
-          Zum Nachlesen: [Klammern ausmultiplizieren bei Serlo](https://de.serlo.org/mathe/1525/klammern-ausmultiplizieren).
   - type: section
     id: uebung
     title: Übung
@@ -91,11 +85,6 @@ blocks:
             correct: false
             info: "Das letzte Produkt ist 3 · 5 = 15, das stimmt. Die 8 gehört zum Mittelglied: 5x + 3x = 8x."
         explanation: "Nur außen rechnen reicht nicht: (x + 3)(x + 5) = x² + 5x + 3x + 15 = x² + 8x + 15."
-        links:
-          - {
-              title: Klammern ausmultiplizieren (Serlo),
-              url: "https://de.serlo.org/mathe/1525/klammern-ausmultiplizieren",
-            }
       - type: vue-component
         id: klammern-ueben
         component: BinomTermAufgabe

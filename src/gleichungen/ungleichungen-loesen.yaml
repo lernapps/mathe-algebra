@@ -1,0 +1,300 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Lineare Ungleichungen lösen
+description: "Wenn die Waage kippt: Du löst eine Ungleichung wie 2x + 3 > 11 mit Tabelle und Umformen und zeigst die Lösungsmenge auf der Zahlengerade. Mit dem Trick bei negativen Zahlen."
+competencies: [ungleichungen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Welche Seite ist schwerer?
+    blocks:
+      - type: text
+        text: >-
+          Manchmal fragst du nicht nach einer einzigen Zahl, sondern: Für welche Zahlen ist etwas größer oder kleiner?
+          Das beantwortet eine Ungleichung. Zuerst vergleichst du zwei Seiten einer Waage.
+      - type: single-choice
+        id: waage-schwerer
+        text: "Links liegen 2 Päckchen mit je 5 Gewichten und noch 3 einzelne Gewichte. Rechts liegen 11 Gewichte. Wie steht die Waage?"
+        options:
+          - text: "Sie kippt nach links."
+            correct: true
+            info: "Links liegen 2 · 5 + 3 = 13 Gewichte, rechts 11. Links ist mehr Gewicht, also kippt die Waage nach links."
+          - text: "Sie ist im Gleichgewicht."
+            correct: false
+            info: "Im Gleichgewicht wären beide Seiten gleich schwer. Links sind es aber 2 · 5 + 3 = 13, rechts nur 11."
+          - text: "Sie kippt nach rechts."
+            correct: false
+            info: "Rechts liegen 11 Gewichte, links 13. Die schwerere Seite geht nach unten, das ist hier die linke."
+        explanation: "Du rechnest erst jede Seite aus und vergleichst dann: 13 ist größer als 11, also ist die linke Seite schwerer."
+  - type: section
+    id: kippen
+    title: Die Waage kippt
+    blocks:
+      - type: text
+        text: >-
+          Wenn du wissen willst, für welche Zahlen eine Seite schwerer ist, hast du eine Ungleichung. Bei einer
+          Gleichung ist die Waage im Gleichgewicht, bei einer **Ungleichung** kippt sie. Die Ungleichung
+          $2 \cdot x + 3 > 11$ sagt: Links ist mehr Gewicht als rechts. Die offene Seite des Zeichens zeigt zur
+          schwereren Seite.
+      - type: figure
+        image: images/gleichungen-ungleichungen-loesen-waage.svg
+        alt: "Eine Waage kippt nach links. Links liegen zwei Päckchen x und drei Gewichte, für x = 5 sind das 13 Gewichte. Rechts liegen 11 Gewichte. Links ist schwerer: 13 > 11."
+        caption: "Für $x = 5$ wiegt die linke Seite $2 \\cdot 5 + 3 = 13$, die rechte 11. Die Waage kippt nach links: $13 > 11$."
+        source: Eigene Darstellung
+        licence: MIT
+      - type: definition
+        term: Lösungsmenge
+        explanation: >-
+          Die Lösungsmenge einer Ungleichung sind alle Zahlen für $x$, bei denen sie stimmt. Bei $2 \cdot x + 3 > 11$
+          ist das nicht eine Zahl, sondern ganz viele.
+      - type: text
+        text: >-
+          Für welche Zahlen kippt die Waage nach links? Probieren in der Tabelle passt, um ein Gefühl für die Lösungen
+          zu bekommen, zeigt aber nur einzelne Zahlen. Die Spalte Vergleich zeigt dir: bei
+          „>“ ist links schwerer, bei „=“ sind beide Seiten gleich, bei „<“ ist links leichter.
+      - type: vue-component
+        id: tabelle-ungleichung
+        component: RaetselTabelle
+        props:
+          a: 2
+          b: 3
+          c: 11
+          eingabeLabel: "Zahl für x"
+          eintragen: "In die Tabelle"
+          neuAnfangen: "Neu anfangen"
+          spalteX: "x"
+          spalteLinks: "2 · x + 3"
+          spalteRechts: "Rechts"
+          spalteVergleich: "Vergleich"
+          ungleichung: true
+        nojs: |
+          Tabelle zum Probieren für 2 · x + 3 > 11. Für x = 2 ist die linke Seite 7: kleiner als 11. Für x = 4 ist sie 11:
+          beide Seiten sind gleich. Für x = 5 ist sie 13: links ist größer. Zur Lösungsmenge gehören alle Zahlen, bei denen
+          links größer ist, also alle Zahlen über 4.
+  - type: section
+    id: umformen
+    title: Auf beiden Seiten dasselbe tun
+    blocks:
+      - type: text
+        text: >-
+          Willst du alle Lösungen sicher finden, ohne unendlich viele Zahlen zu probieren, formst du um wie bei einer
+          Gleichung. Wenn du auf beiden Seiten dasselbe tust, bleibt die
+          Waage in der Schieflage und das Zeichen bleibt. Das gilt für plus, minus, mal und geteilt durch eine
+          **positive** Zahl.
+      - type: example
+        title: "Löse 2 · x + 3 > 11"
+        blocks:
+          - type: table
+            caption: "Links die Ungleichung, rechts, was du auf beiden Seiten tust"
+            header: ["Ungleichung", "Du tust"]
+            rows:
+              - ["$2 \\cdot x + 3 > 11$", "Start"]
+              - ["$2 \\cdot x > 8$", "auf beiden Seiten − 3"]
+              - ["$x > 4$", "beide Seiten : 2"]
+          - type: text
+            text: >-
+              Die Tabelle und das Umformen sagen dasselbe: $x > 4$. Die 4 gehört nicht dazu, denn
+              $2 \cdot 4 + 3 = 11$ und 11 ist nicht größer als 11.
+  - type: section
+    id: zahlengerade
+    title: Die Lösungsmenge auf der Zahlengerade
+    blocks:
+      - type: text
+        text: >-
+          Willst du alle Lösungen auf einen Blick zeigen, zeichnest du die Lösungsmenge auf der **Zahlengerade**. Der Punkt an der Grenzzahl ist **offen**, wenn sie
+          nicht dazugehört (bei < und >), und **gefüllt**, wenn sie dazugehört (bei ≤ und ≥). Der Strahl zeigt zu den
+          Lösungen. Teste Zahlen: Gehören sie dazu?
+      - type: vue-component
+        id: gerade-groesser-4
+        component: GleichungenGerade
+        props:
+          grenze: 4
+          zeichen: ">"
+          eingabeLabel: "Probezahl"
+          pruefenKnopf: "Gehört sie dazu?"
+          neuAnfangen: "Neu anfangen"
+        nojs: |
+          Zahlengerade für x > 4. Der Punkt bei der 4 ist offen, die Beschriftung sagt „ohne die 4“. Der Strahl geht von der 4
+          nach rechts. Zur Lösungsmenge gehören alle Zahlen rechts der 4, zum Beispiel 5 und 4,5. Die 4 gehört nicht dazu.
+  - type: section
+    id: negativ
+    title: Mal oder geteilt durch eine negative Zahl
+    blocks:
+      - type: text
+        text: >-
+          Beim Umformen kommt es vor, dass du durch eine negative Zahl teilen musst, etwa bei $-2 \cdot x > 6$. Dann
+          musst du wissen, was mit dem Zeichen passiert. Das Zeichen bleibt aber nicht immer, bei einer **negativen** Zahl ist es anders. Es gilt $2 < 5$. Rechne beide Zahlen mal $-2$: Du bekommst
+          $-4$ und $-10$. Auf der Zahlengerade liegt $-4$ rechts von $-10$, also gilt $-4 > -10$.
+      - type: table
+        caption: "Die Reihenfolge dreht sich um"
+        header: ["Was", "Vorher", "Nach · (−2)"]
+        rowHeaders: true
+        rows:
+          - ["Zahlen", "2 und 5", "−4 und −10"]
+          - ["Vergleich", "2 < 5", "−4 > −10"]
+      - type: note
+        title: Zeichen umdrehen
+        blocks:
+          - type: text
+            text: >-
+              Mal oder geteilt durch eine negative Zahl **dreht das Zeichen um**: Aus $<$ wird $>$, aus $\le$ wird
+              $\ge$, und umgekehrt.
+      - type: example
+        title: "Löse −2 · x > 6"
+        blocks:
+          - type: text
+            text: >-
+              Du teilst beide Seiten durch $-2$ und drehst das Zeichen um: $x < -3$. Probe mit $x = -5$: Es ist
+              $-2 \cdot (-5) = 10$ und $10 > 6$ stimmt. Mit $x = -1$ ist $-2 \cdot (-1) = 2$, und $2 > 6$ stimmt nicht.
+      - type: vue-component
+        id: gerade-kleiner-minus-3
+        component: GleichungenGerade
+        props:
+          grenze: -3
+          zeichen: "<"
+          eingabeLabel: "Probezahl"
+          pruefenKnopf: "Gehört sie dazu?"
+          neuAnfangen: "Neu anfangen"
+        nojs: |
+          Zahlengerade für x < −3. Der Punkt bei der −3 ist offen, die Beschriftung sagt „ohne die −3“. Der Strahl geht von
+          der −3 nach links. Zur Lösungsmenge gehören alle Zahlen links der −3, zum Beispiel −5. Die −3 gehört nicht dazu.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: text
+        text: >-
+          Hier entscheidest du, wann das Zeichen bleibt und wann es sich dreht, und liest Lösungsmengen von der
+          Zahlengerade ab.
+      - type: single-choice
+        id: zeichen-nach-umformung
+        text: "Du löst 3x + 2 < 14. Nach „minus 2“ steht 3 · x < 12. Du teilst beide Seiten durch 3. Was steht dann?"
+        options:
+          - text: "x < 4"
+            correct: true
+            info: "12 : 3 = 4. Du teilst durch eine positive Zahl, also bleibt das Zeichen."
+          - text: "x > 4"
+            correct: false
+            info: "Das Zeichen dreht sich nur um, wenn du mit einer negativen Zahl malst oder durch sie teilst. 3 ist positiv."
+          - text: "x < 36"
+            correct: false
+            info: "36 ist 12 · 3. Du musst aber durch 3 teilen: 12 : 3."
+          - text: "x < 10"
+            correct: false
+            info: "10 ist 12 − 2. Die 2 hast du schon im ersten Schritt abgezogen. Jetzt fehlt nur noch das Teilen durch 3."
+        explanation: "Teilen durch eine positive Zahl lässt die Waage in der Schieflage: Das Zeichen bleibt, aus 3 · x < 12 wird x < 4."
+      - type: matching
+        id: loesungsmenge-zuordnen
+        text: "Ordne jeder Ungleichung ihre Lösungsmenge auf der Zahlengerade zu."
+        pairs:
+          - left: "x > 2"
+            right: "Alle Zahlen rechts der 2, ohne die 2"
+          - left: "x ≥ 2"
+            right: "Alle Zahlen rechts der 2, mit der 2"
+          - left: "x < −1"
+            right: "Alle Zahlen links der −1, ohne die −1"
+          - left: "x ≤ −1"
+            right: "Alle Zahlen links der −1, mit der −1"
+        distractors:
+          - "Alle Zahlen links der 2, ohne die 2"
+        explanation: "Das Zeichen sagt die Richtung: > und ≥ zeigen nach rechts, < und ≤ nach links. Ein Gleichheitsstrich (≥ und ≤) heißt: Die Grenzzahl gehört dazu, der Punkt ist gefüllt."
+      - type: single-choice
+        id: gerade-lesen
+        text: "Welche Ungleichung gehört zur Zahlengerade im Bild?"
+        material:
+          - type: figure
+            image: images/gleichungen-ungleichungen-loesen-gerade.svg
+            alt: "Zahlengerade von −5 bis 3. Bei der −2 liegt ein gefüllter Punkt mit der Beschriftung „mit der −2“. Von dort geht ein dicker Strahl nach rechts."
+            caption: "Achte auf den Punkt und auf die Richtung des Strahls."
+            source: Eigene Darstellung
+            licence: MIT
+        options:
+          - text: "x ≥ −2"
+            correct: true
+            info: "Der Strahl geht nach rechts, also größer, und der Punkt ist gefüllt: Die −2 gehört dazu."
+          - text: "x > −2"
+            correct: false
+            info: "Der Strahl stimmt, aber bei > wäre der Punkt offen („ohne die −2“). Hier ist er gefüllt."
+          - text: "x ≤ −2"
+            correct: false
+            info: "Der Punkt stimmt, aber bei ≤ ginge der Strahl nach links, zu den kleineren Zahlen."
+          - text: "x ≥ 2"
+            correct: false
+            info: "Der Punkt liegt bei der −2, links der Null, nicht bei der 2."
+        explanation: "Erst die Richtung, dann der Rand: Strahl nach rechts heißt > oder ≥, gefüllter Punkt heißt ≥."
+      - type: generated
+        id: grenzzahl-positiv
+        given:
+          a: { int: [2, 9] }
+          b: { int: [1, 20] }
+          c: { int: [10, 80] }
+        where: ["c > b", "decimals((c - b) / a) == 0"]
+        task:
+          text: "Löse {{a}} · x + {{b}} > {{c}}. Die Lösung heißt x > Grenzzahl. Welche Zahl ist die Grenzzahl?"
+        answer: { value: "(c - b) / a", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "c - b"
+            message: "Du hast {{b}} abgezogen, aber noch nicht durch {{a}} geteilt."
+          - value: "c / a - b"
+            message: "Du hast zuerst durch {{a}} geteilt und dann {{b}} abgezogen. Erst minus {{b}}, dann geteilt durch {{a}}: Auf beiden Seiten gilt dieselbe Reihenfolge."
+          - value: "(c + b) / a"
+            message: "Du hast {{b}} addiert. Um {{b}} loszuwerden, ziehst du auf beiden Seiten {{b}} ab."
+        hint: "Wie bei einer Gleichung: Erst auf beiden Seiten {{b}} abziehen, dann beide Seiten durch {{a}} teilen. Das Zeichen bleibt."
+        steps:
+          - "Auf beiden Seiten − {{b}}: {{a}} · x > {{c}} − {{b}}."
+          - "Beide Seiten durch {{a}} (positiv, das Zeichen bleibt): x > ({{c}} − {{b}}) : {{a}}."
+          - "Die Grenzzahl ist {{answer}}, also x > {{answer}}."
+      - type: single-choice
+        id: zeichen-nicht-gedreht
+        text: "Mia löst −4 · x < 20. Sie teilt beide Seiten durch −4 und schreibt x < −5. Was stimmt?"
+        options:
+          - text: "Das Zeichen muss sich umdrehen: x > −5"
+            correct: true
+            info: "Mia teilt durch eine negative Zahl. Dann dreht sich das Zeichen um: aus < wird >."
+          - text: "Es muss x < 5 heißen."
+            correct: false
+            info: "20 : (−4) ist −5, nicht 5. Die Zahl hat Mia richtig, nur das Zeichen fehlt."
+          - text: "Mias Lösung stimmt."
+            correct: false
+            info: "Probe mit x = −6: Es ist −4 · (−6) = 24, und 24 < 20 stimmt nicht. Die −6 gehört nicht zur Lösung, obwohl sie zu x < −5 passt."
+        explanation: "Der typische Fehler: Das Zeichen bleibt, obwohl durch eine negative Zahl geteilt wird. Die Probe mit einer Zahl aus der Lösungsmenge deckt ihn auf: x = −4 gibt −4 · (−4) = 16, und 16 < 20 stimmt."
+      - type: generated
+        id: grenzzahl-negativ
+        given:
+          a: { oneOf: [2, 3, 4, 5] }
+          c: { int: [-40, 40] }
+        where: ["c != 0", "decimals(c / a) == 0"]
+        task:
+          text: "Löse −{{a}} · x < {{c}}. Beim Teilen durch −{{a}} dreht sich das Zeichen um: Die Lösung heißt x > Grenzzahl. Welche Zahl ist die Grenzzahl?"
+        answer: { value: "(0 - c) / a", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "c / a"
+            message: "Du hast durch {{a}} geteilt, aber die Teilung geht durch −{{a}}. Die Grenzzahl bekommt das andere Vorzeichen."
+          - value: "0 - c * a"
+            message: "Du hast mit {{a}} multipliziert. Wenn −{{a}} · x dasteht, teilst du durch −{{a}}."
+        hint: "Teile beide Seiten durch −{{a}}. Eine positive Zahl durch eine negative geteilt gibt eine negative Zahl, und umgekehrt."
+        steps:
+          - "Beide Seiten durch −{{a}}: x > {{c}} : (−{{a}})."
+          - "Das Zeichen dreht sich um, weil du durch eine negative Zahl teilst."
+          - "Die Grenzzahl ist {{answer}}, also x > {{answer}}."
+      - type: generated
+        id: grenzzahl-zwei-schritte
+        given:
+          a: { int: [2, 6] }
+          b: { int: [1, 30] }
+          c: { int: [1, 30] }
+        where: ["b != c", "decimals((b - c) / a) == 0"]
+        task:
+          text: "Löse {{b}} − {{a}} · x > {{c}}. Die Lösung heißt x < Grenzzahl. Welche Zahl ist die Grenzzahl?"
+        answer: { value: "(b - c) / a", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "(c - b) / a"
+            message: "Du hast durch {{a}} geteilt statt durch −{{a}}. Das Minus vor dem x gehört zur Zahl, durch die du teilst: Dann ändert sich das Vorzeichen der Grenzzahl."
+          - value: "(b + c) / a"
+            message: "Du hast {{c}} addiert. Du ziehst auf beiden Seiten {{b}} ab, dann steht rechts {{c}} − {{b}}."
+        hint: "Erst auf beiden Seiten {{b}} abziehen. Dann steht links −{{a}} · x. Teile durch −{{a}} und drehe das Zeichen um."
+        steps:
+          - "Auf beiden Seiten − {{b}}: −{{a}} · x > {{c}} − {{b}}."
+          - "Beide Seiten durch −{{a}}, das Zeichen dreht um: x < ({{b}} − {{c}}) : {{a}}."
+          - "Die Grenzzahl ist {{answer}}, also x < {{answer}}."
+      - type: text
+        text: "Das kannst du jetzt: Du löst eine lineare Ungleichung wie eine Gleichung, drehst das Zeichen um, wenn du mit einer negativen Zahl malst oder durch sie teilst, und zeigst die Lösungsmenge auf der Zahlengerade mit offenem oder gefülltem Punkt."

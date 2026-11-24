@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Geschickt rechnen
-description: "Geschickt rechnen mit den binomischen Formeln: 49², 21 · 19 und 102² im Kopf. Erklärung, Flächenbild mit Zahlen, Video und Übungsaufgaben mit Sofort-Feedback."
+description: "Geschickt rechnen mit den binomischen Formeln: 49², 21 · 19 und 102² im Kopf. Erklärung, Flächenbild mit Zahlen und Übungsaufgaben mit Sofort-Feedback."
 competencies: [klammern-binome]
 blocks:
   - type: section
@@ -9,11 +9,14 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Die binomischen Formeln sind nicht nur für Buchstaben da. Mit ihnen rechnest du Aufgaben wie $49^2$ oder $21 \cdot 19$ im Kopf aus – schneller als mit dem schriftlichen Verfahren. Das hilft beim Kopfrechnen, beim Überschlagen und in der Klassenarbeit ohne Taschenrechner. Und es zeigt dir, dass die Formeln wirklich für jede Zahl gelten: Buchstaben sind nur Platzhalter.
+          Wenn du $49^2$ oder $21 \cdot 19$ ohne Taschenrechner ausrechnen willst, hilft dir eine binomische Formel: Du rechnest im Kopf, schneller als schriftlich. Das zeigt auch, dass die Formeln für jede Zahl gelten: Buchstaben sind nur Platzhalter.
   - type: section
     id: regel
     title: Regel
     blocks:
+      - type: text
+        text: >-
+          Eine Zahl wie $49$ ist knapp unter $50$, und mit $50$ rechnet es sich leicht. So nutzt du das:
       - type: formula
         formula: "49^2 = (50 - 1)^2 = 2500 - 100 + 1 = 2401"
       - type: text
@@ -33,6 +36,8 @@ blocks:
       - type: example
         title: "Rechne im Kopf: 102² und 21 · 19"
         blocks:
+          - type: text
+            text: "Je nach Aufgabe passt die erste oder die dritte Formel."
           - type: table
             caption: "Die Rechenwege für 102² und 21 · 19"
             rowHeaders: true
@@ -50,20 +55,9 @@ blocks:
       - type: figure
         image: images/binom-geschickt-rechnen.svg
         alt: 49² = 2401. 50² − zwei Streifen + Ecke zurück
-        caption: "$49^2$ als Fläche: Ein Quadrat mit der Seite $50$, also $50^2 = 2500$. Rechts und unten ist je ein Streifen $50 \\cdot 1 = 50$ markiert (rot): Beide werden abgezogen. Die grüne Ecke $1^2 = 1$ steckt in beiden Streifen, ist also doppelt abgezogen und kommt einmal zurück. Übrig bleibt das Quadrat $49^2$: $2500 - 100 + 1 = 2401$."
+        caption: "Warum die Rechnung stimmt, zeigt eine Fläche. $49^2$ als Fläche: Ein Quadrat mit der Seite $50$, also $50^2 = 2500$. Rechts und unten ist je ein Streifen $50 \\cdot 1 = 50$ markiert (rot): Beide werden abgezogen. Die grüne Ecke $1^2 = 1$ steckt in beiden Streifen, ist also doppelt abgezogen und kommt einmal zurück. Übrig bleibt das Quadrat $49^2$: $2500 - 100 + 1 = 2401$."
         source: Eigene Darstellung der Mathe-Karte
         licence: MIT
-  - type: section
-    id: video
-    title: Video dazu
-    blocks:
-      - type: video
-        youtube: LoTVgi5tYsQ
-        title: "Nur für NERDS: Kopfrechnen mit den binomischen Formeln!"
-        channel: Lehrerschmidt
-      - type: text
-        text: >-
-          Zum Nachlesen: [Exkurs: Kopfrechnen mit binomischen Formeln bei Serlo](https://de.serlo.org/mathe/18631/ueberblick-zu-den-binomischen-formeln#19104).
   - type: section
     id: uebung
     title: Übung
@@ -72,23 +66,20 @@ blocks:
         id: geschickt-zerlegen
         text: Welche Rechnung passt zu 49²?
         options:
-          - text: "49 = 50 - 1, also 50² - 2 · 50 · 1 + 1²"
+          - text: "49 = 50 − 1, also 50² − 2 · 50 · 1 + 1²"
             correct: true
-            info: "Das ist die 2. Formel: 2500 - 100 + 1 = 2401."
-          - text: "49 = 50 - 1, also 50² - 1²"
+            info: "Das ist die 2. Formel: 2500 − 100 + 1 = 2401."
+          - text: "49 = 50 − 1, also 50² − 1²"
             correct: false
-            info: "Hier fehlt das Mittelglied -2 · 50 · 1 = -100. 2500 - 1 = 2499 ist zu groß."
-          - text: "49 = 50 - 1, also 50² + 2 · 50 · 1 + 1²"
+            info: "Hier fehlt das Mittelglied −2 · 50 · 1 = −100. 2500 − 1 = 2499 ist zu groß."
+          - text: "49 = 50 − 1, also 50² + 2 · 50 · 1 + 1²"
             correct: false
-            info: "Das ist 51² = (50 + 1)². Bei (50 - 1)² ist das Mittelglied negativ."
+            info: "Das ist 51² = (50 + 1)². Bei (50 − 1)² ist das Mittelglied negativ."
           - text: "49 = 40 + 9, also 40² + 9²"
             correct: false
-            info: "Hier fehlt das Mittelglied 2 · 40 · 9. Außerdem rechnet es sich mit 50 - 1 viel leichter."
+            info: "Hier fehlt das Mittelglied 2 · 40 · 9. Außerdem rechnet es sich mit 50 − 1 viel leichter."
         explanation: >-
-          49 = 50 - 1, also 49² = (50 - 1)² = 50² - 2 · 50 · 1 + 1² = 2500 - 100 + 1 = 2401.
-        links:
-          - title: Kopfrechnen mit binomischen Formeln (Serlo)
-            url: "https://de.serlo.org/mathe/18631/ueberblick-zu-den-binomischen-formeln#19104"
+          49 = 50 − 1, also 49² = (50 − 1)² = 50² − 2 · 50 · 1 + 1² = 2500 − 100 + 1 = 2401.
       - type: vue-component
         id: geschickt-ueben
         component: BinomKopfrechnen

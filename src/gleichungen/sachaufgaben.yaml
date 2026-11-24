@@ -1,0 +1,225 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Gleichungen zu Sachaufgaben aufstellen
+description: "Aus einem Text eine Gleichung machen: Du gehst in vier Schritten vor, löst die Gleichung und prüfst das Ergebnis am Text. Mit Aufgaben zu Preisen, Alter, Weg und Zeit und zum Umfang."
+competencies: [gleichungen-aufstellen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Aus dem Text wird eine Gleichung
+    blocks:
+      - type: text
+        text: >-
+          In einer Sachaufgabe steht die Gleichung versteckt in einem Text. Bevor du etwas ausrechnen kannst, musst du
+          den Text in eine Gleichung übersetzen. Das übst du zuerst.
+      - type: matching
+        id: text-gleichung-zuordnen
+        text: "Ordne jedem Text die Gleichung zu, die zu ihm passt. Zwei Gleichungen passen zu keinem Text."
+        pairs:
+          - left: "Ich denke mir eine Zahl, addiere 7 und erhalte 19."
+            right: "x + 7 = 19"
+          - left: "Ein Heft kostet x €. Drei Hefte kosten zusammen 18 €."
+            right: "3 · x = 18"
+          - left: "Tom ist x Jahre alt. In 5 Jahren ist er 16 Jahre alt."
+            right: "x + 5 = 16"
+          - left: "Ich denke mir eine Zahl und teile sie durch 3. Das Ergebnis ist 6."
+            right: "x : 3 = 6"
+        distractors:
+          - "x − 7 = 19"
+          - "x + 3 = 18"
+        explanation: "Du schreibst Wort für Wort auf, was im Text passiert: addieren wird plus, „drei Hefte“ wird 3 · x, „in 5 Jahren“ wird plus 5, „teilen“ wird ein Doppelpunkt."
+  - type: section
+    id: ablauf
+    title: Vier Schritte
+    blocks:
+      - type: text
+        text: >-
+          In einer Sachaufgabe gibt es eine Größe, die du nicht kennst. Wenn du dabei oft nicht weißt, wo du anfangen
+          sollst oder was du vergessen hast, hilft dir ein fester Ablauf. Du gehst immer gleich vor:
+
+
+          1. **Unbekanntes festlegen:** Was weißt du nicht? Das wird $x$. Schreibe auf, was $x$ bedeutet, mit Einheit.
+
+          2. **Gleichung aufstellen:** Schreibe den Text als Rechnung mit $x$.
+
+          3. **Lösen:** Probiere Zahlen aus und rechne nach, wenn die Zahlen klein sind, oder forme um, wenn Probieren zu lange dauert.
+
+          4. **Antworten und Probe:** Schreibe einen Antwortsatz auf die Frage. Prüfe das Ergebnis am Text, nicht nur an der Gleichung.
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: text
+        text: >-
+          An einem Beispiel siehst du, wie die vier Schritte zusammen eine Aufgabe lösen.
+      - type: example
+        title: "Fahrkarten und Stadtplan"
+        blocks:
+          - type: text
+            text: >-
+              Ayla kauft 4 Fahrkarten zum gleichen Preis und einen Stadtplan für 3 €. Sie zahlt zusammen 23 €. Wie viel
+              kostet eine Fahrkarte? Schritt 1: $x$ ist der Preis einer Fahrkarte in Euro. Schritt 2: $4 \cdot x + 3 = 23$.
+          - type: table
+            caption: "Schritt 3, erster Weg: Probieren. Drei Versuche."
+            header: ["x", "4 · x + 3", "Vergleich mit 23"]
+            rows:
+              - ["4", "19", "kleiner"]
+              - ["6", "27", "größer"]
+              - ["5", "23", "gleich"]
+          - type: table
+            caption: "Schritt 3, zweiter Weg: Umformen heißt auf beiden Seiten dasselbe tun."
+            header: ["Gleichung", "Was du tust"]
+            rows:
+              - ["4 · x + 3 = 23", "beide Seiten minus 3"]
+              - ["4 · x = 20", "beide Seiten durch 4"]
+              - ["x = 5", "Lösung"]
+          - type: text
+            text: >-
+              Schritt 4: Eine Fahrkarte kostet 5 €. Probe am Text: 4 Fahrkarten zu 5 € sind 20 €, dazu der Stadtplan für
+              3 € sind 23 €. Das sagt der Text. Beide Wege führen zu $x = 5$.
+      - type: note
+        title: "Merke"
+        blocks:
+          - type: text
+            text: "$x$ ist nicht immer das, was gefragt ist. Lies am Ende die Frage noch einmal und antworte auf sie."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: text
+        text: >-
+          Mit diesen Aufgaben übst du, den Ablauf auf Preise, Alter, Weg und Zeit und den Umfang zu übertragen.
+      - type: ordering
+        id: ablauf-ordnen
+        text: "Nele kauft 3 Eintrittskarten und eine Limonade für 2 €. Sie zahlt zusammen 14 €. Bring die Schritte in die richtige Reihenfolge."
+        items:
+          - "Festlegen: x ist der Preis einer Karte in €."
+          - "Aufstellen: 3 · x + 2 = 14"
+          - "Lösen: x = 4"
+          - "Antworten und Probe: Eine Karte kostet 4 €. 3 · 4 € + 2 € = 14 €."
+        explanation: "Erst legst du fest, was x ist, dann stellst du die Gleichung auf, dann löst du sie. Am Ende steht der Antwortsatz mit der Probe am Text."
+      - type: single-choice
+        id: gleichung-preise-waehlen
+        text: "Im Zoo kosten 5 Kinderkarten und eine Futtertüte für 3 € zusammen 38 €. x ist der Preis einer Kinderkarte in €. Welche Gleichung passt?"
+        options:
+          - text: "5 · x + 3 = 38"
+            correct: true
+            info: "5 Karten kosten 5 · x, dazu kommt die Futtertüte für 3 €. Zusammen sind das 38 €. Für x = 7 stimmt es: 35 + 3 = 38."
+          - text: "5 · (x + 3) = 38"
+            correct: false
+            info: "Die Klammer würde heißen: Zu jeder der 5 Karten kommen 3 € dazu. Die Futtertüte gibt es aber nur einmal."
+          - text: "5 · x − 3 = 38"
+            correct: false
+            info: "Die Futtertüte kostet zusätzlich Geld. Sie wird zum Preis der Karten addiert, nicht abgezogen."
+          - text: "38 · 5 + 3 = x"
+            correct: false
+            info: "38 € ist der Gesamtpreis, aber x ist der Preis einer einzelnen Karte. Der Gesamtpreis steht auf der anderen Seite des Gleichheitszeichens."
+        explanation: "Der Gesamtpreis besteht aus 5 Karten zu je x und einer Futtertüte: 5 · x + 3 = 38."
+      - type: generated
+        id: preise-ueben
+        given:
+          n: { int: [3, 8] }
+          b: { int: [2, 9] }
+          c: { int: [20, 80] }
+        where: ["decimals((c - b) / n) == 0"]
+        task:
+          text: "Die Kinder kaufen {{n}} Eintrittskarten zum gleichen Preis und einen Plan für {{b}} €. Zusammen zahlen sie {{c}} €. Wie viel Euro kostet eine Eintrittskarte?"
+        answer: { value: "(c - b) / n", compare: { number: { format: integer, unit: "€" } } }
+        mistakes:
+          - value: "c - b"
+            message: "Du hast {{b}} € abgezogen, aber noch nicht durch {{n}} geteilt. So kommt der Preis aller {{n}} Karten heraus, nicht der Preis einer Karte."
+          - value: "c / n - b"
+            message: "Du hast zuerst durch {{n}} geteilt. Den Plan zahlen die Kinder aber nur einmal, nicht für jede Karte: erst {{b}} € abziehen, dann durch {{n}} teilen."
+          - value: "(c + b) / n"
+            message: "Du hast {{b}} € addiert. Der Plan steckt schon im Gesamtpreis von {{c}} €, du musst ihn abziehen."
+        hint: "x ist der Preis einer Karte. Die Gleichung heißt {{n}} · x + {{b}} = {{c}}."
+        steps:
+          - "Schritt 1 und 2: x ist der Preis einer Karte in €. Die Gleichung heißt {{n}} · x + {{b}} = {{c}}."
+          - "Schritt 3: Beide Seiten minus {{b}}, dann durch {{n}}: x = ({{c}} − {{b}}) : {{n}} = {{answer}}."
+          - "Schritt 4: Eine Eintrittskarte kostet {{answer}} €. Probe am Text: {{n}} · {{answer}} + {{b}} muss {{c}} ergeben."
+      - type: single-choice
+        id: gleichung-alter-waehlen
+        text: "Jonas ist x Jahre alt. Seine Schwester ist 4 Jahre älter. Zusammen sind die beiden 30 Jahre alt. Welche Gleichung passt?"
+        options:
+          - text: "x + (x + 4) = 30"
+            correct: true
+            info: "Jonas ist x, seine Schwester x + 4. Zusammen: x + (x + 4) = 30. Für x = 13 stimmt es: 13 + 17 = 30."
+          - text: "x + 4 = 30"
+            correct: false
+            info: "x + 4 ist nur das Alter der Schwester. Die 30 Jahre sind aber das Alter von beiden zusammen."
+          - text: "2 · x − 4 = 30"
+            correct: false
+            info: "Die Schwester ist älter, also kommen 4 Jahre dazu. Du hast abgezogen statt addiert."
+          - text: "x · 4 = 30"
+            correct: false
+            info: "„4 Jahre älter“ heißt plus 4, nicht mal 4."
+        explanation: "Beide Alter werden addiert: x für Jonas und x + 4 für die Schwester."
+      - type: generated
+        id: alter-ueben
+        given:
+          d: { int: [2, 6] }
+          s: { int: [20, 50] }
+        where: ["decimals((s - d) / 2) == 0"]
+        task:
+          text: "Mara ist {{d}} Jahre älter als ihr Bruder. Zusammen sind die beiden {{s}} Jahre alt. Wie alt ist Mara?"
+        answer: { value: "(s + d) / 2", compare: { number: { format: integer, unit: "Jahre" } } }
+        mistakes:
+          - value: "(s - d) / 2"
+            message: "Das ist x, das Alter des Bruders. Gefragt ist aber Mara: Sie ist {{d}} Jahre älter, also x + {{d}}."
+          - value: "s - d"
+            message: "Du hast {{d}} abgezogen, aber noch nicht durch 2 geteilt. In der Gleichung 2 · x + {{d}} = {{s}} steht 2 · x für beide Geschwister."
+          - value: "s / 2"
+            message: "So rechnest du, als wären beide gleich alt. Mara ist aber {{d}} Jahre älter als ihr Bruder."
+        hint: "x ist das Alter des Bruders. Mara ist dann x + {{d}}. Die Gleichung heißt x + (x + {{d}}) = {{s}}."
+        steps:
+          - "Schritt 1: x ist das Alter des Bruders in Jahren. Mara ist x + {{d}} Jahre alt."
+          - "Schritt 2: x + (x + {{d}}) = {{s}}, zusammengefasst 2 · x + {{d}} = {{s}}."
+          - "Schritt 3: Beide Seiten minus {{d}}, dann durch 2: x = ({{s}} − {{d}}) : 2. Das ist das Alter des Bruders."
+          - "Schritt 4: Gefragt ist Mara: x + {{d}} = {{answer}}. Probe am Text: Maras Bruder ist {{answer}} − {{d}} Jahre alt, und beide zusammen müssen {{s}} Jahre alt sein."
+      - type: generated
+        id: weg-zeit-ueben
+        given:
+          v: { oneOf: [10, 15, 20] }
+          a: { int: [5, 30], step: 5 }
+          c: { int: [60, 80], step: 5 }
+        where: ["decimals((c - a) / v) <= 1"]
+        task:
+          text: "Lena hat auf ihrer Radtour schon {{a}} km geschafft. Sie fährt mit gleichbleibend {{v}} km pro Stunde weiter. Nach wie vielen Stunden hat sie insgesamt {{c}} km geschafft? Gib auch halbe Stunden an, zum Beispiel 2,5."
+        answer: { value: "(c - a) / v", compare: { number: { format: decimal, decimals: 1, unit: "Stunden" } } }
+        mistakes:
+          - value: "c - a"
+            message: "Das sind die Kilometer, die noch fehlen, nicht die Stunden. Teile noch durch {{v}}, denn Lena fährt {{v}} km in jeder Stunde."
+          - value: "c / v - a"
+            message: "Du hast zuerst durch {{v}} geteilt und dann Kilometer von Stunden abgezogen. Die {{a}} km sind schon geschafft: erst {{a}} abziehen, dann durch {{v}} teilen."
+          - value: "c / v"
+            message: "Du hast die {{a}} km vergessen, die Lena schon geschafft hat. Sie muss nicht mehr die ganze Strecke fahren."
+        hint: "x ist die Zahl der Stunden. In x Stunden fährt Lena {{v}} · x km. Die Gleichung heißt {{a}} + {{v}} · x = {{c}}."
+        steps:
+          - "Schritt 1 und 2: x ist die Zahl der Stunden. Die Gleichung heißt {{a}} + {{v}} · x = {{c}}."
+          - "Schritt 3: Beide Seiten minus {{a}}, dann durch {{v}}: x = ({{c}} − {{a}}) : {{v}} = {{answer}}."
+          - "Schritt 4: Lena braucht {{answer}} Stunden. Probe am Text: {{v}} · {{answer}} + {{a}} muss {{c}} ergeben."
+      - type: generated
+        id: umfang-ueben
+        given:
+          d: { int: [2, 5] }
+          u: { int: [22, 60], step: 2 }
+        where: ["decimals((u + 2 * d) / 4) <= 1"]
+        task:
+          text: "Ein rechteckiges Beet ist {{d}} m länger als breit. Sein Umfang beträgt {{u}} m. Wie viele Meter lang ist das Beet? Bei einem Ergebnis mit Komma gib es mit Komma an."
+        answer: { value: "(u + 2 * d) / 4", compare: { number: { format: decimal, decimals: 1, unit: "m" } } }
+        mistakes:
+          - value: "(u - 2 * d) / 4"
+            message: "Das ist x, die Breite des Beets. Gefragt ist die Länge: Sie ist {{d}} m größer, also x + {{d}}."
+          - value: "(u - d) / 2"
+            message: "Der Umfang geht rundherum: 2 Längen und 2 Breiten. Die Gleichung heißt 2 · x + 2 · (x + {{d}}) = {{u}}."
+          - value: "u / 4"
+            message: "So rechnest du, als wäre das Beet ein Quadrat. Die Länge ist aber {{d}} m größer als die Breite."
+        hint: "x ist die Breite in m, die Länge ist x + {{d}} m. Der Umfang ist 2 · x + 2 · (x + {{d}})."
+        steps:
+          - "Schritt 1: x ist die Breite in m. Die Länge ist x + {{d}} m."
+          - "Schritt 2: 2 · x + 2 · (x + {{d}}) = {{u}}, zusammengefasst 4 · x + 2 · {{d}} = {{u}}."
+          - "Schritt 3: Beide Seiten minus 2 · {{d}}, dann durch 4: x = ({{u}} − 2 · {{d}}) : 4. Das ist die Breite."
+          - "Schritt 4: Gefragt ist die Länge: x + {{d}} = {{answer}} m. Probe am Text: Länge {{answer}} m, Breite {{answer}} − {{d}} m, und 2 Längen plus 2 Breiten müssen {{u}} m ergeben."
+      - type: text
+        text: >-
+          Das kannst du jetzt: Du stellst zu einer Sachaufgabe in vier Schritten eine Gleichung auf, löst sie und prüfst
+          das Ergebnis am Text. Du antwortest auf die gestellte Frage, nicht nur mit $x$.

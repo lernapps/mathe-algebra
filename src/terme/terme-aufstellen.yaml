@@ -1,0 +1,249 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Terme mit Variablen aufstellen
+description: "Wachsende Streichholzmuster als Terme mit n aufschreiben, Zahlen einsetzen und in einer Tabelle prüfen, ob zwei Terme gleich sind."
+competencies: [terme-variable]
+blocks:
+  - type: section
+    id: einstieg
+    title: Streichhölzer zählen
+    blocks:
+      - type: text
+        text: >-
+          Wenn du wissen willst, wie viele Streichhölzer eine lange Kette braucht, ohne sie zu legen, suchst du die Regel
+          dahinter. Aus Streichhölzern entsteht eine Kette aus Quadraten. Das Bild zeigt Ketten mit 1, 2 und 3 Quadraten. Die
+          orangen Hölzer kommen dazu, wenn ein Quadrat angelegt wird.
+      - type: figure
+        image: images/terme-terme-aufstellen-quadrate.svg
+        alt: "Streichholzketten aus einem, zwei und drei Quadraten, untereinander. Das erste Quadrat ist blau, jedes weitere Quadrat orange. Daneben steht n = 1, n = 2 und n = 3."
+        caption: "Eine Kette aus n Quadraten, für n = 1, 2 und 3. Blau: das erste Quadrat. Orange: die Hölzer, die ein weiteres Quadrat dazubringt."
+        source: Eigene Darstellung
+        licence: MIT
+      - type: number
+        id: kette-fortsetzen
+        text: "Du legst die Kette weiter. Wie viele Streichhölzer brauchst du für eine Kette aus 8 Quadraten? Ein Bild für 8 Quadrate zu legen ist mühsam: Suche das Muster."
+        answer: 25
+        tolerance: 0
+        hint: "Zähle die Hölzer für 1, 2 und 3 Quadrate. Wie viele kommen bei jedem weiteren Quadrat dazu?"
+        explanation: "Das erste Quadrat braucht 4 Hölzer, die 7 weiteren je 3: 4 + 7 · 3 = 25."
+  - type: section
+    id: variable
+    title: n steht für viele Zahlen
+    blocks:
+      - type: text
+        text: >-
+          Damit eine einzige Rechnung für jede Länge der Kette stimmt, schreibst du für die Zahl der Quadrate einen
+          Buchstaben, hier $n$. Das erste Quadrat braucht 4 Hölzer. Bei
+          $n$ Quadraten kommen $n - 1$ weitere dazu, jedes mit 3 Hölzern:
+      - type: formula
+        formula: '4 + 3 \cdot (n - 1)'
+      - type: definition
+        term: Variable
+        explanation: >-
+          Eine Variable ist ein Buchstabe, der für viele Zahlen steht, hier $n$ für die Zahl der Quadrate. Du darfst
+          jede passende Zahl einsetzen.
+      - type: definition
+        term: Term
+        explanation: >-
+          Ein Term ist eine Rechnung mit Zahlen und Variablen, zum Beispiel $3 \cdot n + 1$. Setzt du für $n$ eine
+          Zahl ein, kommt eine Zahl heraus.
+      - type: example
+        title: "Wertetabelle der Quadratkette"
+        blocks:
+          - type: text
+            text: "Wenn du wissen willst, wie viele Hölzer bestimmte Ketten brauchen, setzt du die Zahl der Quadrate in den Term ein."
+          - type: table
+            caption: "Du setzt Zahlen für n ein und rechnest den Term aus."
+            header: ["n", "4 + 3 · (n − 1)", "Hölzer"]
+            rows:
+              - ["1", "4 + 3 · 0", "4"]
+              - ["2", "4 + 3 · 1", "7"]
+              - ["3", "4 + 3 · 2", "10"]
+              - ["4", "4 + 3 · 3", "13"]
+              - ["10", "4 + 3 · 9", "31"]
+          - type: text
+            text: "Eine solche Tabelle heißt **Wertetabelle**."
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: text
+        text: "Bei einem neuen Muster stellst du den Term selbst auf: Du zählst, was beim ersten Mal nötig ist und was bei jedem weiteren Mal dazukommt."
+      - type: figure
+        image: images/terme-terme-aufstellen-dreiecke.svg
+        alt: "Streichholzketten aus einem, zwei und drei Dreiecken, untereinander. Das erste Dreieck ist blau, jedes weitere Dreieck orange. Daneben steht n = 1, n = 2 und n = 3."
+        caption: "Eine Kette aus n Dreiecken, für n = 1, 2 und 3. Blau: das erste Dreieck. Orange: die Hölzer, die ein weiteres Dreieck dazubringt."
+        source: Eigene Darstellung
+        licence: MIT
+      - type: example
+        title: "Term für die Dreieckskette aufstellen"
+        blocks:
+          - type: text
+            text: >-
+              Das erste Dreieck braucht 3 Hölzer. Jedes weitere teilt eine Seite mit dem Nachbarn und braucht nur 2
+              Hölzer dazu. Bei $n$ Dreiecken sind es $n - 1$ weitere:
+          - type: formula
+            formula: '3 + 2 \cdot (n - 1) = 3 + 2n - 2 = 2 \cdot n + 1'
+          - type: text
+            text: >-
+              Probe mit $n = 3$: $2 \cdot 3 + 1 = 7$. Im Bild zählst du 3 + 2 + 2 = 7 Hölzer.
+  - type: section
+    id: tabelle
+    title: Zwei Terme vergleichen
+    blocks:
+      - type: text
+        text: >-
+          Wenn zwei Kinder dasselbe Muster verschieden aufschreiben, willst du wissen, ob ihre Terme gleich sind. Lena
+          und Jonas zählen die Quadratkette verschieden. Lena rechnet: 4 Hölzer für das erste Quadrat und 3 für
+          jedes weitere, also $4 + 3 \cdot (n - 1)$. Jonas legt zuerst 1 Holz an den Rand und rechnet 3 Hölzer je
+          Quadrat, also $3 \cdot n + 1$. Haben beide recht? Schau in die **Tabelle**.
+      - type: vue-component
+        id: tabelle-lena-jonas
+        component: TermeTabelle
+        props:
+          term1: "4 + 3 · (n − 1)"
+          term2: "3 · n + 1"
+          name1: "Lena"
+          name2: "Jonas"
+          feld1: "Term von Lena"
+          feld2: "Term von Jonas"
+          weiteresN: "Weiteres n"
+          eintragen: "In die Tabelle"
+          zuruecksetzen: "Zurücksetzen"
+          spalteN: "n"
+          tabelleName: "Werte von Lena und Jonas"
+        nojs: |
+          Tabelle zum Vergleichen zweier Terme. Lena: 4 + 3 · (n − 1), Jonas: 3 · n + 1. Für n = 1, 2, 3, 4, 5 und 6
+          stehen bei beiden die Werte 4, 7, 10, 13, 16 und 19: In jeder Zeile sind die Werte gleich.
+      - type: text
+        text: >-
+          Das spricht dafür, dass beide Terme für jedes $n$ dasselbe sagen. Eine einzige Zeile mit verschiedenen Werten
+          zeigt dagegen: Die Terme sind nicht gleich. Probiere es: Ändere Jonas' Term in $3 \cdot n + 2$.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: text
+        text: "Jetzt stellst du selbst Terme auf und prüfst sie. So kommst du bei neuen Mustern ohne Bild aus."
+      - type: vue-component
+        id: term-kette
+        component: TermeAufstellen
+        props:
+          art: kette
+          loesungZeigen: Lösung zeigen
+          tipp: Tipp
+          rechenweg: "Lösung:"
+        examples:
+          accepted:
+            - { answer: "2n+1", seed: 4 }
+            - { answer: "3 + 2(n−1)", seed: 4 }
+            - { answer: "1 + 3n", seed: 3 }
+            - { answer: "4 + 3 · (n − 1)", seed: 3 }
+          rejected:
+            - { answer: "3n", seed: 4 }
+            - { answer: "2n", seed: 4 }
+            - { answer: "n+2", seed: 4 }
+            - { answer: "3n+1", seed: 4 }
+      - type: generated
+        id: wert-einsetzen
+        given:
+          a: { int: [2, 6] }
+          b: { int: [1, 9] }
+          n: { int: [3, 12] }
+        where: ["a != b"]
+        task:
+          text: "Für eine Reihe von Figuren aus Streichhölzern gilt: Bei n Figuren brauchst du {{a}} · n + {{b}} Hölzer. Wie viele Hölzer brauchst du für {{n}} Figuren?"
+        answer: { value: "a * n + b", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "a * (n + b)"
+            message: "Du hast erst n und {{b}} addiert. Beim Term gilt Punkt vor Strich: Rechne zuerst {{a}} · {{n}}, dann addierst du {{b}}."
+          - value: "a + b * n"
+            message: "Du hast die Zahlen vertauscht: {{a}} wird mit n malgenommen, {{b}} wird nur einmal addiert."
+          - value: "(a + b) * n"
+            message: "Du hast {{a}} und {{b}} addiert und dann mit {{n}} malgenommen. Nur {{a}} wird mit n malgenommen, {{b}} kommt einmal dazu."
+        hint: "Setze {{n}} für n ein und rechne: erst das Malnehmen, dann das Addieren."
+        steps:
+          - "Setze n = {{n}} ein: {{a}} · {{n}} + {{b}}."
+          - "Punkt vor Strich: {{a}} · {{n}} + {{b}} = {{answer}}."
+      - type: text
+        text: >-
+          Mia und Tom zählen Streichhölzer, aber einer von beiden hat sich verzählt. Mia schreibt
+          $2 \cdot n + 1$, Tom schreibt $3 \cdot n - 1$. Vergleiche in der Tabelle.
+      - type: vue-component
+        id: tabelle-mia-tom
+        component: TermeTabelle
+        props:
+          term1: "2 · n + 1"
+          term2: "3 · n − 1"
+          name1: "Mia"
+          name2: "Tom"
+          feld1: "Term von Mia"
+          feld2: "Term von Tom"
+          weiteresN: "Weiteres n"
+          eintragen: "In die Tabelle"
+          zuruecksetzen: "Zurücksetzen"
+          spalteN: "n"
+          tabelleName: "Werte von Mia und Tom"
+        nojs: |
+          Tabelle zum Vergleichen zweier Terme. Mia: 2 · n + 1, Tom: 3 · n − 1. Für n = 1, 2, 3 und 4 stehen bei Mia die
+          Werte 3, 5, 7 und 9, bei Tom die Werte 2, 5, 8 und 11.
+      - type: number
+        id: mia-tom-n
+        text: "Bei welchem n stehen in der Tabelle bei Mia und Tom dieselben Werte?"
+        answer: 2
+        tolerance: 0
+        hint: "Suche die Zeile mit dem Gleichheitszeichen."
+        explanation: "Für n = 2 ist 2 · 2 + 1 = 5 und 3 · 2 − 1 = 5. Bei n = 1 sind es 3 und 2, bei n = 3 sind es 7 und 8."
+      - type: single-choice
+        id: mia-tom-gleich
+        text: "Sind die Terme 2 · n + 1 und 3 · n − 1 gleich?"
+        options:
+          - text: "Ja, denn in einer Zeile stehen dieselben Werte."
+            correct: false
+            info: "Eine Übereinstimmung genügt nicht. Bei n = 1 stehen 3 und 2, bei n = 3 stehen 7 und 8. Gleich sind zwei Terme nur, wenn in jeder Zeile dieselben Werte stehen."
+          - text: "Nein, denn nur in einer Zeile stehen dieselben Werte."
+            correct: true
+            info: "Richtig. Gleich sind zwei Terme nur, wenn in jeder Zeile dieselben Werte stehen."
+          - text: "Nein, denn in keiner Zeile stehen dieselben Werte."
+            correct: false
+            info: "In einer Zeile stehen sie doch: bei n = 2 ist links und rechts 5. Aber das reicht nicht, die Terme gleich zu nennen."
+        explanation: "Nur bei n = 2 sind sie gleich, sonst verschieden."
+      - type: vue-component
+        id: term-preis
+        component: TermeAufstellen
+        props:
+          art: preis
+          loesungZeigen: Lösung zeigen
+          tipp: Tipp
+          rechenweg: "Lösung:"
+        examples:
+          accepted:
+            - { answer: "4n+7", seed: 1 }
+            - { answer: "7 + 4 · n", seed: 1 }
+            - { answer: "4(n+1)+3", seed: 1 }
+          rejected:
+            - { answer: "7n+4", seed: 1 }
+            - { answer: "(4+7)n", seed: 1 }
+            - { answer: "4n", seed: 1 }
+            - { answer: "7+4+n", seed: 1 }
+      - type: generated
+        id: zuwachs
+        given:
+          a: { int: [2, 6] }
+          b: { int: [1, 9] }
+        where: ["a != b"]
+        task:
+          text: "Der Term {{a}} · n + {{b}} sagt, wie viele Hölzer n Figuren brauchen. Wie viele Hölzer kommen bei jeder weiteren Figur dazu?"
+        answer: { value: "a", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "b"
+            message: "{{b}} ist die Zahl, die nur einmal im Term steht. Sie wächst nicht mit n. Bei jeder weiteren Figur kommt die Zahl dazu, die mit n malgenommen wird."
+          - value: "a + b"
+            message: "Du hast {{a}} und {{b}} addiert. Die {{b}} kommt aber nur einmal vor. Bei jeder weiteren Figur wächst der Term nur um die Zahl vor dem n."
+        hint: "Setze n = 1 und n = 2 ein und schau, um wie viel der Wert wächst."
+        steps:
+          - "Für n = 1 ist der Wert {{a}} · 1 + {{b}}, für n = 2 ist er {{a}} · 2 + {{b}}."
+          - "Der Unterschied ist {{a}}: Die {{b}} bleibt gleich, nur das Malnehmen wächst. Es kommen {{answer}} Hölzer dazu."
+      - type: text
+        text: >-
+          Das kannst du jetzt: Du stellst zu einem wachsenden Muster einen Term mit der Variablen $n$ auf, setzt eine
+          Zahl für $n$ ein und rechnest den Wert aus. In einer Tabelle prüfst du, ob zwei Terme gleich sind.

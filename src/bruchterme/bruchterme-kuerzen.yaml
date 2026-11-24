@@ -1,0 +1,235 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Bruchterme kürzen und erweitern
+description: "Bruchterme wie Brüche vereinfachen: erst faktorisieren, dann gleiche Faktoren kürzen. Mit Rechteckmodell, Tabelle, Erweitern und Aufgaben, die dir sagen, warum eine Antwort stimmt."
+competencies: [bruchterme]
+blocks:
+  - type: section
+    id: kuerzen
+    title: "Kürzen heißt: einen gemeinsamen Faktor wegnehmen"
+    blocks:
+      - type: text
+        text: >-
+          Wenn ein Bruchterm unübersichtlich ist, willst du ihn einfacher schreiben, ohne dass sich sein Wert ändert. Das
+          gelingt wie bei Brüchen durch Kürzen. Dabei nimmst du aus Zähler und Nenner denselben **Faktor** weg, zum Beispiel
+          $\frac{5 \cdot (x + 2)}{3 \cdot (x + 2)} = \frac{5}{3}$. Im Rechteckmodell ist ein Faktor eine Seite.
+          Drück auf „Kürzen“ und sieh, was passiert.
+      - type: vue-component
+        id: rechteck-kuerzen
+        component: BruchtermRechteck
+        props:
+          faktor: "x + 2"
+          zaehler: "5"
+          nenner: "3"
+          titelZaehler: "Zähler"
+          titelNenner: "Nenner"
+          kuerzen: "Kürzen"
+          zurueck: "Zurück"
+          weg: "gekürzt"
+        nojs: |
+          Zwei Rechtecke, eins für den Zähler und eins für den Nenner. Beide haben die Seite x + 2. Die andere Seite ist 5
+          beim Zähler und 3 beim Nenner. Beim Kürzen fällt die gemeinsame Seite x + 2 weg: Übrig bleiben 5 und 3.
+      - type: text
+        text: "Der Wert bleibt, aber die Zahl $-2$ bleibt verboten: Für $x = -2$ ist der Nenner schon vor dem Kürzen 0."
+  - type: section
+    id: faktorisieren
+    title: Erst faktorisieren, dann kürzen
+    blocks:
+      - type: text
+        text: >-
+          Oft steht im Zähler eine Summe wie $4x + 12$ oder $x^2 - 9$, und du siehst keinen Faktor zum Kürzen. Kürzen darfst
+          du nur **Faktoren**, nie Summanden. Darum verwandelst du die Summe erst in ein Produkt, also **faktorisierst**
+          du. Hast du in allen Summanden dieselbe Zahl, klammerst du sie als gemeinsamen Faktor aus. Ist es eine
+          Differenz zweier Quadrate, nimmst du die dritte binomische Formel.
+      - type: example
+        title: "Gemeinsamer Faktor"
+        blocks:
+          - type: formula
+            formula: '\frac{4x + 12}{x + 3}'
+          - type: table
+            caption: "Erst faktorisieren, dann kürzen."
+            rowHeaders: true
+            rows:
+              - ["Faktorisieren", "$4x + 12 = 4(x + 3)$"]
+              - ["Kürzen", "$\\frac{4(x + 3)}{x + 3} = 4$"]
+              - ["Definitionsmenge", "$x \\neq -3$"]
+      - type: example
+        title: "Dritte binomische Formel"
+        blocks:
+          - type: formula
+            formula: '\frac{x^2 - 9}{x + 3}'
+          - type: table
+            caption: "x² − 9 ist ein Produkt aus Summe und Differenz."
+            rowHeaders: true
+            rows:
+              - ["Faktorisieren", "$x^2 - 9 = (x + 3)(x - 3)$"]
+              - ["Kürzen", "$\\frac{(x + 3)(x - 3)}{x + 3} = x - 3$"]
+              - ["Definitionsmenge", "$x \\neq -3$"]
+  - type: section
+    id: luecke
+    title: Die Lücke bleibt
+    blocks:
+      - type: text
+        text: >-
+          Nach dem Kürzen sieht der Term aus, als dürfte $x$ jede Zahl sein. Ob das stimmt, zeigt die Tabelle: Der Wert
+          ist überall 4, nur bei $x = -3$ nicht. Darum bestimmst du die Definitionsmenge am Nenner **vor** dem Kürzen.
+      - type: vue-component
+        id: tabelle-4x-plus-12
+        component: BruchtermTabelle
+        props:
+          a: 4
+          b: 12
+          c: 1
+          d: 3
+          start: [0, 1, 5]
+          eingabeLabel: "Zahl für x"
+          eintragen: "In die Tabelle"
+          neuAnfangen: "Neu anfangen"
+          spalteX: "x"
+          spalteTerm: "Bruchterm"
+          spalteErgebnis: "Ergebnis"
+          nichtDefiniert: "nicht definiert"
+          nennerNull: "Nenner ist 0"
+        nojs: |
+          Tabelle für den Bruchterm (4x + 12) geteilt durch (x + 3). Für x = 0, 1 und 5 ist das Ergebnis immer 4. Für x = −3 ist
+          der Nenner 0: Dort steht „nicht definiert“, obwohl der gekürzte Term 4 dort einen Wert hätte.
+  - type: section
+    id: summen
+    title: Aus Summen kürzt man nicht
+    blocks:
+      - type: text
+        text: >-
+          Wenn du kürzen willst, ist der häufigste Fehler, aus einer Summe zu kürzen: Aus $\frac{x + 6}{6}$ wird
+          „gekürzt“ $x + 1$. Ob das erlaubt ist, prüfst du, indem du Zahlen einsetzt.
+      - type: table
+        caption: "Der Bruchterm und der falsch gekürzte Term haben verschiedene Werte."
+        header: ["x", "Bruchterm", "„Gekürzt“"]
+        rows:
+          - ["6", "$\\frac{6 + 6}{6} = 2$", "$6 + 1 = 7$"]
+          - ["12", "$\\frac{12 + 6}{6} = 3$", "$12 + 1 = 13$"]
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: "Die 6 im Zähler ist ein Summand, kein Faktor. Aus einer Summe kürzt du erst, wenn du sie faktorisiert hast."
+  - type: section
+    id: erweitern
+    title: Erweitern und gleichnamig machen
+    blocks:
+      - type: text
+        text: >-
+          Wenn du Bruchterme addieren oder vergleichen willst, brauchen sie denselben Nenner. Bruchterme mit demselben
+          Nenner heißen **gleichnamig**. Der gemeinsame Nenner, in dem jeder der Nenner als Faktor steckt, heißt
+          **Hauptnenner**. Um Bruchterme gleichnamig zu machen, **erweiterst** du sie: Du multiplizierst Zähler und
+          Nenner mit demselben Term. Bei $\frac{1}{x}$ und $\frac{2}{x + 1}$ ist der Hauptnenner $x(x + 1)$.
+      - type: formula
+        formula: '\frac{1}{x} = \frac{1 \cdot (x + 1)}{x \cdot (x + 1)}'
+      - type: formula
+        formula: '\frac{2}{x + 1} = \frac{2 \cdot x}{(x + 1) \cdot x}'
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: text
+        text: "Damit du Bruchterme sicher vereinfachst, übst du hier, was erlaubt ist und was nicht."
+      - type: single-choice
+        id: summanden-kuerzen
+        text: "Jan kürzt $\\frac{x + 6}{6}$ zu $x + 1$. Was ist daran falsch?"
+        options:
+          - text: "Er hat aus einer Summe gekürzt. Man darf nur Faktoren kürzen"
+            correct: true
+            info: "Richtig. Für x = 6 ist der Bruchterm 12 : 6 = 2, aber x + 1 ist 7."
+          - text: "Er hätte die 6 nur im Nenner streichen dürfen"
+            correct: false
+            info: "Gekürzt wird in Zähler und Nenner zugleich und nur mit einem Faktor."
+          - text: "Nichts, denn 6 : 6 = 1"
+            correct: false
+            info: "Die 6 im Zähler steht in einer Summe. Die Probe mit x = 6 zeigt 2 und 7."
+        explanation: "Aus Summen kürzt man nicht. Erst faktorisieren, dann kürzen."
+      - type: generated
+        id: ausklammern-kuerzen
+        given:
+          k: { oneOf: [2, 3, 4, 5] }
+          b: { int: [2, 30] }
+          v: { int: [1, 9] }
+        where: ["decimals(b / k) == 0"]
+        task:
+          text: "Klammere im Zähler aus und kürze: $\\frac{{{k}}x + {{b}}}{{{k}}}$. Welche Zahl kommt heraus, wenn du in den gekürzten Term $x = {{v}}$ einsetzt?"
+        answer: { value: "v + b / k", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "v + b"
+            message: "Summanden gekürzt: Du hast nur das x durch {{k}} geteilt. Beide Summanden gehören geteilt."
+          - value: "v * k + b"
+            message: "Das ist nur der Zähler. Teile noch durch {{k}}."
+        hint: "Klammere {{k}} im Zähler aus. Dann kürzt du die {{k}}."
+        steps:
+          - '$\frac{{{k}}x + {{b}}}{{{k}}} = \frac{{{k}} \cdot (x + {{b}} : {{k}})}{{{k}}}$'
+          - "Gekürzt bleibt $x + {{b}} : {{k}}$. Für $x = {{v}}$ ist das {{answer}}."
+      - type: generated
+        id: binomische-kuerzen
+        given:
+          r: { int: [2, 5] }
+          v: { int: [4, 15] }
+        where: ["v - r >= 2"]
+        task:
+          text: "Faktorisiere und kürze: $\\frac{x^2 - {{r}}^2}{x + {{r}}}$. Welche Zahl kommt heraus, wenn du $x = {{v}}$ einsetzt?"
+        answer: { value: "v - r", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "v + r"
+            message: "Du hast die falsche Klammer behalten. Es bleibt x − {{r}}."
+          - value: "v * v - r * r"
+            message: "Du hast nur den Zähler eingesetzt. Kürze vorher durch x + {{r}}."
+        hint: "Dritte binomische Formel: x² − {{r}}² = (x + {{r}})(x − {{r}})."
+        steps:
+          - "$x^2 - {{r}}^2 = (x + {{r}})(x - {{r}})$"
+          - '$\frac{(x + {{r}})(x - {{r}})}{x + {{r}}} = x - {{r}}$'
+      - type: single-choice
+        id: luecke-vergessen
+        text: "Mia kürzt $\\frac{x^2 - 9}{x + 3}$ zu $x - 3$ und schreibt: „x kann jede Zahl sein.“ Was fehlt?"
+        options:
+          - text: "x darf nicht −3 sein, weil der ursprüngliche Nenner dann 0 wäre"
+            correct: true
+            info: "Für x = −3 ist x + 3 = 0, auch wenn x − 3 dort einen Wert hätte."
+          - text: "x darf nicht 3 sein"
+            correct: false
+            info: "Für x = 3 ist der Nenner 6. Ein Zähler 0 ist erlaubt."
+          - text: "Nichts, nach dem Kürzen ist der Term überall definiert"
+            correct: false
+            info: "Der gekürzte Term ja, der ursprüngliche nicht: Die Lücke bei −3 bleibt."
+        explanation: "Die Definitionsmenge richtet sich nach dem Nenner vor dem Kürzen."
+      - type: single-choice
+        id: hauptnenner
+        text: "Die Bruchterme $\\frac{1}{x}$ und $\\frac{2}{x + 1}$ sollen gleichnamig werden. Welcher Nenner passt für beide?"
+        options:
+          - text: "x · (x + 1)"
+            correct: true
+            info: "Der erste Bruchterm wird mit x + 1 erweitert, der zweite mit x."
+          - text: "x + 1"
+            correct: false
+            info: "x ist kein Faktor von x + 1: Der erste Bruchterm lässt sich darauf nicht erweitern."
+          - text: "2x + 1"
+            correct: false
+            info: "Nenner werden nicht addiert. Beide Nenner müssen als Faktoren darin stecken."
+        explanation: "Der Hauptnenner enthält jeden Faktor der Nenner: x und x + 1."
+      - type: generated
+        id: erweitern-wert
+        given:
+          p: { int: [2, 9] }
+          a: { int: [1, 6] }
+          b: { int: [1, 6] }
+          v: { int: [3, 9] }
+        where: ["a != b"]
+        task:
+          text: "Erweitere $\\frac{{{p}}}{x + {{a}}}$ auf den Nenner $(x + {{a}})(x + {{b}})$. Welche Zahl steht im neuen Zähler, wenn du $x = {{v}}$ einsetzt?"
+        answer: { value: "p * (v + b)", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "p"
+            message: "Du hast den Zähler nicht mit erweitert. Beide müssen mit x + {{b}} multipliziert werden."
+          - value: "p + v + b"
+            message: "Du hast addiert. Erweitern heißt multiplizieren."
+        hint: "Mit welchem Term multiplizierst du den Nenner? Mit demselben den Zähler."
+        steps:
+          - '$\frac{{{p}}}{x + {{a}}} = \frac{{{p}} \cdot (x + {{b}})}{(x + {{a}})(x + {{b}})}$'
+      - type: text
+        text: >-
+          Das kannst du jetzt: Du faktorisierst Zähler und Nenner, kürzt nur Faktoren, bestimmst die Definitionsmenge
+          vor dem Kürzen und machst Bruchterme durch Erweitern gleichnamig.

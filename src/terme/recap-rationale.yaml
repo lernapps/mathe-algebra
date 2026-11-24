@@ -1,0 +1,78 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du für dieses Kapitel
+description: Kurze Wiederholung zum Rechnen mit negativen Zahlen, mit zwei Kurztests, damit du siehst, ob du bereit bist.
+recap: mathematik/rationale-zahlen-rechnen
+blocks:
+  - type: text
+    text:
+      "In Termen (Rechenausdrücken) stehen Variablen, das sind Buchstaben für Zahlen. Für sie setzt du auch negative Zahlen
+      ein. Dafür musst du mit negativen Zahlen sicher rechnen. Ein Baustein ist ein Thema auf der Lernlandkarte. Dieser Baustein
+      heißt „Rechnen mit negativen Zahlen“: Ich kann mit negativen Zahlen rechnen und dabei Vorzeichen- und Klammerregeln beachten."
+  - type: section
+    id: negative-zahlen
+    title: Rechnen mit negativen Zahlen
+    blocks:
+      - type: definition
+        term: Vorzeichen
+        explanation:
+          "Das Plus oder Minus, das vor einer Zahl steht und sagt, auf welcher Seite der Null sie liegt. Beispiel:
+          $-4$ liegt links von der Null, $+4$ rechts. Ohne Vorzeichen meint man eine positive Zahl."
+      - type: definition
+        term: Gegenzahl
+        explanation:
+          "Die Zahl mit demselben Abstand zur Null auf der anderen Seite. Beispiel: Die Gegenzahl von $5$ ist $-5$,
+          und $5 + (-5) = 0$. Die Gegenzahl von $-3$ ist $3$."
+      - type: definition
+        term: Minus vor einer Klammer
+        explanation:
+          "Eine Subtraktion ist das Addieren der Gegenzahl. Beispiel: $5 - (-3) = 5 + 3 = 8$ und $5 + (-3) = 5 - 3
+          = 2$. Eine negative Zahl in einer Rechnung steht in Klammern. Steht ein Minus vor einer Klammer mit mehreren Zahlen,
+          ändert jede Zahl in der Klammer ihr Vorzeichen: $-(2 - 5) = -2 + 5 = 3$."
+      - type: definition
+        term: Vorzeichenregel beim Malnehmen und Teilen
+        explanation:
+          'Gleiche Vorzeichen geben ein positives Ergebnis, verschiedene ein negatives. Beispiel: $(-3) \cdot (-4)
+          = 12$, $(-3) \cdot 4 = -12$ und $(-12) : 4 = -3$.'
+      - type: single-choice
+        id: recap-gemischt
+        text: "Was ist (−4) · (−3) − (−6) : 2?"
+        options:
+          - text: "15"
+            correct: true
+            info: "(−4) · (−3) = 12 und (−6) : 2 = −3. Dann 12 − (−3) = 12 + 3 = 15."
+          - text: "9"
+            correct: false
+            info: "Du hast 12 − 3 gerechnet. Minus (−3) heißt aber: Du addierst die Gegenzahl 3."
+          - text: −9
+            correct: false
+            info: "Das Ergebnis von (−4) · (−3) ist positiv: gleiche Vorzeichen geben plus. Es sind +12."
+        explanation: "(−4) · (−3) = 12 und (−6) : 2 = −3. Dann 12 − (−3) = 12 + 3 = 15."
+      - type: single-choice
+        id: recap-klammer
+        text: Was ist 8 − (2 − 5) − (−1)?
+        options:
+          - text: "12"
+            correct: true
+            info: 8 − (2 − 5) = 8 − 2 + 5 = 11, denn das Minus dreht beide Vorzeichen um. Dann 11 − (−1) = 11 + 1 = 12.
+          - text: "2"
+            correct: false
+            info:
+              "Du hast 8 − 2 − 5 gerechnet. Das Minus vor der Klammer dreht jedes Vorzeichen in der Klammer um: aus −5 wird
+              +5."
+          - text: "10"
+            correct: false
+            info: "Du hast 11 − 1 gerechnet. Minus (−1) heißt aber: Du addierst die Gegenzahl 1, also 11 + 1."
+        explanation: "Erst die Klammer auflösen (8 − 2 + 5 = 11), dann das Minus vor (−1) als Plus rechnen: 12."
+      - type: text
+        text:
+          "Wenn du dich vertan hast, wiederhole den Baustein „Rechnen mit negativen Zahlen“ auf seiner Seite der Lernlandkarte:
+          [Rechnen mit negativen Zahlen](https://lernapps.net/apps/map/mathematik/c/rationale-zahlen-rechnen/)."
+  - type: note
+    title: Du bist bereit, wenn du das kannst
+    blocks:
+      - type: text
+        text: "- Ich kann Zahlen mit Vorzeichen addieren und subtrahieren und dabei die Klammern beachten.
+
+          - Ich kann beim Malnehmen und Teilen das Vorzeichen des Ergebnisses bestimmen.
+
+          "

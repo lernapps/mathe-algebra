@@ -1,0 +1,274 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Gleichungen durch Umformen lösen
+description: "Lineare Gleichungen lösen: Du tust auf beiden Seiten dasselbe, Schritt für Schritt, und vergleichst den Weg mit dem Probieren in der Tabelle. Mit Minus, Klammern und Probe."
+competencies: [lineare-gleichungen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Die Waage bleibt im Gleichgewicht
+    blocks:
+      - type: text
+        text: >-
+          Bei einer Gleichung suchst du die Zahl, die für das $x$ passt. Zwei Wege führen dahin: Du probierst Zahlen aus,
+          oder du formst die Gleichung um. Das Umformen brauchst du, sobald Probieren zu lange dauert. Eine Gleichung ist
+          wie eine Waage im Gleichgewicht. Nimmst du links etwas weg, nimmst du rechts genauso viel weg, sonst kippt
+          sie. Dasselbe auf beiden Seiten zu tun heißt **umformen**.
+      - type: text
+        text: >-
+          In der Waage enthält ein Päckchen gleich viele Gewichte, das ist das $x$. Nimm $3 \cdot x - 5 = 16$: Eine
+          Zahl mal 3, dann 5 weniger, ergibt 16. **Weg 1:** Probiere in der Tabelle. Er passt, wenn du eine Lösung
+          schnell schätzen kannst.
+      - type: vue-component
+        id: tabelle-3x-minus-5
+        component: RaetselTabelle
+        props:
+          a: 3
+          b: -5
+          c: 16
+          eingabeLabel: "Zahl für x"
+          eintragen: "In die Tabelle"
+          neuAnfangen: "Neu anfangen"
+          spalteX: "x"
+          spalteLinks: "3 · x − 5"
+          spalteRechts: "Rechts"
+          spalteVergleich: "Vergleich"
+        nojs: |
+          Tabelle zum Probieren für 3 · x − 5 = 16. Für x = 5 ist die linke Seite 10: kleiner als 16. Für x = 8 ist sie 19:
+          größer als 16. Für x = 7 ist sie 16: beide Seiten sind gleich. Die Lösung ist 7.
+      - type: text
+        text: >-
+          **Weg 2:** Die Waage. Sie passt, wenn Probieren zu lange dauert, denn sie sagt dir bei jedem Schritt, was du
+          tun musst. „Minus 5“ heißt: Fünf Gewichte fehlen, sie sind gestrichelt. Tu auf beiden Seiten
+          dasselbe, bis ein Päckchen allein liegt. Schreib bei jedem Schritt auf, was du getan hast.
+      - type: vue-component
+        id: waage-3x-minus-5
+        component: GleichungWaage
+        props:
+          a: 3
+          b: -5
+          c: 16
+          schrittLabel: "Deine Schritte"
+          zahlLabel: "Anzahl"
+          minusKnopf: "Auf beiden Seiten minus"
+          plusKnopf: "Auf beiden Seiten plus"
+          teilenKnopf: "Beide Seiten teilen"
+          neuAnfangen: "Neu anfangen"
+          bildLabel: "Waage mit drei Päckchen und fünf fehlenden Gewichten links, 16 Gewichten rechts."
+        nojs: |
+          Waage für 3 · x − 5 = 16. Auf beiden Seiten 5 dazulegen: 3 · x = 21. Beide Seiten durch 3 teilen: x = 7.
+      - type: text
+        text: >-
+          Beide Wege führen zu $x = 7$. Die Tabelle zeigt dir Zahl für Zahl, ob du näher kommst. Das Umformen sagt dir
+          genau, was der nächste Schritt ist. Bei großen oder krummen Zahlen ist das viel kürzer.
+  - type: section
+    id: umformen
+    title: Auf beiden Seiten dasselbe tun
+    blocks:
+      - type: text
+        text: >-
+          Damit du ohne Waagenbild umformen kannst, brauchst du genau zu wissen, welche Schritte erlaubt sind.
+      - type: definition
+        term: Äquivalenzumformung
+        explanation: >-
+          Ein Schritt, den du auf beiden Seiten gleich ausführst: dieselbe Zahl addieren oder subtrahieren, beide
+          Seiten mit derselben Zahl malnehmen oder durch dieselbe Zahl teilen (nicht mit 0 malnehmen, nicht durch 0 teilen). Die Gleichung sieht danach anders aus, hat aber dieselbe
+          Lösung.
+      - type: example
+        title: "Löse 3 · x − 5 = 16 durch Umformen"
+        blocks:
+          - type: table
+            caption: "Eine Zeile je Schritt. Rechts steht, was du auf beiden Seiten getan hast."
+            header: ["Gleichung", "Rand"]
+            rows:
+              - ["3 · x − 5 = 16", "Start"]
+              - ["3 · x = 21", "+ 5"]
+              - ["x = 7", ": 3"]
+          - type: text
+            text: >-
+              **Probe:** Setz $x = 7$ in die Anfangsgleichung ein. Links ist $3 \cdot 7 - 5 = 21 - 5 = 16$, rechts
+              steht 16. Das stimmt. Die Probe ist ein einziger Tabellenversuch: Sie zeigt, ob du dich verrechnet hast.
+      - type: note
+        title: Merke
+        blocks:
+          - type: text
+            text: >-
+              Aus „− 5“ wird „+ 5“, aus „+ 4“ wird „− 4“, und es gilt immer für **beide** Seiten. Geteilt wird durch
+              die Zahl vor dem $x$, und zwar jedes Glied.
+  - type: section
+    id: klammern
+    title: Mit Klammern
+    blocks:
+      - type: text
+        text: >-
+          Steht das $x$ in einer Klammer, musst du entscheiden, womit du anfängst. Bei $2 \cdot (x + 3) = 14$ hast du
+          zwei Wege. Weg A teilt zuerst beide Seiten durch 2. Weg B multipliziert die Klammer aus.
+      - type: table
+        caption: "Dieselbe Gleichung auf zwei Wegen. Beide geben x = 4."
+        header: ["Weg A: erst teilen", "Weg B: ausmultiplizieren"]
+        rows:
+          - ["2 · (x + 3) = 14", "2 · (x + 3) = 14"]
+          - ["x + 3 = 7 (: 2)", "2 · x + 6 = 14 (ausmultiplizieren)"]
+          - ["x = 4 (− 3)", "2 · x = 8 (− 6)"]
+          - ["fertig nach 2 Schritten", "x = 4 (: 2), fertig nach 3 Schritten"]
+      - type: text
+        text: >-
+          Zur Probe: $2 \cdot (4 + 3) = 2 \cdot 7 = 14$. Weg A ist kürzer, wenn die Zahl vor der Klammer aufgeht. Weg B
+          klappt immer.
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: text
+        text: >-
+          Hier prüfst du, ob du die Schritte sicher setzt und begründen kannst.
+      - type: single-choice
+        id: nur-eine-seite
+        text: "Jonas löst 2 · x + 4 = 10. Er schreibt 2 · x = 10 und dann x = 5. Was ist falsch?"
+        options:
+          - text: "Er hat 4 nur links abgezogen."
+            correct: true
+            info: "Rechts blieb 10 stehen. Richtig ist 2 · x = 6."
+          - text: "Er hätte 4 addieren müssen."
+            correct: false
+            info: "Bei + 4 ziehst du 4 ab."
+          - text: "Nichts, x = 5 stimmt."
+            correct: false
+            info: "Probe: 2 · 5 + 4 = 14, nicht 10."
+        explanation: "Jeder Schritt gilt für beide Seiten."
+      - type: vue-component
+        id: tabelle-4x-minus-7
+        component: RaetselTabelle
+        props:
+          a: 4
+          b: -7
+          c: 21
+          eingabeLabel: "Zahl für x"
+          eintragen: "In die Tabelle"
+          neuAnfangen: "Neu anfangen"
+          spalteX: "x"
+          spalteLinks: "4 · x − 7"
+          spalteRechts: "Rechts"
+          spalteVergleich: "Vergleich"
+        nojs: |
+          Tabelle zum Probieren für 4 · x − 7 = 21. Probier Zahlen für x aus, bis beide Seiten gleich sind.
+      - type: vue-component
+        id: waage-4x-minus-7
+        component: GleichungWaage
+        props:
+          a: 4
+          b: -7
+          c: 21
+          schrittLabel: "Deine Schritte"
+          zahlLabel: "Anzahl"
+          minusKnopf: "Auf beiden Seiten minus"
+          plusKnopf: "Auf beiden Seiten plus"
+          teilenKnopf: "Beide Seiten teilen"
+          neuAnfangen: "Neu anfangen"
+          bildLabel: "Waage mit vier Päckchen und sieben fehlenden Gewichten links, 21 Gewichten rechts."
+        nojs: |
+          Waage für 4 · x − 7 = 21. Auf beiden Seiten 7 dazulegen: 4 · x = 28. Beide Seiten durch 4 teilen: x = 7.
+      - type: number
+        id: zwei-wege-4x-minus-7
+        text: "Löse 4 · x − 7 = 21 mit der Tabelle und mit der Waage. Welche Zahl ist x?"
+        answer: 7
+        tolerance: 0
+        hint: "Erst auf beiden Seiten + 7, dann : 4."
+        explanation: "4 · x = 28, also x = 7. Die Tabelle braucht mehr Versuche, das Umformen drei Zeilen."
+      - type: matching
+        id: begruendungen-zuordnen
+        text: "Welche Umformung steht am Rand? Ordne zu."
+        pairs:
+          - left: "Schritt von 6 · x + 9 = 33 zu 6 · x = 24"
+            right: "− 9"
+          - left: "Schritt von 6 · x = 24 zu x = 4"
+            right: ": 6"
+          - left: "Schritt von x − 5 = 2 zu x = 7"
+            right: "+ 5"
+        distractors:
+          - "· 6"
+        explanation: "Du machst jede Rechnung mit ihrem Gegenteil rückgängig."
+      - type: generated
+        id: umformen-plus
+        given:
+          a: { int: [2, 9] }
+          b: { int: [2, 20] }
+          c: { int: [20, 100] }
+        where: ["c > b", "a != b", "decimals((c - b) / a) == 0"]
+        task:
+          text: "Löse {{a}} · x + {{b}} = {{c}}. Welche Zahl ist x?"
+        answer: { value: "(c - b) / a", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "(c + b) / a"
+            message: "Vorzeichen: Aus + {{b}} wird − {{b}}."
+          - value: "c / a"
+            message: "Du hast {{b}} nur links abgezogen."
+          - value: "(c - b) / b"
+            message: "Du musst durch die Zahl vor x teilen ({{a}}), nicht durch {{b}}."
+          - value: "c / a - b"
+            message: "Geteilt hast du nur {{c}}, {{b}} blieb stehen."
+        hint: "Erst − {{b}}, dann : {{a}}."
+        steps:
+          - '${{a}} \cdot x = {{c}} - {{b}}$'
+          - "$x = ({{c}} - {{b}}) : {{a}} = {{answer}}$"
+      - type: generated
+        id: umformen-minus
+        given:
+          a: { int: [2, 9] }
+          b: { int: [2, 15] }
+          c: { int: [3, 60] }
+        where: ["a != b", "decimals((c + b) / a) == 0"]
+        task:
+          text: "Löse {{a}} · x − {{b}} = {{c}}. Welche Zahl ist x?"
+        answer: { value: "(c + b) / a", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "(c - b) / a"
+            message: "Aus − {{b}} wird + {{b}}, auf beiden Seiten."
+          - value: "c + b"
+            message: "Du hast {{b}} richtig addiert, aber noch nicht durch {{a}} geteilt."
+        hint: "Erst + {{b}}, dann : {{a}}."
+        steps:
+          - '${{a}} \cdot x = {{c}} + {{b}}$'
+          - "$x = ({{c}} + {{b}}) : {{a}} = {{answer}}$"
+      - type: generated
+        id: umformen-klammer
+        given:
+          a: { int: [2, 6] }
+          b: { int: [1, 9] }
+          c: { int: [12, 60] }
+        where: ["decimals(c / a) == 0", "c / a > b"]
+        task:
+          text: "Löse {{a}} · (x + {{b}}) = {{c}}. Welche Zahl ist x?"
+        answer: { value: "c / a - b", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "c / a"
+            message: "In der Klammer steht noch + {{b}}."
+          - value: "(c - b) / a"
+            message: "Die Klammer gilt {{a}}-fach: erst durch {{a}} teilen."
+        hint: "Beide Seiten : {{a}}, dann − {{b}}."
+        steps:
+          - "$x + {{b}} = {{c}} : {{a}}$"
+          - "$x = {{c}} : {{a}} - {{b}} = {{answer}}$"
+      - type: generated
+        id: umformen-negativ
+        given:
+          a: { int: [2, 6] }
+          b: { int: [2, 12] }
+          k: { int: [2, 30] }
+        where: ["a != b", "decimals((k + b) / a) == 0", "decimals((b - k) / a) == 0"]
+        task:
+          text: "Löse {{a}} · x + {{b}} = −{{k}}. Welche Zahl ist x? Die Lösung ist negativ."
+        answer: { value: "-(k + b) / a", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "(k + b) / a"
+            message: "Das Minus der Lösung fehlt."
+          - value: "(b - k) / a"
+            message: "Von −{{k}} ziehst du {{b}} ab, das wird kleiner."
+        hint: "Erst − {{b}}: rechts steht dann −{{k}} − {{b}}."
+        steps:
+          - '${{a}} \cdot x = -{{k}} - {{b}}$'
+          - "$x = (-{{k}} - {{b}}) : {{a}} = {{answer}}$"
+      - type: text
+        text: >-
+          Das kannst du jetzt: Du löst eine Gleichung der Form $a \cdot x + b = c$ durch Umformen, Schritt für Schritt
+          und mit der Begründung am Rand. Du vergleichst den Weg mit dem Probieren in der Tabelle, behandelst Minus,
+          negative Zahlen und Klammern und prüfst jedes Ergebnis mit der Probe.

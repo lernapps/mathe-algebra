@@ -1,0 +1,96 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Das brauchst du für dieses Kapitel
+description: Kurze Wiederholung zum Kürzen und Erweitern von Brüchen und zum Malnehmen und Teilen von Brüchen, mit zwei Kurztests.
+recap:
+  - mathematik/brueche-kuerzen-erweitern
+  - mathematik/brueche-multiplizieren-dividieren
+blocks:
+  - type: text
+    text: "Bruchterme behandelst du wie Brüche, nur mit Variablen im Zähler und im Nenner.
+      Dafür musst du Brüche sicher kürzen, erweitern, malnehmen und teilen können. Ein Baustein ist ein Thema auf der Lernlandkarte.
+      Die Bausteine heißen auf der Lernlandkarte „Brüche kürzen und erweitern“ und „Bruchrechnung: Multiplikation und Division“."
+  - type: section
+    id: kuerzen-erweitern
+    title: Brüche kürzen und erweitern
+    blocks:
+      - type: text
+        text: Ich kann Brüche kürzen und erweitern und der Größe nach vergleichen.
+      - type: definition
+        term: Kürzen
+        explanation:
+          'Zähler und Nenner durch dieselbe Zahl teilen. Der Wert des Bruchs bleibt gleich. Beispiel: $\frac{6}{8}
+          = \frac{6 : 2}{8 : 2} = \frac{3}{4}$.'
+      - type: definition
+        term: Erweitern
+        explanation:
+          'Zähler und Nenner mit derselben Zahl malnehmen. Der Wert bleibt gleich. Beispiel: $\frac{3}{4} = \frac{3
+          \cdot 5}{4 \cdot 5} = \frac{15}{20}$. So bekommst du gleiche Nenner.'
+      - type: definition
+        term: Hauptnenner
+        explanation:
+          'Der kleinste gemeinsame Nenner von Brüchen. Du erweiterst die Brüche, bis die Nenner gleich sind, und rechnest
+          dann mit den Zählern. Beispiel: $\frac{1}{2} + \frac{1}{3} = \frac{3}{6} + \frac{2}{6} = \frac{5}{6}$.'
+      - type: single-choice
+        id: recap-kuerzen
+        text: Kürze 48/84 so weit wie möglich. Welcher Bruch bleibt?
+        options:
+          - text: 4/7
+            correct: true
+            info: "Teile durch 12: 48 : 12 = 4 und 84 : 12 = 7. Mehr geht nicht, denn 4 und 7 haben keinen gemeinsamen Teiler."
+          - text: 24/42
+            correct: false
+            info: Das ist erst durch 2 gekürzt. Beide Zahlen lassen sich noch weiter durch 6 teilen.
+          - text: 12/21
+            correct: false
+            info: Das ist durch 4 gekürzt. 12 und 21 haben noch den gemeinsamen Teiler 3.
+        explanation: "Teile durch 12: 48 : 12 = 4 und 84 : 12 = 7. Mehr geht nicht, denn 4 und 7 haben keinen gemeinsamen Teiler."
+      - type: text
+        text:
+          "Wenn du dich vertan hast, wiederhole den Baustein „Brüche kürzen und erweitern“ auf seiner Seite der Lernlandkarte:
+          [Brüche kürzen und erweitern](https://lernapps.net/apps/map/mathematik/c/brueche-kuerzen-erweitern/)."
+  - type: section
+    id: multiplizieren-dividieren
+    title: "Bruchrechnung: Multiplikation und Division"
+    blocks:
+      - type: text
+        text: Ich kann Brüche multiplizieren und dividieren.
+      - type: definition
+        term: Brüche malnehmen
+        explanation:
+          'Zähler mal Zähler, Nenner mal Nenner. Beispiel: $\frac{2}{3} \cdot \frac{4}{5} = \frac{2 \cdot 4}{3 \cdot
+          5} = \frac{8}{15}$.'
+      - type: definition
+        term: Kehrwert
+        explanation:
+          'Der Bruch mit vertauschtem Zähler und Nenner. Beispiel: Der Kehrwert von $\frac{2}{3}$ ist $\frac{3}{2}$.
+          Durch einen Bruch teilst du, indem du mit seinem Kehrwert malnimmst: $\frac{1}{2} : \frac{3}{4} = \frac{1}{2} \cdot
+          \frac{4}{3} = \frac{4}{6} = \frac{2}{3}$.'
+      - type: single-choice
+        id: recap-teilen
+        text: "Was ist 3/4 : 9/8?"
+        options:
+          - text: 2/3
+            correct: true
+            info: "Durch 9/8 teilen heißt mit 8/9 malnehmen: 3/4 · 8/9 = 24/36 = 2/3."
+          - text: 27/32
+            correct: false
+            info: Das ist 3/4 · 9/8. Beim Teilen musst du den Kehrwert des zweiten Bruchs nehmen.
+          - text: 3/2
+            correct: false
+            info:
+              "Du hast die Zähler und die Nenner einzeln geteilt: 3 : 9 und 4 : 8 ergibt nicht 2/3. Rechne 3/4 mal den Kehrwert
+              8/9 von 9/8."
+        explanation: "Durch 9/8 teilen heißt mit 8/9 malnehmen: 3/4 · 8/9 = 24/36 = 2/3."
+      - type: text
+        text:
+          "Wenn du dich vertan hast, wiederhole den Baustein „Bruchrechnung: Multiplikation und Division“ auf seiner Seite
+          der Lernlandkarte: [Bruchrechnung: Multiplikation und Division](https://lernapps.net/apps/map/mathematik/c/brueche-multiplizieren-dividieren/)."
+  - type: note
+    title: Du bist bereit, wenn du das kannst
+    blocks:
+      - type: text
+        text: "- Ich kann einen Bruch kürzen und erweitern, ohne seinen Wert zu ändern.
+
+          - Ich kann Brüche malnehmen und durch einen Bruch teilen, indem ich mit dem Kehrwert malnehme.
+
+          "

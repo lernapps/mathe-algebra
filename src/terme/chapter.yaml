@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Terme aufstellen und umformen
+summary: >-
+  Klasse 7-8: Terme mit Variablen aufstellen, zusammenfassen und Klammern auflösen. Das Rechteckmodell und die Tabelle helfen dir beim Prüfen.
+pages: [recap-rationale, terme-aufstellen, terme-zusammenfassen, klammern-aufloesen]
+selfAssessment:
+  pages:
+    - exercises:
+        - /terme/terme-aufstellen/#wert-einsetzen
+        - /terme/terme-zusammenfassen/#gleichartig-ueben
+        - /terme/klammern-aufloesen/#faktor-ueben
+    - exercises:
+        - /terme/terme-aufstellen/#term-kette
+        - /terme/terme-zusammenfassen/#zusammenfassen-zahl-vor-x
+        - /terme/klammern-aufloesen/#faktor-probe

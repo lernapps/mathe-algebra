@@ -1,0 +1,230 @@
+# yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
+title: Terme zusammenfassen
+description: "Gleichartige Glieder zusammenfassen: 3x + 5x oder 2a + 3b − a. Du unterscheidest Zahlen und Variablen und prüfst mit der Tabelle, ob der Term gleich bleibt."
+competencies: [terme-umformen]
+blocks:
+  - type: section
+    id: einstieg
+    title: Schachteln zählen
+    blocks:
+      - type: text
+        text: >-
+          Wenn ein Term lang und unübersichtlich ist, willst du ihn kürzer schreiben, ohne dass sich sein Wert ändert.
+          Das geht, indem du Gleichartiges zusammenfasst. Ein Buchstabe wie $x$ steht für eine Zahl. Hier ist es die Zahl der Streichhölzer in einer Schachtel, jede
+          Schachtel enthält gleich viele. Einzelne Streichhölzer sind einfache Zahlen.
+      - type: single-choice
+        id: schachteln-zaehlen
+        text: "Du hast 3 Schachteln, 5 einzelne Streichhölzer und noch 2 Schachteln. In jeder Schachtel liegen x Streichhölzer. Wie schreibst du den Term für alle Streichhölzer möglichst kurz?"
+        options:
+          - text: "5x + 5"
+            correct: true
+            info: "3 + 2 = 5 Schachteln, also 5x. Die 5 einzelnen Streichhölzer bleiben extra: 5x + 5."
+          - text: "10x"
+            correct: false
+            info: "Die 5 einzelnen Streichhölzer sind keine Schachteln und gehören nicht zum x."
+          - text: "5x + 2"
+            correct: false
+            info: "Die 2 Schachteln sind 2x und werden zu 3x addiert, sie sind nicht einzelne Streichhölzer."
+        explanation: "Aus 3x + 5 + 2x wird 5x + 5: Schachteln zu Schachteln, einzelne Streichhölzer für sich."
+  - type: section
+    id: gleichartig
+    title: Gleichartige Glieder
+    blocks:
+      - type: text
+        text: >-
+          Ein Term besteht aus **Gliedern**, das sind die Teile, die mit Plus oder Minus verbunden sind. Wenn du ihn kürzer schreiben willst, schaust du, welche Glieder zusammenpassen: Wenn zwei Glieder dieselbe Variable haben, zum Beispiel $3x$ und $5x$ (3 Schachteln und 5 Schachteln), kannst du
+          sie zu einem Glied zusammenfassen. Dazu zählst du die Zahlen vor dem $x$ zusammen, das $x$ bleibt stehen.
+      - type: formula
+        formula: '3x + 5x = (3 + 5) \cdot x = 8x'
+      - type: definition
+        term: Gleichartige Glieder
+        explanation: >-
+          Glieder mit derselben Variable, zum Beispiel $3x$ und $5x$. Zahlen ohne Variable sind untereinander gleichartig,
+          zum Beispiel $4$ und $7$. Eine Zahl und ein Glied mit Variable, zum Beispiel $4$ und $5x$, sind nicht gleichartig.
+      - type: single-choice
+        id: gleichartig-erkennen
+        text: "Welches Glied ist gleichartig mit 4a?"
+        options:
+          - text: "−9a"
+            correct: true
+            info: "Beide haben die Variable a. Das Vorzeichen ist egal: 4a − 9a = −5a."
+          - text: "4b"
+            correct: false
+            info: "4b hat die Variable b. Verschiedene Variablen sind nicht gleichartig."
+          - text: "4"
+            correct: false
+            info: "4 hat keine Variable. 4a und 4 lassen sich nicht zusammenfassen."
+        explanation: "Gleichartig heißt: dieselbe Variable."
+  - type: section
+    id: beispiel
+    title: Beispiel
+    blocks:
+      - type: text
+        text: "Bei einem Term mit mehreren Variablen und einer Zahl sortierst du zuerst, damit du nichts Ungleichartiges zusammenwirfst."
+      - type: example
+        title: "Fasse zusammen: 2a + 3b − a + 4b + 5"
+        blocks:
+          - type: table
+            caption: "Ein Schritt je Zeile, die Begründung steht rechts."
+            header: ["Term", "Begründung"]
+            rows:
+              - ["$2a + 3b - a + 4b + 5$", "Aufgabe"]
+              - ["$2a - a + 3b + 4b + 5$", "Gleichartige Glieder nebeneinander, das Minus wandert mit"]
+              - ["$(2 - 1)a + (3 + 4)b + 5$", "Zahlen vor der Variable zusammenzählen, a ist 1a"]
+              - ["**$a + 7b + 5$**", "ausgerechnet, die 5 bleibt allein"]
+  - type: section
+    id: probe
+    title: Probe mit Zahlen
+    blocks:
+      - type: text
+        text: >-
+          Wenn du wissen willst, ob du richtig zusammengefasst hast, machst du eine **Probe**. Beim Umformen bleibt der
+          Wert des Terms gleich, das prüfst du so: Setze dieselben Zahlen in den
+          alten und in den neuen Term ein. Bei $2a + 3b - a + 4b + 5$ und $a + 7b + 5$ kommt jedes Mal dasselbe heraus.
+      - type: table
+        caption: "Wertetabelle: derselbe Wert vor und nach dem Umformen."
+        header: ["Zahlen", "Vorher", "Nachher"]
+        rows:
+          - ["$a = 2$, $b = 3$", "28", "28"]
+          - ["$a = 4$, $b = 1$", "16", "16"]
+          - ["$a = 5$, $b = 2$", "24", "24"]
+      - type: text
+        text: >-
+          Ein häufiger Fehler ist $3x + 5 = 8x$: Die 5 ist eine Zahl und gehört nicht zu den $x$. Die Probe zeigt es.
+          Aber Vorsicht: Bei $x = 1$ stimmt es zufällig. Probiere immer mehrere Zahlen.
+      - type: table
+        caption: "Probe für 3x + 5 und 8x"
+        header: ["$x$", "$3x + 5$", "$8x$"]
+        rows:
+          - ["1", "8", "8"]
+          - ["2", "11", "16"]
+          - ["3", "14", "24"]
+      - type: number
+        id: probe-4x-plus-6
+        text: "Jemand fasst 4x + 6 zu 10x zusammen. Bei x = 1 stimmt das: beide Terme haben den Wert 10. Mach die Probe mit x = 2. Welchen Wert hat 4x + 6?"
+        answer: 14
+        tolerance: 0
+        hint: "Setze 2 für x ein: 4 · 2 + 6."
+        explanation: "4 · 2 + 6 = 14, aber 10 · 2 = 20. Die Terme sind verschieden: Die 6 ist eine Zahl und gehört nicht zu den x."
+  - type: section
+    id: uebung
+    title: Übung
+    blocks:
+      - type: text
+        text: "Hier erkennst du Fehler und fasst selbst zusammen. So wirst du sicher, was zusammengehört und was nicht."
+      - type: single-choice
+        id: fehler-zahl-und-x
+        text: "Jemand rechnet 2x + 3 + 4x = 9x. Was ist falsch?"
+        options:
+          - text: "Die 3 ist eine Zahl und gehört nicht zu den x. Richtig ist 6x + 3."
+            correct: true
+            info: "2x + 4x = 6x. Die 3 hat keine Variable und bleibt stehen."
+          - text: "Die 2 und die 4 hätten multipliziert werden müssen."
+            correct: false
+            info: "Die Zahlen vor dem x werden addiert (2 + 4 = 6), nicht multipliziert."
+          - text: "Nichts, bei x = 1 kommt beides Mal 9 heraus."
+            correct: false
+            info: "Bei x = 1 stimmt es zufällig. Bei x = 2 ist 2x + 3 + 4x gleich 15, aber 9x gleich 18."
+        explanation: "Zahl und Glieder mit x sind nicht gleichartig."
+      - type: vue-component
+        id: gleichartig-ueben
+        component: TermeUmformen
+        props:
+          art: gleichartig
+          loesungZeigen: Lösung zeigen
+          tipp: Tipp
+          rechenweg: "Lösung:"
+          probeZeigen: Probe mit Zahlen
+          probeVerbergen: Probe verbergen
+        examples:
+          accepted:
+            - { answer: "7x", seed: 1 }
+            - { answer: "x*7", seed: 1 }
+            - { answer: "21y", seed: 2 }
+          rejected:
+            - { answer: "6x", seed: 1 }
+            - { answer: "7x^2", seed: 1 }
+            - { answer: "x+6x", seed: 1 }
+            - { answer: "336y", seed: 2 }
+      - type: generated
+        id: zusammenfassen-zahl-vor-x
+        given:
+          a: { int: [2, 9] }
+          b: { int: [2, 9] }
+          c: { int: [1, 9] }
+        where: ["a + b - c >= 1", "a != b"]
+        task:
+          text: "Fasse zusammen: ${{a}}x + {{b}}x - {{c}}x$. Welche Zahl steht danach vor dem $x$?"
+        answer: { value: "a + b - c", compare: { number: { format: integer } } }
+        mistakes:
+          - value: "a + b + c"
+            message: "Du hast {{c}} addiert. Vor dem Glied steht ein Minus."
+          - value: "a + b"
+            message: "Das Glied −{{c}}x fehlt in deiner Rechnung."
+        hint: "Rechne {{a}} + {{b}} − {{c}}. Das x bleibt stehen."
+        steps:
+          - "Zahlen vor dem $x$ zusammenzählen: ${{a}} + {{b}} - {{c}} = {{answer}}$."
+      - type: vue-component
+        id: gemischt-ueben
+        component: TermeUmformen
+        props:
+          art: gemischt
+          loesungZeigen: Lösung zeigen
+          tipp: Tipp
+          rechenweg: "Lösung:"
+          probeZeigen: Probe mit Zahlen
+          probeVerbergen: Probe verbergen
+        examples:
+          accepted:
+            - { answer: "8x-1", seed: 1 }
+            - { answer: "-1+8x", seed: 1 }
+            - { answer: "-4y+2", seed: 2 }
+          rejected:
+            - { answer: "7x", seed: 1 }
+            - { answer: "8x+1", seed: 1 }
+            - { answer: "2x-1+6x", seed: 1 }
+            - { answer: "-2y", seed: 2 }
+      - type: matching
+        id: zusammenfassen-zuordnen
+        text: "Ordne jedem Term den zusammengefassten Term zu."
+        pairs:
+          - { left: "3x + 5x", right: "8x" }
+          - { left: "6a − a", right: "5a" }
+          - { left: "4x + 7 + x", right: "5x + 7" }
+          - { left: "2a + 3b − a", right: "a + 3b" }
+        distractors:
+          - "12x"
+          - "5ab"
+        explanation: "Nur gleichartige Glieder werden zusammengefasst. Bei 6a − a ist das zweite Glied 1a, also 6 − 1 = 5."
+      - type: vue-component
+        id: zweivariablen-ueben
+        component: TermeUmformen
+        props:
+          art: zweivariablen
+          loesungZeigen: Lösung zeigen
+          tipp: Tipp
+          rechenweg: "Lösung:"
+          probeZeigen: Probe mit Zahlen
+          probeVerbergen: Probe verbergen
+        examples:
+          accepted:
+            - { answer: "3b+6a", seed: 1 }
+            - { answer: "6a + 3b", seed: 1 }
+            - { answer: "4b+14a+9", seed: 2 }
+          rejected:
+            - { answer: "9ab", seed: 1 }
+            - { answer: "10a+5b", seed: 1 }
+            - { answer: "18ab", seed: 2 }
+      - type: ordering
+        id: zusammenfassen-reihenfolge
+        text: "Bring die Schritte beim Zusammenfassen von 2a + 3b − a + 4b in die richtige Reihenfolge."
+        items:
+          - "2a + 3b − a + 4b"
+          - "2a − a + 3b + 4b"
+          - "(2 − 1)a + (3 + 4)b"
+          - "a + 7b"
+        explanation: "Erst sortieren, dann die Zahlen vor jeder Variablen zusammenzählen, dann ausrechnen."
+      - type: text
+        text: >-
+          Das kannst du jetzt: Du erkennst gleichartige Glieder, fasst sie zusammen, lässt Zahl und Variable getrennt und
+          prüfst mit der Probe, ob der Term gleich geblieben ist.
