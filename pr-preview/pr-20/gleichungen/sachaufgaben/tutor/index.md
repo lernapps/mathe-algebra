@@ -58,18 +58,22 @@ Aus einem Text eine Gleichung machen: Du gehst in vier Schritten vor, löst die 
 
 ### Aus dem Text wird eine Gleichung
 
+In einer Sachaufgabe steht die Gleichung versteckt in einem Text. Bevor du etwas ausrechnen kannst, musst du den Text in eine Gleichung übersetzen. Das übst du zuerst.
+
 - Aufgabe `text-gleichung-zuordnen` (unten)
 
 ### Vier Schritte
 
-In einer Sachaufgabe gibt es eine Größe, die du nicht kennst. Du gehst immer gleich vor:
+In einer Sachaufgabe gibt es eine Größe, die du nicht kennst. Wenn du dabei oft nicht weißt, wo du anfangen sollst oder was du vergessen hast, hilft dir ein fester Ablauf. Du gehst immer gleich vor:
 
 1. **Unbekanntes festlegen:** Was weißt du nicht? Das wird $x$. Schreibe auf, was $x$ bedeutet, mit Einheit.
 2. **Gleichung aufstellen:** Schreibe den Text als Rechnung mit $x$.
-3. **Lösen:** Probiere in der Tabelle oder forme um, wie du es kennst.
+3. **Lösen:** Probiere Zahlen aus und rechne nach, wenn die Zahlen klein sind, oder forme um, wenn Probieren zu lange dauert.
 4. **Antworten und Probe:** Schreibe einen Antwortsatz auf die Frage. Prüfe das Ergebnis am Text, nicht nur an der Gleichung.
 
 ### Beispiel
+
+An einem Beispiel siehst du, wie die vier Schritte zusammen eine Aufgabe lösen.
 
 **Beispiel: Fahrkarten und Stadtplan**
 
@@ -81,7 +85,7 @@ Schritt 3, erster Weg: Probieren. Drei Versuche.:
 - 6 | 27 | größer
 - 5 | 23 | gleich
 
-Schritt 3, zweiter Weg: Umformen wie bei der Waage.:
+Schritt 3, zweiter Weg: Umformen heißt auf beiden Seiten dasselbe tun.:
 - Gleichung | Was du tust
 - 4 · x + 3 = 23 | beide Seiten minus 3
 - 4 · x = 20 | beide Seiten durch 4
@@ -94,6 +98,8 @@ Schritt 4: Eine Fahrkarte kostet 5 €. Probe am Text: 4 Fahrkarten zu 5 € s
 $x$ ist nicht immer das, was gefragt ist. Lies am Ende die Frage noch einmal und antworte auf sie.
 
 ### Übung
+
+Mit diesen Aufgaben übst du, den Ablauf auf Preise, Alter, Weg und Zeit und den Umfang zu übertragen.
 
 - Aufgabe `ablauf-ordnen` (unten)
 
@@ -177,29 +183,29 @@ Nr. | n | b | c | Lösung | F1 | F2 | F3
 17 | 7 | 4 | 46 | 6 € | 42 | 2,571429 | 7,142857
 18 | 6 | 2 | 68 | 11 € | 66 | 9,333333 | 11,666667
 19 | 3 | 6 | 39 | 11 € | 33 | 7 | 15
-20 | 6 | 7 | 37 | 5 € | 30 | -0,833333 | 7,333333
+20 | 6 | 7 | 37 | 5 € | 30 | −0,833333 | 7,333333
 21 | 4 | 7 | 39 | 8 € | 32 | 2,75 | 11,5
-22 | 6 | 5 | 29 | 4 € | 24 | -0,166667 | 5,666667
+22 | 6 | 5 | 29 | 4 € | 24 | −0,166667 | 5,666667
 23 | 8 | 2 | 26 | 3 € | 24 | 1,25 | 3,5
 24 | 8 | 6 | 54 | 6 € | 48 | 0,75 | 7,5
 25 | 5 | 5 | 35 | 6 € | 30 | 2 | 8
 26 | 3 | 7 | 76 | 23 € | 69 | 18,333333 | 27,666667
-27 | 7 | 8 | 50 | 6 € | 42 | -0,857143 | 8,285714
+27 | 7 | 8 | 50 | 6 € | 42 | −0,857143 | 8,285714
 28 | 5 | 3 | 78 | 15 € | 75 | 12,6 | 16,2
 29 | 4 | 3 | 35 | 8 € | 32 | 5,75 | 9,5
 30 | 4 | 9 | 77 | 17 € | 68 | 10,25 | 21,5
 31 | 4 | 7 | 67 | 15 € | 60 | 9,75 | 18,5
 32 | 3 | 9 | 42 | 11 € | 33 | 5 | 17
 33 | 7 | 5 | 61 | 8 € | 56 | 3,714286 | 9,428571
-34 | 5 | 5 | 20 | 3 € | 15 | -1 | 5
+34 | 5 | 5 | 20 | 3 € | 15 | −1 | 5
 35 | 3 | 3 | 39 | 12 € | 36 | 10 | 14
 36 | 3 | 3 | 75 | 24 € | 72 | 22 | 26
 37 | 6 | 8 | 80 | 12 € | 72 | 5,333333 | 14,666667
 38 | 4 | 9 | 41 | 8 € | 32 | 1,25 | 12,5
-39 | 8 | 8 | 56 | 6 € | 48 | -1 | 8
-40 | 7 | 6 | 34 | 4 € | 28 | -1,142857 | 5,714286
+39 | 8 | 8 | 56 | 6 € | 48 | −1 | 8
+40 | 7 | 6 | 34 | 4 € | 28 | −1,142857 | 5,714286
 41 | 3 | 6 | 66 | 20 € | 60 | 16 | 24
-42 | 7 | 8 | 43 | 5 € | 35 | -1,857143 | 7,285714
+42 | 7 | 8 | 43 | 5 € | 35 | −1,857143 | 7,285714
 43 | 4 | 7 | 43 | 9 € | 36 | 3,75 | 12,5
 44 | 3 | 6 | 27 | 7 € | 21 | 3 | 11
 45 | 3 | 6 | 36 | 10 € | 30 | 6 | 14
@@ -208,15 +214,15 @@ Nr. | n | b | c | Lösung | F1 | F2 | F3
 48 | 6 | 2 | 38 | 6 € | 36 | 4,333333 | 6,666667
 49 | 8 | 6 | 70 | 8 € | 64 | 2,75 | 9,5
 50 | 4 | 9 | 69 | 15 € | 60 | 8,25 | 19,5
-51 | 7 | 9 | 44 | 5 € | 35 | -2,714286 | 7,571429
+51 | 7 | 9 | 44 | 5 € | 35 | −2,714286 | 7,571429
 52 | 8 | 5 | 53 | 6 € | 48 | 1,625 | 7,25
 53 | 8 | 6 | 62 | 7 € | 56 | 1,75 | 8,5
 54 | 8 | 4 | 52 | 6 € | 48 | 2,5 | 7
 55 | 6 | 2 | 80 | 13 € | 78 | 11,333333 | 13,666667
 56 | 5 | 6 | 71 | 13 € | 65 | 8,2 | 15,4
-57 | 5 | 9 | 24 | 3 € | 15 | -4,2 | 6,6
-58 | 8 | 5 | 37 | 4 € | 32 | -0,375 | 5,25
-59 | 4 | 8 | 20 | 3 € | 12 | -3 | 7
+57 | 5 | 9 | 24 | 3 € | 15 | −4,2 | 6,6
+58 | 8 | 5 | 37 | 4 € | 32 | −0,375 | 5,25
+59 | 4 | 8 | 20 | 3 € | 12 | −3 | 7
 60 | 3 | 5 | 32 | 9 € | 27 | 5,666667 | 12,333333
 61 | 3 | 8 | 38 | 10 € | 30 | 4,666667 | 15,333333
 62 | 5 | 6 | 56 | 10 € | 50 | 5,2 | 12,4
@@ -346,61 +352,61 @@ Nr. | d | s | Lösung | F1 | F2 | F3
 
 ```
 Nr. | a | v | c | Lösung | F1 | F2 | F3
-1 | 30 | 15 | 75 | 3 Stunden | 45 | -25 | 5
-2 | 20 | 20 | 60 | 2 Stunden | 40 | -17 | 3
-3 | 30 | 10 | 75 | 4,5 Stunden | 45 | -22,5 | 7,5
-4 | 15 | 10 | 80 | 6,5 Stunden | 65 | -7 | 8
-5 | 30 | 10 | 65 | 3,5 Stunden | 35 | -23,5 | 6,5
-6 | 25 | 10 | 65 | 4 Stunden | 40 | -18,5 | 6,5
-7 | 15 | 20 | 65 | 2,5 Stunden | 50 | -11,75 | 3,25
+1 | 30 | 15 | 75 | 3 Stunden | 45 | −25 | 5
+2 | 20 | 20 | 60 | 2 Stunden | 40 | −17 | 3
+3 | 30 | 10 | 75 | 4,5 Stunden | 45 | −22,5 | 7,5
+4 | 15 | 10 | 80 | 6,5 Stunden | 65 | −7 | 8
+5 | 30 | 10 | 65 | 3,5 Stunden | 35 | −23,5 | 6,5
+6 | 25 | 10 | 65 | 4 Stunden | 40 | −18,5 | 6,5
+7 | 15 | 20 | 65 | 2,5 Stunden | 50 | −11,75 | 3,25
 8 | 5 | 10 | 80 | 7,5 Stunden | 75 | 3 | 8
-9 | 20 | 10 | 75 | 5,5 Stunden | 55 | -12,5 | 7,5
-10 | 25 | 20 | 75 | 2,5 Stunden | 50 | -21,25 | 3,75
-11 | 20 | 10 | 60 | 4 Stunden | 40 | -14 | 6
-12 | 15 | 20 | 75 | 3 Stunden | 60 | -11,25 | 3,75
-13 | 30 | 15 | 60 | 2 Stunden | 30 | -26 | 4
-14 | 10 | 10 | 80 | 7 Stunden | 70 | -2 | 8
-15 | 25 | 10 | 80 | 5,5 Stunden | 55 | -17 | 8
-16 | 20 | 20 | 80 | 3 Stunden | 60 | -16 | 4
-17 | 10 | 20 | 70 | 3 Stunden | 60 | -6,5 | 3,5
-18 | 30 | 20 | 80 | 2,5 Stunden | 50 | -26 | 4
-19 | 30 | 10 | 60 | 3 Stunden | 30 | -24 | 6
-20 | 10 | 10 | 60 | 5 Stunden | 50 | -4 | 6
-21 | 30 | 10 | 70 | 4 Stunden | 40 | -23 | 7
+9 | 20 | 10 | 75 | 5,5 Stunden | 55 | −12,5 | 7,5
+10 | 25 | 20 | 75 | 2,5 Stunden | 50 | −21,25 | 3,75
+11 | 20 | 10 | 60 | 4 Stunden | 40 | −14 | 6
+12 | 15 | 20 | 75 | 3 Stunden | 60 | −11,25 | 3,75
+13 | 30 | 15 | 60 | 2 Stunden | 30 | −26 | 4
+14 | 10 | 10 | 80 | 7 Stunden | 70 | −2 | 8
+15 | 25 | 10 | 80 | 5,5 Stunden | 55 | −17 | 8
+16 | 20 | 20 | 80 | 3 Stunden | 60 | −16 | 4
+17 | 10 | 20 | 70 | 3 Stunden | 60 | −6,5 | 3,5
+18 | 30 | 20 | 80 | 2,5 Stunden | 50 | −26 | 4
+19 | 30 | 10 | 60 | 3 Stunden | 30 | −24 | 6
+20 | 10 | 10 | 60 | 5 Stunden | 50 | −4 | 6
+21 | 30 | 10 | 70 | 4 Stunden | 40 | −23 | 7
 22 | 5 | 10 | 65 | 6 Stunden | 60 | 1,5 | 6,5
-23 | 30 | 20 | 60 | 1,5 Stunden | 30 | -27 | 3
-24 | 5 | 20 | 65 | 3 Stunden | 60 | -1,75 | 3,25
-25 | 20 | 15 | 80 | 4 Stunden | 60 | -14,666667 | 5,333333
-26 | 25 | 10 | 70 | 4,5 Stunden | 45 | -18 | 7
-27 | 15 | 15 | 60 | 3 Stunden | 45 | -11 | 4
-28 | 10 | 10 | 70 | 6 Stunden | 60 | -3 | 7
-29 | 25 | 10 | 75 | 5 Stunden | 50 | -17,5 | 7,5
-30 | 20 | 15 | 65 | 3 Stunden | 45 | -15,666667 | 4,333333
-31 | 20 | 10 | 70 | 5 Stunden | 50 | -13 | 7
-32 | 15 | 10 | 70 | 5,5 Stunden | 55 | -8 | 7
-33 | 25 | 15 | 70 | 3 Stunden | 45 | -20,333333 | 4,666667
-34 | 30 | 20 | 70 | 2 Stunden | 40 | -26,5 | 3,5
-35 | 20 | 10 | 80 | 6 Stunden | 60 | -12 | 8
+23 | 30 | 20 | 60 | 1,5 Stunden | 30 | −27 | 3
+24 | 5 | 20 | 65 | 3 Stunden | 60 | −1,75 | 3,25
+25 | 20 | 15 | 80 | 4 Stunden | 60 | −14,666667 | 5,333333
+26 | 25 | 10 | 70 | 4,5 Stunden | 45 | −18 | 7
+27 | 15 | 15 | 60 | 3 Stunden | 45 | −11 | 4
+28 | 10 | 10 | 70 | 6 Stunden | 60 | −3 | 7
+29 | 25 | 10 | 75 | 5 Stunden | 50 | −17,5 | 7,5
+30 | 20 | 15 | 65 | 3 Stunden | 45 | −15,666667 | 4,333333
+31 | 20 | 10 | 70 | 5 Stunden | 50 | −13 | 7
+32 | 15 | 10 | 70 | 5,5 Stunden | 55 | −8 | 7
+33 | 25 | 15 | 70 | 3 Stunden | 45 | −20,333333 | 4,666667
+34 | 30 | 20 | 70 | 2 Stunden | 40 | −26,5 | 3,5
+35 | 20 | 10 | 80 | 6 Stunden | 60 | −12 | 8
 36 | 5 | 10 | 60 | 5,5 Stunden | 55 | 1 | 6
-37 | 20 | 10 | 65 | 4,5 Stunden | 45 | -13,5 | 6,5
-38 | 25 | 20 | 65 | 2 Stunden | 40 | -21,75 | 3,25
-39 | 25 | 10 | 60 | 3,5 Stunden | 35 | -19 | 6
-40 | 15 | 10 | 75 | 6 Stunden | 60 | -7,5 | 7,5
-41 | 30 | 10 | 80 | 5 Stunden | 50 | -22 | 8
-42 | 10 | 10 | 75 | 6,5 Stunden | 65 | -2,5 | 7,5
-43 | 10 | 15 | 70 | 4 Stunden | 60 | -5,333333 | 4,666667
-44 | 15 | 10 | 60 | 4,5 Stunden | 45 | -9 | 6
-45 | 15 | 15 | 75 | 4 Stunden | 60 | -10 | 5
-46 | 10 | 20 | 80 | 3,5 Stunden | 70 | -6 | 4
+37 | 20 | 10 | 65 | 4,5 Stunden | 45 | −13,5 | 6,5
+38 | 25 | 20 | 65 | 2 Stunden | 40 | −21,75 | 3,25
+39 | 25 | 10 | 60 | 3,5 Stunden | 35 | −19 | 6
+40 | 15 | 10 | 75 | 6 Stunden | 60 | −7,5 | 7,5
+41 | 30 | 10 | 80 | 5 Stunden | 50 | −22 | 8
+42 | 10 | 10 | 75 | 6,5 Stunden | 65 | −2,5 | 7,5
+43 | 10 | 15 | 70 | 4 Stunden | 60 | −5,333333 | 4,666667
+44 | 15 | 10 | 60 | 4,5 Stunden | 45 | −9 | 6
+45 | 15 | 15 | 75 | 4 Stunden | 60 | −10 | 5
+46 | 10 | 20 | 80 | 3,5 Stunden | 70 | −6 | 4
 47 | 5 | 10 | 70 | 6,5 Stunden | 65 | 2 | 7
-48 | 20 | 20 | 70 | 2,5 Stunden | 50 | -16,5 | 3,5
-49 | 5 | 15 | 65 | 4 Stunden | 60 | -0,666667 | 4,333333
-50 | 15 | 10 | 65 | 5 Stunden | 50 | -8,5 | 6,5
-51 | 5 | 20 | 75 | 3,5 Stunden | 70 | -1,25 | 3,75
+48 | 20 | 20 | 70 | 2,5 Stunden | 50 | −16,5 | 3,5
+49 | 5 | 15 | 65 | 4 Stunden | 60 | −0,666667 | 4,333333
+50 | 15 | 10 | 65 | 5 Stunden | 50 | −8,5 | 6,5
+51 | 5 | 20 | 75 | 3,5 Stunden | 70 | −1,25 | 3,75
 52 | 5 | 10 | 75 | 7 Stunden | 70 | 2,5 | 7,5
-53 | 10 | 20 | 60 | 2,5 Stunden | 50 | -7 | 3
+53 | 10 | 20 | 60 | 2,5 Stunden | 50 | −7 | 3
 54 | 5 | 15 | 80 | 5 Stunden | 75 | 0,333333 | 5,333333
-55 | 10 | 10 | 65 | 5,5 Stunden | 55 | -3,5 | 6,5
+55 | 10 | 10 | 65 | 5,5 Stunden | 55 | −3,5 | 6,5
 ```
 
 ### Aufgabe umfang-ueben

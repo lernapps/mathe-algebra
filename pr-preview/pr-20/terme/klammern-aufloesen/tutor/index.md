@@ -58,13 +58,13 @@ Klammern auflösen: Plus und Minus vor der Klammer, ein Faktor vor der Klammer m
 
 ### Ein Rechteck in Teile zerlegen
 
-Ein Rechteck kannst du in Teile zerlegen. Die Fläche jedes Teils ist Höhe mal Breite. Zusammen sind es die Fläche des ganzen Rechtecks.
+Wenn ein Term eine Klammer hat, kannst du ihn oft nicht weiter vereinfachen. Erst ohne Klammer geht es weiter. Wie das gelingt, zeigt ein Rechteck. Du kannst es in Teile zerlegen. Die Fläche jedes Teils ist Höhe mal Breite. Zusammen sind es die Fläche des ganzen Rechtecks.
 
 - Aufgabe `rechteck-teile` (unten)
 
 ### Plus oder Minus vor der Klammer
 
-Eine **Klammer auflösen** heißt: Du schreibst den Term ohne Klammer, sein Wert bleibt gleich. Bei einem Plus davor lässt du die Klammer weg. Bei einem Minus dreht sich **jedes** Vorzeichen in der Klammer um.
+Wenn du einen Term mit Klammer vereinfachen willst, musst du erst die Klammer loswerden. Steht vor ihr nur ein Plus oder Minus, geht das so: Eine **Klammer auflösen** heißt: Du schreibst den Term ohne Klammer, sein Wert bleibt gleich. Bei einem Plus davor lässt du die Klammer weg. Bei einem Minus dreht sich **jedes** Vorzeichen in der Klammer um.
 
 $10 - (3 - 1) = 10 - 3 + 1 = 8$
 
@@ -72,7 +72,7 @@ $10 - (3 - 1) = 10 - 3 + 1 = 8$
 
 ### Faktor vor der Klammer
 
-Das Rechteckmodell hilft. Ein Rechteck mit der Höhe $3$ und der Breite $x + 4$ besteht aus zwei Teilen: $3 \cdot x$ und $3 \cdot 4$.
+Wenn du eine Klammer mit einer Zahl davor auflösen willst, hilft das Rechteckmodell: Es zeigt, dass die Zahl für jedes Glied in der Klammer gilt. Ein Rechteck mit der Höhe $3$ und der Breite $x + 4$ besteht aus zwei Teilen: $3 \cdot x$ und $3 \cdot 4$.
 
 Bild: Zwei Rechtecke. Oben: 3(x + 4) = 3x + 12, ein Rechteck mit der Höhe 3, geteilt in die Teile 3x und 12. Unten: 3(x − 2) = 3x − 6, ein Rechteck der Fläche 3x, von dem ein gestrichelter Streifen mit der Fläche 6 abgezogen wird. Bildunterschrift: Oben: Höhe 3, Breite $x + 4$ (blauer Teil $x$, oranger Teil $4$). Die Teilflächen sind $3x$ und $12$. Unten: Bei $x - 2$ wird der gestrichelte Streifen der Breite $2$ abgezogen, es bleibt $3x - 6$.
 
@@ -81,6 +81,8 @@ $a \cdot (b + c) = a \cdot b + a \cdot c$
 Das ist das **Distributivgesetz** (Verteilungsgesetz): Ein Faktor vor der Klammer wird mit **jedem** Glied in der Klammer multipliziert, das Vorzeichen gehört zum Glied: $2 \cdot (x - 5) = 2x - 10$.
 
 ### Beispiel
+
+Kommen beide Fälle in einem Term vor, löst du die Klammern nacheinander auf und fasst danach zusammen.
 
 **Beispiel: Löse die Klammern auf und fasse zusammen: 4(x + 2) − (x − 3)**
 
@@ -94,7 +96,7 @@ Ein Schritt je Zeile, die Begründung steht rechts.:
 
 ### Probe mit Zahlen
 
-Auch hier prüfst du mit der Wertetabelle: Links und rechts muss derselbe Wert herauskommen. So fallen typische Fehler auf.
+Wenn du wissen willst, ob du die Klammern richtig aufgelöst hast, prüfst du mit der Wertetabelle: Links und rechts muss derselbe Wert herauskommen. So fallen typische Fehler auf.
 
 Probe: Wert links und rechts vom Gleichheitszeichen:
 - Umformung | Zahlen | Werte
@@ -103,6 +105,8 @@ Probe: Wert links und rechts vom Gleichheitszeichen:
 - $3(x + 4) = 3x + 4$ | $x = 2$ | 18 und 10
 
 ### Übung
+
+Hier löst du Klammern selbst auf. Du brauchst das, um Terme ohne Klammer weiterzuvereinfachen.
 
 - Aufgabe `minus-vor-klammer` (unten)
 

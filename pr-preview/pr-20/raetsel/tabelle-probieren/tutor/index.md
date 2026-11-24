@@ -58,19 +58,23 @@ Eine gedachte Zahl finden: Du probierst in einer Tabelle Zahlen aus und rechnest
 
 ### Ich denke mir eine Zahl
 
+Manchmal kennst du das Ergebnis einer Rechnung, aber nicht die Zahl, mit der sie anfängt. Dann suchst du eine gedachte Zahl, wie in diesem Rätsel.
+
 - Aufgabe `gedachte-zahl-erkennen` (unten)
 
 ### Die gedachte Zahl heißt x
 
-Für eine Zahl, die du noch nicht kennst, schreibst du einen Buchstaben, meistens $x$. Der Buchstabe steht für die gedachte Zahl: Er ist ein **Platzhalter**. Das Rätsel „Ich denke mir eine Zahl, rechne mal 3 und addiere 4. Das Ergebnis ist 19“ schreibst du so auf: $3 \cdot x + 4 = 19$.
+Damit du ein Rätsel kurz aufschreiben kannst, schreibst du für eine Zahl, die du noch nicht kennst, einen Buchstaben, meistens $x$. Der Buchstabe steht für die gedachte Zahl: Er ist ein **Platzhalter**. Das Rätsel „Ich denke mir eine Zahl, rechne mal 3 und addiere 4. Das Ergebnis ist 19“ schreibst du so auf: $3 \cdot x + 4 = 19$.
 
 - **Gleichung**: Links und rechts vom Gleichheitszeichen steht eine Rechnung, zum Beispiel $3 \cdot x + 4 = 19$. Beide Seiten haben denselben Wert, wenn du die richtige Zahl für $x$ einsetzt. Diese Zahl heißt **Lösung**.
 
-Du findest die Lösung durch **Probieren**: Setze eine Zahl für $x$ ein und rechne die linke Seite aus. Probiere es in der Tabelle: Trag eine Zahl ein. Sie rechnet die linke Seite aus und sagt dir, ob sie kleiner, gleich oder größer ist als die rechte Seite (19).
+Wenn du die Lösung nicht sofort siehst, findest du sie durch **Probieren**: Setze eine Zahl für $x$ ein und rechne die linke Seite aus. Probiere es in der Tabelle: Trag eine Zahl ein. Sie rechnet die linke Seite aus und sagt dir, ob sie kleiner, gleich oder größer ist als die rechte Seite (19).
 
 Interaktiv: Tabelle zum Probieren für 3 · x + 4 = 19. Für x = 2 ist die linke Seite 10: kleiner als 19. Für x = 6 ist sie 22: größer als 19. Für x = 5 ist sie 19: beide Seiten sind gleich. Die Lösung ist 5.
 
 ### Beispiel
+
+Wenn du sehen willst, wie das Probieren Schritt für Schritt zur Lösung führt, hilft eine Tabelle mit allen Versuchen.
 
 **Beispiel: Löse 3 · x + 4 = 19 durch Probieren**
 
@@ -81,9 +85,11 @@ Vier Versuche. Jeder Wert sagt, in welche Richtung du als Nächstes gehst.:
 - 4 | 16 | kleiner
 - 5 | 19 | gleich
 
-Die Lösung ist $x = 5$. Die **Probe** ist das Nachrechnen mit der Lösung: $3 \cdot 5 + 4 = 15 + 4 = 19$. Das stimmt. Ein zweiter Weg ist das **Rückwärtsrechnen**: Das Gegenteil von „plus 4“ ist „minus 4“, das Gegenteil von „mal 3“ ist „geteilt durch 3“. Also $19 - 4 = 15$ und $15 : 3 = 5$. Beide Wege führen zu $x = 5$.
+Die Lösung ist $x = 5$. Willst du sicher sein, dass die Lösung stimmt, machst du die **Probe**, das Nachrechnen mit der Lösung: $3 \cdot 5 + 4 = 15 + 4 = 19$. Das stimmt. Wenn Probieren zu lange dauern würde, etwa bei großen Zahlen, rechnest du **rückwärts**: Das Gegenteil von „plus 4“ ist „minus 4“, das Gegenteil von „mal 3“ ist „geteilt durch 3“. Also $19 - 4 = 15$ und $15 : 3 = 5$. Beide Wege führen zu $x = 5$.
 
 ### Übung
+
+Beim Probieren sagt dir der Vergleich, in welche Richtung du weitergehst. Das brauchst du, um mit wenigen Versuchen zur Lösung zu kommen.
 
 - Aufgabe `naechste-zahl-waehlen` (unten)
 
@@ -318,25 +324,25 @@ Nr. | a | c | Lösung | F1
 Nr. | a | b | c | Lösung | F1 | F2
 1 | 6 | 9 | 93 | 14 | 84 | 6,5
 2 | 2 | 25 | 99 | 37 | 74 | 24,5
-3 | 9 | 18 | 99 | 9 | 81 | -7
+3 | 9 | 18 | 99 | 9 | 81 | −7
 4 | 2 | 12 | 48 | 18 | 36 | 12
 5 | 2 | 7 | 73 | 33 | 66 | 29,5
 6 | 3 | 18 | 66 | 16 | 48 | 4
 7 | 2 | 6 | 48 | 21 | 42 | 18
-8 | 9 | 22 | 40 | 2 | 18 | -17,555556
-9 | 3 | 17 | 47 | 10 | 30 | -1,333333
+8 | 9 | 22 | 40 | 2 | 18 | −17,555556
+9 | 3 | 17 | 47 | 10 | 30 | −1,333333
 10 | 4 | 5 | 25 | 5 | 20 | 1,25
-11 | 6 | 18 | 60 | 7 | 42 | -8
+11 | 6 | 18 | 60 | 7 | 42 | −8
 12 | 3 | 13 | 40 | 9 | 27 | 0,333333
-13 | 6 | 22 | 82 | 10 | 60 | -8,333333
+13 | 6 | 22 | 82 | 10 | 60 | −8,333333
 14 | 4 | 6 | 34 | 7 | 28 | 2,5
-15 | 3 | 23 | 53 | 10 | 30 | -5,333333
+15 | 3 | 23 | 53 | 10 | 30 | −5,333333
 16 | 4 | 8 | 92 | 21 | 84 | 15
-17 | 7 | 11 | 74 | 9 | 63 | -0,428571
+17 | 7 | 11 | 74 | 9 | 63 | −0,428571
 18 | 3 | 2 | 44 | 14 | 42 | 12,666667
-19 | 3 | 24 | 45 | 7 | 21 | -9
+19 | 3 | 24 | 45 | 7 | 21 | −9
 20 | 3 | 5 | 74 | 23 | 69 | 19,666667
-21 | 8 | 7 | 47 | 5 | 40 | -1,125
+21 | 8 | 7 | 47 | 5 | 40 | −1,125
 22 | 4 | 6 | 38 | 8 | 32 | 3,5
 23 | 3 | 3 | 84 | 27 | 81 | 25
 24 | 3 | 4 | 46 | 14 | 42 | 11,333333
@@ -346,31 +352,31 @@ Nr. | a | b | c | Lösung | F1 | F2
 28 | 2 | 25 | 87 | 31 | 62 | 18,5
 29 | 2 | 21 | 91 | 35 | 70 | 24,5
 30 | 4 | 2 | 50 | 12 | 48 | 10,5
-31 | 4 | 9 | 33 | 6 | 24 | -0,75
-32 | 8 | 20 | 100 | 10 | 80 | -7,5
+31 | 4 | 9 | 33 | 6 | 24 | −0,75
+32 | 8 | 20 | 100 | 10 | 80 | −7,5
 33 | 2 | 2 | 58 | 28 | 56 | 27
-34 | 5 | 24 | 79 | 11 | 55 | -8,2
-35 | 5 | 15 | 70 | 11 | 55 | -1
+34 | 5 | 24 | 79 | 11 | 55 | −8,2
+35 | 5 | 15 | 70 | 11 | 55 | −1
 36 | 2 | 19 | 75 | 28 | 56 | 18,5
 37 | 6 | 3 | 27 | 4 | 24 | 1,5
 38 | 2 | 14 | 50 | 18 | 36 | 11
-39 | 6 | 21 | 87 | 11 | 66 | -6,5
+39 | 6 | 21 | 87 | 11 | 66 | −6,5
 40 | 4 | 8 | 80 | 18 | 72 | 12
 41 | 4 | 12 | 84 | 18 | 72 | 9
 42 | 2 | 19 | 69 | 25 | 50 | 15,5
-43 | 5 | 8 | 33 | 5 | 25 | -1,4
+43 | 5 | 8 | 33 | 5 | 25 | −1,4
 44 | 6 | 6 | 60 | 9 | 54 | 4
-45 | 9 | 14 | 32 | 2 | 18 | -10,444444
+45 | 9 | 14 | 32 | 2 | 18 | −10,444444
 46 | 5 | 5 | 70 | 13 | 65 | 9
 47 | 2 | 14 | 100 | 43 | 86 | 36
 48 | 4 | 18 | 86 | 17 | 68 | 3,5
-49 | 7 | 22 | 85 | 9 | 63 | -9,857143
+49 | 7 | 22 | 85 | 9 | 63 | −9,857143
 50 | 5 | 15 | 90 | 15 | 75 | 3
-51 | 7 | 6 | 20 | 2 | 14 | -3,142857
+51 | 7 | 6 | 20 | 2 | 14 | −3,142857
 52 | 2 | 6 | 22 | 8 | 16 | 5
 53 | 2 | 15 | 43 | 14 | 28 | 6,5
-54 | 4 | 21 | 37 | 4 | 16 | -11,75
-55 | 6 | 20 | 56 | 6 | 36 | -10,666667
+54 | 4 | 21 | 37 | 4 | 16 | −11,75
+55 | 6 | 20 | 56 | 6 | 36 | −10,666667
 56 | 3 | 20 | 83 | 21 | 63 | 7,666667
 57 | 6 | 9 | 87 | 13 | 78 | 5,5
 58 | 2 | 5 | 99 | 47 | 94 | 44,5
@@ -381,6 +387,6 @@ Nr. | a | b | c | Lösung | F1 | F2
 63 | 2 | 25 | 67 | 21 | 42 | 8,5
 64 | 2 | 2 | 46 | 22 | 44 | 21
 65 | 2 | 16 | 50 | 17 | 34 | 9
-66 | 7 | 16 | 44 | 4 | 28 | -9,714286
-67 | 4 | 22 | 30 | 2 | 8 | -14,5
+66 | 7 | 16 | 44 | 4 | 28 | −9,714286
+67 | 4 | 22 | 30 | 2 | 8 | −14,5
 ```

@@ -58,11 +58,13 @@ Formeln aus Geometrie und Physik nach einer Größe umstellen: erst mit Zahlen, 
 
 ### Erst mit Zahlen
 
+Oft kennst du von einer Formel alle Größen bis auf eine und willst genau diese ausrechnen. Dafür musst du die Formel nach der gesuchten Größe umstellen. Zuerst siehst du das an einer Aufgabe mit Zahlen.
+
 - Aufgabe `rechteck-seite-a` (unten)
 
 ### Derselbe Weg mit Buchstaben
 
-Eine **Formel** ist eine Gleichung mit Buchstaben. Die Buchstaben stehen für Zahlen. Darum stellst du eine Formel um wie eine Gleichung mit Zahlen: Du tust auf beiden Seiten dasselbe. Probiere es an der Waage mit den Zahlen von eben.
+Willst du dieselbe Rechnung für viele Zahlen nutzen, ohne jedes Mal neu zu überlegen, stellst du die Formel einmal mit Buchstaben um. Eine **Formel** ist eine Gleichung mit Buchstaben. Die Buchstaben stehen für Zahlen. Darum stellst du eine Formel um wie eine Gleichung mit Zahlen: Du tust auf beiden Seiten dasselbe. Probiere es an der Waage mit den Zahlen von eben.
 
 Interaktiv: Waage für 20 = 2 · a + 8. Auf beiden Seiten 8 abziehen: 12 = 2 · a. Beide Seiten durch 2 teilen: a = 6.
 
@@ -83,7 +85,7 @@ $a = (U - 2b) : 2 \quad \text{oder} \quad a = \frac{U - 2b}{2}$
 
 ### Mit Einheiten
 
-In Formeln aus der Physik hat jede Größe eine Einheit, und die Einheit rechnest du mit. Für die Gewichtskraft gilt $F = m \cdot g$. Wir runden den Ortsfaktor auf $g = 10\,\frac{\text{N}}{\text{kg}}$.
+Willst du aus einer Formel der Physik eine Größe mit Einheit ausrechnen, rechnest du die Einheit mit. Für die Gewichtskraft gilt $F = m \cdot g$. Wir runden den Ortsfaktor auf $g = 10\,\frac{\text{N}}{\text{kg}}$.
 
 **Beispiel: Welche Masse hat ein Körper?**
 
@@ -96,6 +98,8 @@ $m = 45\,\text{N} : 10\,\frac{\text{N}}{\text{kg}} = 4{,}5\,\text{kg}$
 Bei der Dichte $\rho = m : V$ ist es genauso: Willst du die Masse, rechnest du auf beiden Seiten mal $V$. Es entsteht $m = \rho \cdot V$.
 
 ### Übung
+
+Hier stellst du Formeln um und rechnest mit der umgestellten Formel.
 
 - Aufgabe `formeln-zuordnen` (unten)
 

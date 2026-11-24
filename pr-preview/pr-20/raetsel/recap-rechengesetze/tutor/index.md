@@ -35,9 +35,11 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 ## Wo das Kind gerade ist
 
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?uebung=recap-punkt-vor-strich`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
 - Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
 - Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
 - „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/raetsel/recap-rechengesetze/?via=tutor#recap-punkt-vor-strich`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
 
 ## Besondere Anforderungen
 
@@ -52,11 +54,11 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 ## Kontext: die Seite „Das brauchst du für dieses Kapitel“
 
-Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat keine Aufgabe. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/mathematik/c/grundrechenarten-rechengesetze/
+Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat höchstens zwei Aufgaben zur Kontrolle. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/mathematik/c/grundrechenarten-rechengesetze/
 
 Kurze Wiederholung zu Klammern, Punkt vor Strich und den Rechengesetzen, mit zwei Kurztests, damit du siehst, ob du bereit bist.
 
-Das brauchst du für dieses Kapitel: Du löst Zahlenrätsel und rechnest dabei vor und zurück. Dafür musst du sicher mit Klammern, Punkt vor Strich und den Rechengesetzen umgehen. Ein Baustein ist ein Thema auf der Lernlandkarte. Dieser Baustein heißt „Vorrangregeln und Rechengesetze“: Ich kann Klammern und Vorrangregeln beachten und Rechengesetze für vorteilhaftes Rechnen nutzen.
+Du löst Zahlenrätsel und rechnest dabei vor und zurück. Dafür musst du sicher mit Klammern, Punkt vor Strich und den Rechengesetzen umgehen. Ein Baustein ist ein Thema auf der Lernlandkarte. Dieser Baustein heißt „Vorrangregeln und Rechengesetze“: Ich kann Klammern und Vorrangregeln beachten und Rechengesetze für vorteilhaftes Rechnen nutzen.
 
 ### Vorrangregeln und Rechengesetze
 
@@ -64,7 +66,7 @@ Das brauchst du für dieses Kapitel: Du löst Zahlenrätsel und rechnest dabei v
 
 - **Klammer**: Was in einer Klammer steht, rechnest du zuerst. Beispiel: $(3 + 4) \cdot 5 = 7 \cdot 5 = 35$.
 
-Interaktiv: Kurztest: Was ist 24 − 6 · 3 + 8 : 2? 10, 31 oder 14. Antwort: 10, denn erst 6 · 3 = 18 und 8 : 2 = 4, dann 24 − 18 + 4 = 10 (Punkt vor Strich).
+- Aufgabe `recap-punkt-vor-strich` (unten)
 
 - **Kommutativgesetz**: Das Vertauschungsgesetz: Beim Plus und beim Malnehmen darfst du die Zahlen vertauschen. Beispiel: $4 \cdot 25 = 25 \cdot 4$. Beim Minus und beim Teilen geht das nicht: $7 - 3$ ist nicht $3 - 7$.
 
@@ -76,11 +78,35 @@ Interaktiv: Kurztest: Was ist 24 − 6 · 3 + 8 : 2? 10, 31 oder 14. Antwort: 10
 
 Vertausche und fasse zusammen: $4 \cdot 27 \cdot 25 = 27 \cdot (4 \cdot 25) = 27 \cdot 100 = 2700$.
 
-Interaktiv: Kurztest: Wie rechnest du 7 · 98 geschickt im Kopf? Antwort: 7 · 100 − 7 · 2, denn 98 = 100 − 2 (Distributivgesetz), also 700 − 14 = 686.
+- Aufgabe `recap-verteilen` (unten)
 
 Wenn du dich vertan hast, wiederhole den Baustein „Vorrangregeln und Rechengesetze“ auf seiner Seite der Lernlandkarte: [Vorrangregeln und Rechengesetze](https://lernapps.net/apps/map/mathematik/c/grundrechenarten-rechengesetze/).
 
-**Merke: Du bist bereit, wenn du …**
+**Merke: Du bist bereit, wenn du das kannst**
 
 - Ich kann Klammern zuerst rechnen und Punkt vor Strich beachten.
 - Ich kann mit den Rechengesetzen vorteilhaft rechnen, zum Beispiel $4 \cdot 27 \cdot 25$ im Kopf.
+
+### Aufgabe recap-punkt-vor-strich
+
+- Aufgabe: Was ist 24 − 6 · 3 + 8 : 2?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ 10 – Erst Punkt vor Strich: 6 · 3 = 18 und 8 : 2 = 4. Dann 24 − 18 + 4 = 10.
+  - ✗ 31 – Du hast von links nach rechts gerechnet. Malnehmen und Teilen kommen vor Plus und Minus.
+  - ✗ 14 – Du hast 8 : 2 nicht ausgerechnet, sondern 8 addiert. Es sind 4.
+- Lösung: 10
+- Erklärung: Erst Punkt vor Strich: 6 · 3 = 18 und 8 : 2 = 4. Dann 24 − 18 + 4 = 10.
+- Link: [../?via=tutor#recap-punkt-vor-strich](../?via=tutor#recap-punkt-vor-strich)
+
+### Aufgabe recap-verteilen
+
+- Aufgabe: Wie rechnest du 7 · 98 geschickt im Kopf?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ 7 · 100 − 7 · 2 – 98 = 100 − 2, also 7 · 98 = 700 − 14 = 686 (Distributivgesetz).
+  - ✗ 7 · 100 − 2 – Der Faktor 7 gehört auch zur 2: 7 · 98 = 7 · 100 − 7 · 2. Sonst sind es 12 zu viel.
+  - ✗ 7 · 90 + 8 – 98 = 90 + 8, aber dann musst du 7 · 90 + 7 · 8 rechnen, nicht nur 7 · 90 + 8.
+- Lösung: 7 · 100 − 7 · 2
+- Erklärung: 98 = 100 − 2, also 7 · 98 = 700 − 14 = 686 (Distributivgesetz).
+- Link: [../?via=tutor#recap-verteilen](../?via=tutor#recap-verteilen)

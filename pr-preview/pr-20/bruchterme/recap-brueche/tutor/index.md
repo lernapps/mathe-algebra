@@ -35,9 +35,11 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 ## Wo das Kind gerade ist
 
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?uebung=recap-kuerzen`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
 - Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
 - Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
 - „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/bruchterme/recap-brueche/?via=tutor#recap-kuerzen`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
 
 ## Besondere Anforderungen
 
@@ -52,11 +54,11 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 ## Kontext: die Seite „Das brauchst du für dieses Kapitel“
 
-Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat keine Aufgabe. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/mathematik/c/brueche-kuerzen-erweitern/, https://lernapps.net/apps/map/mathematik/c/brueche-multiplizieren-dividieren/
+Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat höchstens zwei Aufgaben zur Kontrolle. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/mathematik/c/brueche-kuerzen-erweitern/, https://lernapps.net/apps/map/mathematik/c/brueche-multiplizieren-dividieren/
 
 Kurze Wiederholung zum Kürzen und Erweitern von Brüchen und zum Malnehmen und Teilen von Brüchen, mit zwei Kurztests.
 
-Das brauchst du für dieses Kapitel: Bruchterme behandelst du wie Brüche, nur mit Variablen im Zähler und im Nenner. Dafür musst du Brüche sicher kürzen, erweitern, malnehmen und teilen können. Ein Baustein ist ein Thema auf der Lernlandkarte. Die Bausteine heißen auf der Lernlandkarte „Brüche kürzen und erweitern“ und „Bruchrechnung: Multiplikation und Division“.
+Bruchterme behandelst du wie Brüche, nur mit Variablen im Zähler und im Nenner. Dafür musst du Brüche sicher kürzen, erweitern, malnehmen und teilen können. Ein Baustein ist ein Thema auf der Lernlandkarte. Die Bausteine heißen auf der Lernlandkarte „Brüche kürzen und erweitern“ und „Bruchrechnung: Multiplikation und Division“.
 
 ### Brüche kürzen und erweitern
 
@@ -68,7 +70,7 @@ Ich kann Brüche kürzen und erweitern und der Größe nach vergleichen.
 
 - **Hauptnenner**: Der kleinste gemeinsame Nenner von Brüchen. Du erweiterst die Brüche, bis die Nenner gleich sind, und rechnest dann mit den Zählern. Beispiel: $\frac{1}{2} + \frac{1}{3} = \frac{3}{6} + \frac{2}{6} = \frac{5}{6}$.
 
-Interaktiv: Kurztest: Kürze 48/84 so weit wie möglich. 4/7, 24/42 oder 12/21. Antwort: 4/7, denn Zähler und Nenner werden durch 12 geteilt.
+- Aufgabe `recap-kuerzen` (unten)
 
 Wenn du dich vertan hast, wiederhole den Baustein „Brüche kürzen und erweitern“ auf seiner Seite der Lernlandkarte: [Brüche kürzen und erweitern](https://lernapps.net/apps/map/mathematik/c/brueche-kuerzen-erweitern/).
 
@@ -80,11 +82,35 @@ Ich kann Brüche multiplizieren und dividieren.
 
 - **Kehrwert**: Der Bruch mit vertauschtem Zähler und Nenner. Beispiel: Der Kehrwert von $\frac{2}{3}$ ist $\frac{3}{2}$. Durch einen Bruch teilst du, indem du mit seinem Kehrwert malnimmst: $\frac{1}{2} : \frac{3}{4} = \frac{1}{2} \cdot \frac{4}{3} = \frac{4}{6} = \frac{2}{3}$.
 
-Interaktiv: Kurztest: Was ist 3/4 : 9/8? 2/3, 27/32 oder 3/2. Antwort: 2/3, denn durch 9/8 teilen heißt mit 8/9 malnehmen: 3/4 · 8/9 = 24/36 = 2/3.
+- Aufgabe `recap-teilen` (unten)
 
 Wenn du dich vertan hast, wiederhole den Baustein „Bruchrechnung: Multiplikation und Division“ auf seiner Seite der Lernlandkarte: [Bruchrechnung: Multiplikation und Division](https://lernapps.net/apps/map/mathematik/c/brueche-multiplizieren-dividieren/).
 
-**Merke: Du bist bereit, wenn du …**
+**Merke: Du bist bereit, wenn du das kannst**
 
 - Ich kann einen Bruch kürzen und erweitern, ohne seinen Wert zu ändern.
 - Ich kann Brüche malnehmen und durch einen Bruch teilen, indem ich mit dem Kehrwert malnehme.
+
+### Aufgabe recap-kuerzen
+
+- Aufgabe: Kürze 48/84 so weit wie möglich. Welcher Bruch bleibt?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ 4/7 – Teile durch 12: 48 : 12 = 4 und 84 : 12 = 7. Mehr geht nicht, denn 4 und 7 haben keinen gemeinsamen Teiler.
+  - ✗ 24/42 – Das ist erst durch 2 gekürzt. Beide Zahlen lassen sich noch weiter durch 6 teilen.
+  - ✗ 12/21 – Das ist durch 4 gekürzt. 12 und 21 haben noch den gemeinsamen Teiler 3.
+- Lösung: 4/7
+- Erklärung: Teile durch 12: 48 : 12 = 4 und 84 : 12 = 7. Mehr geht nicht, denn 4 und 7 haben keinen gemeinsamen Teiler.
+- Link: [../?via=tutor#recap-kuerzen](../?via=tutor#recap-kuerzen)
+
+### Aufgabe recap-teilen
+
+- Aufgabe: Was ist 3/4 : 9/8?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ 2/3 – Durch 9/8 teilen heißt mit 8/9 malnehmen: 3/4 · 8/9 = 24/36 = 2/3.
+  - ✗ 27/32 – Das ist 3/4 · 9/8. Beim Teilen musst du den Kehrwert des zweiten Bruchs nehmen.
+  - ✗ 3/2 – Du hast die Zähler und die Nenner einzeln geteilt: 3 : 9 und 4 : 8 ergibt nicht 2/3. Rechne 3/4 mal den Kehrwert 8/9 von 9/8.
+- Lösung: 2/3
+- Erklärung: Durch 9/8 teilen heißt mit 8/9 malnehmen: 3/4 · 8/9 = 24/36 = 2/3.
+- Link: [../?via=tutor#recap-teilen](../?via=tutor#recap-teilen)

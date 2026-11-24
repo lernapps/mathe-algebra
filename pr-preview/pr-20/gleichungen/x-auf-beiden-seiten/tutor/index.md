@@ -58,19 +58,21 @@ Gleichungen mit x links und rechts lösen: Du sammelst zuerst alle x auf einer S
 
 ### Päckchen links und rechts
 
-Ein Päckchen ist das $x$: Es enthält überall gleich viele Gewichte. Bis jetzt lagen Päckchen nur auf einer Schale. Jetzt liegen sie auf beiden. Dann **sammelst** du zuerst die Päckchen auf einer Seite: Du nimmst auf beiden Seiten gleich viele Päckchen weg.
+Steht in einer Gleichung das $x$ links und rechts, weißt du nicht, womit du anfangen sollst. Dann **sammelst** du zuerst die $x$ auf einer Seite. Ein Päckchen ist das $x$: Es enthält überall gleich viele Gewichte. Du nimmst auf beiden Seiten gleich viele Päckchen weg.
 
-Jetzt liegen Päckchen auf beiden Schalen: $3 \cdot x + 2 = x + 8$. **Weg 1:** Probiere in der Tabelle. Beide Seiten hängen von $x$ ab. Achte darauf, ob der Unterschied zwischen links und rechts kleiner wird.
+Zwei Wege führen zur Lösung von $3 \cdot x + 2 = x + 8$. **Weg 1:** Probiere in der Tabelle. Er passt, wenn du die Lösung schätzen kannst. Beide Seiten hängen von $x$ ab. Achte darauf, ob der Unterschied zwischen links und rechts kleiner wird.
 
 Interaktiv: Tabelle zum Probieren für 3 · x + 2 = x + 8. Für x = 1 ist links 5 und rechts 9: links ist kleiner. Für x = 5 ist links 17 und rechts 13: links ist größer. Für x = 3 ist links 11 und rechts 11: beide Seiten sind gleich. Die Lösung ist 3.
 
-**Weg 2:** Die Waage. Sammle zuerst alle Päckchen auf einer Seite: Nimm auf beiden Seiten gleich viele weg. Dann sind es wieder die Schritte von vorher.
+**Weg 2:** Die Waage. Sie passt, wenn du ohne Raten ans Ziel willst. Sammle zuerst alle Päckchen auf einer Seite: Nimm auf beiden Seiten gleich viele weg. Danach steht x nur noch auf einer Seite, und du löst wie bei einer gewöhnlichen Gleichung.
 
 Interaktiv: Waage für 3 · x + 2 = x + 8. Auf beiden Seiten ein Päckchen wegnehmen: 2 · x + 2 = 8. Auf beiden Seiten 2 Gewichte wegnehmen: 2 · x = 6. Beide Seiten durch 2 teilen: x = 3.
 
 Beide Wege geben $x = 3$. Zur Probe setzt du 3 links und rechts ein: $3 \cdot 3 + 2 = 11$ und $3 + 8 = 11$. Die Tabelle sagt dir nur, ob du triffst. Das Umformen führt dich ohne Raten ans Ziel.
 
 ### Erst x sammeln
+
+Damit du Gleichungen mit $x$ auf beiden Seiten sicher löst, brauchst du eine feste Reihenfolge der Schritte.
 
 **Beispiel: Löse 5 · x − 4 = 2 · x + 11**
 
@@ -89,7 +91,7 @@ Erst die $x$ auf eine Seite sammeln, dann die Zahlen auf die andere Seite bringe
 
 ### Wenn das x verschwindet
 
-Manchmal bleiben beim Sammeln keine Päckchen übrig. Probiere $2 \cdot x + 3 = 2 \cdot x + 7$ in der Tabelle: Was fällt dir auf?
+Nicht jede Gleichung hat genau eine Lösung. Du willst wissen, woran du das erkennst. Manchmal bleiben beim Sammeln keine Päckchen übrig. Probiere $2 \cdot x + 3 = 2 \cdot x + 7$ in der Tabelle: Was fällt dir auf?
 
 Interaktiv: Tabelle zum Probieren für 2 · x + 3 = 2 · x + 7. Für jede Zahl ist links 4 weniger als rechts: Für x = 1 steht 5 &lt; 9, für x = 4 steht 11 &lt; 15. Beide Seiten sind nie gleich.
 
@@ -102,6 +104,8 @@ Was nach dem Sammeln der x übrig bleibt, sagt dir die Lösung.:
 Ist die Aussage am Ende falsch, gibt es **keine Lösung**: Egal welche Zahl du einsetzt, links und rechts bleiben verschieden. Ist sie immer wahr, ist **jede Zahl** eine Lösung. Hier hilft dir die Tabelle: Du siehst, dass der Unterschied immer gleich bleibt.
 
 ### Übung
+
+Hier übst du das Sammeln der $x$ und erkennst, wie viele Lösungen eine Gleichung hat.
 
 - Aufgabe `x-nur-links` (unten)
 
@@ -258,10 +262,10 @@ Nr. | a | b | c | d | Lösung | F1 | F2
 4 | 7 | 7 | 3 | 25 | 8 | 4,5 | 4,571429
 5 | 8 | 11 | 2 | 19 | 5 | 1,333333 | 3,75
 6 | 3 | 9 | 2 | 25 | 34 | 16 | 11,333333
-7 | 7 | 8 | 4 | 7 | 5 | -0,333333 | 2,142857
+7 | 7 | 8 | 4 | 7 | 5 | −0,333333 | 2,142857
 8 | 6 | 11 | 4 | 17 | 14 | 3 | 4,666667
-9 | 5 | 10 | 3 | 4 | 7 | -3 | 2,8
-10 | 3 | 9 | 1 | 5 | 7 | -2 | 4,666667
+9 | 5 | 10 | 3 | 4 | 7 | −3 | 2,8
+10 | 3 | 9 | 1 | 5 | 7 | −2 | 4,666667
 11 | 7 | 2 | 2 | 23 | 5 | 4,2 | 3,571429
 12 | 9 | 10 | 2 | 18 | 4 | 1,142857 | 3,111111
 13 | 5 | 9 | 4 | 27 | 36 | 18 | 7,2
@@ -271,7 +275,7 @@ Nr. | a | b | c | d | Lösung | F1 | F2
 17 | 3 | 10 | 1 | 22 | 16 | 6 | 10,666667
 18 | 6 | 6 | 1 | 19 | 5 | 2,6 | 4,166667
 19 | 7 | 4 | 3 | 20 | 6 | 4 | 3,428571
-20 | 5 | 11 | 2 | 7 | 6 | -1,333333 | 3,6
+20 | 5 | 11 | 2 | 7 | 6 | −1,333333 | 3,6
 21 | 3 | 5 | 2 | 28 | 33 | 23 | 11
 22 | 7 | 1 | 1 | 5 | 1 | 0,666667 | 0,857143
 23 | 4 | 12 | 1 | 12 | 8 | 0 | 6
@@ -280,7 +284,7 @@ Nr. | a | b | c | d | Lösung | F1 | F2
 26 | 4 | 1 | 3 | 11 | 12 | 10 | 3
 27 | 5 | 11 | 4 | 21 | 32 | 10 | 6,4
 28 | 9 | 6 | 2 | 8 | 2 | 0,285714 | 1,555556
-29 | 9 | 3 | 4 | 2 | 1 | -0,2 | 0,555556
+29 | 9 | 3 | 4 | 2 | 1 | −0,2 | 0,555556
 30 | 3 | 12 | 2 | 23 | 35 | 11 | 11,666667
 31 | 6 | 6 | 4 | 20 | 13 | 7 | 4,333333
 32 | 3 | 12 | 2 | 30 | 42 | 18 | 14
@@ -296,7 +300,7 @@ Nr. | a | b | c | d | Lösung | F1 | F2
 42 | 5 | 1 | 3 | 3 | 2 | 1 | 0,8
 43 | 6 | 5 | 4 | 23 | 14 | 9 | 4,666667
 44 | 5 | 5 | 4 | 11 | 16 | 6 | 3,2
-45 | 5 | 12 | 4 | 5 | 17 | -7 | 3,4
+45 | 5 | 12 | 4 | 5 | 17 | −7 | 3,4
 46 | 3 | 5 | 1 | 23 | 14 | 9 | 9,333333
 47 | 4 | 4 | 3 | 11 | 15 | 7 | 3,75
 48 | 7 | 4 | 1 | 26 | 5 | 3,666667 | 4,285714
@@ -309,16 +313,16 @@ Nr. | a | b | c | d | Lösung | F1 | F2
 55 | 6 | 9 | 2 | 27 | 9 | 4,5 | 6
 56 | 5 | 9 | 3 | 27 | 18 | 9 | 7,2
 57 | 6 | 5 | 1 | 10 | 3 | 1 | 2,5
-58 | 8 | 11 | 2 | 7 | 3 | -0,666667 | 2,25
-59 | 9 | 7 | 3 | 5 | 2 | -0,333333 | 1,333333
-60 | 5 | 8 | 4 | 5 | 13 | -3 | 2,6
-61 | 5 | 4 | 4 | 3 | 7 | -1 | 1,4
+58 | 8 | 11 | 2 | 7 | 3 | −0,666667 | 2,25
+59 | 9 | 7 | 3 | 5 | 2 | −0,333333 | 1,333333
+60 | 5 | 8 | 4 | 5 | 13 | −3 | 2,6
+61 | 5 | 4 | 4 | 3 | 7 | −1 | 1,4
 62 | 5 | 5 | 4 | 23 | 28 | 18 | 5,6
 63 | 4 | 5 | 3 | 9 | 14 | 4 | 3,5
-64 | 5 | 6 | 4 | 3 | 9 | -3 | 1,8
+64 | 5 | 6 | 4 | 3 | 9 | −3 | 1,8
 65 | 6 | 7 | 3 | 11 | 6 | 1,333333 | 3
 66 | 8 | 2 | 4 | 14 | 4 | 3 | 2
-67 | 3 | 5 | 1 | 3 | 4 | -1 | 2,666667
+67 | 3 | 5 | 1 | 3 | 4 | −1 | 2,666667
 ```
 
 ### Aufgabe beide-seiten-rechts
@@ -337,71 +341,71 @@ Nr. | a | b | c | d | Lösung | F1 | F2
 
 ```
 Nr. | a | b | c | d | Lösung | F1 | F2
-1 | 1 | 40 | 8 | 5 | 5 | -5 | 4,375
-2 | 3 | 12 | 5 | 4 | 4 | -4 | 1,6
-3 | 3 | 48 | 5 | 10 | 19 | -19 | 7,6
-4 | 3 | 15 | 5 | 7 | 4 | -4 | 1,6
-5 | 2 | 43 | 4 | 3 | 20 | -20 | 10
-6 | 3 | 18 | 4 | 7 | 11 | -11 | 2,75
-7 | 2 | 32 | 5 | 2 | 10 | -10 | 6
-8 | 4 | 36 | 9 | 6 | 6 | -6 | 3,333333
-9 | 3 | 40 | 4 | 1 | 39 | -39 | 9,75
-10 | 1 | 24 | 8 | 3 | 3 | -3 | 2,625
-11 | 2 | 50 | 5 | 2 | 16 | -16 | 9,6
-12 | 1 | 20 | 4 | 8 | 4 | -4 | 3
-13 | 1 | 15 | 7 | 9 | 1 | -1 | 0,857143
-14 | 3 | 12 | 5 | 10 | 1 | -1 | 0,4
-15 | 4 | 23 | 6 | 3 | 10 | -10 | 3,333333
-16 | 3 | 34 | 6 | 4 | 10 | -10 | 5
-17 | 3 | 42 | 4 | 7 | 35 | -35 | 8,75
-18 | 3 | 44 | 6 | 8 | 12 | -12 | 6
-19 | 2 | 12 | 3 | 2 | 10 | -10 | 3,333333
-20 | 3 | 24 | 5 | 2 | 11 | -11 | 4,4
-21 | 3 | 47 | 8 | 2 | 9 | -9 | 5,625
-22 | 1 | 12 | 4 | 3 | 3 | -3 | 2,25
-23 | 1 | 25 | 6 | 10 | 3 | -3 | 2,5
-24 | 3 | 17 | 4 | 8 | 9 | -9 | 2,25
-25 | 2 | 12 | 3 | 1 | 11 | -11 | 3,666667
-26 | 2 | 48 | 7 | 3 | 9 | -9 | 6,428571
-27 | 3 | 25 | 6 | 10 | 5 | -5 | 2,5
-28 | 2 | 36 | 7 | 6 | 6 | -6 | 4,285714
-29 | 1 | 21 | 5 | 9 | 3 | -3 | 2,4
-30 | 2 | 26 | 5 | 8 | 6 | -6 | 3,6
-31 | 3 | 30 | 4 | 8 | 22 | -22 | 5,5
-32 | 2 | 33 | 3 | 6 | 27 | -27 | 9
-33 | 4 | 34 | 7 | 10 | 8 | -8 | 3,428571
-34 | 1 | 16 | 6 | 1 | 3 | -3 | 2,5
-35 | 2 | 36 | 5 | 3 | 11 | -11 | 6,6
-36 | 1 | 42 | 4 | 3 | 13 | -13 | 9,75
-37 | 3 | 27 | 9 | 3 | 4 | -4 | 2,666667
-38 | 3 | 31 | 7 | 7 | 6 | -6 | 3,428571
-39 | 1 | 46 | 9 | 6 | 5 | -5 | 4,444444
-40 | 4 | 13 | 6 | 3 | 5 | -5 | 1,666667
-41 | 4 | 21 | 5 | 9 | 12 | -12 | 2,4
-42 | 4 | 18 | 7 | 3 | 5 | -5 | 2,142857
-43 | 1 | 23 | 4 | 5 | 6 | -6 | 4,5
-44 | 4 | 47 | 6 | 5 | 21 | -21 | 7
-45 | 2 | 24 | 3 | 8 | 16 | -16 | 5,333333
-46 | 2 | 50 | 8 | 2 | 8 | -8 | 6
-47 | 3 | 19 | 4 | 2 | 17 | -17 | 4,25
-48 | 3 | 29 | 5 | 7 | 11 | -11 | 4,4
-49 | 1 | 37 | 3 | 7 | 15 | -15 | 10
-50 | 4 | 18 | 5 | 7 | 11 | -11 | 2,2
-51 | 4 | 19 | 5 | 10 | 9 | -9 | 1,8
-52 | 2 | 34 | 3 | 9 | 25 | -25 | 8,333333
-53 | 3 | 36 | 4 | 10 | 26 | -26 | 6,5
-54 | 4 | 44 | 7 | 2 | 14 | -14 | 6
-55 | 3 | 48 | 4 | 5 | 43 | -43 | 10,75
-56 | 2 | 25 | 3 | 8 | 17 | -17 | 5,666667
-57 | 4 | 33 | 9 | 3 | 6 | -6 | 3,333333
-58 | 4 | 38 | 5 | 4 | 34 | -34 | 6,8
-59 | 3 | 12 | 7 | 8 | 1 | -1 | 0,571429
-60 | 4 | 29 | 5 | 2 | 27 | -27 | 5,4
-61 | 1 | 13 | 3 | 3 | 5 | -5 | 3,333333
-62 | 1 | 29 | 6 | 4 | 5 | -5 | 4,166667
-63 | 1 | 16 | 4 | 7 | 3 | -3 | 2,25
-64 | 3 | 44 | 4 | 7 | 37 | -37 | 9,25
-65 | 4 | 13 | 5 | 8 | 5 | -5 | 1
-66 | 4 | 24 | 5 | 3 | 21 | -21 | 4,2
-67 | 1 | 26 | 5 | 2 | 6 | -6 | 4,8
+1 | 1 | 40 | 8 | 5 | 5 | −5 | 4,375
+2 | 3 | 12 | 5 | 4 | 4 | −4 | 1,6
+3 | 3 | 48 | 5 | 10 | 19 | −19 | 7,6
+4 | 3 | 15 | 5 | 7 | 4 | −4 | 1,6
+5 | 2 | 43 | 4 | 3 | 20 | −20 | 10
+6 | 3 | 18 | 4 | 7 | 11 | −11 | 2,75
+7 | 2 | 32 | 5 | 2 | 10 | −10 | 6
+8 | 4 | 36 | 9 | 6 | 6 | −6 | 3,333333
+9 | 3 | 40 | 4 | 1 | 39 | −39 | 9,75
+10 | 1 | 24 | 8 | 3 | 3 | −3 | 2,625
+11 | 2 | 50 | 5 | 2 | 16 | −16 | 9,6
+12 | 1 | 20 | 4 | 8 | 4 | −4 | 3
+13 | 1 | 15 | 7 | 9 | 1 | −1 | 0,857143
+14 | 3 | 12 | 5 | 10 | 1 | −1 | 0,4
+15 | 4 | 23 | 6 | 3 | 10 | −10 | 3,333333
+16 | 3 | 34 | 6 | 4 | 10 | −10 | 5
+17 | 3 | 42 | 4 | 7 | 35 | −35 | 8,75
+18 | 3 | 44 | 6 | 8 | 12 | −12 | 6
+19 | 2 | 12 | 3 | 2 | 10 | −10 | 3,333333
+20 | 3 | 24 | 5 | 2 | 11 | −11 | 4,4
+21 | 3 | 47 | 8 | 2 | 9 | −9 | 5,625
+22 | 1 | 12 | 4 | 3 | 3 | −3 | 2,25
+23 | 1 | 25 | 6 | 10 | 3 | −3 | 2,5
+24 | 3 | 17 | 4 | 8 | 9 | −9 | 2,25
+25 | 2 | 12 | 3 | 1 | 11 | −11 | 3,666667
+26 | 2 | 48 | 7 | 3 | 9 | −9 | 6,428571
+27 | 3 | 25 | 6 | 10 | 5 | −5 | 2,5
+28 | 2 | 36 | 7 | 6 | 6 | −6 | 4,285714
+29 | 1 | 21 | 5 | 9 | 3 | −3 | 2,4
+30 | 2 | 26 | 5 | 8 | 6 | −6 | 3,6
+31 | 3 | 30 | 4 | 8 | 22 | −22 | 5,5
+32 | 2 | 33 | 3 | 6 | 27 | −27 | 9
+33 | 4 | 34 | 7 | 10 | 8 | −8 | 3,428571
+34 | 1 | 16 | 6 | 1 | 3 | −3 | 2,5
+35 | 2 | 36 | 5 | 3 | 11 | −11 | 6,6
+36 | 1 | 42 | 4 | 3 | 13 | −13 | 9,75
+37 | 3 | 27 | 9 | 3 | 4 | −4 | 2,666667
+38 | 3 | 31 | 7 | 7 | 6 | −6 | 3,428571
+39 | 1 | 46 | 9 | 6 | 5 | −5 | 4,444444
+40 | 4 | 13 | 6 | 3 | 5 | −5 | 1,666667
+41 | 4 | 21 | 5 | 9 | 12 | −12 | 2,4
+42 | 4 | 18 | 7 | 3 | 5 | −5 | 2,142857
+43 | 1 | 23 | 4 | 5 | 6 | −6 | 4,5
+44 | 4 | 47 | 6 | 5 | 21 | −21 | 7
+45 | 2 | 24 | 3 | 8 | 16 | −16 | 5,333333
+46 | 2 | 50 | 8 | 2 | 8 | −8 | 6
+47 | 3 | 19 | 4 | 2 | 17 | −17 | 4,25
+48 | 3 | 29 | 5 | 7 | 11 | −11 | 4,4
+49 | 1 | 37 | 3 | 7 | 15 | −15 | 10
+50 | 4 | 18 | 5 | 7 | 11 | −11 | 2,2
+51 | 4 | 19 | 5 | 10 | 9 | −9 | 1,8
+52 | 2 | 34 | 3 | 9 | 25 | −25 | 8,333333
+53 | 3 | 36 | 4 | 10 | 26 | −26 | 6,5
+54 | 4 | 44 | 7 | 2 | 14 | −14 | 6
+55 | 3 | 48 | 4 | 5 | 43 | −43 | 10,75
+56 | 2 | 25 | 3 | 8 | 17 | −17 | 5,666667
+57 | 4 | 33 | 9 | 3 | 6 | −6 | 3,333333
+58 | 4 | 38 | 5 | 4 | 34 | −34 | 6,8
+59 | 3 | 12 | 7 | 8 | 1 | −1 | 0,571429
+60 | 4 | 29 | 5 | 2 | 27 | −27 | 5,4
+61 | 1 | 13 | 3 | 3 | 5 | −5 | 3,333333
+62 | 1 | 29 | 6 | 4 | 5 | −5 | 4,166667
+63 | 1 | 16 | 4 | 7 | 3 | −3 | 2,25
+64 | 3 | 44 | 4 | 7 | 37 | −37 | 9,25
+65 | 4 | 13 | 5 | 8 | 5 | −5 | 1
+66 | 4 | 24 | 5 | 3 | 21 | −21 | 4,2
+67 | 1 | 26 | 5 | 2 | 6 | −6 | 4,8
 ```

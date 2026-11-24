@@ -63,21 +63,22 @@ zuerst Aufgaben.</li>
 <h2>Kontext: die Seite „Terme mit Variablen aufstellen“</h2>
 <p>Wachsende Streichholzmuster als Terme mit n aufschreiben, Zahlen einsetzen und in einer Tabelle prüfen, ob zwei Terme gleich sind.</p>
 <h3>Streichhölzer zählen</h3>
-<p>Aus Streichhölzern entsteht eine Kette aus Quadraten. Das Bild zeigt Ketten mit 1, 2 und 3 Quadraten. Die orangen Hölzer kommen dazu, wenn ein Quadrat angelegt wird.</p>
+<p>Wenn du wissen willst, wie viele Streichhölzer eine lange Kette braucht, ohne sie zu legen, suchst du die Regel dahinter. Aus Streichhölzern entsteht eine Kette aus Quadraten. Das Bild zeigt Ketten mit 1, 2 und 3 Quadraten. Die orangen Hölzer kommen dazu, wenn ein Quadrat angelegt wird.</p>
 <p>Bild: Streichholzketten aus einem, zwei und drei Quadraten, untereinander. Das erste Quadrat ist blau, jedes weitere Quadrat orange. Daneben steht n = 1, n = 2 und n = 3. Bildunterschrift: Eine Kette aus n Quadraten, für n = 1, 2 und 3. Blau: das erste Quadrat. Orange: die Hölzer, die ein weiteres Quadrat dazubringt.</p>
 <ul>
 <li>Aufgabe <code>kette-fortsetzen</code> (unten)</li>
 </ul>
 <h3>n steht für viele Zahlen</h3>
-<p>Für die Zahl der Quadrate schreibst du einen Buchstaben, hier $n$. Das erste Quadrat braucht 4 Hölzer. Bei $n$ Quadraten kommen $n - 1$ weitere dazu, jedes mit 3 Hölzern:</p>
+<p>Damit eine einzige Rechnung für jede Länge der Kette stimmt, schreibst du für die Zahl der Quadrate einen Buchstaben, hier $n$. Das erste Quadrat braucht 4 Hölzer. Bei $n$ Quadraten kommen $n - 1$ weitere dazu, jedes mit 3 Hölzern:</p>
 <p>$4 + 3 \cdot (n - 1)$</p>
 <ul>
-<li><p><strong>Variable</strong>: Eine Variable ist ein Buchstabe, der für viele Zahlen steht, hier $n$ für die Zahl der Quadrate. Du darfst jede passende Zahl einsetzen. Im Zahlenrätsel suchst du beim $x$ dagegen eine einzige Zahl.</p>
+<li><p><strong>Variable</strong>: Eine Variable ist ein Buchstabe, der für viele Zahlen steht, hier $n$ für die Zahl der Quadrate. Du darfst jede passende Zahl einsetzen.</p>
 </li>
 <li><p><strong>Term</strong>: Ein Term ist eine Rechnung mit Zahlen und Variablen, zum Beispiel $3 \cdot n + 1$. Setzt du für $n$ eine Zahl ein, kommt eine Zahl heraus.</p>
 </li>
 </ul>
 <p><strong>Beispiel: Wertetabelle der Quadratkette</strong></p>
+<p>Wenn du wissen willst, wie viele Hölzer bestimmte Ketten brauchen, setzt du die Zahl der Quadrate in den Term ein.</p>
 <p>Du setzt Zahlen für n ein und rechnest den Term aus.:</p>
 <ul>
 <li>n | 4 + 3 · (n − 1) | Hölzer</li>
@@ -89,16 +90,18 @@ zuerst Aufgaben.</li>
 </ul>
 <p>Eine solche Tabelle heißt <strong>Wertetabelle</strong>.</p>
 <h3>Beispiel</h3>
+<p>Bei einem neuen Muster stellst du den Term selbst auf: Du zählst, was beim ersten Mal nötig ist und was bei jedem weiteren Mal dazukommt.</p>
 <p>Bild: Streichholzketten aus einem, zwei und drei Dreiecken, untereinander. Das erste Dreieck ist blau, jedes weitere Dreieck orange. Daneben steht n = 1, n = 2 und n = 3. Bildunterschrift: Eine Kette aus n Dreiecken, für n = 1, 2 und 3. Blau: das erste Dreieck. Orange: die Hölzer, die ein weiteres Dreieck dazubringt.</p>
 <p><strong>Beispiel: Term für die Dreieckskette aufstellen</strong></p>
 <p>Das erste Dreieck braucht 3 Hölzer. Jedes weitere teilt eine Seite mit dem Nachbarn und braucht nur 2 Hölzer dazu. Bei $n$ Dreiecken sind es $n - 1$ weitere:</p>
 <p>$3 + 2 \cdot (n - 1) = 3 + 2n - 2 = 2 \cdot n + 1$</p>
 <p>Probe mit $n = 3$: $2 \cdot 3 + 1 = 7$. Im Bild zählst du 3 + 2 + 2 = 7 Hölzer.</p>
 <h3>Zwei Terme vergleichen</h3>
-<p>Lena und Jonas zählen die Quadratkette verschieden. Lena rechnet: 4 Hölzer für das erste Quadrat und 3 für jedes weitere, also $4 + 3 \cdot (n - 1)$. Jonas legt zuerst 1 Holz an den Rand und rechnet 3 Hölzer je Quadrat, also $3 \cdot n + 1$. Haben beide recht? Schau in die <strong>Tabelle</strong>.</p>
+<p>Wenn zwei Kinder dasselbe Muster verschieden aufschreiben, willst du wissen, ob ihre Terme gleich sind. Lena und Jonas zählen die Quadratkette verschieden. Lena rechnet: 4 Hölzer für das erste Quadrat und 3 für jedes weitere, also $4 + 3 \cdot (n - 1)$. Jonas legt zuerst 1 Holz an den Rand und rechnet 3 Hölzer je Quadrat, also $3 \cdot n + 1$. Haben beide recht? Schau in die <strong>Tabelle</strong>.</p>
 <p>Interaktiv: Tabelle zum Vergleichen zweier Terme. Lena: 4 + 3 · (n − 1), Jonas: 3 · n + 1. Für n = 1, 2, 3, 4, 5 und 6 stehen bei beiden die Werte 4, 7, 10, 13, 16 und 19: In jeder Zeile sind die Werte gleich.</p>
 <p>Das spricht dafür, dass beide Terme für jedes $n$ dasselbe sagen. Eine einzige Zeile mit verschiedenen Werten zeigt dagegen: Die Terme sind nicht gleich. Probiere es: Ändere Jonas&#39; Term in $3 \cdot n + 2$.</p>
 <h3>Übung</h3>
+<p>Jetzt stellst du selbst Terme auf und prüfst sie. So kommst du bei neuen Mustern ohne Bild aus.</p>
 <ul>
 <li><p>Aufgabe <code>term-kette</code> (unten)</p>
 </li>

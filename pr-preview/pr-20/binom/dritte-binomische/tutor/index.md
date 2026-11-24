@@ -58,9 +58,11 @@ Die dritte binomische Formel (a + b)(a − b) = a² − b²: Erklärung mit Flä
 
 ### Warum?
 
-Die dritte Formel ist die kürzeste: Aus $(x + 4)(x - 4)$ wird sofort $x^2 - 16$, ganz ohne Mittelglied. Du brauchst sie ständig, um Terme zu vereinfachen und später, um Differenzen wie $x^2 - 16$ wieder in Klammern zu zerlegen. Und sie ist ein starker Kopfrechentrick: $21 \cdot 19 = 20^2 - 1^2 = 399$.
+Wenn du $(x + 4)(x - 4)$ ausmultiplizierst, kommen vier Produkte heraus, doch zwei davon fallen weg. Die dritte Formel schreibt das Ergebnis $x^2 - 16$ sofort hin. Mit ihr kannst du auch eine Differenz wie $x^2 - 16$ in Klammern zerlegen. Und sie ist ein Kopfrechentrick: $21 \cdot 19 = 20^2 - 1^2 = 399$.
 
 ### Regel
+
+Wenn sich zwei Klammern nur im Vorzeichen zwischen denselben Gliedern unterscheiden, gibt es eine Abkürzung.
 
 $(a + b)(a - b) = a^2 - b^2$
 
@@ -76,6 +78,8 @@ Kein Mittelglied – und das Minus bleibt: $a^2 - b^2$, nicht $a^2 + b^2$.
 
 **Beispiel: Multipliziere aus: (x + 4)(x − 4)**
 
+Hier siehst du, wie die Mittelglieder wegfallen.
+
 Der Rechenweg für (x + 4)(x − 4):
 - Glieder | $a = x$, $b = 4$
 - Vier Produkte | $x^2 - 4x + 4x - 16$ – die Mittelglieder heben sich auf
@@ -86,7 +90,7 @@ Mit Zahlen davor: $(3a + 2b)(3a - 2b)$ $= 9a^2 - 4b^2$.
 
 ### Bild
 
-Bild: (x + 4)(x − 4) = x² − 16. Gleiche Teile, gleiche Fläche. Bildunterschrift: Oben: das Quadrat $x^2$, aus dem rechts unten die Ecke $4^2 = 16$ fehlt (gestrichelt). Der Rest besteht aus zwei Teilen: einem blauen Rechteck $x$ mal $x - 4$ und einem gelben Rechteck $x - 4$ mal $4$. Unten: Das gelbe Teil ist gedreht und rechts angelegt – jetzt ist es ein Rechteck mit den Seiten $x + 4$ und $x - 4$. Gleiche Teile, gleiche Fläche: $(x + 4)(x - 4) = x^2 - 16$.
+Bild: (x + 4)(x − 4) = x² − 16. Gleiche Teile, gleiche Fläche. Bildunterschrift: Warum $-b^2$ übrig bleibt, zeigt eine Fläche, deren Teile man umlegt. Oben: das Quadrat $x^2$, aus dem rechts unten die Ecke $4^2 = 16$ fehlt (gestrichelt). Der Rest besteht aus zwei Teilen: einem blauen Rechteck $x$ mal $x - 4$ und einem gelben Rechteck $x - 4$ mal $4$. Unten: Das gelbe Teil ist gedreht und rechts angelegt – jetzt ist es ein Rechteck mit den Seiten $x + 4$ und $x - 4$. Gleiche Teile, gleiche Fläche: $(x + 4)(x - 4) = x^2 - 16$.
 
 ### Übung
 

@@ -58,13 +58,13 @@ Gleichartige Glieder zusammenfassen: 3x + 5x oder 2a + 3b − a. Du unterscheide
 
 ### Schachteln zählen
 
-Ein Buchstabe wie $x$ steht für eine Zahl. Hier ist es die Zahl der Streichhölzer in einer Schachtel, jede Schachtel enthält gleich viele. Einzelne Streichhölzer sind einfache Zahlen.
+Wenn ein Term lang und unübersichtlich ist, willst du ihn kürzer schreiben, ohne dass sich sein Wert ändert. Das geht, indem du Gleichartiges zusammenfasst. Ein Buchstabe wie $x$ steht für eine Zahl. Hier ist es die Zahl der Streichhölzer in einer Schachtel, jede Schachtel enthält gleich viele. Einzelne Streichhölzer sind einfache Zahlen.
 
 - Aufgabe `schachteln-zaehlen` (unten)
 
 ### Gleichartige Glieder
 
-Zwei Terme wie $3x$ und $5x$ (3 Schachteln und 5 Schachteln) kannst du zu einem zusammenfassen. Dazu zählst du die Zahlen vor dem $x$ zusammen, das $x$ bleibt stehen.
+Ein Term besteht aus **Gliedern**, das sind die Teile, die mit Plus oder Minus verbunden sind. Wenn du ihn kürzer schreiben willst, schaust du, welche Glieder zusammenpassen: Wenn zwei Glieder dieselbe Variable haben, zum Beispiel $3x$ und $5x$ (3 Schachteln und 5 Schachteln), kannst du sie zu einem Glied zusammenfassen. Dazu zählst du die Zahlen vor dem $x$ zusammen, das $x$ bleibt stehen.
 
 $3x + 5x = (3 + 5) \cdot x = 8x$
 
@@ -73,6 +73,8 @@ $3x + 5x = (3 + 5) \cdot x = 8x$
 - Aufgabe `gleichartig-erkennen` (unten)
 
 ### Beispiel
+
+Bei einem Term mit mehreren Variablen und einer Zahl sortierst du zuerst, damit du nichts Ungleichartiges zusammenwirfst.
 
 **Beispiel: Fasse zusammen: 2a + 3b − a + 4b + 5**
 
@@ -85,7 +87,7 @@ Ein Schritt je Zeile, die Begründung steht rechts.:
 
 ### Probe mit Zahlen
 
-Beim Umformen bleibt der Wert des Terms gleich. Das prüfst du mit einer **Probe**: Setze dieselben Zahlen in den alten und in den neuen Term ein. Bei $2a + 3b - a + 4b + 5$ und $a + 7b + 5$ kommt jedes Mal dasselbe heraus.
+Wenn du wissen willst, ob du richtig zusammengefasst hast, machst du eine **Probe**. Beim Umformen bleibt der Wert des Terms gleich, das prüfst du so: Setze dieselben Zahlen in den alten und in den neuen Term ein. Bei $2a + 3b - a + 4b + 5$ und $a + 7b + 5$ kommt jedes Mal dasselbe heraus.
 
 Wertetabelle: derselbe Wert vor und nach dem Umformen.:
 - Zahlen | Vorher | Nachher
@@ -104,6 +106,8 @@ Probe für 3x + 5 und 8x:
 - Aufgabe `probe-4x-plus-6` (unten)
 
 ### Übung
+
+Hier erkennst du Fehler und fasst selbst zusammen. So wirst du sicher, was zusammengehört und was nicht.
 
 - Aufgabe `fehler-zahl-und-x` (unten)
 

@@ -58,9 +58,11 @@ Geschickt rechnen mit den binomischen Formeln: 49², 21 · 19 und 102² im Kopf.
 
 ### Warum?
 
-Die binomischen Formeln sind nicht nur für Buchstaben da. Mit ihnen rechnest du Aufgaben wie $49^2$ oder $21 \cdot 19$ im Kopf aus – schneller als mit dem schriftlichen Verfahren. Das hilft beim Kopfrechnen, beim Überschlagen und in der Klassenarbeit ohne Taschenrechner. Und es zeigt dir, dass die Formeln wirklich für jede Zahl gelten: Buchstaben sind nur Platzhalter.
+Wenn du $49^2$ oder $21 \cdot 19$ ohne Taschenrechner ausrechnen willst, hilft dir eine binomische Formel: Du rechnest im Kopf, schneller als schriftlich. Das zeigt auch, dass die Formeln für jede Zahl gelten: Buchstaben sind nur Platzhalter.
 
 ### Regel
+
+Eine Zahl wie $49$ ist knapp unter $50$, und mit $50$ rechnet es sich leicht. So nutzt du das:
 
 $49^2 = (50 - 1)^2 = 2500 - 100 + 1 = 2401$
 
@@ -76,6 +78,8 @@ Das Mittelglied nicht vergessen! $49^2$ ist nicht $2500 - 1 = 2499$.
 
 **Beispiel: Rechne im Kopf: 102² und 21 · 19**
 
+Je nach Aufgabe passt die erste oder die dritte Formel.
+
 Die Rechenwege für 102² und 21 · 19:
 - Zerlegen | $102 = 100 + 2$ → 1. Formel
 - Formel | $100^2 + 2 \cdot 100 \cdot 2 + 2^2$ $= 10000 + 400 + 4$
@@ -86,7 +90,7 @@ Die Rechenwege für 102² und 21 · 19:
 
 ### Bild
 
-Bild: 49² = 2401. 50² − zwei Streifen + Ecke zurück. Bildunterschrift: $49^2$ als Fläche: Ein Quadrat mit der Seite $50$, also $50^2 = 2500$. Rechts und unten ist je ein Streifen $50 \cdot 1 = 50$ markiert (rot): Beide werden abgezogen. Die grüne Ecke $1^2 = 1$ steckt in beiden Streifen, ist also doppelt abgezogen und kommt einmal zurück. Übrig bleibt das Quadrat $49^2$: $2500 - 100 + 1 = 2401$.
+Bild: 49² = 2401. 50² − zwei Streifen + Ecke zurück. Bildunterschrift: Warum die Rechnung stimmt, zeigt eine Fläche. $49^2$ als Fläche: Ein Quadrat mit der Seite $50$, also $50^2 = 2500$. Rechts und unten ist je ein Streifen $50 \cdot 1 = 50$ markiert (rot): Beide werden abgezogen. Die grüne Ecke $1^2 = 1$ steckt in beiden Streifen, ist also doppelt abgezogen und kommt einmal zurück. Übrig bleibt das Quadrat $49^2$: $2500 - 100 + 1 = 2401$.
 
 ### Übung
 

@@ -58,9 +58,11 @@ Binome rückwärts: x² + 6x + 9 = (x + 3)², x² − 16 = (x + 4)(x − 4). Fak
 
 ### Warum?
 
-Bisher hast du Klammern aufgelöst. Oft brauchst du den umgekehrten Weg: Aus $x^2 + 6x + 9$ wird wieder $(x + 3)^2$. Das nennt man faktorisieren. Ein Produkt verrät mehr als eine Summe – zum Beispiel, wann ein Term null wird oder wie sich ein Bruch kürzen lässt.
+Manchmal steht eine Summe wie $x^2 + 6x + 9$ da, und du brauchst sie als Produkt $(x + 3)^2$. Ein Produkt verrät mehr als eine Summe: Du siehst, wann der Term null wird, und kannst einen Bruch kürzen. Den Weg von der Summe zum Produkt nennt man faktorisieren.
 
 ### Regel
+
+Um eine Summe in Klammern zu schreiben, brauchst du die binomischen Formeln von rechts nach links.
 
 $a^2 + 2ab + b^2 = (a + b)^2$
 
@@ -72,7 +74,7 @@ $a^2 - b^2 = (a + b)(a - b)$
 
 So erkennst du die Formel: Such zwei **Quadrate** (erstes und letztes Glied). Daraus liest du $a$ und $b$ ab. Steht dazwischen ein **Mittelglied**, prüfst du, ob es $2 \cdot a \cdot b$ ist – sein Vorzeichen entscheidet zwischen $(a + b)^2$ und $(a - b)^2$. Gibt es **kein Mittelglied** und steht ein Minus zwischen den Quadraten, ist es die dritte Formel.
 
-Bei Lückenaufgaben rechnest du genauso: Das Mittelglied ist $2 \cdot a \cdot b$, das letzte Glied ist $b^2$.
+Fehlt in der Summe ein Glied (eine Lücke), rechnest du genauso: Das Mittelglied ist $2 \cdot a \cdot b$, das letzte Glied ist $b^2$.
 
 **Merke: Merke**
 
@@ -81,6 +83,8 @@ Das Mittelglied halbieren! Bei $x^2 + 6x + 9$ ist $b = 3$ (denn $2 \cdot 3 = 6$)
 ### Beispiel
 
 **Beispiel: Schreib als Produkt: x² + 6x + 9**
+
+Hier wird aus einer Summe ein Produkt.
 
 Der Rechenweg für x² + 6x + 9:
 - Quadrate | $x^2 = x^2$, $9 = 3^2$, also $a = x$, $b = 3$
@@ -91,7 +95,7 @@ Genauso: $x^2 - 10x + 25 = (x - 5)^2$ und $x^2 - 16 = (x + 4)(x - 4)$. Lücken: 
 
 ### Bild
 
-Bild: x² + 6x + 9 = (x + 3)². Teilflächen gegeben – welche Seite hat das Quadrat? Bildunterschrift: Das Flächenbild der ersten Formel, rückwärts gelesen: Ein Quadrat aus den Teilflächen $x^2$ (blau), zweimal $3x$ (gelb) und $9$ (grün). Die Teilflächen sind gegeben, gesucht ist die Seite des Quadrats. Sie ist $x + 3$, also $x^2 + 6x + 9 = (x + 3)^2$.
+Bild: x² + 6x + 9 = (x + 3)². Teilflächen gegeben – welche Seite hat das Quadrat? Bildunterschrift: Warum die Klammer $(x + 3)$ herauskommt, zeigt eine Fläche, rückwärts gelesen: Ein Quadrat aus den Teilflächen $x^2$ (blau), zweimal $3x$ (gelb) und $9$ (grün). Die Teilflächen sind gegeben, gesucht ist die Seite des Quadrats. Sie ist $x + 3$, also $x^2 + 6x + 9 = (x + 3)^2$.
 
 ### Übung
 

@@ -35,9 +35,11 @@ Eltern und Lehrkräfte sehen hier, was der Tutor bekommt. [Zur Seite](../)
 
 ## Wo das Kind gerade ist
 
+- Die erste Nachricht des Kindes nennt diese Seite und je Aufgabe die Nummer, die das Kind gerade vor sich hat, z. B. `?uebung=recap-gemischt`. Schlag die Nummern unten bei den Aufgaben nach. Kommt das Kind mit „Hilfe“, nennt `uebung=` die Aufgabe und `abschnitt=` ihren Abschnitt.
 - Steht in der Nachricht „Die App sagt: …“, hat die App das zur Eingabe des Kindes gemeldet. Setz dort an, ohne es zu wiederholen.
 - Eine Zeile wie „…, Nr. 16: richtig im 2. Versuch.“ kommt von „Zurück“ in der App: Aufgabe, Nummer und wie weit das Kind damit kam.
 - „Ich habe auf … geübt:“ kommt von „Zurück zum Tutor“: diese Seite mit den Nummern, dann je geübter Aufgabe, wie es lief, bei einer falschen mit Eingabe und Meldung der App. Setz bei den falschen an, eine nach der anderen.
+- Jede Nummer hat einen Link: die Adresse der Seite, also dieser Tutor-Seite ohne `tutor/` und ohne `?…`, mit der Nummer und `via=tutor`, z. B. `…/terme/recap-rationale/?via=tutor#recap-gemischt`. Schick ihn immer als volle Adresse, mit Schema und Host dieser Tutor-Seite (z. B. `https://`). Zum Weiterüben nimm eine andere Nummer der Aufgabe und nenn ihren Text. Sag dazu: „Löse sie in der App und drück dann ‚Zurück‘. Füg die Zeile hier ein.“
 
 ## Besondere Anforderungen
 
@@ -52,11 +54,11 @@ Nennt die Adresse dieser Seite `bedarf=`, gilt jeder Abschnitt, den sie nennt, m
 
 ## Kontext: die Seite „Das brauchst du für dieses Kapitel“
 
-Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat keine Aufgabe. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/mathematik/c/rationale-zahlen-rechnen/
+Diese Seite ist eine Wiederholung: Sie wiederholt etwas, das das Kind schon können sollte, und hat höchstens zwei Aufgaben zur Kontrolle. Erklär mit dem Inhalt der Seite und frag nach, ob das Kind ihn verstanden hat. Üben kann es das in anderen Apps; welche das sind, steht hier: https://lernapps.net/apps/map/mathematik/c/rationale-zahlen-rechnen/
 
 Kurze Wiederholung zum Rechnen mit negativen Zahlen, mit zwei Kurztests, damit du siehst, ob du bereit bist.
 
-Das brauchst du für dieses Kapitel: In Termen (Rechenausdrücken) stehen Variablen, das sind Buchstaben für Zahlen. Für sie setzt du auch negative Zahlen ein. Dafür musst du mit negativen Zahlen sicher rechnen. Ein Baustein ist ein Thema auf der Lernlandkarte. Dieser Baustein heißt „Rechnen mit negativen Zahlen“: Ich kann mit negativen Zahlen rechnen und dabei Vorzeichen- und Klammerregeln beachten.
+In Termen (Rechenausdrücken) stehen Variablen, das sind Buchstaben für Zahlen. Für sie setzt du auch negative Zahlen ein. Dafür musst du mit negativen Zahlen sicher rechnen. Ein Baustein ist ein Thema auf der Lernlandkarte. Dieser Baustein heißt „Rechnen mit negativen Zahlen“: Ich kann mit negativen Zahlen rechnen und dabei Vorzeichen- und Klammerregeln beachten.
 
 ### Rechnen mit negativen Zahlen
 
@@ -68,13 +70,37 @@ Das brauchst du für dieses Kapitel: In Termen (Rechenausdrücken) stehen Variab
 
 - **Vorzeichenregel beim Malnehmen und Teilen**: Gleiche Vorzeichen geben ein positives Ergebnis, verschiedene ein negatives. Beispiel: $(-3) \cdot (-4) = 12$, $(-3) \cdot 4 = -12$ und $(-12) : 4 = -3$.
 
-Interaktiv: Kurztest: Was ist (−4) · (−3) − (−6) : 2? 15, 9 oder −9. Antwort: 15, denn (−4) · (−3) = 12 und (−6) : 2 = −3, dann 12 + 3 = 15.
+- Aufgabe `recap-gemischt` (unten)
 
-Interaktiv: Kurztest: Was ist −7 + (−5) − (−9)? −3, −21 oder 7. Antwort: −3, denn −7 + (−5) = −12 und −12 + 9 = −3.
+- Aufgabe `recap-klammer` (unten)
 
 Wenn du dich vertan hast, wiederhole den Baustein „Rechnen mit negativen Zahlen“ auf seiner Seite der Lernlandkarte: [Rechnen mit negativen Zahlen](https://lernapps.net/apps/map/mathematik/c/rationale-zahlen-rechnen/).
 
-**Merke: Du bist bereit, wenn du …**
+**Merke: Du bist bereit, wenn du das kannst**
 
 - Ich kann Zahlen mit Vorzeichen addieren und subtrahieren und dabei die Klammern beachten.
 - Ich kann beim Malnehmen und Teilen das Vorzeichen des Ergebnisses bestimmen.
+
+### Aufgabe recap-gemischt
+
+- Aufgabe: Was ist (−4) · (−3) − (−6) : 2?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ 15 – (−4) · (−3) = 12 und (−6) : 2 = −3. Dann 12 − (−3) = 12 + 3 = 15.
+  - ✗ 9 – Du hast 12 − 3 gerechnet. Minus (−3) heißt aber: Du addierst die Gegenzahl 3.
+  - ✗ −9 – Das Ergebnis von (−4) · (−3) ist positiv: gleiche Vorzeichen geben plus. Es sind +12.
+- Lösung: 15
+- Erklärung: (−4) · (−3) = 12 und (−6) : 2 = −3. Dann 12 − (−3) = 12 + 3 = 15.
+- Link: [../?via=tutor#recap-gemischt](../?via=tutor#recap-gemischt)
+
+### Aufgabe recap-klammer
+
+- Aufgabe: Was ist 8 − (2 − 5) − (−1)?
+- Antwortformat: eine Antwort wählen
+- Antworten zur Wahl (✓ richtig, ✗ falsch, mit der Meldung der App):
+  - ✓ 12 – 8 − (2 − 5) = 8 − 2 + 5 = 11, denn das Minus dreht beide Vorzeichen um. Dann 11 − (−1) = 11 + 1 = 12.
+  - ✗ 2 – Du hast 8 − 2 − 5 gerechnet. Das Minus vor der Klammer dreht jedes Vorzeichen in der Klammer um: aus −5 wird +5.
+  - ✗ 10 – Du hast 11 − 1 gerechnet. Minus (−1) heißt aber: Du addierst die Gegenzahl 1, also 11 + 1.
+- Lösung: 12
+- Erklärung: Erst die Klammer auflösen (8 − 2 + 5 = 11), dann das Minus vor (−1) als Plus rechnen: 12.
+- Link: [../?via=tutor#recap-klammer](../?via=tutor#recap-klammer)

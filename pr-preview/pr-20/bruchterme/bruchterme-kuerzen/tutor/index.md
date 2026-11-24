@@ -58,7 +58,7 @@ Bruchterme wie Brüche vereinfachen: erst faktorisieren, dann gleiche Faktoren k
 
 ### Kürzen heißt: einen gemeinsamen Faktor wegnehmen
 
-Beim Kürzen nimmst du aus Zähler und Nenner denselben **Faktor** weg, zum Beispiel $\frac{5 \cdot (x + 2)}{3 \cdot (x + 2)} = \frac{5}{3}$. Im Rechteckmodell ist ein Faktor eine Seite. Drück auf „Kürzen“ und sieh, was passiert.
+Wenn ein Bruchterm unübersichtlich ist, willst du ihn einfacher schreiben, ohne dass sich sein Wert ändert. Das gelingt wie bei Brüchen durch Kürzen. Dabei nimmst du aus Zähler und Nenner denselben **Faktor** weg, zum Beispiel $\frac{5 \cdot (x + 2)}{3 \cdot (x + 2)} = \frac{5}{3}$. Im Rechteckmodell ist ein Faktor eine Seite. Drück auf „Kürzen“ und sieh, was passiert.
 
 Interaktiv: Zwei Rechtecke, eins für den Zähler und eins für den Nenner. Beide haben die Seite x + 2. Die andere Seite ist 5 beim Zähler und 3 beim Nenner. Beim Kürzen fällt die gemeinsame Seite x + 2 weg: Übrig bleiben 5 und 3.
 
@@ -66,7 +66,7 @@ Der Wert bleibt, aber die Zahl $-2$ bleibt verboten: Für $x = -2$ ist der Nenne
 
 ### Erst faktorisieren, dann kürzen
 
-Kürzen darfst du nur **Faktoren**, nie Summanden. Zähler wie $4x + 12$ oder $x^2 - 9$ sind Summen. Du musst sie erst in ein Produkt verwandeln, also **faktorisieren**: mit einem gemeinsamen Faktor oder mit der dritten binomischen Formel.
+Oft steht im Zähler eine Summe wie $4x + 12$ oder $x^2 - 9$, und du siehst keinen Faktor zum Kürzen. Kürzen darfst du nur **Faktoren**, nie Summanden. Darum verwandelst du die Summe erst in ein Produkt, also **faktorisierst** du. Hast du in allen Summanden dieselbe Zahl, klammerst du sie als gemeinsamen Faktor aus. Ist es eine Differenz zweier Quadrate, nimmst du die dritte binomische Formel.
 
 **Beispiel: Gemeinsamer Faktor**
 
@@ -88,13 +88,13 @@ x² − 9 ist ein Produkt aus Summe und Differenz.:
 
 ### Die Lücke bleibt
 
-Die Definitionsmenge bestimmst du am Nenner **vor** dem Kürzen. In der Tabelle siehst du, warum: Der Wert ist überall 4, nur bei $x = -3$ nicht.
+Nach dem Kürzen sieht der Term aus, als dürfte $x$ jede Zahl sein. Ob das stimmt, zeigt die Tabelle: Der Wert ist überall 4, nur bei $x = -3$ nicht. Darum bestimmst du die Definitionsmenge am Nenner **vor** dem Kürzen.
 
 Interaktiv: Tabelle für den Bruchterm (4x + 12) geteilt durch (x + 3). Für x = 0, 1 und 5 ist das Ergebnis immer 4. Für x = −3 ist der Nenner 0: Dort steht „nicht definiert“, obwohl der gekürzte Term 4 dort einen Wert hätte.
 
 ### Aus Summen kürzt man nicht
 
-Der häufigste Fehler: Aus $\frac{x + 6}{6}$ wird „gekürzt“ $x + 1$. Setz Zahlen ein und prüfe.
+Wenn du kürzen willst, ist der häufigste Fehler, aus einer Summe zu kürzen: Aus $\frac{x + 6}{6}$ wird „gekürzt“ $x + 1$. Ob das erlaubt ist, prüfst du, indem du Zahlen einsetzt.
 
 Der Bruchterm und der falsch gekürzte Term haben verschiedene Werte.:
 - x | Bruchterm | „Gekürzt“
@@ -107,13 +107,15 @@ Die 6 im Zähler ist ein Summand, kein Faktor. Aus einer Summe kürzt du erst, w
 
 ### Erweitern und gleichnamig machen
 
-Erweitern ist das Gegenteil von Kürzen: Du multiplizierst Zähler und Nenner mit demselben Term. Für das **Gleichnamigmachen** erweiterst du beide Bruchterme auf denselben Nenner. Bei $\frac{1}{x}$ und $\frac{2}{x + 1}$ ist das $x(x + 1)$.
+Wenn du Bruchterme addieren oder vergleichen willst, brauchen sie denselben Nenner. Bruchterme mit demselben Nenner heißen **gleichnamig**. Der gemeinsame Nenner, in dem jeder der Nenner als Faktor steckt, heißt **Hauptnenner**. Um Bruchterme gleichnamig zu machen, **erweiterst** du sie: Du multiplizierst Zähler und Nenner mit demselben Term. Bei $\frac{1}{x}$ und $\frac{2}{x + 1}$ ist der Hauptnenner $x(x + 1)$.
 
 $\frac{1}{x} = \frac{1 \cdot (x + 1)}{x \cdot (x + 1)}$
 
 $\frac{2}{x + 1} = \frac{2 \cdot x}{(x + 1) \cdot x}$
 
 ### Übung
+
+Damit du Bruchterme sicher vereinfachst, übst du hier, was erlaubt ist und was nicht.
 
 - Aufgabe `summanden-kuerzen` (unten)
 

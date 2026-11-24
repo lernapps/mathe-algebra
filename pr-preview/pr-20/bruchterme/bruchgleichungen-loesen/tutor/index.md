@@ -58,11 +58,13 @@ Gleichungen mit x im Nenner lösen, auf zwei Wegen: durch Einsetzen in die Tabel
 
 ### Eine Zahl steht im Nenner
 
+Manchmal steht die gesuchte Zahl im Nenner eines Bruchs. Wie du sie findest, lernst du auf dieser Seite.
+
 - Aufgabe `teilen-rueckwaerts` (unten)
 
 ### Weg 1: Zahlen einsetzen
 
-Die Gleichung $\frac{6}{x} = 2$ ist eine **Bruchgleichung**: Das $x$ steht im Nenner. Du löst sie wie ein Zahlenrätsel durch Probieren. Trag Zahlen für $x$ in die Tabelle ein, auch die 0.
+Wenn du eine Gleichung lösen willst, in der $x$ im Nenner steht, und du die Lösung schätzen oder nur prüfen willst, setzt du Zahlen ein. Eine solche Gleichung heißt **Bruchgleichung**, zum Beispiel $\frac{6}{x} = 2$. Trag Zahlen für $x$ in die Tabelle ein, auch die 0.
 
 Interaktiv: Tabelle zum Probieren für 6 : x = 2. Für x = 2 ist die linke Seite 3: größer als 2. Für x = 4 ist sie 1,5: kleiner als 2. Für x = 3 ist sie 2: beide Seiten sind gleich. Für x = 0 gibt es eine Lücke: Durch 0 teilt man nicht, die linke Seite ist nicht definiert. Die Lösung ist 3.
 
@@ -70,11 +72,11 @@ Bei $x = 0$ bleibt eine **Lücke**: Durch 0 teilt man nicht, der Term $\frac{6}{
 
 ### Weg 2: Mit dem Hauptnenner rechnen
 
-Das Einsetzen findet die Lösung nur, wenn du sie triffst. Das Rechnen findet sie sicher, in vier Schritten:
+Wenn du die Lösung nicht erraten kannst oder sicher sein willst, dass du keine übersiehst, rechnest du. Das Einsetzen findet die Lösung nur, wenn du sie triffst. Das Rechnen findet sie sicher: Du machst aus der Bruchgleichung eine Gleichung ohne Brüche. Dafür brauchst du den **Hauptnenner**, einen Nenner, in dem jeder Nenner der Gleichung als Faktor steckt. Bei $\frac{6}{x} = 2$ ist er $x$, bei $\frac{3}{x-1} = \frac{2}{x+1}$ ist er $(x-1)(x+1)$. Das sind vier Schritte:
 
 1. **Definitionsmenge:** Welche Zahlen machen einen Nenner 0? Die darf $x$ nicht sein.
-2. **Multiplizieren:** Nimm beide Seiten mal den Hauptnenner, wie bei der Waage: auf beiden Seiten dasselbe. Jeder Bruch verliert seinen Nenner.
-3. **Lösen:** Die Gleichung ist jetzt linear. Löse sie mit der Waage.
+2. **Multiplizieren:** Nimm beide Seiten mal den Hauptnenner, also auf beiden Seiten dasselbe. Jeder Bruch verliert seinen Nenner.
+3. **Lösen:** Die Gleichung ist jetzt linear. Löse sie, indem du auf beiden Seiten dasselbe rechnest.
 4. **Prüfen:** Gehört die Lösung zur Definitionsmenge? Dann mache die Probe.
 
 **Beispiel: Löse 3 : (x − 1) = 2 : (x + 1)**
@@ -85,7 +87,7 @@ $\frac{3}{x-1} = \frac{2}{x+1}$
 
 $3 \cdot (x+1) = 2 \cdot (x-1)$
 
-Das ist der Schritt „beide Seiten mal $(x-1)(x+1)$“: Links fällt $x-1$ weg, rechts fällt $x+1$ weg. Dann löst du wie mit der Waage.
+Das ist der Schritt „beide Seiten mal $(x-1)(x+1)$“: Links fällt $x-1$ weg, rechts fällt $x+1$ weg. Dann löst du die lineare Gleichung.
 
 $3 \cdot x + 3 = 2 \cdot x - 2$
 
@@ -98,6 +100,8 @@ Dieselbe Gleichung kannst du auch mit Weg 1 lösen. In der Tabelle zeigt die Lü
 Interaktiv: Tabelle zum Probieren für 3 : (x − 1) = 2 : (x + 1). Für x = 1 und für x = −1 gibt es eine Lücke, weil ein Nenner 0 wird. Für x = 0 ist links −3 und rechts 2. Für x = −5 sind beide Seiten −0,5: gleich. Die Lösung ist −5.
 
 ### Die zwei Wege im Vergleich
+
+Welchen Weg du nimmst, hängt davon ab, was du brauchst: eine schnelle Probe oder eine sichere Lösung.
 
 Beide Wege führen zum selben x. Sie zeigen Verschiedenes.:
 - Weg | Tabelle | Rechnen
@@ -112,6 +116,8 @@ Beide Wege führen zum selben x. Sie zeigen Verschiedenes.:
 - **Die Lösung nicht prüfen.** Bei $\frac{x}{x-3} = \frac{3}{x-3}$ kommt beim Rechnen $x = 3$ heraus. Aber 3 ist verboten: Die Gleichung hat keine Lösung.
 
 ### Übung
+
+Hier löst du Bruchgleichungen selbst und entscheidest, wann du einsetzt und wann du rechnest.
 
 - Aufgabe `einfach-ueben` (unten)
 
@@ -272,73 +278,73 @@ Nr. | a | b | Lösung | F1 | F2
 
 ```
 Nr. | a | p | b | q | Lösung | F1 | F2
-1 | 2 | 3 | 3 | 5 | 19 | 1 | -1
+1 | 2 | 3 | 3 | 5 | 19 | 1 | −1
 2 | 3 | 3 | 4 | 4 | 24 | 0 | 0
-3 | 5 | 6 | 3 | 6 | -24 | -6 | 6
-4 | 3 | 5 | 2 | 1 | -13 | 7 | -7
-5 | 2 | 2 | 1 | 4 | -10 | -6 | 6
-6 | 4 | 3 | 5 | 3 | 27 | -3 | 3
-7 | 3 | 2 | 2 | 6 | -22 | -14 | 14
-8 | 2 | 3 | 4 | 4 | 10 | -2 | 2
-9 | 5 | 2 | 4 | 5 | -33 | -17 | 17
-10 | 2 | 1 | 1 | 4 | -9 | -7 | 7
-11 | 5 | 3 | 4 | 5 | -37 | -13 | 13
-12 | 4 | 1 | 3 | 5 | -23 | -17 | 17
-13 | 2 | 6 | 3 | 6 | 30 | -6 | 6
-14 | 2 | 6 | 4 | 4 | 16 | -8 | 8
-15 | 4 | 2 | 5 | 5 | 30 | 10 | -10
-16 | 3 | 3 | 2 | 1 | -9 | 3 | -3
-17 | 4 | 1 | 1 | 2 | -3 | -2,333333 | 2,333333
-18 | 4 | 2 | 3 | 6 | -30 | -18 | 18
-19 | 2 | 4 | 3 | 3 | 18 | -6 | 6
-20 | 6 | 1 | 3 | 2 | -5 | -3 | 3
-21 | 6 | 5 | 1 | 5 | -7 | -5 | 5
-22 | 3 | 6 | 4 | 4 | 36 | -12 | 12
-23 | 5 | 5 | 2 | 4 | -10 | -3,333333 | 3,333333
-24 | 3 | 2 | 2 | 1 | -7 | 1 | -1
-25 | 2 | 2 | 1 | 2 | -6 | -2 | 2
-26 | 6 | 5 | 5 | 3 | -43 | 7 | -7
-27 | 4 | 3 | 5 | 6 | 39 | 9 | -9
-28 | 3 | 2 | 1 | 6 | -10 | -8 | 8
-29 | 2 | 5 | 5 | 1 | 9 | -7,666667 | 7,666667
-30 | 6 | 2 | 4 | 1 | -7 | 1 | -1
-31 | 4 | 3 | 2 | 6 | -15 | -9 | 9
-32 | 3 | 6 | 4 | 1 | 27 | -21 | 21
-33 | 4 | 4 | 5 | 4 | 36 | -4 | 4
-34 | 6 | 4 | 4 | 6 | -26 | -10 | 10
-35 | 4 | 2 | 3 | 5 | -26 | -14 | 14
-36 | 2 | 5 | 3 | 6 | 27 | -3 | 3
-37 | 4 | 4 | 2 | 2 | -8 | 0 | 0
-38 | 3 | 5 | 5 | 3 | 17 | -8 | 8
-39 | 5 | 2 | 2 | 1 | -3 | -0,333333 | 0,333333
-40 | 5 | 3 | 4 | 2 | -22 | 2 | -2
-41 | 4 | 3 | 5 | 4 | 31 | 1 | -1
-42 | 2 | 1 | 3 | 3 | 9 | 3 | -3
-43 | 3 | 1 | 2 | 4 | -14 | -10 | 10
-44 | 2 | 1 | 4 | 6 | 8 | 4 | -4
-45 | 6 | 3 | 3 | 1 | -5 | 1 | -1
-46 | 6 | 6 | 5 | 6 | -66 | -6 | 6
-47 | 2 | 5 | 1 | 3 | -11 | -1 | 1
-48 | 3 | 6 | 5 | 6 | 24 | -6 | 6
-49 | 2 | 4 | 1 | 1 | -6 | 2 | -2
-50 | 4 | 1 | 5 | 3 | 17 | 7 | -7
-51 | 4 | 4 | 2 | 5 | -14 | -6 | 6
-52 | 2 | 5 | 4 | 2 | 12 | -8 | 8
-53 | 6 | 1 | 3 | 6 | -13 | -11 | 11
-54 | 6 | 4 | 4 | 4 | -20 | -4 | 4
-55 | 4 | 4 | 2 | 6 | -16 | -8 | 8
-56 | 5 | 6 | 2 | 6 | -14 | -6 | 6
-57 | 2 | 3 | 1 | 3 | -9 | -3 | 3
-58 | 2 | 1 | 1 | 3 | -7 | -5 | 5
-59 | 4 | 3 | 1 | 6 | -9 | -7 | 7
-60 | 4 | 5 | 3 | 5 | -35 | -5 | 5
-61 | 4 | 1 | 5 | 1 | 9 | -1 | 1
-62 | 2 | 4 | 1 | 3 | -10 | -2 | 2
-63 | 6 | 3 | 4 | 2 | -12 | 0 | 0
-64 | 2 | 6 | 1 | 5 | -16 | -4 | 4
-65 | 6 | 3 | 3 | 2 | -7 | -1 | 1
-66 | 4 | 2 | 3 | 4 | -22 | -10 | 10
-67 | 6 | 1 | 4 | 3 | -11 | -7 | 7
+3 | 5 | 6 | 3 | 6 | −24 | −6 | 6
+4 | 3 | 5 | 2 | 1 | −13 | 7 | −7
+5 | 2 | 2 | 1 | 4 | −10 | −6 | 6
+6 | 4 | 3 | 5 | 3 | 27 | −3 | 3
+7 | 3 | 2 | 2 | 6 | −22 | −14 | 14
+8 | 2 | 3 | 4 | 4 | 10 | −2 | 2
+9 | 5 | 2 | 4 | 5 | −33 | −17 | 17
+10 | 2 | 1 | 1 | 4 | −9 | −7 | 7
+11 | 5 | 3 | 4 | 5 | −37 | −13 | 13
+12 | 4 | 1 | 3 | 5 | −23 | −17 | 17
+13 | 2 | 6 | 3 | 6 | 30 | −6 | 6
+14 | 2 | 6 | 4 | 4 | 16 | −8 | 8
+15 | 4 | 2 | 5 | 5 | 30 | 10 | −10
+16 | 3 | 3 | 2 | 1 | −9 | 3 | −3
+17 | 4 | 1 | 1 | 2 | −3 | −2,333333 | 2,333333
+18 | 4 | 2 | 3 | 6 | −30 | −18 | 18
+19 | 2 | 4 | 3 | 3 | 18 | −6 | 6
+20 | 6 | 1 | 3 | 2 | −5 | −3 | 3
+21 | 6 | 5 | 1 | 5 | −7 | −5 | 5
+22 | 3 | 6 | 4 | 4 | 36 | −12 | 12
+23 | 5 | 5 | 2 | 4 | −10 | −3,333333 | 3,333333
+24 | 3 | 2 | 2 | 1 | −7 | 1 | −1
+25 | 2 | 2 | 1 | 2 | −6 | −2 | 2
+26 | 6 | 5 | 5 | 3 | −43 | 7 | −7
+27 | 4 | 3 | 5 | 6 | 39 | 9 | −9
+28 | 3 | 2 | 1 | 6 | −10 | −8 | 8
+29 | 2 | 5 | 5 | 1 | 9 | −7,666667 | 7,666667
+30 | 6 | 2 | 4 | 1 | −7 | 1 | −1
+31 | 4 | 3 | 2 | 6 | −15 | −9 | 9
+32 | 3 | 6 | 4 | 1 | 27 | −21 | 21
+33 | 4 | 4 | 5 | 4 | 36 | −4 | 4
+34 | 6 | 4 | 4 | 6 | −26 | −10 | 10
+35 | 4 | 2 | 3 | 5 | −26 | −14 | 14
+36 | 2 | 5 | 3 | 6 | 27 | −3 | 3
+37 | 4 | 4 | 2 | 2 | −8 | 0 | 0
+38 | 3 | 5 | 5 | 3 | 17 | −8 | 8
+39 | 5 | 2 | 2 | 1 | −3 | −0,333333 | 0,333333
+40 | 5 | 3 | 4 | 2 | −22 | 2 | −2
+41 | 4 | 3 | 5 | 4 | 31 | 1 | −1
+42 | 2 | 1 | 3 | 3 | 9 | 3 | −3
+43 | 3 | 1 | 2 | 4 | −14 | −10 | 10
+44 | 2 | 1 | 4 | 6 | 8 | 4 | −4
+45 | 6 | 3 | 3 | 1 | −5 | 1 | −1
+46 | 6 | 6 | 5 | 6 | −66 | −6 | 6
+47 | 2 | 5 | 1 | 3 | −11 | −1 | 1
+48 | 3 | 6 | 5 | 6 | 24 | −6 | 6
+49 | 2 | 4 | 1 | 1 | −6 | 2 | −2
+50 | 4 | 1 | 5 | 3 | 17 | 7 | −7
+51 | 4 | 4 | 2 | 5 | −14 | −6 | 6
+52 | 2 | 5 | 4 | 2 | 12 | −8 | 8
+53 | 6 | 1 | 3 | 6 | −13 | −11 | 11
+54 | 6 | 4 | 4 | 4 | −20 | −4 | 4
+55 | 4 | 4 | 2 | 6 | −16 | −8 | 8
+56 | 5 | 6 | 2 | 6 | −14 | −6 | 6
+57 | 2 | 3 | 1 | 3 | −9 | −3 | 3
+58 | 2 | 1 | 1 | 3 | −7 | −5 | 5
+59 | 4 | 3 | 1 | 6 | −9 | −7 | 7
+60 | 4 | 5 | 3 | 5 | −35 | −5 | 5
+61 | 4 | 1 | 5 | 1 | 9 | −1 | 1
+62 | 2 | 4 | 1 | 3 | −10 | −2 | 2
+63 | 6 | 3 | 4 | 2 | −12 | 0 | 0
+64 | 2 | 6 | 1 | 5 | −16 | −4 | 4
+65 | 6 | 3 | 3 | 2 | −7 | −1 | 1
+66 | 4 | 2 | 3 | 4 | −22 | −10 | 10
+67 | 6 | 1 | 4 | 3 | −11 | −7 | 7
 ```
 
 ### Aufgabe keine-loesung
@@ -371,28 +377,28 @@ Nr. | a | p | b | q | Lösung | F1 | F2
 
 ```
 Nr. | a | b | Lösung | F1 | F2
-1 | 10 | 5 | 10 | -5 | 5
-2 | 6 | 5 | 30 | -1 | 1
-3 | 5 | 4 | 20 | -1 | 1
-4 | 10 | 9 | 90 | -1 | 1
-5 | 12 | 3 | 4 | -9 | 9
-6 | 8 | 6 | 24 | -2 | 2
-7 | 6 | 3 | 6 | -3 | 3
-8 | 4 | 3 | 12 | -1 | 1
-9 | 8 | 7 | 56 | -1 | 1
-10 | 12 | 6 | 12 | -6 | 6
-11 | 6 | 2 | 3 | -4 | 4
-12 | 7 | 6 | 42 | -1 | 1
-13 | 11 | 10 | 110 | -1 | 1
-14 | 8 | 4 | 8 | -4 | 4
-15 | 12 | 8 | 24 | -4 | 4
-16 | 10 | 8 | 40 | -2 | 2
-17 | 12 | 4 | 6 | -8 | 8
-18 | 12 | 10 | 60 | -2 | 2
-19 | 9 | 8 | 72 | -1 | 1
-20 | 9 | 6 | 18 | -3 | 3
-21 | 4 | 2 | 4 | -2 | 2
-22 | 10 | 6 | 15 | -4 | 4
-23 | 6 | 4 | 12 | -2 | 2
-24 | 12 | 9 | 36 | -3 | 3
+1 | 10 | 5 | 10 | −5 | 5
+2 | 6 | 5 | 30 | −1 | 1
+3 | 5 | 4 | 20 | −1 | 1
+4 | 10 | 9 | 90 | −1 | 1
+5 | 12 | 3 | 4 | −9 | 9
+6 | 8 | 6 | 24 | −2 | 2
+7 | 6 | 3 | 6 | −3 | 3
+8 | 4 | 3 | 12 | −1 | 1
+9 | 8 | 7 | 56 | −1 | 1
+10 | 12 | 6 | 12 | −6 | 6
+11 | 6 | 2 | 3 | −4 | 4
+12 | 7 | 6 | 42 | −1 | 1
+13 | 11 | 10 | 110 | −1 | 1
+14 | 8 | 4 | 8 | −4 | 4
+15 | 12 | 8 | 24 | −4 | 4
+16 | 10 | 8 | 40 | −2 | 2
+17 | 12 | 4 | 6 | −8 | 8
+18 | 12 | 10 | 60 | −2 | 2
+19 | 9 | 8 | 72 | −1 | 1
+20 | 9 | 6 | 18 | −3 | 3
+21 | 4 | 2 | 4 | −2 | 2
+22 | 10 | 6 | 15 | −4 | 4
+23 | 6 | 4 | 12 | −2 | 2
+24 | 12 | 9 | 36 | −3 | 3
 ```

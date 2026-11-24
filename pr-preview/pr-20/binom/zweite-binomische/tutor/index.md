@@ -58,9 +58,11 @@ Die zweite binomische Formel (a − b)² = a² − 2ab + b²: Erklärung mit Fl�
 
 ### Warum?
 
-Die zweite Formel ist die Schwester der ersten – nur mit Minus in der Klammer. Genau dieses Minus macht sie tückisch: Beim Ausmultiplizieren von $(x - 5)^2$ passieren die meisten Vorzeichenfehler. Wer die Formel kennt, schreibt das Ergebnis in einer Zeile hin. Und wer weiß, *warum* am Ende $+b^2$ steht, verwechselt die Vorzeichen nicht mehr.
+Wenn in der Klammer ein Minus steht, wie bei $(x - 5)^2$, passieren beim Ausmultiplizieren die meisten Vorzeichenfehler. Die zweite Formel schreibt das Ergebnis in einer Zeile hin. Und wer weiß, *warum* am Ende $+b^2$ steht, verwechselt die Vorzeichen nicht mehr.
 
 ### Regel
+
+Wird eine Differenz quadriert, gilt ein Muster, das sich nur in den Vorzeichen vom Plus-Fall unterscheidet.
 
 $(a - b)^2 = a^2 - 2ab + b^2$
 
@@ -76,6 +78,8 @@ $(a - b)^2$ ist nicht $a^2 - b^2$. Das Mittelglied $-2ab$ fehlt sonst, und das $
 
 **Beispiel: Multipliziere aus: (x − 5)²**
 
+So kommst du mit der Formel ohne Vorzeichenfehler zum Ergebnis.
+
 Der Rechenweg für (x − 5)²:
 - Glieder | $a = x$, $b = 5$
 - Formel | $x^2 - 2 \cdot x \cdot 5 + 5^2$
@@ -85,7 +89,7 @@ Mit Zahlen davor: $(2a - 3b)^2$ $= 4a^2 - 12ab + 9b^2$.
 
 ### Bild
 
-Bild: (x − 5)² = x² − 10x + 25. x² − zwei Streifen + Ecke zurück. Bildunterschrift: Ein Quadrat mit der Seite $x$. Rechts und unten ist je ein Streifen der Breite $5$ markiert (rot): Beide Streifen $5x$ werden abgezogen. Die grüne Ecke $25$ rechts unten steckt in beiden Streifen, ist also doppelt abgezogen und kommt einmal zurück ($+25$). Übrig bleibt links oben das blaue Quadrat $(x - 5)^2$, also $(x - 5)^2 = x^2 - 10x + 25$.
+Bild: (x − 5)² = x² − 10x + 25. x² − zwei Streifen + Ecke zurück. Bildunterschrift: Warum am Ende $+b^2$ steht, zeigt eine Fläche. Ein Quadrat mit der Seite $x$. Rechts und unten ist je ein Streifen der Breite $5$ markiert (rot): Beide Streifen $5x$ werden abgezogen. Die grüne Ecke $25$ rechts unten steckt in beiden Streifen, ist also doppelt abgezogen und kommt einmal zurück ($+25$). Übrig bleibt links oben das blaue Quadrat $(x - 5)^2$, also $(x - 5)^2 = x^2 - 10x + 25$.
 
 ### Übung
 

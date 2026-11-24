@@ -58,7 +58,7 @@ Wachsende Streichholzmuster als Terme mit n aufschreiben, Zahlen einsetzen und i
 
 ### Streichhölzer zählen
 
-Aus Streichhölzern entsteht eine Kette aus Quadraten. Das Bild zeigt Ketten mit 1, 2 und 3 Quadraten. Die orangen Hölzer kommen dazu, wenn ein Quadrat angelegt wird.
+Wenn du wissen willst, wie viele Streichhölzer eine lange Kette braucht, ohne sie zu legen, suchst du die Regel dahinter. Aus Streichhölzern entsteht eine Kette aus Quadraten. Das Bild zeigt Ketten mit 1, 2 und 3 Quadraten. Die orangen Hölzer kommen dazu, wenn ein Quadrat angelegt wird.
 
 Bild: Streichholzketten aus einem, zwei und drei Quadraten, untereinander. Das erste Quadrat ist blau, jedes weitere Quadrat orange. Daneben steht n = 1, n = 2 und n = 3. Bildunterschrift: Eine Kette aus n Quadraten, für n = 1, 2 und 3. Blau: das erste Quadrat. Orange: die Hölzer, die ein weiteres Quadrat dazubringt.
 
@@ -66,15 +66,17 @@ Bild: Streichholzketten aus einem, zwei und drei Quadraten, untereinander. Das e
 
 ### n steht für viele Zahlen
 
-Für die Zahl der Quadrate schreibst du einen Buchstaben, hier $n$. Das erste Quadrat braucht 4 Hölzer. Bei $n$ Quadraten kommen $n - 1$ weitere dazu, jedes mit 3 Hölzern:
+Damit eine einzige Rechnung für jede Länge der Kette stimmt, schreibst du für die Zahl der Quadrate einen Buchstaben, hier $n$. Das erste Quadrat braucht 4 Hölzer. Bei $n$ Quadraten kommen $n - 1$ weitere dazu, jedes mit 3 Hölzern:
 
 $4 + 3 \cdot (n - 1)$
 
-- **Variable**: Eine Variable ist ein Buchstabe, der für viele Zahlen steht, hier $n$ für die Zahl der Quadrate. Du darfst jede passende Zahl einsetzen. Im Zahlenrätsel suchst du beim $x$ dagegen eine einzige Zahl.
+- **Variable**: Eine Variable ist ein Buchstabe, der für viele Zahlen steht, hier $n$ für die Zahl der Quadrate. Du darfst jede passende Zahl einsetzen.
 
 - **Term**: Ein Term ist eine Rechnung mit Zahlen und Variablen, zum Beispiel $3 \cdot n + 1$. Setzt du für $n$ eine Zahl ein, kommt eine Zahl heraus.
 
 **Beispiel: Wertetabelle der Quadratkette**
+
+Wenn du wissen willst, wie viele Hölzer bestimmte Ketten brauchen, setzt du die Zahl der Quadrate in den Term ein.
 
 Du setzt Zahlen für n ein und rechnest den Term aus.:
 - n | 4 + 3 · (n − 1) | Hölzer
@@ -88,6 +90,8 @@ Eine solche Tabelle heißt **Wertetabelle**.
 
 ### Beispiel
 
+Bei einem neuen Muster stellst du den Term selbst auf: Du zählst, was beim ersten Mal nötig ist und was bei jedem weiteren Mal dazukommt.
+
 Bild: Streichholzketten aus einem, zwei und drei Dreiecken, untereinander. Das erste Dreieck ist blau, jedes weitere Dreieck orange. Daneben steht n = 1, n = 2 und n = 3. Bildunterschrift: Eine Kette aus n Dreiecken, für n = 1, 2 und 3. Blau: das erste Dreieck. Orange: die Hölzer, die ein weiteres Dreieck dazubringt.
 
 **Beispiel: Term für die Dreieckskette aufstellen**
@@ -100,13 +104,15 @@ Probe mit $n = 3$: $2 \cdot 3 + 1 = 7$. Im Bild zählst du 3 + 2 + 2 = 7 Hölzer
 
 ### Zwei Terme vergleichen
 
-Lena und Jonas zählen die Quadratkette verschieden. Lena rechnet: 4 Hölzer für das erste Quadrat und 3 für jedes weitere, also $4 + 3 \cdot (n - 1)$. Jonas legt zuerst 1 Holz an den Rand und rechnet 3 Hölzer je Quadrat, also $3 \cdot n + 1$. Haben beide recht? Schau in die **Tabelle**.
+Wenn zwei Kinder dasselbe Muster verschieden aufschreiben, willst du wissen, ob ihre Terme gleich sind. Lena und Jonas zählen die Quadratkette verschieden. Lena rechnet: 4 Hölzer für das erste Quadrat und 3 für jedes weitere, also $4 + 3 \cdot (n - 1)$. Jonas legt zuerst 1 Holz an den Rand und rechnet 3 Hölzer je Quadrat, also $3 \cdot n + 1$. Haben beide recht? Schau in die **Tabelle**.
 
 Interaktiv: Tabelle zum Vergleichen zweier Terme. Lena: 4 + 3 · (n − 1), Jonas: 3 · n + 1. Für n = 1, 2, 3, 4, 5 und 6 stehen bei beiden die Werte 4, 7, 10, 13, 16 und 19: In jeder Zeile sind die Werte gleich.
 
 Das spricht dafür, dass beide Terme für jedes $n$ dasselbe sagen. Eine einzige Zeile mit verschiedenen Werten zeigt dagegen: Die Terme sind nicht gleich. Probiere es: Ändere Jonas' Term in $3 \cdot n + 2$.
 
 ### Übung
+
+Jetzt stellst du selbst Terme auf und prüfst sie. So kommst du bei neuen Mustern ohne Bild aus.
 
 - Aufgabe `term-kette` (unten)
 

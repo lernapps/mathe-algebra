@@ -58,21 +58,23 @@ Eine Gleichung als Waage: Päckchen mit gleicher Zahl und Gewichte. Du tust auf 
 
 ### Zwei gleiche Seiten
 
-Eine Waage ist im **Gleichgewicht**, wenn beide Seiten gleich schwer sind. Auf der Waage liegen Gewichte, jedes wiegt 1, und **Päckchen**: In jedem Päckchen stecken gleich viele Gewichte, aber du weißt nicht, wie viele. Diese unbekannte Zahl nennst du $x$.
+Wenn du eine Gleichung lösen willst, hilft ein Bild: die Waage. Sie zeigt, warum du auf beiden Seiten dasselbe tun darfst. Eine Waage ist im **Gleichgewicht**, wenn beide Seiten gleich schwer sind. Auf der Waage liegen Gewichte, jedes wiegt 1, und **Päckchen**: In jedem Päckchen stecken gleich viele Gewichte, aber du weißt nicht, wie viele. Diese unbekannte Zahl nennst du $x$.
 
 - Aufgabe `waage-gleichgewicht` (unten)
 
 ### Das Päckchen finden
 
-Die Gleichung $x + 3 = 7$ sagt: Ein Päckchen und 3 Gewichte wiegen so viel wie 7 Gewichte. Du willst wissen, wie schwer ein Päckchen ist. Dazu tust du **auf beiden Seiten dasselbe**, bis ein Päckchen allein liegt. Probiere es aus.
+Wenn du wissen willst, wie schwer ein Päckchen ist, löst du die Gleichung. $x + 3 = 7$ sagt: Ein Päckchen und 3 Gewichte wiegen so viel wie 7 Gewichte. Dazu tust du **auf beiden Seiten dasselbe**, bis ein Päckchen allein liegt. Probiere es aus.
 
 Interaktiv: Waage für x + 3 = 7. Links liegen ein Päckchen x und 3 Gewichte, rechts 7 Gewichte. Auf beiden Seiten 3 abziehen: x = 4. Ein Päckchen wiegt 4 Gewichte.
 
-Bei $2 \cdot x + 3 = 11$ liegen zwei Päckchen links. Erst nimmst du 3 Gewichte weg, dann teilst du beide Seiten durch 2: Ein Päckchen wiegt 4 Gewichte. Das ist derselbe Weg wie die Umkehraufgabe mit den Pfeilen.
+Bei $2 \cdot x + 3 = 11$ liegen zwei Päckchen links. Erst nimmst du 3 Gewichte weg, dann teilst du beide Seiten durch 2: Ein Päckchen wiegt 4 Gewichte.
 
 Interaktiv: Waage für 2 · x + 3 = 11. Erst auf beiden Seiten 3 abziehen: 2 · x = 8. Dann beide Seiten durch 2 teilen: x = 4.
 
 ### Übung
+
+Mit der Waage findest du jede Päckchenzahl, solange du auf beiden Seiten dasselbe tust. Das übst du jetzt mit mehr Päckchen und mehr Gewichten.
 
 Interaktiv: Waage für 3 · x + 5 = 23. Erst auf beiden Seiten 5 abziehen: 3 · x = 18. Dann beide Seiten durch 3 teilen: x = 6.
 
@@ -84,7 +86,7 @@ Interaktiv: Waage für 3 · x + 5 = 23. Erst auf beiden Seiten 5 abziehen: 3 · 
 
 - Aufgabe `waage-ueben-beides` (unten)
 
-Das kannst du jetzt: Du löst eine Gleichung mit der Waage, indem du auf beiden Seiten dasselbe tust, und prüfst das Ergebnis mit der Probe.
+Das kannst du jetzt: Du löst eine Gleichung mit der Waage, indem du auf beiden Seiten dasselbe tust, und kannst dein Ergebnis durch Einsetzen prüfen.
 
 ### Aufgabe waage-gleichgewicht
 
@@ -302,17 +304,17 @@ Nr. | a | b | c | Lösung | F1 | F2
 8 | 2 | 10 | 80 | 35 | 70 | 30
 9 | 4 | 12 | 60 | 12 | 48 | 3
 10 | 6 | 8 | 74 | 11 | 66 | 4,333333
-11 | 5 | 12 | 47 | 7 | 35 | -2,6
+11 | 5 | 12 | 47 | 7 | 35 | −2,6
 12 | 6 | 4 | 40 | 6 | 36 | 2,666667
 13 | 3 | 11 | 41 | 10 | 30 | 2,666667
-14 | 6 | 15 | 33 | 3 | 18 | -9,5
+14 | 6 | 15 | 33 | 3 | 18 | −9,5
 15 | 2 | 3 | 39 | 18 | 36 | 16,5
 16 | 2 | 5 | 75 | 35 | 70 | 32,5
-17 | 5 | 12 | 27 | 3 | 15 | -6,6
+17 | 5 | 12 | 27 | 3 | 15 | −6,6
 18 | 3 | 4 | 49 | 15 | 45 | 12,333333
 19 | 3 | 8 | 74 | 22 | 66 | 16,666667
 20 | 5 | 10 | 55 | 9 | 45 | 1
-21 | 5 | 12 | 52 | 8 | 40 | -1,6
+21 | 5 | 12 | 52 | 8 | 40 | −1,6
 22 | 3 | 10 | 34 | 8 | 24 | 1,333333
 23 | 2 | 4 | 52 | 24 | 48 | 22
 24 | 4 | 13 | 77 | 16 | 64 | 6,25
@@ -321,8 +323,8 @@ Nr. | a | b | c | Lösung | F1 | F2
 27 | 4 | 3 | 27 | 6 | 24 | 3,75
 28 | 3 | 14 | 62 | 16 | 48 | 6,666667
 29 | 2 | 9 | 49 | 20 | 40 | 15,5
-30 | 5 | 6 | 21 | 3 | 15 | -1,8
-31 | 2 | 15 | 29 | 7 | 14 | -0,5
+30 | 5 | 6 | 21 | 3 | 15 | −1,8
+31 | 2 | 15 | 29 | 7 | 14 | −0,5
 32 | 3 | 5 | 74 | 23 | 69 | 19,666667
 33 | 2 | 2 | 34 | 16 | 32 | 15
 34 | 2 | 3 | 31 | 14 | 28 | 12,5
@@ -330,11 +332,11 @@ Nr. | a | b | c | Lösung | F1 | F2
 36 | 2 | 8 | 46 | 19 | 38 | 15
 37 | 3 | 7 | 49 | 14 | 42 | 9,333333
 38 | 2 | 12 | 80 | 34 | 68 | 28
-39 | 5 | 12 | 22 | 2 | 10 | -7,6
+39 | 5 | 12 | 22 | 2 | 10 | −7,6
 40 | 2 | 14 | 54 | 20 | 40 | 13
 41 | 4 | 5 | 33 | 7 | 28 | 3,25
 42 | 6 | 4 | 64 | 10 | 60 | 6,666667
-43 | 4 | 15 | 31 | 4 | 16 | -7,25
+43 | 4 | 15 | 31 | 4 | 16 | −7,25
 44 | 2 | 3 | 79 | 38 | 76 | 36,5
 45 | 2 | 15 | 69 | 27 | 54 | 19,5
 46 | 2 | 7 | 57 | 25 | 50 | 21,5
@@ -342,19 +344,19 @@ Nr. | a | b | c | Lösung | F1 | F2
 48 | 2 | 13 | 41 | 14 | 28 | 7,5
 49 | 4 | 15 | 75 | 15 | 60 | 3,75
 50 | 5 | 2 | 27 | 5 | 25 | 3,4
-51 | 6 | 10 | 28 | 3 | 18 | -5,333333
-52 | 6 | 15 | 75 | 10 | 60 | -2,5
+51 | 6 | 10 | 28 | 3 | 18 | −5,333333
+52 | 6 | 15 | 75 | 10 | 60 | −2,5
 53 | 4 | 5 | 61 | 14 | 56 | 10,25
-54 | 5 | 15 | 55 | 8 | 40 | -4
+54 | 5 | 15 | 55 | 8 | 40 | −4
 55 | 2 | 11 | 59 | 24 | 48 | 18,5
 56 | 2 | 10 | 40 | 15 | 30 | 10
-57 | 4 | 14 | 34 | 5 | 20 | -5,5
+57 | 4 | 14 | 34 | 5 | 20 | −5,5
 58 | 2 | 2 | 50 | 24 | 48 | 23
 59 | 6 | 3 | 57 | 9 | 54 | 6,5
 60 | 3 | 2 | 71 | 23 | 69 | 21,666667
-61 | 6 | 12 | 36 | 4 | 24 | -6
+61 | 6 | 12 | 36 | 4 | 24 | −6
 62 | 2 | 4 | 30 | 13 | 26 | 11
-63 | 6 | 15 | 39 | 4 | 24 | -8,5
+63 | 6 | 15 | 39 | 4 | 24 | −8,5
 64 | 4 | 6 | 54 | 12 | 48 | 7,5
 65 | 3 | 7 | 61 | 18 | 54 | 13,333333
 66 | 4 | 4 | 20 | 4 | 16 | 1
