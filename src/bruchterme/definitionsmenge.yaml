@@ -41,7 +41,7 @@ blocks:
     blocks:
       - type: text
         text: >-
-          Die Tabelle zeigt eine Lücke. Wenn du wissen willst, warum sie da ist und wo es noch Lücken gibt, schaust du auf
+          Trag in der Tabelle eine Zahl wie x = 2 ein: Dann zeigt sie eine Lücke. Wenn du wissen willst, warum sie da ist und wo es noch Lücken gibt, schaust du auf
           den Nenner. Wird er 0, hat der Bruchterm keinen Wert, denn durch 0 kannst du nicht teilen: Mal 0 kommt nie 6
           heraus, also gibt es 6 : 0 nicht. Der Bruchterm ist dann für diese Zahl **nicht definiert**. Alle anderen
           Zahlen darfst du einsetzen.

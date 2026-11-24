@@ -122,7 +122,7 @@ blocks:
       - type: text
         text: >-
           Beim Umformen kommt es vor, dass du durch eine negative Zahl teilen musst, etwa bei $-2 \cdot x > 6$. Dann
-          musst du wissen, was mit dem Zeichen passiert. Bei einer **negativen** Zahl ist es anders. Es gilt $2 < 5$. Rechne beide Zahlen mal $-2$: Du bekommst
+          musst du wissen, was mit dem Zeichen passiert. Das Zeichen bleibt aber nicht immer, bei einer **negativen** Zahl ist es anders. Es gilt $2 < 5$. Rechne beide Zahlen mal $-2$: Du bekommst
           $-4$ und $-10$. Auf der Zahlengerade liegt $-4$ rechts von $-10$, also gilt $-4 > -10$.
       - type: table
         caption: "Die Reihenfolge dreht sich um"

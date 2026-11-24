@@ -37,8 +37,8 @@ blocks:
           Lösung ist 3.
       - type: text
         text: >-
-          **Weg 2:** Die Waage. Sie passt, wenn du ohne Raten ans Ziel willst. Sammle zuerst alle Päckchen auf einer Seite: Nimm auf beiden Seiten gleich viele weg. Dann
-          sind es wieder die Schritte von vorher.
+          **Weg 2:** Die Waage. Sie passt, wenn du ohne Raten ans Ziel willst. Sammle zuerst alle Päckchen auf einer Seite: Nimm auf beiden Seiten gleich viele weg. Danach
+          steht x nur noch auf einer Seite, und du löst wie bei einer gewöhnlichen Gleichung.
       - type: vue-component
         id: waage-3x-plus-2-gleich-x-plus-8
         component: GleichungenWaage

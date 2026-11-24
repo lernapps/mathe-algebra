@@ -41,7 +41,7 @@ blocks:
 
           2. **Gleichung aufstellen:** Schreibe den Text als Rechnung mit $x$.
 
-          3. **Lösen:** Probiere in der Tabelle, wenn die Zahlen klein sind, oder forme um, wenn Probieren zu lange dauert.
+          3. **Lösen:** Probiere Zahlen aus und rechne nach, wenn die Zahlen klein sind, oder forme um, wenn Probieren zu lange dauert.
 
           4. **Antworten und Probe:** Schreibe einen Antwortsatz auf die Frage. Prüfe das Ergebnis am Text, nicht nur an der Gleichung.
   - type: section
@@ -66,7 +66,7 @@ blocks:
               - ["6", "27", "größer"]
               - ["5", "23", "gleich"]
           - type: table
-            caption: "Schritt 3, zweiter Weg: Umformen wie bei der Waage."
+            caption: "Schritt 3, zweiter Weg: Umformen heißt auf beiden Seiten dasselbe tun."
             header: ["Gleichung", "Was du tust"]
             rows:
               - ["4 · x + 3 = 23", "beide Seiten minus 3"]
