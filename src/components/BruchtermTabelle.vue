@@ -25,6 +25,7 @@ const props = defineProps<{
 const term = computed(() => ({ a: props.a, b: props.b, c: props.c, d: props.d }));
 const eingabe = ref("");
 const zeilen = ref<Zeile[]>(startZeilen(term.value, props.start));
+const startAnzahl = zeilen.value.length;
 const meldung = ref("");
 const id = useId();
 const feld = ref<HTMLInputElement | null>(null);
@@ -88,7 +89,9 @@ const ganz = (w: Wert): boolean => w.q === 1;
         @keydown.enter.prevent="eintragenKlick"
       />
       <button type="button" class="bt-knopf" @click="eintragenKlick">{{ eintragen }}</button>
-      <button type="button" class="bt-zweit" @click="neuAnfangenKlick">{{ neuAnfangen }}</button>
+      <button v-if="zeilen.length > startAnzahl" type="button" class="bt-zweit" @click="neuAnfangenKlick">
+        {{ neuAnfangen }}
+      </button>
     </div>
     <p class="bt-hinweis" aria-live="polite">{{ rueckmeldung }}</p>
     <div class="bt-scroll" tabindex="0" role="region" :aria-label="spalteErgebnis">

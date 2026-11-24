@@ -40,12 +40,15 @@ Je Seite eine Kompetenz (ein Baustein), Datei `src/<kapitel>/<seite>.yaml`. Reih
 - Seitenabschnitte nach dem, was die Seite lehrt (ids bleiben nach der Veröffentlichung); neue Seiten beginnen mit einer
   leichten ersten Aufgabe oder einem Bild, wechseln Schauen, Tun, Lesen und enden mit „Das kannst du jetzt: …“. Die
   Seiten von `binom` haben die Abschnitte `warum`, `regel`, `beispiel`, `bild`, `uebung`.
+- Erst das Wozu, dann das Wie: Jede Seite, jeder Abschnitt und jedes Verfahren beginnt in ein bis zwei Sätzen mit dem Anlass
+  (Welche Frage löst es?), erst danach kommt die Methode. Buttons eigener Komponenten haben eine sichtbare Wirkung und die
+  Gestaltung der Laufzeit (`--page-*`).
 - Eine neue Darstellung oder Rechenart wird vor der ersten Aufgabe in Worten mit ihrem Modell eingeführt; Texte und
   Aufgaben verweisen nur auf Sichtbares („die Tabelle darüber“ nur, wenn das Werkzeug direkt davor steht).
 - Recap-Seite (`recap:`, nur beschreibende Blöcke): Kopf „Das brauchst du für dieses Kapitel“, je Baustein eine
-  Überschrift, Fachbegriffe als `definition` (kommen ins Glossar), ein Beispiel, die Komponente `Kurztest` (kein Zählen,
-  Rückmeldung mit Grund) und der Satz mit dem Namen des Bausteins und seiner Kartenseite; Schluss „Du bist bereit,
-  wenn du …“. Kurztests sind nicht zu leicht für die Stufe.
+  Überschrift, Fachbegriffe als `definition` (kommen ins Glossar), ein Beispiel, höchstens zwei Übungen (`single-choice`, sofortige
+  Rückmeldung mit Grund, nicht zu leicht für die Stufe) und der Satz mit dem Namen des Bausteins und seiner Kartenseite;
+  Schluss „Du bist bereit, wenn du …“ als Liste. Wiederholungen stehen nur auf Recap-Seiten.
 - Keine Videos, keine Links auf fremde Seiten (auch nicht serlo oder Wikipedia), keine `links:` an Aufgaben.
 - `description` und `summary` sind reiner Text ohne `$…$`.
 

@@ -1,83 +1,77 @@
 # yaml-language-server: $schema=../../node_modules/@lernapps/app-templates/runtime/explainer/explainer.v2.schema.json
 title: Das brauchst du für dieses Kapitel
-description: "Kurze Wiederholung zum Rechnen mit negativen Zahlen, mit zwei Kurztests, damit du siehst, ob du bereit bist."
+description: Kurze Wiederholung zum Rechnen mit negativen Zahlen, mit zwei Kurztests, damit du siehst, ob du bereit bist.
 recap: mathematik/rationale-zahlen-rechnen
 blocks:
   - type: text
-    text: >-
-      Das brauchst du für dieses Kapitel: In Termen (Rechenausdrücken) stehen Variablen, das sind Buchstaben für Zahlen. Für sie setzt du auch negative Zahlen ein.
-      Dafür musst du mit negativen Zahlen sicher rechnen. Ein Baustein ist ein Thema auf der Lernlandkarte. Dieser Baustein heißt „Rechnen mit
-      negativen Zahlen“: Ich kann mit negativen Zahlen rechnen und dabei Vorzeichen- und Klammerregeln beachten.
+    text:
+      "Das brauchst du für dieses Kapitel: In Termen (Rechenausdrücken) stehen Variablen, das sind Buchstaben für Zahlen.
+      Für sie setzt du auch negative Zahlen ein. Dafür musst du mit negativen Zahlen sicher rechnen. Ein Baustein ist ein Thema
+      auf der Lernlandkarte. Dieser Baustein heißt „Rechnen mit negativen Zahlen“: Ich kann mit negativen Zahlen rechnen und
+      dabei Vorzeichen- und Klammerregeln beachten."
   - type: section
     id: negative-zahlen
     title: Rechnen mit negativen Zahlen
     blocks:
       - type: definition
         term: Vorzeichen
-        explanation: >-
-          Das Plus oder Minus, das vor einer Zahl steht und sagt, auf welcher Seite der Null sie liegt. Beispiel:
-          $-4$ liegt links von der Null, $+4$ rechts. Ohne Vorzeichen meint man eine positive Zahl.
+        explanation:
+          "Das Plus oder Minus, das vor einer Zahl steht und sagt, auf welcher Seite der Null sie liegt. Beispiel:
+          $-4$ liegt links von der Null, $+4$ rechts. Ohne Vorzeichen meint man eine positive Zahl."
       - type: definition
         term: Gegenzahl
-        explanation: >-
-          Die Zahl mit demselben Abstand zur Null auf der anderen Seite. Beispiel: Die Gegenzahl von $5$ ist $-5$,
-          und $5 + (-5) = 0$. Die Gegenzahl von $-3$ ist $3$.
+        explanation:
+          "Die Zahl mit demselben Abstand zur Null auf der anderen Seite. Beispiel: Die Gegenzahl von $5$ ist $-5$,
+          und $5 + (-5) = 0$. Die Gegenzahl von $-3$ ist $3$."
       - type: definition
         term: Minus vor einer Klammer
-        explanation: >-
-          Eine Subtraktion ist das Addieren der Gegenzahl. Beispiel: $5 - (-3) = 5 + 3 = 8$ und
-          $5 + (-3) = 5 - 3 = 2$. Eine negative Zahl in einer Rechnung steht in Klammern. Steht ein Minus vor einer Klammer mit mehreren Zahlen, ändert jede Zahl in der Klammer ihr Vorzeichen: $-(2 - 5) = -2 + 5 = 3$.
+        explanation:
+          "Eine Subtraktion ist das Addieren der Gegenzahl. Beispiel: $5 - (-3) = 5 + 3 = 8$ und $5 + (-3) = 5 - 3
+          = 2$. Eine negative Zahl in einer Rechnung steht in Klammern. Steht ein Minus vor einer Klammer mit mehreren Zahlen,
+          ändert jede Zahl in der Klammer ihr Vorzeichen: $-(2 - 5) = -2 + 5 = 3$."
       - type: definition
         term: Vorzeichenregel beim Malnehmen und Teilen
-        explanation: >-
-          Gleiche Vorzeichen geben ein positives Ergebnis, verschiedene ein negatives. Beispiel:
-          $(-3) \cdot (-4) = 12$, $(-3) \cdot 4 = -12$ und $(-12) : 4 = -3$.
-      - type: vue-component
-        id: kurztest-gemischt
-        component: Kurztest
-        props:
-          question: "Was ist (−4) · (−3) − (−6) : 2?"
-          options:
-            - { text: "15", correct: true, info: "(−4) · (−3) = 12 und (−6) : 2 = −3. Dann 12 − (−3) = 12 + 3 = 15." }
-            - {
-                text: "9",
-                correct: false,
-                info: "Du hast 12 − 3 gerechnet. Minus (−3) heißt aber: Du addierst die Gegenzahl 3.",
-              }
-            - {
-                text: "−9",
-                correct: false,
-                info: "Das Ergebnis von (−4) · (−3) ist positiv: gleiche Vorzeichen geben plus. Es sind +12.",
-              }
-          right: "Richtig."
-          wrong: "Nicht richtig."
-        nojs: |
-          Kurztest: Was ist (−4) · (−3) − (−6) : 2? 15, 9 oder −9. Antwort: 15, denn (−4) · (−3) = 12 und (−6) : 2 = −3, dann 12 + 3 = 15.
-      - type: vue-component
-        id: kurztest-addieren
-        component: Kurztest
-        props:
-          question: "Was ist −7 + (−5) − (−9)?"
-          options:
-            - { text: "−3", correct: true, info: "−7 + (−5) = −12. Dann −12 − (−9) = −12 + 9 = −3." }
-            - { text: "−21", correct: false, info: "Du hast 9 abgezogen. Minus (−9) heißt: Du addierst 9." }
-            - {
-                text: "7",
-                correct: false,
-                info: "Du hast die Vorzeichen nicht beachtet. −7 + (−5) liegt links von der Null, bei −12.",
-              }
-          right: "Richtig."
-          wrong: "Nicht richtig."
-        nojs: |
-          Kurztest: Was ist −7 + (−5) − (−9)? −3, −21 oder 7. Antwort: −3, denn −7 + (−5) = −12 und −12 + 9 = −3.
+        explanation:
+          'Gleiche Vorzeichen geben ein positives Ergebnis, verschiedene ein negatives. Beispiel: $(-3) \cdot (-4)
+          = 12$, $(-3) \cdot 4 = -12$ und $(-12) : 4 = -3$.'
+      - type: single-choice
+        id: recap-gemischt
+        text: "Was ist (−4) · (−3) − (−6) : 2?"
+        options:
+          - text: "15"
+            correct: true
+            info: "(−4) · (−3) = 12 und (−6) : 2 = −3. Dann 12 − (−3) = 12 + 3 = 15."
+          - text: "9"
+            correct: false
+            info: "Du hast 12 − 3 gerechnet. Minus (−3) heißt aber: Du addierst die Gegenzahl 3."
+          - text: −9
+            correct: false
+            info: "Das Ergebnis von (−4) · (−3) ist positiv: gleiche Vorzeichen geben plus. Es sind +12."
+        explanation: "(−4) · (−3) = 12 und (−6) : 2 = −3. Dann 12 − (−3) = 12 + 3 = 15."
+      - type: single-choice
+        id: recap-addieren
+        text: Was ist −7 + (−5) − (−9)?
+        options:
+          - text: −3
+            correct: true
+            info: −7 + (−5) = −12. Dann −12 − (−9) = −12 + 9 = −3.
+          - text: −21
+            correct: false
+            info: "Du hast 9 abgezogen. Minus (−9) heißt: Du addierst 9."
+          - text: "7"
+            correct: false
+            info: Du hast die Vorzeichen nicht beachtet. −7 + (−5) liegt links von der Null, bei −12.
+        explanation: −7 + (−5) = −12. Dann −12 − (−9) = −12 + 9 = −3.
       - type: text
-        text: >-
-          Wenn du dich vertan hast, wiederhole den Baustein „Rechnen mit negativen Zahlen“ auf seiner Seite der
-          Lernlandkarte: [Rechnen mit negativen Zahlen](https://lernapps.net/apps/map/mathematik/c/rationale-zahlen-rechnen/).
+        text:
+          "Wenn du dich vertan hast, wiederhole den Baustein „Rechnen mit negativen Zahlen“ auf seiner Seite der Lernlandkarte:
+          [Rechnen mit negativen Zahlen](https://lernapps.net/apps/map/mathematik/c/rationale-zahlen-rechnen/)."
   - type: note
     title: Du bist bereit, wenn du …
     blocks:
       - type: text
-        text: |
-          - Ich kann Zahlen mit Vorzeichen addieren und subtrahieren und dabei die Klammern beachten.
+        text: "- Ich kann Zahlen mit Vorzeichen addieren und subtrahieren und dabei die Klammern beachten.
+
           - Ich kann beim Malnehmen und Teilen das Vorzeichen des Ergebnisses bestimmen.
+
+          "
